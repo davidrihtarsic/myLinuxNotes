@@ -113,6 +113,8 @@ def eclipse
 		Icon = /opt/eclipse/cpp-neon/eclipse/icon.xpm
 		Categories = Development;
 def Arduino():
+	pass
+def GitHub():
 	for install:
 		#za Debian le:
 		sudo apt-get install git
@@ -150,7 +152,7 @@ def Arduino():
 				#hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 			## potem naredis
 			:git pull
-			# in če je bil dokument spremenjen na ISTEM mestu (recimo v isti crstici[nevisti])
+			# in če je bil dokument spremenjen na ISTEM mestu (recimo v isti crstici)
 			# potem je to v dokumentu označeno z:
 				#<<<<<<< HEAD
 				#			#to je novo na compu
@@ -158,9 +160,9 @@ def Arduino():
 				#			#to je novo na GitHubu
 				#		#heh nisem si zapisoval
 				#>>>>>>> 14d185fbd48d55e9a37d7de3e4d9bde157aa8915
-			# če pa je na različnih mestih...
-def GitHub():
-
+			# če pa je na različnih mestih pa dokument združi preko "recursive strategy"...
+			# in je to - to :)
+			# skratka popraviš in uploadaš še enkrat :) jeah!
 def w3m():
 	for instalation :
 		apt-get install w3m
