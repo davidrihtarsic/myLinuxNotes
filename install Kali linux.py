@@ -150,7 +150,7 @@ def Arduino():
 				#hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 			## potem naredis
 			:git pull
-			# in če je bil dokument spremenjen na ISTEM mestu (recimo v isti crstici)
+			# in če je bil dokument spremenjen na ISTEM mestu (recimo v isti crstici[nevisti])
 			# potem je to v dokumentu označeno z:
 				#<<<<<<< HEAD
 				#			#to je novo na compu
