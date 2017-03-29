@@ -119,6 +119,16 @@ def Arduino():
 	for config:
 		git config --global user.name "davidrihtarsic"
 		git config --global user.email "david.rihtarsic@gmail.com"
+		git config --global core.editor="subl"
+	for general_use:
+		make new repository ... BlaBla_project (need to be on URL gitHub)
+		make dir on your computer for that project 
+		navigate to that dir
+		:git init
+		:git add . #dodaj vse datoteke
+		:git commit -m "comment"
+		
+
 		#heh nisem si zapisoval
 def GitHub():
 
