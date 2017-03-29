@@ -115,8 +115,10 @@ def eclipse
 def Arduino():
 	pass
 def GitHub():
+	for literatura:
+		# https://www.youtube.com/watch?v=1h9_cB9mPT8
 	for install:
-		#za Debian le:
+		# za Debian le:
 		sudo apt-get install git
 	for config:
 		git config --global user.name "davidrihtarsic"
