@@ -151,7 +151,7 @@ def GitHub():
 				#hint: (e.g., 'git pull ...') before pushing again.
 				#hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 			## potem naredis
-			:git pull
+			:git pull #ce je prvič lahko tudi: git pull origin master
 			# in če je bil dokument spremenjen na ISTEM mestu (recimo v isti crstici)
 			# potem je to v dokumentu označeno z:
 				#<<<<<<< HEAD
