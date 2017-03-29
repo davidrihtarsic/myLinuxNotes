@@ -125,9 +125,11 @@ def Arduino():
 		make dir on your computer for that project 
 		navigate to that dir
 		:git init
-		:git add . #dodaj vse datoteke
-		:git commit -m "comment"
-		
+		#:git add . #dodaj vse datoteke
+		#:git commit -m "comment"
+		:git commit -a -m "comment" #naredi vse naenkrat
+		:git status # ni potreben a se vidi ce je potrebno kaj commitat
+		:git diff 	#ni potrebno a pokaže razlike...
 
 		#heh nisem si zapisoval
 def GitHub():
