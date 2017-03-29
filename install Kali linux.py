@@ -138,8 +138,11 @@ def Arduino():
 			:git remote add origin https://github.com/davidrihtarsic/myZapiski.git
 			:git push origin master #daš na GitHub +username +passWd
 		for updating:
-			## naprimer, da nekdo popravi kodo (recimo ti sam na GitHubu in na compu)
+			## naprimer, da nekdo popravi kodo (recimo ti sam na GitHubu...
+			## in nekdo tudi na compu ter naredi commit)
+			:git commit -a -m "comment"
 			## hočeš naložit... novo verzijo in dobiš konflikt s tisto na GitHub-u
+			:git push origin master #in dobiš error
 				#hint: Updates were rejected because the remote contains work that you do
 				#hint: not have locally. This is usually caused by another repository pushing
 				#hint: to the same ref. You may want to first integrate the remote changes
