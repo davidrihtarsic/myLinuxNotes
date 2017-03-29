@@ -146,7 +146,6 @@ def Arduino():
 				#hint: (e.g., 'git pull ...') before pushing again.
 				#hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 			
-		#heh nisem si zapisoval
 def GitHub():
 
 def w3m():
