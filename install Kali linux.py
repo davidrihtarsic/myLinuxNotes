@@ -137,7 +137,9 @@ def Arduino():
 			# v spremenljivko "origin" spravimo URL projekta
 			:git remote add origin https://github.com/davidrihtarsic/myZapiski.git
 			:git push origin master #daš na GitHub +username +passWd
-			
+		for updating:
+			## naprimer, da nekdo popravi kodo (recimo ti sam na GitHubu in na compu)
+			## hočeš naložit...
 		#heh nisem si zapisoval
 def GitHub():
 
