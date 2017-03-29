@@ -158,7 +158,7 @@ def Arduino():
 				#			#to je novo na GitHubu
 				#		#heh nisem si zapisoval
 				#>>>>>>> 14d185fbd48d55e9a37d7de3e4d9bde157aa8915
-			
+			# če pa je na različnih mestih...
 def GitHub():
 
 def w3m():
