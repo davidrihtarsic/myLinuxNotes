@@ -119,6 +119,7 @@ def Arduino():
 	for config:
 		git config --global user.name "davidrihtarsic"
 		git config --global user.email "david.rihtarsic@gmail.com"
+		#heh nisem si zapisoval
 def GitHub():
 
 def w3m():
