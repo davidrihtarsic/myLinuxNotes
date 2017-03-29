@@ -148,7 +148,17 @@ def Arduino():
 				#hint: to the same ref. You may want to first integrate the remote changes
 				#hint: (e.g., 'git pull ...') before pushing again.
 				#hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-			#to je novo na compu
+			## potem naredis
+			:git pull
+			# in če je bil dokument spremenjen na ISTEM mestu (recimo v isti crstici)
+			# potem je to v dokumentu označeno z:
+				#<<<<<<< HEAD
+				#			#to je novo na compu
+				#=======
+				#			#to je novo na GitHubu
+				#		#heh nisem si zapisoval
+				#>>>>>>> 14d185fbd48d55e9a37d7de3e4d9bde157aa8915
+			
 def GitHub():
 
 def w3m():
