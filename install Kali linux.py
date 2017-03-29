@@ -132,8 +132,12 @@ def Arduino():
 			:git commit -a -m "comment" #naredi vse naenkrat
 			:git status # ni potreben a se vidi ce je potrebno kaj commitat
 			:git diff 	#ni potrebno a pokaže razlike...
-		
-
+		for uploading:
+			## kako dastvar na GitHub...
+			# v spremenljivko "origin" spravimo URL projekta
+			:git remote add origin https://github.com/davidrihtarsic/myZapiski.git
+			:git push origin master #daš na GitHub +username +passWd
+			
 		#heh nisem si zapisoval
 def GitHub():
 
