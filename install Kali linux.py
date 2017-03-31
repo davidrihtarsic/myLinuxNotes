@@ -25,6 +25,30 @@ def Tab-CLICK():
 		-in nato : Tab-CLICK = ON
 	Videl sem tudi, da problem reši tudi:
 		synclient tapbutton1=1
+def Touchpad()
+	v dat /usr/share/X11/xorg.conf.d/50-synaptics.conf
+	dodas:
+	Section "InputClass"
+		Identifier      "Touchpad"                      # required
+		MatchIsTouchpad "yes"                           # required
+		Driver          "synaptics"                     # required
+		Option          "MinSpeed"              "0.5"
+		Option          "MaxSpeed"              "1.0"
+		Option          "AccelFactor"           "0.075"
+		Option          "TapButton1"            "1"
+		Option          "TapButton2"            "3"     # multitouch
+		Option          "TapButton3"            "2"     # multitouch
+		Option          "VertTwoFingerScroll"   "1"     # multitouch
+		Option          "HorizTwoFingerScroll"  "1"     # multitouch
+		Option          "VertEdgeScroll"        "1"
+		Option          "CoastingSpeed"         "8"
+		Option          "CornerCoasting"        "1"
+		Option          "CircularScrolling"     "1"
+		Option          "CircScrollTrigger"     "7"
+		Option          "EdgeMotionUseAlways"   "1"
+		Option          "LBCornerButton"        "8"     # browser "back" btn
+		Option          "RBCornerButton"        "9"     # browser "forward" btn
+	EndSection
 def SoundON():
 	Na začetku mi ni delal zvok... Rešitev je bila:
 		- lspci:
