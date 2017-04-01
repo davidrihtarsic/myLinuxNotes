@@ -1,2 +1,2 @@
-# myZapiski
+# myLinuxNotes
 neki zapiski o Linuxu
