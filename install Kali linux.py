@@ -1,3 +1,6 @@
+def EFI_mode():
+	boot -> CSM enable
+	security -> security boot control -> dissable
 def installBUNSEN():
 	#instaliral ...
 	#grub dal na sda1 (kjer sem našel efi... [sudo parted -l])
