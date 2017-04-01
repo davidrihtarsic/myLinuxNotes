@@ -10,6 +10,13 @@ def installBUNSEN():
 	# Test x-n
 	# probaj ta navodila:
 	# http://sarah.thesharps.us/2014/12/31/installing-debian-on-asus-ux301la/
+	#-----
+	#install
+	# grub -> /dev/sda1
+	# takoj ne dela... zažene se win10...
+	# path :\EFI\debian\grubx64.efi [ne dela]
+	# path :\efi\boot\bootx64.efi [ne dela]
+	
 def KeyBoardSettings():
 	Settings -> Reigon&Language -> Input Source
 def ShortCuts():
