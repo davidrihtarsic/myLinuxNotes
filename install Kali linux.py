@@ -1,3 +1,15 @@
+def installBUNSEN():
+	#instaliral ...
+	#grub dal na sda1 (kjer sem našel efi... [sudo parted -l])
+	# kar nekaj sem probal... ni delalo - sedaj pišem kaj ne dela
+	# test x-1
+	# BIOS:
+	# new boot oprions:
+	# - path:\efi\boot\bootx64.efi
+	#ne dela
+	# Test x-n
+	# probaj ta navodila:
+	# http://sarah.thesharps.us/2014/12/31/installing-debian-on-asus-ux301la/
 def KeyBoardSettings():
 	Settings -> Reigon&Language -> Input Source
 def ShortCuts():
