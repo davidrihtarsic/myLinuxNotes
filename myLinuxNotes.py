@@ -19,7 +19,9 @@ def installBUNSEN():
 	# takoj ne dela... zažene se win10...
 	# path :\EFI\debian\grubx64.efi [ne dela]
 	# path :\efi\boot\bootx64.efi [ne dela]
-	
+def Wireless_Monitoring:
+	Wavemon...
+	sudo apt-get install wavemon
 def KeyBoardSettings():
 	Settings -> Reigon&Language -> Input Source
 def ShortCuts():
@@ -40,7 +42,7 @@ def Terminal():
 		Profiles -> Background -> Transparency = 50%
 def LibreOffice():
 	apt-get install libreoffice
-def Tab-CLICK():
+def Tab_CLICK():
 	Da vklnjučiš Tab-CLICK greš v:
 		-settings
 		-mouse
