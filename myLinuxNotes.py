@@ -22,14 +22,21 @@ def installBUNSEN():
 def Wireless_Monitoring:
 	Wavemon...
 	sudo apt-get install wavemon
-def KeyBoardSettings():
+def KeyBoardSettings&Keybindings():
 	Settings -> Reigon&Language -> Input Source
-def ShortCuts():
-	v settings>Keyboaard sem si nastavil nekaj bližnjic:
-		super+w > Firefox
-		super+e > Text Editor
-		super+f > File Manager
-		super+t > terminator
+	for KeyBindings:
+	def ShortCuts():
+		v settings>Keyboaard sem si nastavil nekaj bližnjic:
+			super+w > Firefox
+			super+e > Text Editor
+			super+f > File Manager
+			super+t > terminator
+			---
+			v ~/.bashrc (file se zazene na zacetku)
+			#bliznica ll namesto ...
+			alias ll='ls -alF'
+			#tipki [đ] dodelimo znak [/]
+			xmodmap -e "keycode 35 = slash"
 def FileManager():
 	Všeč mi je filemanager THUNAR:
 		- apt-get install thunar
@@ -169,8 +176,8 @@ def GitHub():
 		# za Debian le:
 		sudo apt-get install git
 	for config:
-		git config --global user.name "davidrihtarsic"
-		git config --global user.email "david.rihtarsic@gmail.com"
+		git config --global user.name "xxxyyy"
+		git config --global user.email "xxx.yyy@džimail.com"
 		git config --global core.editor="subl"
 	for general_use:
 		make new repository ... BlaBla_project (need to be on URL gitHub)
@@ -188,7 +195,7 @@ def GitHub():
 			## kako da stvar na GitHub...
 			# v spremenljivko "origin" spravimo URL projekta
 			:git remote add origin https://github.com/davidrihtarsic/myZapiski.git
-			:git push origin master #daš na GitHub +username +passWd
+			:git push ~~origin master~~ #daš na GitHub +username +passWd
 		for updating:
 			## naprimer, da nekdo popravi kodo (recimo ti sam na GitHubu...
 			## in nekdo tudi na compu ter naredi commit)
