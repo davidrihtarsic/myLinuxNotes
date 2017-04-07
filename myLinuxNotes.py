@@ -20,6 +20,9 @@ def gamming_kernel:
 			6. reboot
 			7. preveri disk scheduler:
 				1. sudo cat /sys/block/sda/queue/scheduler
+		5. install Intel CPU support:
+			1. sudo apt install intel-microcode iucode-tool
+			2. reboot
 			
 def EFI_mode():
 	boot -> CSM enable
