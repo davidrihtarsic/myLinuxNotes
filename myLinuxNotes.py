@@ -19,7 +19,7 @@ def XanMod_kernel:
 			4. cat /proc/version (preveri kernel verzijo:)
 		4. chane [cfg] disk scheduler:
 			1. sudo cat /sys/block/sda/queue/scheduler (kateri so na razpolago)
-			2. sudo nano /etc/default/grub (edit grub settings)
+			2. sudo subl /etc/default/grub (edit grub settings)
 			3. spremeni vrstico:
 				#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 				GRUB_CMDLINE_LINUX_DEFAULT="quiet splash elevator=bfq"
