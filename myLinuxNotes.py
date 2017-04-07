@@ -29,6 +29,9 @@ def XanMod_kernel:
 			7. preveri disk scheduler:
 				1. sudo cat /sys/block/sda/queue/scheduler
 		5. install Intel CPU support:
+			0. ker sem prej dobil error:
+				W: Possible missing firmware /lib/firmware/rtl_nic/rtl8107e-2.fw for module r8169
+				sem namestil še firmware, a mislim, da ni šlo skoz...
 			1. sudo apt install intel-microcode iucode-tool
 			2. reboot
 			
