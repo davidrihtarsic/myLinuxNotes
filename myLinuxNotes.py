@@ -1,4 +1,9 @@
-def gamming_kernel:
+def XanMod_kernel:
+	XanMod is a mainline Linux kernel distribution with custom settings.
+	Optimized to take full advantage of high-performance Desktops, PC Gamers,
+	Workstations, Media Centers and others. Supports all recent 64-bit
+	versions of Debian and Ubuntu-based systems. 
+	
 	based on article:
 		http://www.hecticgeek.com/2016/09/supercharge-ubuntu-16-04-lts-xanmod-kernel/
 	test on Ubuntu MATE:
