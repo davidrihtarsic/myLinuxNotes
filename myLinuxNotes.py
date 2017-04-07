@@ -226,4 +226,8 @@ def w3m():
 	for frendlyUse:
 		v ~/bashrc vpišeš:
 		alias w3mm='w3m www.google.com'
+def dd_ibs_test.sh():
+	program za testiranje dd komnade...
+	kako hitro comp lahko kopira datoteke v odvisnosti ob bs= ? podatka...
+	Program je na GitHubu
 
