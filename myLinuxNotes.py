@@ -8,6 +8,18 @@ def gamming_kernel:
 			1. echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list && wget -qO - http://deb.xanmod.org/gpg.key | sudo apt-key add -
 			2. sudo apt update && sudo apt install linux-xanmod-4.9
 			3. reboot
+			4. cat /proc/version (preveri kernel verzijo:)
+		4. chane [cfg] disk scheduler:
+			1. sudo cat /sys/block/sda/queue/scheduler (kateri so na razpolago)
+			2. sudo nano /etc/default/grub (edit grub settings)
+			3. spremeni vrstico:
+				#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+				GRUB_CMDLINE_LINUX_DEFAULT="quiet splash elevator=bfq"
+			4. shrani
+			5. sudo update-grub2
+			6. reboot
+			7. preveri disk scheduler:
+				1. sudo cat /sys/block/sda/queue/scheduler
 			
 def EFI_mode():
 	boot -> CSM enable
