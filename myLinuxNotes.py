@@ -1,3 +1,13 @@
+def gamming_kernel:
+	based on article:
+		http://www.hecticgeek.com/2016/09/supercharge-ubuntu-16-04-lts-xanmod-kernel/
+	test on Ubuntu MATE:
+		1.https://xanmod.org/
+		2.First install the XanMod Repository Setup
+		3.manual...
+			1. echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list && wget -qO - http://deb.xanmod.org/gpg.key | sudo apt-key add -
+			2. sudo apt update && sudo apt install linux-xanmod-4.9
+			
 def EFI_mode():
 	boot -> CSM enable
 	security -> security boot control -> dissable
