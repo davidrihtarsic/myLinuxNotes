@@ -7,6 +7,7 @@ def gamming_kernel:
 		3.manual...
 			1. echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list && wget -qO - http://deb.xanmod.org/gpg.key | sudo apt-key add -
 			2. sudo apt update && sudo apt install linux-xanmod-4.9
+			3. reboot
 			
 def EFI_mode():
 	boot -> CSM enable
