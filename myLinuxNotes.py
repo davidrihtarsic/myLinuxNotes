@@ -60,6 +60,7 @@ def Wireless_Monitoring:
 	Wavemon...
 	sudo apt-get install wavemon
 def xRandR():
+	# te nastavitve so odvisne od monitorja... !
 	najprej:
 		cvt 1280 1024 60
 		# 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz
