@@ -154,10 +154,32 @@ def Thunderbird():
 		- nastaviš privilegije (če je potrebno): sudo chown -R root:root /opt/thunderbird
 		- in linkaš exe skript: sudo ln -fs /opt/thunderbird/thunderbird /usr/bin/thunderbird
 def Sublime text 3():
-	greš na njihovo stran in snameš dol pravo verzijo (Ubuntu 64)
-	nato pa v terminalu zaženeš:
-	- cd Download1
-	- dpkg -i Sublime...64.deb
+	for install:
+		greš na njihovo stran in snameš dol pravo verzijo (Ubuntu 64)
+		nato pa v terminalu zaženeš:
+		- cd Download1
+		- dpkg -i Sublime...64.deb
+	for uporaba:
+		Install Packages:(https://packagecontrol.io/installation)
+			View->Show Console
+				copy-paste:
+					import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+		GitHub:
+			namestis paket GIT:
+				C+S+p -> Install Packages
+				Git ()
+			nastavitve:
+				The detail step:
+					1. go to your local git project directory, open ".git/config" file and delete the "[remote "origin"]" section.
+					2. go to git bash and input "git remote add origin https://{username}:{password}@github.com/{username}/{project}.git"
+					3. input git push to check if it works.
+					# jaz sem moral prej še spedenat v teerminali:
+						#git commit -a -m "sublime pedenanje"
+						#git push (če je kak error prej še git pull... in popraviš razlike)
+			uporaba:
+				1. popraviš file...
+				2. C+S+p -> quick commit
+				
 def TeamViewer
 	- presnames teamviewer i386 (cetudi imas 64-bitni comp.)
 	- v terminalu> dpkg --add-architecture i386
