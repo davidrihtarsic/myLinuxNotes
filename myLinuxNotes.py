@@ -168,6 +168,7 @@ def Sublime text 3():
 			namestis paket GIT:
 				C+S+p -> Install Packages
 				Git ()
+				vec info na: https://github.com/kemayo/sublime-text-git/wiki
 			nastavitve:
 				The detail step:
 					1. go to your local git project directory, open ".git/config" file and delete the "[remote "origin"]" section.
