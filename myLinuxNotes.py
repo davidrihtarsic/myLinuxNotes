@@ -177,9 +177,9 @@ def Sublime text 3():
 						#git commit -a -m "sublime pedenanje"
 						#git push (če je kak error prej še git pull... in popraviš razlike)
 			uporaba:
-				1. popraviš file...
-				2. C+S+p -> quick commit
-				
+				1. popraviš file... & C+s (save)
+				2. C+S+p -> quick commit -> {msg}
+				3. C+S+p -> push
 def TeamViewer
 	- presnames teamviewer i386 (cetudi imas 64-bitni comp.)
 	- v terminalu> dpkg --add-architecture i386
