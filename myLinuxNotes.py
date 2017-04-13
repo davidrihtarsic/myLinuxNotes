@@ -65,12 +65,14 @@ def xRandR():
 		cvt 1280 1024 60
 		# 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz
 		# Modeline "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hsync +vsync
-	kopiras kar ti terminal veže...:
-		sudo xrandr --newmode "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hsync +vsync
+	kopiras kar ti terminal vrže...:
+		sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hsync +vsync
 	dodas v moznosti:
-		sudo xrandr --addmode VGA1 1280x1024_60.00
+		sudo xrandr --addmode VGA1 1280x1024
 	potem nastavis resolucijo v 
-		arandr
+		arandr ali
+		xrandr --output VGA1 --mode 1280x1024
+
 def KeyBoardSettings():
 	Settings -> Reigon&Language -> Input Source
 	for KeyBindings:
