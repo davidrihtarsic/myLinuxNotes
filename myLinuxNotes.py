@@ -183,6 +183,15 @@ def Sublime text 3():
 				1. popraviš file... & C+s (save)
 				2. C+S+p -> quick commit -> {msg}
 				3. C+S+p -> push
+	MarkDown:
+		1. instal: Package contorill (https://packagecontrol.io/installation)
+		2. Install Package: Markdown extended
+		3. Install Package: Monokai extended
+		4. Preferences -> Color Scheme -> Monokail Extended -> Monokail Extended
+		5. Install Package: Markdown Editing
+		6. Set doc. syntax = Monokai Extended
+
+
 def TeamViewer
 	- presnames teamviewer i386 (cetudi imas 64-bitni comp.)
 	- v terminalu> dpkg --add-architecture i386
