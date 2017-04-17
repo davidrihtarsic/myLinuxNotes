@@ -190,6 +190,16 @@ def Sublime text 3():
 		4. Preferences -> Color Scheme -> Monokail Extended -> Monokail Extended
 		5. Install Package: Markdown Editing
 		6. Set doc. syntax = Monokai Extended
+		7. Preferences -> Package settings -> Markdown Editing -> Markdown Settings (standard) - User:
+			{
+				"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
+				"tab_size": 2,
+				"line_numbers": true,
+			    // Layout
+				"draw_centered": false,
+				"wrap_width": 0,
+				"rulers": []
+			}
 
 
 def TeamViewer
