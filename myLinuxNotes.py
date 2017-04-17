@@ -176,13 +176,14 @@ def Sublime text 3():
 					1. go to your local git project directory, open ".git/config" file and delete the "[remote "origin"]" section.
 					2. go to git bash and input "git remote add origin https://{username}:{password}@github.com/{username}/{project}.git"
 					3. input git push to check if it works.
-					# jaz sem moral prej še spedenat v teerminali:
+					# jaz sem moral prej še spedenat v terminalu:
 						#git commit -a -m "sublime pedenanje"
 						#git push (če je kak error prej še git pull... in popraviš razlike)
 			uporaba:
 				1. popraviš file... & C+s (save)
 				2. C+S+p -> quick commit -> {msg}
 				3. C+S+p -> push
+
 	MarkDown:
 		1. instal: Package contorill (https://packagecontrol.io/installation)
 		2. Install Package: Markdown extended
@@ -201,6 +202,48 @@ def Sublime text 3():
 				"rulers": []
 			}
 
+		LaTeX:
+			namestis paket preko:
+				C+S+p -> Install Packages
+				~~LaTeXTools~~
+				LaTeXing & LaTeX-cwg
+			notes:
+				OK, prej moras namestiti dodatne pakete..:
+				sudo apt-get install texlive-full
+				sudo apt-get install latexmk
+				sudo apt-get install biber
+		Spell Checker:
+			download:
+				v direktorij: /home/david/.config/sublime-text-3/Packages/
+				wget https://github.com/titoBouzout/Dictionaries/archive/master.zip
+				unzip 
+			ali ...
+				Download the language file from the appropiate OpenOffice extension
+				http://extensions.openoffice.org/en/project/slovenian-dictionary-package-slovenski-paket-slovarjev
+				Rename the "some.oxt" file to "some.zip"
+				Unzip the file
+				Look for two files: "lang.aff" and "lang.dic". For example es_ES.aff and es_ES.dic
+				Open the "lang.aff" to check the encoding used. Such the line: SET ISO-8859-1
+				Convert that file to UTF-8 from the used encoding
+				Convert "lang.dic" to UTF-8 from the used encoding.
+				Change SET ISO-8859-1 to SET UTF-8
+				In ST3, click on Preferences -> Browse Packages
+				Create a new folder, for example Language - Spanish
+				Move lang.dic and lang.aff to that folder
+				Activate the dictionary in ST3 (View -> Dictionary -> Language - Spanish -> es_ES)
+				Press F6 to enable spell check
+			View->Dictionaries
+		Google spell check:
+			namestitev:
+				C+S+p -> Install Packages
+				Google Spell Check
+def Texmaker
+	Spell Checker:
+			download:
+				http://extensions.services.openoffice.org/en/project/slovenian-dictionary-package-slovenski-paket-slovarjev
+			unzip pac-sl.oxt
+			in prekopiraš datoteko sl-SI.dic v Sublime paketi direktorij (Preferences->Browse packages)
+			nato nastaviš jezik : View->Dictionary->si-SL.dic
 
 def TeamViewer
 	- presnames teamviewer i386 (cetudi imas 64-bitni comp.)
