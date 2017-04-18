@@ -67,11 +67,12 @@ tested on Ubuntu MATE (DELA SUPER!):
 
 # XRANDR:
   te nastavitve so odvisne od monitorja... !
-
+  
   1. najprej:
-    > `cvt 1280 1024 60`
-    # 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz
-    # Modeline "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034   1063   -hsync +vsync
+      `cvt 1280 1024 60`
+      # 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz
+      # Modeline "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034   1063   -hsync +vsync
+      
   2. kopiras kar ti terminal vrže...:
     > `sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027   1034   1063 -hsync +vsync`
   3. dodas v moznosti:
