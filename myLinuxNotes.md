@@ -343,7 +343,7 @@ Druga rešitev (ali celo dopolnitev):
 
 # GITHUB
 ## LITERATURA:
-  1. [Link][https://www.youtube.com/watch?v=1h9_cB9mPT8]
+  1. [Link](https://www.youtube.com/watch?v=1h9_cB9mPT8)
 	
 ## install:
 Debian le:
@@ -362,8 +362,8 @@ navigate to that dir
 
 ### editing:
 na tem mestu spreminjaš FAJL...
-> `git add .` #dodaj vse datoteke
-> `git commit -m "comment"`
+> `git add .` #dodaj vse datoteke\\
+> `git commit -m "comment"`\\
 > `git commit -a -m "comment"` #naredi vse naenkrat
 > `git status` # ni potreben a se vidi ce je potrebno kaj commitat
 > `git diff` 	#ni potrebno a pokaže razlike...
