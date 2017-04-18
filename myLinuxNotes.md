@@ -362,8 +362,15 @@ navigate to that dir
 
 ### editing:
 na tem mestu spreminjaš FAJL...
-> `git add .` #dodaj vse datoteke\\
-> `git commit -m "comment"`\\
+```bash
+git add . 		    //dodaj vse datoteke
+git commit -m "comment"
+git commit -a -m "comment"` //naredi vse naenkrat
+git status		    // ni potreben a se vidi ce je potrebno kaj commitat
+git diff		    // ni potrebno a pokaže razlike...
+```
+> `git add .` #dodaj vse datoteke
+> `git commit -m "comment"`
 > `git commit -a -m "comment"` #naredi vse naenkrat
 > `git status` # ni potreben a se vidi ce je potrebno kaj commitat
 > `git diff` 	#ni potrebno a pokaže razlike...
