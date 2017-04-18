@@ -151,6 +151,7 @@ tested on Ubuntu MATE (DELA SUPER!):
 
 # SOUNDON:
 ==========
+
   Na začetku mi ni delal zvok... Rešitev je bila:
   1. lspci:
 	  tako preveriš, če je Linux prepoznal zvočno...
