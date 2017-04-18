@@ -5,7 +5,7 @@
   versions of Debian and Ubuntu-based systems. 
 
 ## Tested
-based on [article][http://www.hecticgeek.com/2016/09/supercharge-ubuntu-16-04-lts-xanmod-kernel/]
+based on [article](http://www.hecticgeek.com/2016/09/supercharge-ubuntu-16-04-lts-xanmod-kernel/)
 tested on Ubuntu MATE (DELA SUPER!):
   * Firefox prej 10.5 s ... po tem 4.6 s
   * kopiranje dd (komanda) prej 9MB/s le pri bs=128K
