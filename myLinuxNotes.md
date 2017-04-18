@@ -15,51 +15,48 @@ tested on Ubuntu MATE (DELA SUPER!):
 1. https://xanmod.org/
 2. First install the XanMod Repository Setup
 3. manual...
-	1. `echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/  urces.list.d/xanmod-kernel.list && wget -qO - http://deb.xanmod.org/gpg.key   sudo apt-key add -`
-	2. `sudo apt update && sudo apt install linux-xanmod-4.9`
-	3. reboot
-	4. `cat /proc/version` (preveri kernel verzijo:)
+> `echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/  urces.list.d/xanmod-kernel.list && wget -qO - http://deb.xanmod.org/gpg.key   sudo apt-key add -`  
+> `sudo apt update && sudo apt install linux-xanmod-4.9`  
+> `sudo reboot`  
+> `cat /proc/version` (preveri kernel verzijo:)
 4. chane [cfg] disk scheduler:
-	1. sudo cat /sys/block/sda/queue/scheduler (kateri so na razpolago)
-	2. sudo subl /etc/#ault/grub (edit grub settings)
-	3. spremeni vrstico:
-	```
-	GRUB_CMDLINE_LINUX_#AULT="quiet splash"
-	GRUB_CMDLINE_LINUX_#AULT="quiet splash elevator=bfq"
-	```	
-	4. shrani
-	5. sudo update-grub2
-	6. reboot
-	7. preveri disk scheduler:
-	`sudo cat /sys/block/sda/queue/scheduler`
-	```
-	sudo cat /sys/block/sda/queue/scheduler
-	```
+  1. preveri:
+  > `sudo cat /sys/block/sda/queue/scheduler` (kateri so na razpolago)  
+  > `sudo subl /etc/#ault/grub` (edit grub settings)  
+  2. spremeni vrstico:
+  > GRUB_CMDLINE_LINUX_#AULT="quiet splash"  
+  > GRUB_CMDLINE_LINUX_#AULT="quiet splash elevator=bfq"
+  3. shrani
+  4. sudo update-grub2
+  5. reboot
+  6. preveri disk scheduler:
+  > `sudo cat /sys/block/sda/queue/scheduler`
+
 5. install Intel CPU support:
 	1. ker sem prej dobil error:
-		W: Possible missing firmware /lib/firmware/rtl_nic/rtl8107e-2.fw for dule   r8169
-		sem namestil še firmware, a mislim, da ni šlo skoz...
-	2. sudo apt install intel-microcode iucode-tool
-	3. reboot
+  `W: Possible missing firmware /lib/firmware/rtl_nic/rtl8107e-2.fw for dule   r8169`
+  sem namestil še firmware, a mislim, da ni šlo skoz...
+  > `sudo apt install intel-microcode iucode-tool`
+	> `sudo reboot`
 		
 # EFI MODE:
-  boot -> CSM enable
+  boot -> CSM enable  
   security -> security boot control -> dissable
 
 ## installBUNSEN
   instaliral ...
   grub dal na sda1 (kjer sem našel efi... [sudo parted -l])
   kar nekaj sem probal... ni delalo - sedaj pišem kaj ne dela
-  
+  ---
   BIOS:
   new boot oprions:
   path:\efi\boot\bootx64.efi
   ne dela
-  
+  ---
   Test x-n
   probaj ta navodila:
   http://sarah.thesharps.us/2014/12/31/installing-debian-on-asus-ux301la/
-  
+  ---
   install
   grub -> /dev/sda1
   takoj ne dela... zažene se win10...
@@ -67,23 +64,23 @@ tested on Ubuntu MATE (DELA SUPER!):
   path :\efi\boot\bootx64.efi [ne dela]
 
 # WIRELESS SETUP
-  Wavemon...
-  > `sudo apt-get install wavemon`
+Wavemon...
+> `sudo apt-get install wavemon`
 
 # XRANDR:
-  te nastavitve so odvisne od monitorja... !
-  1. najprej:
+te nastavitve so odvisne od monitorja... !
+
+1. najprej:
 `cvt 1280 1024 60`
-> 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz  
-> Modeline "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034   1063   -hsync +vsync"
-      
-  2. kopiras kar ti terminal vrže...:
-    > `sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027   1034   1063 -hsync +vsync`
-  3. dodas v moznosti:
-   	`sudo xrandr --addmode VGA1 1280x1024`
-  4. potem nastavis resolucijo v 
-    1. arandr ali
-   	2. > `xrandr --output VGA1 --mode 1280x1024`
+  > 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz  
+  > Modeline "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034   1063   -hsync +vsync"
+2. kopiras kar ti terminal vrže...:
+  `sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027   1034   1063 -hsync +vsync`
+3. dodas v moznosti:
+  `sudo xrandr --addmode VGA1 1280x1024`
+4. potem nastavis resolucijo v 
+  1. `arandr` ali
+  2. `xrandr --output VGA1 --mode 1280x1024`
 
 # KEYBOARD SETTINFS:
   Settings -> Reigon&Language -> Input Source
@@ -131,38 +128,40 @@ tested on Ubuntu MATE (DELA SUPER!):
 ## Touchpad
   v [datoteki][/usr/share/X11/xorg.conf.d/50-synaptics.conf]
   dodas:
-  >  Section "InputClass"
-  >    Identifier      "Touchpad"                      # required
-  >    MatchIsTouchpad "yes"                           # required
-  >    Driver          "synaptics"                     # required
-  >    Option          "MinSpeed"              "0.5"
-  >    Option          "MaxSpeed"              "1.0"
-  >    Option          "AccelFactor"           "0.075"
-  >    Option          "TapButton1"            "1"
-  >    Option          "TapButton2"            "3"     # multitouch
-  >    Option          "TapButton3"            "2"     # multitouch
-  >    Option          "VertTwoFingerScroll"   "1"     # multitouch
-  >    Option          "HorizTwoFingerScroll"  "1"     # multitouch
-  >    Option          "VertEdgeScroll"        "1"
-  >    Option          "CoastingSpeed"         "8"
-  >    Option          "CornerCoasting"        "1"
-  >    Option          "CircularScrolling"     "1"
-  >    Option          "CircScrollTrigger"     "7"
-  >    Option          "EdgeMotionUseAlways"   "1"
-  >    Option          "LBCornerButton"        "8"     # browser "back" btn
-  >    Option          "RBCornerButton"        "9"     # browser "forward" btn
-  >  EndSection
+
+    Section "InputClass"  
+      Identifier      "Touchpad"                      # required
+      MatchIsTouchpad "yes"                           # required
+      Driver          "synaptics"                     # required
+      Option          "MinSpeed"              "0.5"  
+      Option          "MaxSpeed"              "1.0"  
+      Option          "AccelFactor"           "0.075"  
+      Option          "TapButton1"            "1"
+      Option          "TapButton2"            "3"     # multitouch
+      Option          "TapButton3"            "2"     # multitouch
+      Option          "VertTwoFingerScroll"   "1"     # multitouch
+      Option          "HorizTwoFingerScroll"  "1"     # multitouch
+      Option          "VertEdgeScroll"        "1"  
+      Option          "CoastingSpeed"         "8"  
+      Option          "CornerCoasting"        "1"  
+      Option          "CircularScrolling"     "1"  
+      Option          "CircScrollTrigger"     "7"  
+      Option          "EdgeMotionUseAlways"   "1"  
+      Option          "LBCornerButton"        "8"     # browser "back" btn
+      Option          "RBCornerButton"        "9"     # browser "forward" btn
+    EndSection
 
 # SOUNDON:
 
-  Na začetku mi ni delal zvok... Rešitev je bila:
-  1. lspci:
-	  tako preveriš, če je Linux prepoznal zvočno...
-	  na terminalu sem dobil:
-	  '00:1b.0 Audio device: Intel Corporation 7 Series/C210 Series Chipset Family High #inition Audio Controller (rev 04)'
-  2. apt-get install libasound2 alsa-utils alsa-oss 
-  3. alsamixer:
-	  in od "mutiraš" kanale, ki so zamutani
+Na začetku mi ni delal zvok... Rešitev je bila:
+
+1. `lspci`: 
+  tako preveriš, če je Linux prepoznal zvočno...
+  na terminalu sem dobil:
+  > '00:1b.0 Audio device: Intel Corporation 7 Series/C210 Series Chipset Family High #inition Audio Controller (rev 04)' 
+2. `apt-get install libasound2 alsa-utils alsa-oss`
+3. `alsamixer`:
+  in od "mutiraš" kanale, ki so zamutani
 
 Druga rešitev (ali celo dopolnitev):
 	- je, da v terminal napišeš:
@@ -190,7 +189,7 @@ Druga rešitev (ali celo dopolnitev):
 ## Install:
   Greš na njihovo stran in snameš dol pravo verzijo (Ubuntu 64)
   nato pa v terminalu zaženeš:
-  > cd Downloads
+  > `cd Downloads`
   > `dpkg -i Sublime...64.deb`
 
 ## Package Controll:
@@ -285,16 +284,16 @@ Druga rešitev (ali celo dopolnitev):
 # TEAMVIEWER
   presnames teamviewer i386 (cetudi imas 64-bitni comp.)
   v terminalu> dpkg --add-architecture i386
-  > apt-get update
-  > `dpkg -i teamviewer_****_i386.deb`
-  > sudo apt-get -f install
+  + `apt-get update`
+  + `dpkg -i teamviewer_****_i386.deb`
+  + `sudo apt-get -f install`
 
 # QCAD
   1. presnameš inštalacijo iz njihove [strani][https://qcad.org/en/qcad-downloads-trial]
   2. nato spremeniš rivilegije datoteke:
-	  > `sudo chmod 777 qcad*.run`
-	3. in poženeš script:
-	  > `./qcad*.run`
+  > `sudo chmod 777 qcad*.run`
+  3. in poženeš script:
+  > `./qcad*.run`
 
 # FREECAD
 	asdf
@@ -306,13 +305,15 @@ Druga rešitev (ali celo dopolnitev):
 	asdf
 
 # POPCORN-TIME
-  1. Download [Popcorn-Time][https://www.popcorntime.ws/about]
+Program za gledanje filmov:
+  1. Download [Popcorn-Time](https://www.popcorntime.ws/about)
   2. razpakiraš in daš dokumente v /opt/popcorn-time/
   3. polinkaš, da bo dosegljivo vsem:
-		> `sudo ln -sf /opt/popcorn-time/Popcorn-Time /usr/bin/popcorn-time`
-	4. Narediš še .desktop datoteko
-		> `sudo nano /usr/share/applications/popcorntime.desktop`
-	5. in vot vpišeš:
+  `sudo ln -sf /opt/popcorn-time/Popcorn-Time /usr/bin/popcorn-time`
+  4. Narediš še .desktop datoteko
+  `sudo nano /usr/share/applications/popcorntime.desktop`
+  5. in vot vpišeš:
+
     [Desktop Entry]
     Version = 1.0
     Type = Application
@@ -321,6 +322,7 @@ Druga rešitev (ali celo dopolnitev):
     Exec = /usr/bin/popcorn-time
     Icon = /opt/popcorn-time/src/app/images/icon.png
     Categories = Application;
+
 
 # ECLIPSE
 
@@ -332,15 +334,17 @@ Druga rešitev (ali celo dopolnitev):
   	sudo ln -sf /opt/eclipse/cpp-neon/eclipse/eclipse /usr/bin/eclipse
 
 ## eclipse.desktop:
-  sudo nano /usr/share/applications/eclipse.desktop
-	[Desktop Entry]
-	Version = Neon 2.0
-	Type = Application
-	Terminal = false
-	Name = eclipse
-	Exec = /usr/bin/eclipse
-	Icon = /opt/eclipse/cpp-neon/eclipse/icon.xpm
-	Categories = Development;
+
+sudo nano /usr/share/applications/eclipse.desktop
+
+    [Desktop Entry]
+    Version = Neon 2.0
+    Type = Application
+    Terminal = false
+    Name = eclipse
+    Exec = /usr/bin/eclipse
+    Icon = /opt/eclipse/cpp-neon/eclipse/icon.xpm
+    Categories = Development;
 
 # ARDUINO
 	pass
@@ -367,13 +371,8 @@ navigate to that dir
 
 ### editing:
 na tem mestu spreminjaš FAJL...
-```c
-git add . 		    //dodaj vse datoteke
-git commit -m "comment"
-git commit -a -m "comment"` //naredi vse naenkrat
-git status		    // ni potreben a se vidi ce je potrebno kaj commitat
-git diff		    // ni potrebno a pokaže razlike...
-```
+
+
 > `git add .` #dodaj vse datoteke
 > `git commit -m "comment"`
 > `git commit -a -m "comment"` #naredi vse naenkrat
@@ -394,11 +393,11 @@ in nekdo tudi na compu ter naredi commit)
 hočeš naložit... novo verzijo in dobiš konflikt s tisto na GitHub-u
 > `git push origin master` #in dobiš error:
 
-	|hint: Updates were rejected because the remote contains work that you do
-	|hint: not have locally. This is usually caused by another repository pushing
-	|hint: to the same ref. You may want to first integrate the remote changes
-	|hint: (e.g., 'git pull ...') before pushing again.
-	|hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+	hint: Updates were rejected because the remote contains work that you do
+	hint: not have locally. This is usually caused by another repository pushing
+	hint: to the same ref. You may want to first integrate the remote changes
+	hint: (e.g., 'git pull ...') before pushing again.
+	hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 potem naredis :
 > `git pull` #ce je prvič lahko tudi: git pull origin master
@@ -406,16 +405,16 @@ potem naredis :
 in če je bil dokument spremenjen na ISTEM mestu (recimo v isti crstici)
 potem je to v dokumentu označeno z:		
 
-	|		<<<<<<< HEAD
-	|				#to je novo na compu
-	|		=======
-	|				#to je novo na GitHubu
-	|				#heh nisem si zapisoval
-	|		>>>>>>> 14d185fbd48d55e9a37d7de3e4d9bde157aa8915
+			<<<<<<< HEAD
+					#to je novo na compu
+			=======
+					#to je novo na GitHubu
+					#heh nisem si zapisoval
+			>>>>>>> 14d185fbd48d55e9a37d7de3e4d9bde157aa8915
 
 če pa je na različnih mestih pa dokument združi preko:
 	
-	| "recursive strategy"...
+	 "recursive strategy"...
 	
 in je to - to :)
 skratka popraviš in uploadaš še enkrat :) jeah!
@@ -431,5 +430,5 @@ skratka popraviš in uploadaš še enkrat :) jeah!
 # DD_IBS_TEST.SH():
 program za testiranje dd komnade...
 kako hitro comp lahko kopira datoteke v odvisnosti ob bs= ? podatka...
-Program je na [GitHubu][https://github.com/tdg5/blog/blob/master/_includes/scripts/dd_ibs_test.sh]
+Program je na [GitHubu](https://github.com/tdg5/blog/blob/master/_includes/scripts/dd_ibs_test.sh)
 

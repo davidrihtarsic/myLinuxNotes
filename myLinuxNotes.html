@@ -1,0 +1,1478 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAzUABAAAAAAFNgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABbAAAABwAAAAcZMzaOEdERUYAAAGIAAAAHQAAACAAOQAET1MvMgAAAagAAAA+AAAAYHqhde9jbWFwAAAB6AAAAFIAAAFa4azkLWN2dCAAAAI8AAAAKAAAACgFgwioZnBnbQAAAmQAAAGxAAACZVO0L6dnYXNwAAAEGAAAAAgAAAAIAAAAEGdseWYAAAQgAAAFDgAACMz7eroHaGVhZAAACTAAAAAwAAAANgWEOEloaGVhAAAJYAAAAB0AAAAkDGEGa2htdHgAAAmAAAAAEwAAADBEgAAQbG9jYQAACZQAAAAaAAAAGgsICJBtYXhwAAAJsAAAACAAAAAgASgBD25hbWUAAAnQAAACZwAABOD4no+3cG9zdAAADDgAAABsAAAAmF+yXM9wcmVwAAAMpAAAAC4AAAAusPIrFAAAAAEAAAAAyYlvMQAAAADLVHQgAAAAAM/u9uZ4nGNgZGBg4ANiCQYQYGJgBEJuIGYB8xgABMMAPgAAAHicY2Bm42OcwMDKwMLSw2LMwMDQBqGZihmiwHycoKCyqJjB4YPDh4NsDP+BfNb3DIuAFCOSEgUGRgAKDgt4AAB4nGNgYGBmgGAZBkYGEAgB8hjBfBYGCyDNxcDBwMTA9MHhQ9SHrA8H//9nYACyQyFs/sP86/kX8HtB9UIBIxsDXICRCUgwMaACRoZhDwA3fxKSAAAAAAHyAHABJQB/AIEAdAFGAOsBIwC/ALgAxACGAGYAugBNACcA/wCIeJxdUbtOW0EQ3Q0PA4HE2CA52hSzmZDGe6EFCcTVjWJkO4XlCGk3cpGLcQEfQIFEDdqvGaChpEibBiEXSHxCPiESM2uIojQ7O7NzzpkzS8qRqnfpa89T5ySQwt0GzTb9Tki1swD3pOvrjYy0gwdabGb0ynX7/gsGm9GUO2oA5T1vKQ8ZTTuBWrSn/tH8Cob7/B/zOxi0NNP01DoJ6SEE5ptxS4PvGc26yw/6gtXhYjAwpJim4i4/plL+tzTnasuwtZHRvIMzEfnJNEBTa20Emv7UIdXzcRRLkMumsTaYmLL+JBPBhcl0VVO1zPjawV2ys+hggyrNgQfYw1Z5DB4ODyYU0rckyiwNEfZiq8QIEZMcCjnl3Mn+pED5SBLGvElKO+OGtQbGkdfAoDZPs/88m01tbx3C+FkcwXe/GUs6+MiG2hgRYjtiKYAJREJGVfmGGs+9LAbkUvvPQJSA5fGPf50ItO7YRDyXtXUOMVYIen7b3PLLirtWuc6LQndvqmqo0inN+17OvscDnh4Lw0FjwZvP+/5Kgfo8LK40aA4EQ3o3ev+iteqIq7wXPrIn07+xWgAAAAABAAH//wAPeJyFlctvG1UUh+/12DPN1B7P3JnYjj2Ox4/MuDHxJH5N3UdaEUQLqBIkfQQioJWQ6AMEQkIqsPGCPwA1otuWSmTBhjtps2ADWbJg3EpIXbGouqSbCraJw7kzNo2dRN1cnXN1ZvT7zuuiMEI7ncizyA0URofRBJpCdbQuIFShYY+GZRrxMDVtih5TwQPHtXDFFSIKoWIbuREBjLH27Ny4MsbVx+uOJThavebgVrNRLAiYx06rXsvhxLgWx9xpfHdrs/ekc2Pl2cpPCVEITQpwbj8VQhfXSq2m+Wxqaq2D73Kne5e3NjHqQNj3CRYlJlgUl/jRNP+2Gs2pNYRQiOnmUaQDqm30KqKiTTWPWjboxnTWpvgxjXo0KrtZXAHt7hwIz0YVcj88JnKlJKi3NPAwLyDwZudSmJSMMJFDYaOkaol6XtESx3Gt1VTytdZJ3DCLeaVhVnCBH1fycHTxFXwPX+l2e3d6H/TufGGmMTLTnbSJUdo00zuBswMO/nl3YLeL/wnu9/limCuD3vC54h5NBVz6Li414AI8Vx3iiosKcQXUbrvhFFiYb++HN4DaF4XzFW0fIN4XDWJ3a3XQoq9V8WiyRmdsatV9xUcHims1JloH0YUa090G3Tro3mC6c01f+YwCPquINr1PTaCP6rVTOOmf0GE2dBc7zWIhji3/5MchSuBHgDbU99RMWt3YUNMZMJmx92YP6NsHx/5/M1yvInpnkIOM3Z8fA3JQ2lW1RFC1KaBPDFXNAHYYvGy73aYZZZ3HifbeuiVZCpwA3oQBs0wGPYJbJfg60xrKEbKiNtTe1adwrpBRwlAuQ3q3VRaX0QmQ9a49BTSCuF1MLfQ6+tinOubRBZuWPNoMevGMT+V41KitO1is3D/tpMcq1JHZqDHGs8DoYGDkxJgKjHROeTCmhZvzPm9pod+ltKm4PN7Dyvvldlpsg8D+4AUJZ3F/JBstZz7cbFRxsaAGV6yX/dkcycWf8eS3QlQea+YLjdm3yrOnrhFpUyKVvFE4lpv4bO3Svx/6F/4xmiDu/RT5iI++lko18mY1oX+5UGKR6kmVjM/Zb76yfHtxy+h/SyQ0lLdpdKy/lWB6szatetQJ8nZ80A2Qt6ift6gJeavU3BO4gtxs/KCtNPVibCtYCWY3SIlSBPKXZALXiIR9oZeJ1AuMyxLpHIy/yO7vSiSE+kZvk0ihJ30HgHfzZtEMmvV58x6dtqns0XTAW7Vdm4HJ04OCp/crOO7rd9SGxQAE/mVA9xRN+kVSMRFF6S9JFGUtthkjBA5tFCWc2l4V43Ex9GmUP3SI37Jjmir9KqlaDJ4S4JB3vuM/jzyH1+8MuoZ+QGzfnvPoJb96cZlWjMcKLfgDwB7E634JTY+asjsPzS5CiVnEWY+KsrsIN5rn3mAPjqmQBxGjcGKB9f9ZxY3mYC2L85CJ2FXIxKKyHk+dg0FHbuEc7D5NzWUX32WxFcWNGRAbvwSx0RmIXVDuYySafluQBmzA/ssqJAMLnli+WIC90Gw4lm85wcp0qjArEDPJJV/sSx4P9ungTpgMw5gVC1XO4uULq0s3v1rqLi0vX/z65vlH50f8T/RHmSPTk5xxWBWOluMT6WiOy+tdvWxlV/XQb3o3c6Ssr+r6I708GsX9/nzp1tKFh0s3v7m4vAy/Hnb/KMOvc1wump6Il48K6mGDy02X9Yd65pa+nQIjk76lWxCkG8NBCP0HQS9IpAAAeJxjYGRgYGBhcCrq214Qz2/zlUGenQEEzr/77oug/zewFbB+AHI5GJhAogBwKQ0qeJxjYGRgYH3/P46BgZ0BBNgKGBgZUAEPAE/7At0AAAB4nGNngAB2IGYjhBsYBAAIYADVAAAAAAAAAAAAAFwAyAEeAaACCgKmAx4DggRmAAAAAQAAAAwAagAEAAAAAAACAAEAAgAWAAABAAChAAAAAHiclZI7bxQxFIWPd/JkUYQChEhIyAVKgdBMskm1QkKrRETpQiLRUczueB/K7HhlOxttg8LvoKPgP9DxFxANDR0tHRWi4NjrPIBEgh1p/dm+vufcawNYFWsQmP6e4jSyQB2fI9cwj++RE9wTjyPP4LYoI89iWbyLPIe6+Bh5Hs9rryMv4GbtW+RF3EhuRa7jbrIbeQkPkjdUETOLnL0Kip4FVvAhco1RXyMnSPEz8gzWxE7kWTwUp5HnsCLeR57HW/El8gJWa58iL+JO7UfkOh4l9yMv4UnyEtvQGGECgwF66MNBooF1bGCL1ELB/TYU+ZBRlvsKQ44Se6jQ4a7hef+fh72Crv25kp+8lNWGmeKoOI5jJLb1aGIGvb6TjfWNLdkqdFvJw4l1amjlXtXRZqRN7lSRylZZyhBqpVFWmTEXgWfUrpi/hZOQXdOd4rKuXOtEWT3k5IArPRzTUU5tHKjecZkTpnVbNOnt6jzN8240GD4xtikvZW56043rPMg/dS+dlOceXoR+WPbJ55Dsekq1lJpnypsMUsYOdCW30o103Ytu/lvh+5RWFLfBjm9/N8hJntPhvx92rnoE/kyHdGasGy754kw36vsVf/lFeBi+0COu+cfgQr42G3CRpeLoZ53gmfe3X6rcKt5oVxnptHR9JS8ehVUd5wvvahN2uqxOOpMXapibI5k7Zwbt4xBSaTfoKBufhAnO/uqNcfK8OTs0OQ6l7JIqFjDhYj5WcjevCnI/1DDiI8j4ndWb/5YzDZWh79yomWXeXj7Nnw70/2TIeFPTrlSh89k1ObOSRVZWZfgF0r/zJQB4nG2JUQuCQBCEd07TTg36fb2IyBaLd3vWaUh/vmSJnvpgmG8YcmS8X3Shf3R7QA4OBUocUKHGER5NNbOOEvwc1txnuWkTRb/aPjimJ5vXabI+3VfOiyS15UWvyezM2xiGOPyuMohOH8O8JiO4Af+FsAGNAEuwCFBYsQEBjlmxRgYrWCGwEFlLsBRSWCGwgFkdsAYrXFhZsBQrAAA=) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>myLinuxNotes</title></head><body><article class="markdown-body"><h1 id="xanmod-kernel"><a name="user-content-xanmod-kernel" href="#xanmod-kernel" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XANMOD KERNEL:</h1>
+<p>XanMod is a mainline Linux kernel distribution with custom settings.<br />
+  Optimized to take full advantage of high-performance Desktops, PC Gamers,<br />
+  Workstations, Media Centers and others. Supports all recent 64-bit<br />
+  versions of Debian and Ubuntu-based systems. </p>
+<h2 id="tested"><a name="user-content-tested" href="#tested" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tested</h2>
+<p>based on <a href="http://www.hecticgeek.com/2016/09/supercharge-ubuntu-16-04-lts-xanmod-kernel/">article</a><br />
+tested on Ubuntu MATE (DELA SUPER!):<br />
+  * Firefox prej 10.5 s &hellip; po tem 4.6 s<br />
+  * kopiranje dd (komanda) prej 9MB/s le pri bs=128K<br />
+  * po tem&hellip; 9MB/s pri 1K, 4K, 8K, 32K, </p>
+<h2 id="installation"><a name="user-content-installation" href="#installation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation</h2>
+<ol>
+<li><a href="https://xanmod.org/">https://xanmod.org/</a></li>
+<li>First install the XanMod Repository Setup</li>
+<li>manual&hellip;<blockquote>
+<p><code>echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/  urces.list.d/xanmod-kernel.list &amp;&amp; wget -qO - http://deb.xanmod.org/gpg.key   sudo apt-key add -</code><br />
+<code>sudo apt update &amp;&amp; sudo apt install linux-xanmod-4.9</code><br />
+<code>sudo reboot</code><br />
+<code>cat /proc/version</code> (preveri kernel verzijo:)</p>
+</blockquote>
+</li>
+<li>chane [cfg] disk scheduler:</li>
+<li>preveri:<blockquote>
+<p><code>sudo cat /sys/block/sda/queue/scheduler</code> (kateri so na razpolago)<br />
+<code>sudo subl /etc/#ault/grub</code> (edit grub settings)  </p>
+</blockquote>
+</li>
+<li>spremeni vrstico:<blockquote>
+<p>GRUB_CMDLINE_LINUX_#AULT=&rdquo;quiet splash&rdquo;<br />
+GRUB_CMDLINE_LINUX_#AULT=&rdquo;quiet splash elevator=bfq&rdquo;</p>
+</blockquote>
+</li>
+<li>shrani</li>
+<li>sudo update-grub2</li>
+<li>reboot</li>
+<li>
+<p>preveri disk scheduler:</p>
+<blockquote>
+<p><code>sudo cat /sys/block/sda/queue/scheduler</code></p>
+</blockquote>
+</li>
+<li>
+<p>install Intel CPU support:</p>
+<ol>
+<li>ker sem prej dobil error:<br />
+<code>W: Possible missing firmware /lib/firmware/rtl_nic/rtl8107e-2.fw for dule   r8169</code><br />
+  sem namestil še firmware, a mislim, da ni šlo skoz&hellip;<blockquote>
+<p><code>sudo apt install intel-microcode iucode-tool</code><br />
+<code>sudo reboot</code></p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="efi-mode"><a name="user-content-efi-mode" href="#efi-mode" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>EFI MODE:</h1>
+<p>boot -&gt; CSM enable<br />
+  security -&gt; security boot control -&gt; dissable</p>
+<h2 id="installbunsen"><a name="user-content-installbunsen" href="#installbunsen" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>installBUNSEN</h2>
+<p>instaliral &hellip;<br />
+  grub dal na sda1 (kjer sem našel efi&hellip; [sudo parted -l])<br />
+  kar nekaj sem probal&hellip; ni delalo - sedaj pišem kaj ne dela</p>
+<hr />
+<p>BIOS:<br />
+  new boot oprions:<br />
+  path:\efi\boot\bootx64.efi<br />
+  ne dela</p>
+<hr />
+<p>Test x-n<br />
+  probaj ta navodila:<br />
+<a href="http://sarah.thesharps.us/2014/12/31/installing-debian-on-asus-ux301la/">http://sarah.thesharps.us/2014/12/31/installing-debian-on-asus-ux301la/</a></p>
+<hr />
+<p>install<br />
+  grub -&gt; /dev/sda1<br />
+  takoj ne dela&hellip; zažene se win10&hellip;<br />
+  path :\EFI\debian\grubx64.efi [ne dela]<br />
+  path :\efi\boot\bootx64.efi [ne dela]</p>
+<h1 id="wireless-setup"><a name="user-content-wireless-setup" href="#wireless-setup" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>WIRELESS SETUP</h1>
+<p>Wavemon&hellip;</p>
+<blockquote>
+<p><code>sudo apt-get install wavemon</code></p>
+</blockquote>
+<h1 id="xrandr"><a name="user-content-xrandr" href="#xrandr" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XRANDR:</h1>
+<p>te nastavitve so odvisne od monitorja&hellip; !</p>
+<ol>
+<li>najprej:<br />
+<code>cvt 1280 1024 60</code><blockquote>
+<p>1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz<br />
+Modeline &ldquo;1280x1024_60.00&rdquo;  109.00  1280 1368 1496 1712  1024 1027 1034   1063   -hsync +vsync&rdquo;</p>
+</blockquote>
+</li>
+<li>kopiras kar ti terminal vrže&hellip;:<br />
+<code>sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027   1034   1063 -hsync +vsync</code></li>
+<li>dodas v moznosti:<br />
+<code>sudo xrandr --addmode VGA1 1280x1024</code></li>
+<li>potem nastavis resolucijo v </li>
+<li><code>arandr</code> ali</li>
+<li><code>xrandr --output VGA1 --mode 1280x1024</code></li>
+</ol>
+<h1 id="keyboard-settinfs"><a name="user-content-keyboard-settinfs" href="#keyboard-settinfs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>KEYBOARD SETTINFS:</h1>
+<p>Settings -&gt; Reigon&amp;Language -&gt; Input Source<br />
+  for KeyBindings:</p>
+<h2 id="shortcuts"><a name="user-content-shortcuts" href="#shortcuts" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ShortCuts():</h2>
+<p>v settings&gt;Keyboaard sem si nastavil nekaj bližnjic:</p>
+<blockquote>
+<p>super+w &gt; Firefox<br />
+super+e &gt; Text Editor<br />
+super+f &gt; File Manager<br />
+super+t &gt; terminator</p>
+</blockquote>
+<p>v ~/.bashrc (file se zazene na zacetku)</p>
+<blockquote>
+<p>bliznica ll namesto &hellip;<br />
+alias ll=&rsquo;ls -alF&rsquo;<br />
+tipki [đ] dodelimo znak [/]<br />
+xmodmap -e &ldquo;keycode 35 = slash&rdquo;</p>
+</blockquote>
+<h1 id="filemanager"><a name="user-content-filemanager" href="#filemanager" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>FILEMANAGER:</h1>
+<p>Všeč mi je filemanager THUNAR:</p>
+<blockquote>
+<p><code>sudo apt-get install thunar</code></p>
+</blockquote>
+<h1 id="terminal"><a name="user-content-terminal" href="#terminal" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>TERMINAL:</h1>
+<p>Terminal je najboljši terminator</p>
+<blockquote>
+<p><code>sudo apt-get install terminator</code></p>
+</blockquote>
+<h2 id="preferences"><a name="user-content-preferences" href="#preferences" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Preferences:</h2>
+<p>[ ] Show title bar<br />
+  Profiles -&gt; Colors = Green on Black<br />
+  Profiles -&gt; Background -&gt; Transparency = 50%</p>
+<h1 id="libreoffice"><a name="user-content-libreoffice" href="#libreoffice" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>LIBREOFFICE:</h1>
+<p>Instal preko terminala:</p>
+<blockquote>
+<p><code>apt-get install libreoffice</code></p>
+</blockquote>
+<h1 id="tab_click"><a name="user-content-tab_click" href="#tab_click" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>TAB_CLICK:</h1>
+<p>Da vklnjučiš Tab-CLICK greš v:<br />
+  1. settings<br />
+  2. mouse<br />
+  3. in nato : Tab-CLICK = ON<br />
+  Videl sem tudi, da problem reši tudi:</p>
+<blockquote>
+<p><code>synclient tapbutton1 = 1</code></p>
+</blockquote>
+<h2 id="touchpad"><a name="user-content-touchpad" href="#touchpad" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Touchpad</h2>
+<p>v [datoteki][/usr/share/X11/xorg.conf.d/50-synaptics.conf]<br />
+  dodas:</p>
+<pre><code>Section "InputClass"  
+  Identifier      "Touchpad"                      # required
+  MatchIsTouchpad "yes"                           # required
+  Driver          "synaptics"                     # required
+  Option          "MinSpeed"              "0.5"  
+  Option          "MaxSpeed"              "1.0"  
+  Option          "AccelFactor"           "0.075"  
+  Option          "TapButton1"            "1"
+  Option          "TapButton2"            "3"     # multitouch
+  Option          "TapButton3"            "2"     # multitouch
+  Option          "VertTwoFingerScroll"   "1"     # multitouch
+  Option          "HorizTwoFingerScroll"  "1"     # multitouch
+  Option          "VertEdgeScroll"        "1"  
+  Option          "CoastingSpeed"         "8"  
+  Option          "CornerCoasting"        "1"  
+  Option          "CircularScrolling"     "1"  
+  Option          "CircScrollTrigger"     "7"  
+  Option          "EdgeMotionUseAlways"   "1"  
+  Option          "LBCornerButton"        "8"     # browser "back" btn
+  Option          "RBCornerButton"        "9"     # browser "forward" btn
+EndSection
+</code></pre>
+<h1 id="soundon"><a name="user-content-soundon" href="#soundon" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SOUNDON:</h1>
+<p>Na začetku mi ni delal zvok&hellip; Rešitev je bila:</p>
+<ol>
+<li><code>lspci</code>: <br />
+  tako preveriš, če je Linux prepoznal zvočno&hellip;<br />
+  na terminalu sem dobil:<blockquote>
+<p>&lsquo;00:1b.0 Audio device: Intel Corporation 7 Series/C210 Series Chipset Family High #inition Audio Controller (rev 04)&rsquo; </p>
+</blockquote>
+</li>
+<li><code>apt-get install libasound2 alsa-utils alsa-oss</code></li>
+<li><code>alsamixer</code>:<br />
+  in od &ldquo;mutiraš&rdquo; kanale, ki so zamutani</li>
+</ol>
+<p>Druga rešitev (ali celo dopolnitev):<br />
+    - je, da v terminal napišeš:<br />
+        pulseaudio -D<br />
+    - secer napiše, da ni mišljeno, da bi bil zagnan kot root<br />
+        ampak Ok&hellip; po tem dela tudi:<br />
+        Settings&gt;Soun</p>
+<h1 id="thunderbird"><a name="user-content-thunderbird" href="#thunderbird" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>THUNDERBIRD()</h1>
+<p>inštalacija je čisto reprosta:</p>
+<blockquote>
+<p><code>apt-get install thunderbird</code></p>
+</blockquote>
+<p>ali če ni apt paketa:<br />
+  1. greš na njihovo stran in presnameš datoteko thunderbird.tar.db2<br />
+  2. extrahiraš v /opt/thunderbird<br />
+  3. preveriš če dela: ./thunderbird<br />
+  4. nastaviš privilegije (če je potrebno):</p>
+<blockquote>
+<p><code>sudo chown -R root:root /opt/hunderbird</code><br />
+  5. in linkaš exe skript:<br />
+<code>sudo ln -fs /opt/thunderbird/thunderbird /usr/bin/hunderbird</code></p>
+</blockquote>
+<h1 id="sublime-text-3"><a name="user-content-sublime-text-3" href="#sublime-text-3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SUBLIME TEXT 3</h1>
+<h2 id="install"><a name="user-content-install" href="#install" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Install:</h2>
+<p>Greš na njihovo stran in snameš dol pravo verzijo (Ubuntu 64)<br />
+  nato pa v terminalu zaženeš:</p>
+<blockquote>
+<p><code>cd Downloads</code><br />
+<code>dpkg -i Sublime...64.deb</code></p>
+</blockquote>
+<h2 id="package-controll"><a name="user-content-package-controll" href="#package-controll" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Package Controll:</h2>
+<p>Paket za koristne funkcionalnosti:</p>
+<h3 id="install_1"><a name="user-content-install_1" href="#install_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>install:</h3>
+<ol>
+<li>goto [link][<a href="https://packagecontrol.io/installation">https://packagecontrol.io/installation</a>]</li>
+<li><em>copy</em> code for Sublime 3:<br />
+<code>import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)</code></li>
+<li>View -&gt; Show Console</li>
+<li><em>paste</em> </li>
+</ol>
+<h3 id="install-github"><a name="user-content-install-github" href="#install-github" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>install GitHub:</h3>
+<ol>
+<li>C+S+p -&gt; Install Packages</li>
+<li>[Git()][<a href="https://github.com/kemayo/sublime-text-git/wiki">https://github.com/kemayo/sublime-text-git/wiki</a>]</li>
+</ol>
+<h4 id="nastavitve"><a name="user-content-nastavitve" href="#nastavitve" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>nastavitve:</h4>
+<p>The detail step:<br />
+   1. go to your local git project directory, [open][.git/config] file and<br />
+   2. edit: <code>https://{username}:{password}@github.com/{username}/{project}.git</code><br />
+   3. input git push to check if it works.<br />
+    &gt; jaz sem moral prej še spedenat v terminalu:<br />
+    &gt; git commit -a -m &ldquo;sublime pedenanje&rdquo;<br />
+      &gt; git push (če je kak error prej še git pull&hellip; in popraviš razlike)</p>
+<h4 id="uporaba"><a name="user-content-uporaba" href="#uporaba" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>uporaba:</h4>
+<ol>
+<li>popraviš file&hellip; &amp; C+s (save)</li>
+<li>C+S+p -&gt; quick commit (repo) -&gt; <code>msg</code></li>
+<li>C+S+p -&gt; push</li>
+</ol>
+<h3 id="markdown"><a name="user-content-markdown" href="#markdown" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>MarkDown:</h3>
+<ol>
+<li>Install Package: <em>Markdown extended</em> (mogoče ni treba)<ol>
+<li>Install Package: <em>Monokai extended</em></li>
+<li>Preferences -&gt; Color Scheme -&gt; Monokail Extended -&gt; Monokail Extended</li>
+<li>Install Package: <em>Markdown Editing</em></li>
+<li>Set doc. syntax = Monokai Extended</li>
+<li>Preferences -&gt; Package settings -&gt; Markdown Editing -&gt; Markdown Settings (standard) - User:<br />
+    {<br />
+        &ldquo;color_scheme&rdquo;: &ldquo;Packages/Monokai Extended/Monokai Extended.tmTheme&rdquo;,<br />
+        &ldquo;tab_size&rdquo;: 2,<br />
+        &ldquo;line_numbers&rdquo;: true,<br />
+        // Layout<br />
+        &ldquo;draw_centered&rdquo;: false,<br />
+        &ldquo;wrap_width&rdquo;: 0,<br />
+        &ldquo;rulers&rdquo;: []<br />
+    }</li>
+</ol>
+</li>
+</ol>
+<h3 id="latex"><a name="user-content-latex" href="#latex" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>LaTeX:</h3>
+<p>namestis paket preko:<br />
+   C+S+p -&gt; Install Packages<br />
+<del>~LaTeXTools</del>~<br />
+   LaTeXing &amp; LaTeX-cwg<br />
+   notes:<br />
+   * OK, prej moras namestiti dodatne pakete..:<br />
+   * sudo apt-get install texlive-full<br />
+   * sudo apt-get install latexmk<br />
+   * sudo apt-get install biber</p>
+<h3 id="spell-checker"><a name="user-content-spell-checker" href="#spell-checker" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Spell Checker:</h3>
+<p>download:<br />
+    v direktorij: /home/david/.config/sublime-text-3/Packages/<br />
+    wget <a href="https://github.com/titoBouzout/Dictionaries/archive/master.zip">https://github.com/titoBouzout/Dictionaries/archive/master.zip</a><br />
+    unzip <br />
+  ali &hellip;<br />
+    Download the language file from the appropiate OpenOffice extension<br />
+<a href="http://extensions.openoffice.org/en/project/">http://extensions.openoffice.org/en/project/</a>  venian-dictionary-package-slovenski-paket-slovarjev<br />
+    Rename the &ldquo;some.oxt&rdquo; file to &ldquo;some.zip&rdquo;<br />
+    Unzip the file<br />
+    Look for two files: &ldquo;lang.aff&rdquo; and &ldquo;lang.dic&rdquo;. For example es_ES.aff and   ES.dic<br />
+    Open the &ldquo;lang.aff&rdquo; to check the encoding used. Such the line: SET   -8859-1<br />
+    Convert that file to UTF-8 from the used encoding<br />
+    Convert &ldquo;lang.dic&rdquo; to UTF-8 from the used encoding.<br />
+    Change SET ISO-8859-1 to SET UTF-8<br />
+    In ST3, click on Preferences -&gt; Browse Packages<br />
+    Create a new folder, for example Language - Spanish<br />
+    Move lang.dic and lang.aff to that folder<br />
+    Activate the dictionary in ST3 (View -&gt; Dictionary -&gt; Language - Spanish   es_ES)<br />
+    Press F6 to enable spell check<br />
+  View-&gt;Dictionaries<br />
+  oogle spell check:<br />
+  namestitev:<br />
+    C+S+p -&gt; Install Packages<br />
+    Google Spell Check</p>
+<h1 id="texmaker"><a name="user-content-texmaker" href="#texmaker" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>TEXMAKER</h1>
+<ol>
+<li>Spell Checker:<br />
+  [download][<a href="http://extensions.services.openoffice.org/en/project/slovenian-dictionary-package-slovenski-paket-slovarjev"><a href="http://extensions.services.openoffice.org/en/project/slovenian-dictionary-package-slovenski-paket-slovarjev"><a href="http://extensions.services.openoffice.org/en/project/slovenian-dictionary-package-slovenski-paket-slovarjev">http://extensions.services.openoffice.org/en/project/slovenian-dictionary-package-slovenski-paket-slovarjev</a></a></a>]<ol>
+<li><code>unzip pac-sl.oxt</code></li>
+<li>in prekopiraš datoteko sl-SI.dic v Sublime paketi direktorij (Preferences-&gt;Browse packages)</li>
+</ol>
+</li>
+<li>nato nastaviš jezik : View-&gt;Dictionary-&gt;si-SL.dic</li>
+</ol>
+<h1 id="teamviewer"><a name="user-content-teamviewer" href="#teamviewer" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>TEAMVIEWER</h1>
+<p>presnames teamviewer i386 (cetudi imas 64-bitni comp.)<br />
+  v terminalu&gt; dpkg &ndash;add-architecture i386<br />
+  + <code>apt-get update</code><br />
+  + <code>dpkg -i teamviewer_****_i386.deb</code><br />
+  + <code>sudo apt-get -f install</code></p>
+<h1 id="qcad"><a name="user-content-qcad" href="#qcad" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>QCAD</h1>
+<ol>
+<li>presnameš inštalacijo iz njihove [strani][<a href="https://qcad.org/en/qcad-downloads-trial">https://qcad.org/en/qcad-downloads-trial</a>]</li>
+<li>nato spremeniš rivilegije datoteke:<blockquote>
+<p><code>sudo chmod 777 qcad*.run</code></p>
+</blockquote>
+</li>
+<li>in poženeš script:<blockquote>
+<p><code>./qcad*.run</code></p>
+</blockquote>
+</li>
+</ol>
+<h1 id="freecad"><a name="user-content-freecad" href="#freecad" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>FREECAD</h1>
+<pre><code>asdf
+</code></pre>
+<h1 id="gimp"><a name="user-content-gimp" href="#gimp" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>GIMP</h1>
+<pre><code>asdf
+</code></pre>
+<h1 id="inkscape"><a name="user-content-inkscape" href="#inkscape" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>INKSCAPE</h1>
+<pre><code>asdf
+</code></pre>
+<h1 id="fritzing"><a name="user-content-fritzing" href="#fritzing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>FRITZING</h1>
+<pre><code>asdf
+</code></pre>
+<h1 id="popcorn-time"><a name="user-content-popcorn-time" href="#popcorn-time" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>POPCORN-TIME</h1>
+<p>Program za gledanje filmov:<br />
+  1. Download <a href="https://www.popcorntime.ws/about">Popcorn-Time</a><br />
+  2. razpakiraš in daš dokumente v /opt/popcorn-time/<br />
+  3. polinkaš, da bo dosegljivo vsem:<br />
+<code>sudo ln -sf /opt/popcorn-time/Popcorn-Time /usr/bin/popcorn-time</code><br />
+  4. Narediš še .desktop datoteko<br />
+<code>sudo nano /usr/share/applications/popcorntime.desktop</code><br />
+  5. in vot vpišeš:</p>
+<pre><code>[Desktop Entry]
+Version = 1.0
+Type = Application
+Terminal = false
+Name = Popcorn Time
+Exec = /usr/bin/popcorn-time
+Icon = /opt/popcorn-time/src/app/images/icon.png
+Categories = Application;
+</code></pre>
+<h1 id="eclipse"><a name="user-content-eclipse" href="#eclipse" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ECLIPSE</h1>
+<h2 id="installation_1"><a name="user-content-installation_1" href="#installation_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>installation:</h2>
+<p>&hellip; nisem zapisal&hellip;<br />
+  &hellip; presnameš, odpakiraš kopiraš v:<br />
+  /opt/eclipse/<br />
+  narediš link za vse uporabnike:<br />
+    sudo ln -sf /opt/eclipse/cpp-neon/eclipse/eclipse /usr/bin/eclipse</p>
+<h2 id="eclipsedesktop"><a name="user-content-eclipsedesktop" href="#eclipsedesktop" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>eclipse.desktop:</h2>
+<p>sudo nano /usr/share/applications/eclipse.desktop</p>
+<pre><code>[Desktop Entry]
+Version = Neon 2.0
+Type = Application
+Terminal = false
+Name = eclipse
+Exec = /usr/bin/eclipse
+Icon = /opt/eclipse/cpp-neon/eclipse/icon.xpm
+Categories = Development;
+</code></pre>
+<h1 id="arduino"><a name="user-content-arduino" href="#arduino" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ARDUINO</h1>
+<pre><code>pass
+</code></pre>
+<h1 id="github"><a name="user-content-github" href="#github" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>GITHUB</h1>
+<h2 id="literatura"><a name="user-content-literatura" href="#literatura" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>LITERATURA:</h2>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=1h9_cB9mPT8">Link</a></li>
+</ol>
+<h2 id="install_2"><a name="user-content-install_2" href="#install_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>install:</h2>
+<p>Debian le:  </p>
+<pre><code>sudo apt-get install git
+</code></pre>
+<h2 id="config"><a name="user-content-config" href="#config" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>config:</h2>
+<blockquote>
+<p><code>git config --global user.name "xxxyyy"</code><br />
+<code>git config --global user.email "xxx.yyy@džimail.com"</code><br />
+<code>git config --global core.editor="subl"</code></p>
+</blockquote>
+<h2 id="general_use"><a name="user-content-general_use" href="#general_use" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>general_use:</h2>
+<p>make new repository &hellip; BlaBla_project (need to be on URL gitHub)<br />
+make dir on your computer for that project <br />
+navigate to that dir</p>
+<blockquote>
+<p><code>git init</code></p>
+</blockquote>
+<h3 id="editing"><a name="user-content-editing" href="#editing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>editing:</h3>
+<p>na tem mestu spreminjaš FAJL&hellip;</p>
+<blockquote>
+<p><code>git add .</code> #dodaj vse datoteke<br />
+<code>git commit -m "comment"</code><br />
+<code>git commit -a -m "comment"</code> #naredi vse naenkrat<br />
+<code>git status</code> # ni potreben a se vidi ce je potrebno kaj commitat<br />
+<code>git diff</code>    #ni potrebno a pokaže razlike&hellip;</p>
+</blockquote>
+<h3 id="uploading"><a name="user-content-uploading" href="#uploading" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>uploading:</h3>
+<p>kako da stvar na GitHub&hellip;<br />
+v spremenljivko &ldquo;origin&rdquo; spravimo URL projekta</p>
+<blockquote>
+<p><code>git remote add origin https://github.com/davidrihtarsic/myZapiski.git</code><br />
+<code>git push ~~origin master~~</code> #daš na GitHub +username +passWd</p>
+</blockquote>
+<h3 id="updating"><a name="user-content-updating" href="#updating" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>updating:</h3>
+<p>naprimer, da nekdo popravi kodo (recimo ti sam na GitHubu&hellip;<br />
+in nekdo tudi na compu ter naredi commit)</p>
+<blockquote>
+<p><code>git commit -a -m "comment"</code></p>
+</blockquote>
+<p>hočeš naložit&hellip; novo verzijo in dobiš konflikt s tisto na GitHub-u</p>
+<blockquote>
+<p><code>git push origin master</code> #in dobiš error:</p>
+</blockquote>
+<pre><code>hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre>
+<p>potem naredis :</p>
+<blockquote>
+<p><code>git pull</code> #ce je prvič lahko tudi: git pull origin master</p>
+</blockquote>
+<p>in če je bil dokument spremenjen na ISTEM mestu (recimo v isti crstici)<br />
+potem je to v dokumentu označeno z:     </p>
+<pre><code>        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+                #to je novo na compu
+        =======
+                #to je novo na GitHubu
+                #heh nisem si zapisoval
+        &gt;&gt;&gt;&gt;&gt;&gt;&gt; 14d185fbd48d55e9a37d7de3e4d9bde157aa8915
+</code></pre>
+<p>če pa je na različnih mestih pa dokument združi preko:</p>
+<pre><code> "recursive strategy"...
+</code></pre>
+<p>in je to - to :)<br />
+skratka popraviš in uploadaš še enkrat :) jeah!</p>
+<h1 id="w3m"><a name="user-content-w3m" href="#w3m" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>W3M:</h1>
+<h2 id="instalation"><a name="user-content-instalation" href="#instalation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>instalation:</h2>
+<blockquote>
+<p><code>apt-get install w3m</code></p>
+</blockquote>
+<h2 id="frendlyuse"><a name="user-content-frendlyuse" href="#frendlyuse" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>frendlyUse:</h2>
+<pre><code>v ~/bashrc vpišeš:
+</code></pre>
+<blockquote>
+<p><code>alias w3mm='w3m www.google.com'</code></p>
+</blockquote>
+<h1 id="dd_ibs_testsh"><a name="user-content-dd_ibs_testsh" href="#dd_ibs_testsh" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>DD_IBS_TEST.SH():</h1>
+<p>program za testiranje dd komnade&hellip;<br />
+kako hitro comp lahko kopira datoteke v odvisnosti ob bs= ? podatka&hellip;<br />
+Program je na <a href="https://github.com/tdg5/blog/blob/master/_includes/scripts/dd_ibs_test.sh">GitHubu</a></p></article></body></html>
