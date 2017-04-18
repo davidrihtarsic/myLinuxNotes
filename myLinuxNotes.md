@@ -150,7 +150,6 @@ tested on Ubuntu MATE (DELA SUPER!):
   >  EndSection
 
 # SOUNDON:
-==========
 
   Na začetku mi ni delal zvok... Rešitev je bila:
   1. lspci:
@@ -169,7 +168,7 @@ Druga rešitev (ali celo dopolnitev):
 		Settings>Soun
 
 # THUNDERBIRD()
-===============
+
   inštalacija je čisto reprosta:
   > `apt-get install thunderbird`
 
@@ -183,7 +182,6 @@ Druga rešitev (ali celo dopolnitev):
    > `sudo ln -fs /opt/thunderbird/thunderbird /usr/bin/hunderbird`
 
 # SUBLIME TEXT 3
-================
 
 ## Install:
   Greš na njihovo stran in snameš dol pravo verzijo (Ubuntu 64)
