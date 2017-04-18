@@ -1021,7 +1021,7 @@ body .markdown-body
   versions of Debian and Ubuntu-based systems. </p>
 <h2 id="tested"><a name="user-content-tested" href="#tested" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tested</h2>
 <p>based on <a href="http://www.hecticgeek.com/2016/09/supercharge-ubuntu-16-04-lts-xanmod-kernel/">article</a><br />
-tested on Ubuntu MATE (DELA SUPER!):<br />
+ tested on Ubuntu MATE (DELA SUPER!):<br />
   * Firefox prej 10.5 s &hellip; po tem 4.6 s<br />
   * kopiranje dd (komanda) prej 9MB/s le pri bs=128K<br />
   * po tem&hellip; 9MB/s pri 1K, 4K, 8K, 32K, </p>
@@ -1050,15 +1050,11 @@ GRUB_CMDLINE_LINUX_#AULT=&rdquo;quiet splash elevator=bfq&rdquo;</p>
 <li>shrani</li>
 <li>sudo update-grub2</li>
 <li>reboot</li>
-<li>
-<p>preveri disk scheduler:</p>
-<blockquote>
+<li>preveri disk scheduler:<blockquote>
 <p><code>sudo cat /sys/block/sda/queue/scheduler</code></p>
 </blockquote>
 </li>
-<li>
-<p>install Intel CPU support:</p>
-<ol>
+<li>install Intel CPU support:<ol>
 <li>ker sem prej dobil error:<br />
 <code>W: Possible missing firmware /lib/firmware/rtl_nic/rtl8107e-2.fw for dule   r8169</code><br />
   sem namestil še firmware, a mislim, da ni šlo skoz&hellip;<blockquote>
@@ -1071,48 +1067,46 @@ GRUB_CMDLINE_LINUX_#AULT=&rdquo;quiet splash elevator=bfq&rdquo;</p>
 </ol>
 <h1 id="efi-mode"><a name="user-content-efi-mode" href="#efi-mode" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>EFI MODE:</h1>
 <p>boot -&gt; CSM enable<br />
-  security -&gt; security boot control -&gt; dissable</p>
+ security -&gt; security boot control -&gt; dissable</p>
 <h2 id="installbunsen"><a name="user-content-installbunsen" href="#installbunsen" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>installBUNSEN</h2>
 <p>instaliral &hellip;<br />
-  grub dal na sda1 (kjer sem našel efi&hellip; [sudo parted -l])<br />
-  kar nekaj sem probal&hellip; ni delalo - sedaj pišem kaj ne dela</p>
+ grub dal na sda1 (kjer sem našel efi&hellip; [sudo parted -l])<br />
+ kar nekaj sem probal&hellip; ni delalo - sedaj pišem kaj ne dela</p>
 <hr />
 <p>BIOS:<br />
-  new boot oprions:<br />
-  path:\efi\boot\bootx64.efi<br />
-  ne dela</p>
+ new boot oprions:<br />
+ path:\efi\boot\bootx64.efi<br />
+ ne dela</p>
 <hr />
 <p>Test x-n<br />
-  probaj ta navodila:<br />
+ probaj ta navodila:<br />
 <a href="http://sarah.thesharps.us/2014/12/31/installing-debian-on-asus-ux301la/">http://sarah.thesharps.us/2014/12/31/installing-debian-on-asus-ux301la/</a></p>
 <hr />
 <p>install<br />
-  grub -&gt; /dev/sda1<br />
-  takoj ne dela&hellip; zažene se win10&hellip;<br />
-  path :\EFI\debian\grubx64.efi [ne dela]<br />
-  path :\efi\boot\bootx64.efi [ne dela]</p>
+ grub -&gt; /dev/sda1<br />
+ takoj ne dela&hellip; zažene se win10&hellip;<br />
+ path :\EFI\debian\grubx64.efi [ne dela]<br />
+ path :\efi\boot\bootx64.efi [ne dela]</p>
 <h1 id="wireless-setup"><a name="user-content-wireless-setup" href="#wireless-setup" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>WIRELESS SETUP</h1>
 <p>Wavemon&hellip;</p>
 <blockquote>
 <p><code>sudo apt-get install wavemon</code></p>
 </blockquote>
 <h1 id="xrandr"><a name="user-content-xrandr" href="#xrandr" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XRANDR:</h1>
-<p>te nastavitve so odvisne od monitorja&hellip; !</p>
-<ol>
-<li>najprej:<br />
-<code>cvt 1280 1024 60</code><blockquote>
+<p>te nastavitve so odvisne od monitorja&hellip; !<br />
+ 1. najprej:<br />
+<code>cvt 1280 1024 60</code></p>
+<blockquote>
 <p>1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz<br />
-Modeline &ldquo;1280x1024_60.00&rdquo;  109.00  1280 1368 1496 1712  1024 1027 1034   1063   -hsync +vsync&rdquo;</p>
+Modeline &ldquo;1280x1024_60.00&rdquo;  109.00  1280 1368 1496 1712  1024 1027 1034   1063   -hsync +vsync&rdquo;<br />
+ 2. kopiras kar ti terminal vrže&hellip;:<br />
+<code>sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027   1034   1063 -hsync +vsync</code><br />
+ 3. dodas v moznosti:<br />
+<code>sudo xrandr --addmode VGA1 1280x1024</code><br />
+ 4. potem nastavis resolucijo v <br />
+  1. <code>arandr</code> ali<br />
+  2. <code>xrandr --output VGA1 --mode 1280x1024</code></p>
 </blockquote>
-</li>
-<li>kopiras kar ti terminal vrže&hellip;:<br />
-<code>sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027   1034   1063 -hsync +vsync</code></li>
-<li>dodas v moznosti:<br />
-<code>sudo xrandr --addmode VGA1 1280x1024</code></li>
-<li>potem nastavis resolucijo v </li>
-<li><code>arandr</code> ali</li>
-<li><code>xrandr --output VGA1 --mode 1280x1024</code></li>
-</ol>
 <h1 id="keyboard-settinfs"><a name="user-content-keyboard-settinfs" href="#keyboard-settinfs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>KEYBOARD SETTINFS:</h1>
 <p>Settings -&gt; Reigon&amp;Language -&gt; Input Source<br />
   for KeyBindings:</p>
@@ -1143,8 +1137,8 @@ xmodmap -e &ldquo;keycode 35 = slash&rdquo;</p>
 </blockquote>
 <h2 id="preferences"><a name="user-content-preferences" href="#preferences" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Preferences:</h2>
 <p>[ ] Show title bar<br />
-  Profiles -&gt; Colors = Green on Black<br />
-  Profiles -&gt; Background -&gt; Transparency = 50%</p>
+ Profiles -&gt; Colors = Green on Black<br />
+ Profiles -&gt; Background -&gt; Transparency = 50%</p>
 <h1 id="libreoffice"><a name="user-content-libreoffice" href="#libreoffice" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>LIBREOFFICE:</h1>
 <p>Instal preko terminala:</p>
 <blockquote>
@@ -1152,16 +1146,16 @@ xmodmap -e &ldquo;keycode 35 = slash&rdquo;</p>
 </blockquote>
 <h1 id="tab_click"><a name="user-content-tab_click" href="#tab_click" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>TAB_CLICK:</h1>
 <p>Da vklnjučiš Tab-CLICK greš v:<br />
-  1. settings<br />
-  2. mouse<br />
-  3. in nato : Tab-CLICK = ON<br />
-  Videl sem tudi, da problem reši tudi:</p>
+ 1. settings<br />
+ 2. mouse<br />
+ 3. in nato : Tab-CLICK = ON<br />
+ Videl sem tudi, da problem reši tudi:</p>
 <blockquote>
 <p><code>synclient tapbutton1 = 1</code></p>
 </blockquote>
 <h2 id="touchpad"><a name="user-content-touchpad" href="#touchpad" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Touchpad</h2>
 <p>v [datoteki][/usr/share/X11/xorg.conf.d/50-synaptics.conf]<br />
-  dodas:</p>
+ dodas:</p>
 <pre><code>Section "InputClass"  
   Identifier      "Touchpad"                      # required
   MatchIsTouchpad "yes"                           # required
@@ -1185,24 +1179,25 @@ xmodmap -e &ldquo;keycode 35 = slash&rdquo;</p>
 EndSection
 </code></pre>
 <h1 id="soundon"><a name="user-content-soundon" href="#soundon" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SOUNDON:</h1>
-<p>Na začetku mi ni delal zvok&hellip; Rešitev je bila:</p>
-<ol>
-<li><code>lspci</code>: <br />
+<p>Na začetku mi ni delal zvok&hellip; Rešitev je bila:<br />
+ 1. <code>lspci</code>: <br />
   tako preveriš, če je Linux prepoznal zvočno&hellip;<br />
-  na terminalu sem dobil:<blockquote>
-<p>&lsquo;00:1b.0 Audio device: Intel Corporation 7 Series/C210 Series Chipset Family High #inition Audio Controller (rev 04)&rsquo; </p>
-</blockquote>
-</li>
+  na terminalu sem dobil:</p>
+<pre><code>  '00:1b.0 Audio device: Intel Corporation 7 Series/C210 Series Chipset Family High #inition Audio Controller (rev 04)'
+</code></pre>
+<ol>
 <li><code>apt-get install libasound2 alsa-utils alsa-oss</code></li>
 <li><code>alsamixer</code>:<br />
-  in od &ldquo;mutiraš&rdquo; kanale, ki so zamutani</li>
+  in od &ldquo;mutiraš&rdquo; kanale, ki so zamutani<br />
+ Druga rešitev (ali celo dopolnitev):<ul>
+<li>je, da v terminal napišeš:<br />
+    pulseaudio -D</li>
+<li>secer napiše, da ni mišljeno, da bi bil zagnan kot root<br />
+    ampak Ok&hellip; po tem dela tudi:<br />
+    Settings&gt;Soun</li>
+</ul>
+</li>
 </ol>
-<p>Druga rešitev (ali celo dopolnitev):<br />
-    - je, da v terminal napišeš:<br />
-        pulseaudio -D<br />
-    - secer napiše, da ni mišljeno, da bi bil zagnan kot root<br />
-        ampak Ok&hellip; po tem dela tudi:<br />
-        Settings&gt;Soun</p>
 <h1 id="thunderbird"><a name="user-content-thunderbird" href="#thunderbird" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>THUNDERBIRD()</h1>
 <p>inštalacija je čisto reprosta:</p>
 <blockquote>
@@ -1256,25 +1251,23 @@ EndSection
 <li>C+S+p -&gt; push</li>
 </ol>
 <h3 id="markdown"><a name="user-content-markdown" href="#markdown" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>MarkDown:</h3>
-<ol>
-<li>Install Package: <em>Markdown extended</em> (mogoče ni treba)<ol>
-<li>Install Package: <em>Monokai extended</em></li>
-<li>Preferences -&gt; Color Scheme -&gt; Monokail Extended -&gt; Monokail Extended</li>
-<li>Install Package: <em>Markdown Editing</em></li>
-<li>Set doc. syntax = Monokai Extended</li>
-<li>Preferences -&gt; Package settings -&gt; Markdown Editing -&gt; Markdown Settings (standard) - User:<br />
-    {<br />
-        &ldquo;color_scheme&rdquo;: &ldquo;Packages/Monokai Extended/Monokai Extended.tmTheme&rdquo;,<br />
-        &ldquo;tab_size&rdquo;: 2,<br />
-        &ldquo;line_numbers&rdquo;: true,<br />
-        // Layout<br />
-        &ldquo;draw_centered&rdquo;: false,<br />
-        &ldquo;wrap_width&rdquo;: 0,<br />
-        &ldquo;rulers&rdquo;: []<br />
-    }</li>
-</ol>
-</li>
-</ol>
+<p>Paket Package Controll mora biti nameščen&hellip;<br />
+  1. Install Package: <em>Markdown extended</em> (mogoče ni treba)<br />
+    2. Install Package: <em>Monokai extended</em><br />
+    3. Preferences -&gt; Color Scheme -&gt; Monokail Extended -&gt; Monokail Extended<br />
+    4. Install Package: <em>Markdown Editing</em><br />
+    5. Set doc. syntax = Monokai Extended<br />
+    6. Preferences -&gt; Package settings -&gt; Markdown Editing -&gt; Markdown Settings (standard) - User:</p>
+<pre><code> {
+   "color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
+   "tab_size": 2,
+   "line_numbers": true,
+   // Layout
+   "draw_centered": false,
+   "wrap_width": 0,
+   "rulers": []
+ }
+</code></pre>
 <h3 id="latex"><a name="user-content-latex" href="#latex" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>LaTeX:</h3>
 <p>namestis paket preko:<br />
    C+S+p -&gt; Install Packages<br />

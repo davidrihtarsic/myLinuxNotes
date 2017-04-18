@@ -5,21 +5,21 @@
   versions of Debian and Ubuntu-based systems. 
 
 ## Tested
-based on [article](http://www.hecticgeek.com/2016/09/supercharge-ubuntu-16-04-lts-xanmod-kernel/)
-tested on Ubuntu MATE (DELA SUPER!):
+ based on [article](http://www.hecticgeek.com/2016/09/supercharge-ubuntu-16-04-lts-xanmod-kernel/)
+ tested on Ubuntu MATE (DELA SUPER!):
   * Firefox prej 10.5 s ... po tem 4.6 s
   * kopiranje dd (komanda) prej 9MB/s le pri bs=128K
   * po tem... 9MB/s pri 1K, 4K, 8K, 32K, 
 
 ## Installation	
-1. https://xanmod.org/
-2. First install the XanMod Repository Setup
-3. manual...
-> `echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/  urces.list.d/xanmod-kernel.list && wget -qO - http://deb.xanmod.org/gpg.key   sudo apt-key add -`  
-> `sudo apt update && sudo apt install linux-xanmod-4.9`  
-> `sudo reboot`  
-> `cat /proc/version` (preveri kernel verzijo:)
-4. chane [cfg] disk scheduler:
+ 1. https://xanmod.org/
+ 2. First install the XanMod Repository Setup
+ 3. manual...
+ > `echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/  urces.list.d/xanmod-kernel.list && wget -qO - http://deb.xanmod.org/gpg.key   sudo apt-key add -`  
+ > `sudo apt update && sudo apt install linux-xanmod-4.9`  
+ > `sudo reboot`  
+ > `cat /proc/version` (preveri kernel verzijo:)
+ 4. chane [cfg] disk scheduler:
   1. preveri:
   > `sudo cat /sys/block/sda/queue/scheduler` (kateri so na razpolago)  
   > `sudo subl /etc/#ault/grub` (edit grub settings)  
@@ -31,8 +31,7 @@ tested on Ubuntu MATE (DELA SUPER!):
   5. reboot
   6. preveri disk scheduler:
   > `sudo cat /sys/block/sda/queue/scheduler`
-
-5. install Intel CPU support:
+ 5. install Intel CPU support:
 	1. ker sem prej dobil error:
   `W: Possible missing firmware /lib/firmware/rtl_nic/rtl8107e-2.fw for dule   r8169`
   sem namestil še firmware, a mislim, da ni šlo skoz...
@@ -40,45 +39,44 @@ tested on Ubuntu MATE (DELA SUPER!):
 	> `sudo reboot`
 		
 # EFI MODE:
-  boot -> CSM enable  
-  security -> security boot control -> dissable
+ boot -> CSM enable  
+ security -> security boot control -> dissable
 
 ## installBUNSEN
-  instaliral ...
-  grub dal na sda1 (kjer sem našel efi... [sudo parted -l])
-  kar nekaj sem probal... ni delalo - sedaj pišem kaj ne dela
-  ---
-  BIOS:
-  new boot oprions:
-  path:\efi\boot\bootx64.efi
-  ne dela
-  ---
-  Test x-n
-  probaj ta navodila:
-  http://sarah.thesharps.us/2014/12/31/installing-debian-on-asus-ux301la/
-  ---
-  install
-  grub -> /dev/sda1
-  takoj ne dela... zažene se win10...
-  path :\EFI\debian\grubx64.efi [ne dela]
-  path :\efi\boot\bootx64.efi [ne dela]
+ instaliral ...
+ grub dal na sda1 (kjer sem našel efi... [sudo parted -l])
+ kar nekaj sem probal... ni delalo - sedaj pišem kaj ne dela
+ ---
+ BIOS:
+ new boot oprions:
+ path:\efi\boot\bootx64.efi
+ ne dela
+ ---
+ Test x-n
+ probaj ta navodila:
+ http://sarah.thesharps.us/2014/12/31/installing-debian-on-asus-ux301la/
+ ---
+ install
+ grub -> /dev/sda1
+ takoj ne dela... zažene se win10...
+ path :\EFI\debian\grubx64.efi [ne dela]
+ path :\efi\boot\bootx64.efi [ne dela]
 
 # WIRELESS SETUP
-Wavemon...
-> `sudo apt-get install wavemon`
+ Wavemon...
+ > `sudo apt-get install wavemon`
 
 # XRANDR:
-te nastavitve so odvisne od monitorja... !
-
-1. najprej:
-`cvt 1280 1024 60`
+ te nastavitve so odvisne od monitorja... !
+ 1. najprej:
+ `cvt 1280 1024 60`
   > 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz  
   > Modeline "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034   1063   -hsync +vsync"
-2. kopiras kar ti terminal vrže...:
-  `sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027   1034   1063 -hsync +vsync`
-3. dodas v moznosti:
-  `sudo xrandr --addmode VGA1 1280x1024`
-4. potem nastavis resolucijo v 
+ 2. kopiras kar ti terminal vrže...:
+ `sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027   1034   1063 -hsync +vsync`
+ 3. dodas v moznosti:
+ `sudo xrandr --addmode VGA1 1280x1024`
+ 4. potem nastavis resolucijo v 
   1. `arandr` ali
   2. `xrandr --output VGA1 --mode 1280x1024`
 
@@ -100,34 +98,34 @@ te nastavitve so odvisne od monitorja... !
    > xmodmap -e "keycode 35 = slash"
 	
 # FILEMANAGER:
-  Všeč mi je filemanager THUNAR:
-  > `sudo apt-get install thunar`
+ Všeč mi je filemanager THUNAR:
+ > `sudo apt-get install thunar`
 
 # TERMINAL:
-  Terminal je najboljši terminator
-  > `sudo apt-get install terminator`
+ Terminal je najboljši terminator
+ > `sudo apt-get install terminator`
 
 ## Preferences:
-  [ ] Show title bar
-  Profiles -> Colors = Green on Black
-  Profiles -> Background -> Transparency = 50%
+ [ ] Show title bar
+ Profiles -> Colors = Green on Black
+ Profiles -> Background -> Transparency = 50%
 
 # LIBREOFFICE:
-  Instal preko terminala:
-  > `apt-get install libreoffice`
+ Instal preko terminala:
+ > `apt-get install libreoffice`
 
 # TAB_CLICK:
 
-  Da vklnjučiš Tab-CLICK greš v:
-  1. settings
-  2. mouse
-  3. in nato : Tab-CLICK = ON
-  Videl sem tudi, da problem reši tudi:
-  > `synclient tapbutton1 = 1`
+ Da vklnjučiš Tab-CLICK greš v:
+ 1. settings
+ 2. mouse
+ 3. in nato : Tab-CLICK = ON
+ Videl sem tudi, da problem reši tudi:
+ > `synclient tapbutton1 = 1`
 
 ## Touchpad
-  v [datoteki][/usr/share/X11/xorg.conf.d/50-synaptics.conf]
-  dodas:
+ v [datoteki][/usr/share/X11/xorg.conf.d/50-synaptics.conf]
+ dodas:
 
     Section "InputClass"  
       Identifier      "Touchpad"                      # required
@@ -152,18 +150,17 @@ te nastavitve so odvisne od monitorja... !
     EndSection
 
 # SOUNDON:
-
-Na začetku mi ni delal zvok... Rešitev je bila:
-
-1. `lspci`: 
+ Na začetku mi ni delal zvok... Rešitev je bila:
+ 1. `lspci`: 
   tako preveriš, če je Linux prepoznal zvočno...
   na terminalu sem dobil:
-  > '00:1b.0 Audio device: Intel Corporation 7 Series/C210 Series Chipset Family High #inition Audio Controller (rev 04)' 
-2. `apt-get install libasound2 alsa-utils alsa-oss`
-3. `alsamixer`:
-  in od "mutiraš" kanale, ki so zamutani
 
-Druga rešitev (ali celo dopolnitev):
+      '00:1b.0 Audio device: Intel Corporation 7 Series/C210 Series Chipset Family High #inition Audio Controller (rev 04)'
+
+ 2. `apt-get install libasound2 alsa-utils alsa-oss`
+ 3. `alsamixer`:
+  in od "mutiraš" kanale, ki so zamutani
+ Druga rešitev (ali celo dopolnitev):
 	- je, da v terminal napišeš:
 		pulseaudio -D
 	- secer napiše, da ni mišljeno, da bi bil zagnan kot root
@@ -221,21 +218,23 @@ Druga rešitev (ali celo dopolnitev):
   3. C+S+p -> push
 
 ### MarkDown:
+Paket Package Controll mora biti nameščen...
   1. Install Package: _Markdown extended_ (mogoče ni treba)
 	2. Install Package: _Monokai extended_
 	3. Preferences -> Color Scheme -> Monokail Extended -> Monokail Extended
 	4. Install Package: _Markdown Editing_
 	5. Set doc. syntax = Monokai Extended
 	6. Preferences -> Package settings -> Markdown Editing -> Markdown Settings (standard) - User:
-		{
-			"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
-			"tab_size": 2,
-			"line_numbers": true,
-		    // Layout
-			"draw_centered": false,
-			"wrap_width": 0,
-			"rulers": []
-		}
+
+     {
+       "color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
+       "tab_size": 2,
+       "line_numbers": true,
+       // Layout
+       "draw_centered": false,
+       "wrap_width": 0,
+       "rulers": []
+     }
 
 ### LaTeX:
   namestis paket preko:
