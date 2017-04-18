@@ -351,7 +351,7 @@ Druga rešitev (ali celo dopolnitev):
 	
 ## install:
 Debian le:
- > `sudo apt-get install git`
+	sudo apt-get install git
 	
 ## config:
 > `git config --global user.name "xxxyyy"`
