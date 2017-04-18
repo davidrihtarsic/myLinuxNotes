@@ -25,6 +25,7 @@ tested on Ubuntu MATE (DELA SUPER!):
 	3. spremeni vrstico:
 		
 		GRUB_CMDLINE_LINUX_#AULT="quiet splash"
+		
 		GRUB_CMDLINE_LINUX_#AULT="quiet splash elevator=bfq"
 		
 	4. shrani
