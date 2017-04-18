@@ -248,28 +248,32 @@ Paket Package Controll mora biti nameščen...
    * sudo apt-get install biber
 
 ### Spell Checker:
-  download:
-  	v direktorij: /home/david/.config/sublime-text-3/Packages/
-  	wget https://github.com/titoBouzout/Dictionaries/archive/master.zip
-  	unzip 
-  ali ...
-  	Download the language file from the appropiate OpenOffice extension
-  	http://extensions.openoffice.org/en/project/  venian-dictionary-package-slovenski-paket-slovarjev
-  	Rename the "some.oxt" file to "some.zip"
-  	Unzip the file
-  	Look for two files: "lang.aff" and "lang.dic". For example es_ES.aff and   ES.dic
-  	Open the "lang.aff" to check the encoding used. Such the line: SET   -8859-1
-  	Convert that file to UTF-8 from the used encoding
-  	Convert "lang.dic" to UTF-8 from the used encoding.
-  	Change SET ISO-8859-1 to SET UTF-8
-  	In ST3, click on Preferences -> Browse Packages
-  	Create a new folder, for example Language - Spanish
-  	Move lang.dic and lang.aff to that folder
-  	Activate the dictionary in ST3 (View -> Dictionary -> Language - Spanish   es_ES)
-  	Press F6 to enable spell check
-  View->Dictionaries
-  oogle spell check:
-  namestitev:
+ download:
+  v direktorij: /home/david/.config/sublime-text-3/Packages/
+  
+  > `wget https://github.com/titoBouzout/Dictionaries/archive/master.zip`  
+  > `unzip..`
+   
+ ali ...
+  1. [Download](http://extensions.openoffice.org/en/project/venian-dictionary-package-slovenski-paket-slovarjev) the language file from the appropiate OpenOffice extension
+  2. Rename the "some.oxt" file to "some.zip"
+  3. Unzip the file
+  4. Look for two files: "lang.aff" and "lang.dic". For example es_ES.aff and   ES.dic
+  5. Open the "lang.aff" to check the encoding used. Such the line: SET   -8859-1
+  6. Convert that file to UTF-8 from the used encoding
+  7. Convert "lang.dic" to UTF-8 from the used encoding.
+  8. Change SET ISO-8859-1 to SET UTF-8
+  9. In ST3, click on Preferences -> Browse Packages
+  10. Create a new folder, for example Language - Spanish
+  11. Move lang.dic and lang.aff to that folder
+  12. Activate the dictionary in ST3 (View -> Dictionary -> Language - Spanish   es_ES)
+  13. Press F6 to enable spell check
+  14. View->Dictionaries
+ 
+ Google spell check:
+  + `apt-get update`
+  + `dpkg -i teamviewer_****_i386.deb`
+  + `sudo apt-get -f install` namestitev:
   	C+S+p -> Install Packages
   	Google Spell Check
 
