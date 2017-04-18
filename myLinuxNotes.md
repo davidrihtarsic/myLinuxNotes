@@ -23,11 +23,8 @@ tested on Ubuntu MATE (DELA SUPER!):
 	1. sudo cat /sys/block/sda/queue/scheduler (kateri so na razpolago)
 	2. sudo subl /etc/#ault/grub (edit grub settings)
 	3. spremeni vrstico:
-		
 		GRUB_CMDLINE_LINUX_#AULT="quiet splash"
-		
 		GRUB_CMDLINE_LINUX_#AULT="quiet splash elevator=bfq"
-		
 	4. shrani
 	5. sudo update-grub2
 	6. reboot
