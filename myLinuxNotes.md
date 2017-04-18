@@ -42,23 +42,26 @@ tested on Ubuntu MATE (DELA SUPER!):
   security -> security boot control -> dissable
 
 ## installBUNSEN
-instaliral ...
-grub dal na sda1 (kjer sem našel efi... [sudo parted -l])
-kar nekaj sem probal... ni delalo - sedaj pišem kaj ne dela
-BIOS:
-new boot oprions:
-path:\efi\boot\bootx64.efi
-ne dela
-Test x-n
-probaj ta navodila:
-http://sarah.thesharps.us/2014/12/31/installing-debian-on-asus-ux301la/
-install
-grub -> /dev/sda1
-takoj ne dela... zažene se win10...
-path :\EFI\debian\grubx64.efi [ne dela]
-path :\efi\boot\bootx64.efi [ne dela]
+  instaliral ...
+  grub dal na sda1 (kjer sem našel efi... [sudo parted -l])
+  kar nekaj sem probal... ni delalo - sedaj pišem kaj ne dela
+  ---
+  BIOS:
+  new boot oprions:
+  path:\efi\boot\bootx64.efi
+  ne dela
+  ---
+  Test x-n
+  probaj ta navodila:
+  http://sarah.thesharps.us/2014/12/31/installing-debian-on-asus-ux301la/
+  --- 
+  install
+  grub -> /dev/sda1
+  takoj ne dela... zažene se win10...
+  path :\EFI\debian\grubx64.efi [ne dela]
+  path :\efi\boot\bootx64.efi [ne dela]
 
-# WIRELESS SETUP:
+# WIRELESS SETUP
   Wavemon...
   > `sudo apt-get install wavemon`
 
