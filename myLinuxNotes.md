@@ -351,6 +351,7 @@ Druga rešitev (ali celo dopolnitev):
 	
 ## install:
 Debian le:  
+    
     sudo apt-get install git
 	
 ## config:
