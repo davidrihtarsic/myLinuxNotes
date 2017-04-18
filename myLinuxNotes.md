@@ -350,8 +350,8 @@ Druga rešitev (ali celo dopolnitev):
   1. [Link](https://www.youtube.com/watch?v=1h9_cB9mPT8)
 	
 ## install:
-Debian le:
-	sudo apt-get install git
+Debian le:  
+    sudo apt-get install git
 	
 ## config:
 > `git config --global user.name "xxxyyy"`
