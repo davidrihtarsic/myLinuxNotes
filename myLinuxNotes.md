@@ -362,7 +362,7 @@ navigate to that dir
 
 ### editing:
 na tem mestu spreminjaš FAJL...
-```bash
+```c
 git add . 		    //dodaj vse datoteke
 git commit -m "comment"
 git commit -a -m "comment"` //naredi vse naenkrat
