@@ -352,6 +352,18 @@ sudo nano /usr/share/applications/eclipse.desktop
 # ARDUINO
 	pass
 
+
+# LAZARUS
+Programing program in pascal... As Delphi
+
+## instalation
+instaliral tako kot je opisano na [internetu](https://forum.lazarus.freepascal.org/index.php?topic=36093.0):
+1. Install fpc_3.0.2-170225_amd64.deb via package manager
+2. Install fpc_3.0.2.x86_64-linux.tar via shell (unzip and run sh install.sh). Install into /usr directory, so it overwrites 3. the existing installation
+4. Install the deb sources via package manager (__tega nisem naredu... neznam__)
+5. Install lazarus-project_1.6.4-0_amd64.deb via package manager
+6. Instaliral gdb
+
 # GITHUB
 ## LITERATURA:
   1. [Link](https://www.youtube.com/watch?v=1h9_cB9mPT8)
@@ -435,3 +447,7 @@ program za testiranje dd komnade...
 kako hitro comp lahko kopira datoteke v odvisnosti ob bs= ? podatka...
 Program je na [GitHubu](https://github.com/tdg5/blog/blob/master/_includes/scripts/dd_ibs_test.sh)
 
+
+# PPRINTER SUPPORT on BunsenLab
+sledil sem tocno tem [navodilom](http://hplipopensource.com/hplip-web/install/manual/distros/debian.html)
+- prej moraš vedeti tudi root geslo 
