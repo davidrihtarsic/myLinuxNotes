@@ -168,7 +168,6 @@
 		Settings>Soun
 
 # THUNDERBIRD()
-
   inštalacija je čisto reprosta:
   > `apt-get install thunderbird`
 
@@ -237,15 +236,13 @@ Paket Package Controll mora biti nameščen...
      }
 
 ### LaTeX:
-  namestis paket preko:
-   C+S+p -> Install Packages
-   ~~~LaTeXTools~~~
-   LaTeXing & LaTeX-cwg
-   notes:
-   * OK, prej moras namestiti dodatne pakete..:
-   * sudo apt-get install texlive-full
-   * sudo apt-get install latexmk
-   * sudo apt-get install biber
+namestis paket preko:
+ C+S+p -> __Install Packages__
+ ~~LaTeXTools~~
+  * OK, prej moras namestiti dodatne pakete..:
+  * `sudo apt-get install texlive-full`
+  * `sudo apt-get install latexmk`
+  * `sudo apt-get install biber`
 
 ### Spell Checker:
  download:
@@ -286,9 +283,10 @@ Paket Package Controll mora biti nameščen...
 
 # TEAMVIEWER
   presnames teamviewer i386 (cetudi imas 64-bitni comp.)
-  v terminalu> dpkg --add-architecture i386
-  + `apt-get update`
-  + `dpkg -i teamviewer_****_i386.deb`
+  v terminalu>
+  + `sudo dpkg --add-architecture i386`
+  + `sudo apt-get update`
+  + `sudo dpkg -i teamviewer_****_i386.deb`
   + `sudo apt-get -f install`
 
 # QCAD
@@ -337,8 +335,8 @@ Program za gledanje filmov:
   	sudo ln -sf /opt/eclipse/cpp-neon/eclipse/eclipse /usr/bin/eclipse
 
 ## eclipse.desktop:
-
-sudo nano /usr/share/applications/eclipse.desktop
+Naredimo datoteko.desktop: 
+ `sudo nano /usr/share/applications/eclipse.desktop`
 
     [Desktop Entry]
     Version = Neon 2.0
@@ -435,3 +433,10 @@ program za testiranje dd komnade...
 kako hitro comp lahko kopira datoteke v odvisnosti ob bs= ? podatka...
 Program je na [GitHubu](https://github.com/tdg5/blog/blob/master/_includes/scripts/dd_ibs_test.sh)
 
+
+# FILES STRUCTURE
+Tu bi si zapisoval kako si bom strukturiral file...
+- Files
+  + Work
+  + Hobi
+  + 
