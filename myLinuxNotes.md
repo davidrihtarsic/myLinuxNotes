@@ -450,4 +450,11 @@ Program je na [GitHubu](https://github.com/tdg5/blog/blob/master/_includes/scrip
 
 # PPRINTER SUPPORT on BunsenLab
 sledil sem tocno tem [navodilom](http://hplipopensource.com/hplip-web/install/manual/distros/debian.html)
-- prej moraš vedeti tudi root geslo 
+- prej moraš vedeti tudi root geslo
+
+# FILES STRUCTURE
+Tu bi napisal kako bom uredil file
+- Files
+  + Work
+  + Hobi
+  + ?
