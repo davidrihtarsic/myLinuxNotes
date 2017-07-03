@@ -455,6 +455,7 @@ sledil sem tocno tem [navodilom](http://hplipopensource.com/hplip-web/install/ma
 # FILES STRUCTURE
 Tu bi napisal kako bom uredil file
 - Files
+  + To-Do(links)
   + Work
     * PeF
       - Vaje
@@ -464,7 +465,16 @@ Tu bi napisal kako bom uredil file
       - Diplome
       - Članki
       - Predstavitve 
-  + To-Do(links)
+    * DRTI
+      - Poletne Šole
+      - Finance
+      - 
+    * 
   + Hobi
+    * Linux
+      - BunsenLab
+      - RPi
+    * Dom
+    * Kolesarjenje
   + Musics
-  + 
+  + GitHub
