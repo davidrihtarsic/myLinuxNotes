@@ -456,5 +456,15 @@ sledil sem tocno tem [navodilom](http://hplipopensource.com/hplip-web/install/ma
 Tu bi napisal kako bom uredil file
 - Files
   + Work
+    * PeF
+      - Vaje
+        + Modelarstvo
+        + Promet
+      - Habilitacija
+      - Diplome
+      - Članki
+      - Predstavitve 
+  + To-Do(links)
   + Hobi
-  + ?
+  + Musics
+  + 
