@@ -180,6 +180,21 @@
   5. in linkaš exe skript:
    > `sudo ln -fs /opt/thunderbird/thunderbird /usr/bin/hunderbird`
 
+## Nastavitev Thunderbirda za PeF
+  - Your name: David Rihtarsic
+  - Email add: david.rihtarsic@pef.uni-lj.si
+  - Password: Work-mei-kabinet
+  - Incoming: IMAP
+    + server: imap.uni-lj.si
+    + port: 993
+    + SSL: SSL/TLS
+    + Authentication: NMLT
+  - Outgoing: SMTP
+    + server: mail.uni-lj.si
+    + port: 587
+    + SSL: None
+    + Authentication: NMLT
+
 # SUBLIME TEXT 3
 
 ## Install:
