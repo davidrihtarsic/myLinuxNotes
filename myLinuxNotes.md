@@ -315,6 +315,26 @@ namestis paket preko:
 	asdf
 # GIMP
 	asdf
+# GRAPHIC CARD
+Kako preveriti in namestiti driverje za grafično kartico
+## GeForce 9600 GT
+Jaz imam na PCju to kartico to lahko preveriš s:
+  > 'lspci'
+  
+V terminalu se ti izpiše nekaj takega:
+  > `05:00.0 VGA compatible controller: NVIDIA Corporation G94 [GeForce 9600 GT] (rev a1)`
+  
+Nato greš na tole stran:
+  [GeForce Drivers](http://www.geforce.com/drivers)
+1. vtipkaš podatke
+2. Download
+3. CTRL+ALT+F1
+4. user:
+5. password:
+6. > `sudo service lightdm stop`
+7. 
+
+
 # INKSCAPE
 	asdf
 # FRITZING
