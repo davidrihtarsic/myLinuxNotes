@@ -1,6 +1,9 @@
 # ARDUINO
-  pass
+  
+## Enable PORT permmissions to user
+> `sudo usermod -a -G dialout terrik`
 
+and Log Out / Log In 
 
 # DD_IBS_TEST.SH():
 program za testiranje dd komnade...
