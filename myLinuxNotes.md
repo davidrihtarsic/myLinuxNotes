@@ -186,6 +186,15 @@ Nato greš na tole stran:
 
 # INKSCAPE
   asdf
+# JAVA in FIREFOX BROWSER
+1. naložiš javo JRE...
+2. mkdir ~/.mozilla/plugins
+3. cd ~/.mozilla/plugins
+4. ln -s /usr/lib/jvm/jre1.8.0_121/lib/amd64/libnpjp2.so
+          [tu pride java direktorij kjer je `libnpjp2.so`]
+5. restart FireFox
+6. v FF vpišeš `about:plugins` in preveriš če je java podprta... 
+
 # KEYBOARD SETTINFS:
   Settings -> Reigon&Language -> Input Source
   for KeyBindings:
