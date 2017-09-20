@@ -87,6 +87,15 @@ Tu bi napisal kako bom uredil file
   + Musics
   + GitHub
 
+# FORMAT
+First, you have to find out which device (/dev/sd??) your USB stick is. Therefore look at the output of
+`sudo fdisk -l`
+After that unmount the device/partition (if necessary) by running
+`sudo umount /dev/sdb`
+Make sure you replaced ?? with the correct device/partition name from the previous output.
+To format The partition as FAT32 use
+`sudo mkdosfs -F 32 -I /dev/sdb`
+
 # FRITZING
   asdf
 
