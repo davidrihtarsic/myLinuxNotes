@@ -461,8 +461,6 @@ namestis paket preko:
     + SSL: None
     + Authentication: NMLT
 
-
-
 # W3M:
 ## instalation:
 > `apt-get install w3m`
