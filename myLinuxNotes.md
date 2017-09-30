@@ -92,7 +92,7 @@ First, you have to find out which device (/dev/sd??) your USB stick is. Therefor
 >sudo fdisk -l
 
 Jaz raje uporabim:
-`lsblk`
+>lsblk
 
     NAME   MAJ:MIN RM    SIZE RO TYPE MOUNTPOINT
     sda      8:0    0  931.5G  0 disk 
@@ -130,6 +130,7 @@ Debian le:
   
 ## config:
 > `git config --global user.name "davidrihtarsic"`
+
 > `git config --global user.email "david.rihtarsic@gmail.com"`
 > `git config --global core.editor="subl"`
   
