@@ -125,8 +125,7 @@ To format The partition as FAT32 use
   
 ## install:
 Debian le:  
-    
-    sudo apt-get install git
+>sudo apt-get install git
   
 ## config:
 >git config --global user.name "davidrihtarsic"
@@ -143,7 +142,6 @@ navigate to that dir
 
 ### editing:
 na tem mestu spreminjaš FAJL...
-
 
 > `git add .` #dodaj vse datoteke
 > `git commit -m "comment"`
@@ -198,7 +196,8 @@ Jaz imam na PCju to kartico to lahko preveriš s:
   > 'lspci'
   
 V terminalu se ti izpiše nekaj takega:
-  > `05:00.0 VGA compatible controller: NVIDIA Corporation G94 [GeForce 9600 GT] (rev a1)`
+    
+    05:00.0 VGA compatible controller: NVIDIA Corporation G94 [GeForce 9600 GT] (rev a1)
   
 Nato greš na tole stran:
   [GeForce Drivers](http://www.geforce.com/drivers)
@@ -207,7 +206,7 @@ Nato greš na tole stran:
 3. CTRL+ALT+F1
 4. user:
 5. password:
-6. > `sudo service lightdm stop`
+6. >sudo service lightdm stop
 7. 
 
 
