@@ -93,14 +93,14 @@ First, you have to find out which device (/dev/sd??) your USB stick is. Therefor
 Jaz raje uporabim:
 `lsblk`
 > NAME   MAJ:MIN RM    SIZE RO TYPE MOUNTPOINT
-sda      8:0    0  931.5G  0 disk 
-├─sda1   8:1    0    100M  0 part 
-├─sda2   8:2    0  639.9G  0 part /media/david/964EABCA4EABA18B
-├─sda3   8:3    0      1K  0 part 
-├─sda5   8:5    0  284.7G  0 part /
-└─sda6   8:6    0    6.9G  0 part [SWAP]
-sdb      8:16   1 1010.3M  0 disk 
-sr0     11:0    1   1024M  0 rom  
+> sda      8:0    0  931.5G  0 disk 
+> ├─sda1   8:1    0    100M  0 part 
+> ├─sda2   8:2    0  639.9G  0 part /media/david/964EABCA4EABA18B
+> ├─sda3   8:3    0      1K  0 part 
+> ├─sda5   8:5    0  284.7G  0 part /
+> └─sda6   8:6    0    6.9G  0 part [SWAP]
+> sdb      8:16   1 1010.3M  0 disk 
+> sr0     11:0    1   1024M  0 rom  
 
 
 
