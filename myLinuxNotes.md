@@ -87,13 +87,22 @@ Tu bi napisal kako bom uredil file
   + Musics
   + GitHub
 
+# FORMAT
+First, you have to find out which device (/dev/sd??) your USB stick is. Therefore look at the output of
+`sudo fdisk -l`
+After that unmount the device/partition (if necessary) by running
+`sudo umount /dev/sdb`
+Make sure you replaced ?? with the correct device/partition name from the previous output.
+To format The partition as FAT32 use
+`sudo mkdosfs -F 32 -I /dev/sdb`
+
 # FRITZING
   asdf
 
 # FREECAD
   asdf
 # GIMP
-  asdf
+  asdf 
 # GITHUB
 ## LITERATURA:
   1. [Link](https://www.youtube.com/watch?v=1h9_cB9mPT8)
@@ -257,6 +266,40 @@ Program za gledanje filmov:
   > `sudo chmod 777 qcad*.run`
   3. in poženeš script:
   > `./qcad*.run`
+
+
+# Qt5
+Za nekateri program sem si moral nainštalirat Qt5 knjižnice:
+1. Manjkala mi je `Qt5LinguistToolsConfig`
+Ostale mislim, da sem imel...
+
+## Instalacija Qt5LinguistToolsConfig
+Mislim, da mi jo je uspelo naložit z:
+> sudo apt-get install qttools5-dev
+
+nato sem datoteko našel:
+> sudo find /usr/lib/* -name Qt5Lin*
+
+nato je manjkal še Qt5Quck
+instaliral sem ga z
+> sudo apt-get install qtdeclarative5-dev
+
+nato je manjkal Qt5SvgConfig, instaliral z:
+> sudo apt-get install libqt5svg5-dev
+> sudo apt-get install libraw-dev
+--sudo apt-get install exiv2 (najverjetneje ni bil taprav paket!!!)--
+> sudo apt-get install libexiv2-dev
+> sudo apt-get install graphicsmagick
+---
+še vedno ni delalo
+nato sem inštaliral qt5 creator... (neumnost, ker je to cel program za programiranje)
+> sudo apt-get install qtcreator
+
+še ni pomagalo:
+sudo apt-get install qml-module-qtgraphicaleffects
+sudo apt-get install qml-module-qtquick-dialogs
+sudo apt-get install pyqt5-dev
+sudo apt-get install qtdeclarative5-models-plugin
 
 
 # SOUNDON:
