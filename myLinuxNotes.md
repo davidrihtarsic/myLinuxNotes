@@ -206,8 +206,8 @@ Nato greš na tole stran:
 3. CTRL+ALT+F1
 4. user:
 5. password:
-6. >sudo service lightdm stop
-7. 
+>sudo service lightdm stop
+ 
 
 
 # INKSCAPE
@@ -391,6 +391,24 @@ Paket Package Controll mora biti nameščen...
        "wrap_width": 0,
        "rulers": []
      }
+### MarkDown uporaba:
+>linux ukazi
+
+    z dvema TAB-oma
+    njegov izpis na ekranu
+    ali nek drug text v filu...
+1. nastevanje
+2. nastevanje..
+  - nast
+  - nast
+  * nato pa se
+  * nato tudi to
+    + lahko pa tudi
+    + ali a +
+__podčtrano__
+~~prečrtano~~ bom uporabljal tam kjer sem nekaj probal pa ni delovalo
+[link](http://google.com)
+
 
 ### LaTeX:
 namestis paket preko:
