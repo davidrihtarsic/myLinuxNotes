@@ -110,7 +110,7 @@ After that unmount the device/partition (if necessary) by running
 `sudo umount /dev/sdb`
 Make sure you replaced ?? with the correct device/partition name from the previous output.
 To format The partition as FAT32 use
-`sudo mkdosfs -F 32 -I /dev/sdb`
+> sudo mkdosfs -F 32 -I /dev/sdb
 
 # FRITZING
   asdf
@@ -212,6 +212,22 @@ Nato greš na tole stran:
 
 # INKSCAPE
   asdf
+# ISO BURN TO USB
+> sudo dd bs=4M if=*.iso of=/dev/sdb status=progress && sync
+
+## More advanced copy with progress
+Inštaliran mora biti `pv`
+
+> sudo apt-get install pv 
+
+Ker pv (pipe Viever) dela več različnih stvari in ne le dd,
+med drugim tudi progress bar... je ukaz potrebno izvesti v sudo načinu:
+> sudo -s
+> pv <NekIsoFile.iso> /dev/sdb
+    857MiB 0:01:05 [13.1MiB/s] [======================================================================>] 100%
+> exit
+>
+
 # JAVA in FIREFOX BROWSER
 1. naložiš javo JRE...
 2. mkdir ~/.mozilla/plugins
@@ -406,9 +422,10 @@ Paket Package Controll mora biti nameščen...
     + lahko pa tudi
     + ali a +
 __podčtrano__
-~~prečrtano~~ bom uporabljal tam kjer sem nekaj probal pa ni delovalo
-[link](http://google.com)
 
+~~prečrtano~~ bom uporabljal tam kjer sem nekaj probal pa ni delovalo
+
+[link](http://google.com)
 
 ### LaTeX:
 namestis paket preko:
