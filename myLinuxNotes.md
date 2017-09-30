@@ -104,10 +104,9 @@ Jaz raje uporabim:
     sdb      8:16   1 1010.3M  0 disk 
     sr0     11:0    1   1024M  0 rom  
 
-
-
 After that unmount the device/partition (if necessary) by running
-`sudo umount /dev/sdb`
+> sudo umount /dev/sdb
+
 Make sure you replaced ?? with the correct device/partition name from the previous output.
 To format The partition as FAT32 use
 > sudo mkdosfs -F 32 -I /dev/sdb
@@ -138,39 +137,38 @@ Debian le:
 make new repository ... BlaBla_project (need to be on URL gitHub)
 make dir on your computer for that project 
 navigate to that dir
-> `git init`
+> git init
 
 ### editing:
 na tem mestu spreminjaš FAJL...
-
-> `git add .` #dodaj vse datoteke
-> `git commit -m "comment"`
-> `git commit -a -m "comment"` #naredi vse naenkrat
-> `git status` # ni potreben a se vidi ce je potrebno kaj commitat
-> `git diff`  #ni potrebno a pokaže razlike...
+> git add .
+> git commit -m "comment"`
+> git commit -a -m "comment"
+> git status
+> git diff
 
 ### uploading:
 kako da stvar na GitHub...
 v spremenljivko "origin" spravimo URL projekta
-> `git remote add origin https://github.com/davidrihtarsic/myZapiski.git`
-> `git push ~~origin master~~` #daš na GitHub +username +passWd
+> git remote add origin https://github.com/davidrihtarsic/myZapiski.git
+> git push ~~origin master~~
 
 ### updating:
 naprimer, da nekdo popravi kodo (recimo ti sam na GitHubu...
 in nekdo tudi na compu ter naredi commit)
-> `git commit -a -m "comment"`
+> git commit -a -m "comment"`
 
 hočeš naložit... novo verzijo in dobiš konflikt s tisto na GitHub-u
-> `git push origin master` #in dobiš error:
+> git push origin master
 
-  hint: Updates were rejected because the remote contains work that you do
-  hint: not have locally. This is usually caused by another repository pushing
-  hint: to the same ref. You may want to first integrate the remote changes
-  hint: (e.g., 'git pull ...') before pushing again.
-  hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+    hint: Updates were rejected because the remote contains work that you do
+    hint: not have locally. This is usually caused by another repository pushing
+    hint: to the same ref. You may want to first integrate the remote changes
+    hint: (e.g., 'git pull ...') before pushing again.
+    hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 potem naredis :
-> `git pull` #ce je prvič lahko tudi: git pull origin master
+> git pull
 
 in če je bil dokument spremenjen na ISTEM mestu (recimo v isti crstici)
 potem je to v dokumentu označeno z:   
@@ -212,6 +210,7 @@ Nato greš na tole stran:
 
 # INKSCAPE
   asdf
+  
 # ISO BURN TO USB
 > sudo dd bs=4M if=*.iso of=/dev/sdb status=progress && sync
 
