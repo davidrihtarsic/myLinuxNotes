@@ -129,9 +129,11 @@ Debian le:
     sudo apt-get install git
   
 ## config:
->git config --global user.name "davidrihtarsic"`
->git config --global user.email "david.rihtarsic@gmail.com"`
->git config --global core.editor="subl"`
+>git config --global user.name "davidrihtarsic"
+
+>git config --global user.email "david.rihtarsic@gmail.com"
+
+>git config --global core.editor="subl"
   
 ## general_use:
 make new repository ... BlaBla_project (need to be on URL gitHub)
