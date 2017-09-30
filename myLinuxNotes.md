@@ -89,7 +89,8 @@ Tu bi napisal kako bom uredil file
 
 # FORMAT
 First, you have to find out which device (/dev/sd??) your USB stick is. Therefore look at the output of
-`sudo fdisk -l`
+>sudo fdisk -l
+
 Jaz raje uporabim:
 `lsblk`
 
