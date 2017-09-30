@@ -17,7 +17,7 @@ Program je na [GitHubu](https://github.com/tdg5/blog/blob/master/_includes/scrip
   ... presnameš, odpakiraš kopiraš v:
   /opt/eclipse/
   narediš link za vse uporabnike:
-    sudo ln -sf /opt/eclipse/cpp-neon/eclipse/eclipse /usr/bin/eclipse
+`sudo ln -sf /opt/eclipse/cpp-neon/eclipse/eclipse /usr/bin/eclipse`
 
 ## eclipse.desktop:
 Naredimo datoteko.desktop: 
@@ -90,6 +90,20 @@ Tu bi napisal kako bom uredil file
 # FORMAT
 First, you have to find out which device (/dev/sd??) your USB stick is. Therefore look at the output of
 `sudo fdisk -l`
+Jaz raje uporabim:
+`lsblk`
+> NAME   MAJ:MIN RM    SIZE RO TYPE MOUNTPOINT
+sda      8:0    0  931.5G  0 disk 
+├─sda1   8:1    0    100M  0 part 
+├─sda2   8:2    0  639.9G  0 part /media/david/964EABCA4EABA18B
+├─sda3   8:3    0      1K  0 part 
+├─sda5   8:5    0  284.7G  0 part /
+└─sda6   8:6    0    6.9G  0 part [SWAP]
+sdb      8:16   1 1010.3M  0 disk 
+sr0     11:0    1   1024M  0 rom  
+
+
+
 After that unmount the device/partition (if necessary) by running
 `sudo umount /dev/sdb`
 Make sure you replaced ?? with the correct device/partition name from the previous output.
@@ -290,7 +304,7 @@ nato je manjkal Qt5SvgConfig, instaliral z:
 --sudo apt-get install exiv2 (najverjetneje ni bil taprav paket!!!)--
 > sudo apt-get install libexiv2-dev
 > sudo apt-get install graphicsmagick
----
+
 še vedno ni delalo
 nato sem inštaliral qt5 creator... (neumnost, ker je to cel program za programiranje)
 > sudo apt-get install qtcreator
