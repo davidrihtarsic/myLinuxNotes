@@ -217,13 +217,13 @@ Nato greš na tole stran:
 
 ## More advanced copy with progress
 Inštaliran mora biti `pv`
-
 > sudo apt-get install pv 
 
 Ker pv (pipe Viever) dela več različnih stvari in ne le dd,
 med drugim tudi progress bar... je ukaz potrebno izvesti v sudo načinu:
 > sudo -s
 > pv <NekIsoFile.iso> /dev/sdb
+
     857MiB 0:01:05 [13.1MiB/s] [======================================================================>] 100%
 > exit
 >
