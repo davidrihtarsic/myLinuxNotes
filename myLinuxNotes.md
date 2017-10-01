@@ -210,7 +210,7 @@ Nato greš na tole stran:
 
 # INKSCAPE
   asdf
-  
+
 # ISO BURN TO USB
 > sudo dd bs=4M if=*.iso of=/dev/sdb status=progress && sync
 
@@ -529,16 +529,19 @@ namestis paket preko:
 
 # THUNDERBIRD()
   inštalacija je čisto reprosta:
-  > `apt-get install thunderbird`
+  > apt-get install thunderbird
 
   ali če ni apt paketa:
   1. greš na njihovo stran in presnameš datoteko thunderbird.tar.db2
   2. extrahiraš v /opt/thunderbird
   3. preveriš če dela: ./thunderbird
-  4. nastaviš privilegije (če je potrebno):
-   > `sudo chown -R root:root /opt/hunderbird`
+  4. nastaviš privilegije (če je potrebno):  
+
+> sudo chown -R root:root /opt/hunderbird
+  
   5. in linkaš exe skript:
-   > `sudo ln -fs /opt/thunderbird/thunderbird /usr/bin/hunderbird`
+
+> sudo ln -fs /opt/thunderbird/thunderbird /usr/bin/hunderbird
 
 ## Nastavitev Thunderbirda za PeF
   - Your name: David Rihtarsic
@@ -554,6 +557,19 @@ namestis paket preko:
     + port: 587
     + SSL: None
     + Authentication: NMLT
+
+## Google Koledar v Thunderbirdu
+1. inštaliraš koledar:
+Menu->AddOns->Lightnings->Install
+2. inštaliraš Google Provider:
+Menu->AddOns->Provider for Google Calender->Install... Restart Now
+3. Vključevanje koledarja:
+  - v "Callenders" klikneš z desno in "New Calenders"
+  - On the network -> Next
+  - Google Calender -> Next
+  - david.rihtarsic@gmail.com + gesla + itd.
+  - izbereš koledarje za sync -> Next
+  - Finish
 
 # W3M:
 ## instalation:
