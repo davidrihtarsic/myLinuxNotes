@@ -304,6 +304,8 @@ Program za gledanje filmov:
     Icon = /opt/popcorn-time/src/app/images/icon.png
     Categories = Application;
 
+# PRINT SCREEN = DARK
+
 
 # QCAD
   1. presnameš inštalacijo iz njihove [strani][https://qcad.org/en/qcad-downloads-trial]
