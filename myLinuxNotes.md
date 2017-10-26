@@ -104,13 +104,9 @@ Jaz raje uporabim:
     sdb      8:16   1 1010.3M  0 disk 
     sr0     11:0    1   1024M  0 rom  
 
-<<<<<<< HEAD
 Lepo se vidijo diski in kje so mountirani. Po potrebi ga lahko od-mountiraš..
->sudo umount /dev/sdb
-=======
 After that unmount the device/partition (if necessary) by running
 > sudo umount /dev/sdb
->>>>>>> ebdf7c2eae4c7e1c9195fa14ada59676b8b0ff18
 
 Make sure you replaced ?? with the correct device/partition name from the previous output.
 To format The partition as FAT32 use
