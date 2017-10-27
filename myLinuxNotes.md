@@ -269,6 +269,10 @@ instaliral tako kot je opisano na [internetu](https://forum.lazarus.freepascal.o
  Instal preko terminala:
  > `apt-get install libreoffice`
 
+# MERGE PDF DOCUMENTS
+Če moramo združiti več pdf dokumentov v enega v terminal napišemo:
+> pdfunite pdf0.pdf pdf1.pdf merged.pdf
+
 # POPCORN-TIME
 # PASSWORD
 To change a password on behalf of a user, first sign on or "su" to the "root" account. Then type:
