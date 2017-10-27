@@ -406,7 +406,7 @@ Paket Package Controll mora biti nameščen...
        "wrap_width": 0,
        "rulers": []
      }
-### MarkDown uporaba:
+#### MarkDown uporaba:
 >linux ukazi
 
     z dvema TAB-oma
@@ -588,7 +588,9 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
   XanMod is a mainline Linux kernel distribution with custom settings.
   Optimized to take full advantage of high-performance Desktops, PC Gamers,
   Workstations, Media Centers and others. Supports all recent 64-bit
-  versions of Debian and Ubuntu-based systems. 
+  versions of Debian and Ubuntu-based systems.
+
+  - ne priporočam, ker potemnisem mogel inštalirati GeForce driverjev... 
 
 ## Tested
  based on [article](http://www.hecticgeek.com/2016/09/supercharge-ubuntu-16-04-lts-xanmod-kernel/)
