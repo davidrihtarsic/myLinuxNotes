@@ -647,16 +647,20 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
     
 
 # XRANDR:
- te nastavitve so odvisne od monitorja... !
- 1. najprej:
- `cvt 1280 1024 60`
-  > 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz  
-  > Modeline "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034   1063   -hsync +vsync"
- 2. kopiras kar ti terminal vrže...:
- `sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027   1034   1063 -hsync +vsync`
- 3. dodas v moznosti:
- `sudo xrandr --addmode VGA1 1280x1024`
- 4. potem nastavis resolucijo v 
-  1. `arandr` ali
-  2. `xrandr --output VGA1 --mode 1280x1024`
+te nastavitve so odvisne od monitorja... !
+najprej:
+> cvt 1280 1024 60
+    # 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz
+    Modeline "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hsync +vsync
+
+...kopiras kar ti terminal vrže...:
+> sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027   1034   1063 -hsync +vsync`
+
+dodas v moznosti:
+> sudo xrandr --addmode VGA1 1280x1024`
+
+potem nastavis resolucijo v 
+__MENU -> Settings -> Arandr__ ali v terminalu:
+> xrandr --output VGA1 --mode 1280x1024 --pos 1366x0
+
 
