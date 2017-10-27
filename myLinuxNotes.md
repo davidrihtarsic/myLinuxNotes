@@ -104,6 +104,7 @@ Jaz raje uporabim:
     sdb      8:16   1 1010.3M  0 disk 
     sr0     11:0    1   1024M  0 rom  
 
+Lepo se vidijo diski in kje so mountirani. Po potrebi ga lahko od-mountiraš..
 After that unmount the device/partition (if necessary) by running
 > sudo umount /dev/sdb
 
@@ -269,6 +270,18 @@ instaliral tako kot je opisano na [internetu](https://forum.lazarus.freepascal.o
  > `apt-get install libreoffice`
 
 # POPCORN-TIME
+# PASSWORD
+To change a password on behalf of a user, first sign on or "su" to the "root" account. Then type:
+(where user is the username for the password you are changing).
+> passwd user
+
+The system will prompt you to enter a password. Passwords do not echo to the screen when you enter them.
+You can also change your own password, by typing:
+(without specifying a username).
+> passwd
+
+You will be prompted to enter your old password for verification, and then a new password.
+
 # PPRINTER SUPPORT on BunsenLab
 sledil sem tocno tem [navodilom](http://hplipopensource.com/hplip-web/install/manual/distros/debian.html)
 - prej moraš vedeti tudi root geslo
@@ -290,6 +303,8 @@ Program za gledanje filmov:
     Exec = /usr/bin/popcorn-time
     Icon = /opt/popcorn-time/src/app/images/icon.png
     Categories = Application;
+
+# PRINT SCREEN = DARK
 
 
 # QCAD
