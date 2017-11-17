@@ -10,6 +10,31 @@ program za testiranje dd komnade...
 kako hitro comp lahko kopira datoteke v odvisnosti ob bs= ? podatka...
 Program je na [GitHubu](https://github.com/tdg5/blog/blob/master/_includes/scripts/dd_ibs_test.sh)
 
+# C++
+## PassBy VALUE REFERENCE POINTER
+Pomembno pri funkcijah, naprimer:
+void passByVal(int val);
+void passByRef(int &ref);
+void passByPtr(int *ptr);
+
+### Value
+: int x = 5;
+: naredi kopijo spremenljivke v stacku
+- več spomina
++ vrednost prvotne spremenljivke se ne spremeni
+
+### Reference
+: int &ref = x
+: to je alias spremenljivke x
++ ne zasede novega spomina
++ če potrebuješ, da funkcija vrne več parametrov in NI potrebno imeti globalne spremenljivke. Vrednost spremenljivke  se lahko spremeni med samo funkcijo
+
+### Pionter
+: int *xptr = &x;
+: xptr je naslov spremenljivke x, če želimo vrednost na tem naslovu = *xptr
+- nekoliko bolj zakomplicirana sintaksa, ker je prej potrebno v *xptr dati naslov spremenljivke
++ le s pointerji lahko dostopamo do __HEAP__ spomina (spomin večjih razsežnosti)
+
 # ECLIPSE
 
 ## installation:
