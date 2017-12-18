@@ -298,8 +298,7 @@ instaliral tako kot je opisano na [internetu](https://forum.lazarus.freepascal.o
 Če moramo združiti več pdf dokumentov v enega v terminal napišemo:
 > pdfunite pdf0.pdf pdf1.pdf merged.pdf
 
-# POPCORN-TIME
-# PASSWORD
+# PASSWORD (LINUX)
 To change a password on behalf of a user, first sign on or "su" to the "root" account. Then type:
 (where user is the username for the password you are changing).
 > passwd user
@@ -310,7 +309,50 @@ You can also change your own password, by typing:
 > passwd
 
 You will be prompted to enter your old password for verification, and then a new password.
+#PIDGIN
+## HANGOUTS
+https://bitbucket.org/EionRobb/purple-hangouts/
+> sudo apt-get install -y libpurple-dev libjson-glib-dev libglib2.0-dev libprotobuf-c-dev protobuf-c-compiler mercurial make;
+> hg clone https://bitbucket.org/EionRobb/purple-hangouts/ && cd purple-hangouts;
+> make && sudo make install
 
+Po tem greš na tole spletno stran:
+https://accounts.google.com/ServiceLogin?passive=1&continue=https://accounts.google.com/o/oauth2/programmatic_auth?hl%3Den%26scope%3Dhttps://www.google.com/accounts/OAuthLogin%2Bhttps://www.googleapis.com/auth/userinfo.email%26client_id%3D936475272427.apps.googleusercontent.com%26access_type%3Doffline%26delegated_client_id%3D183697946088-m3jnlsqshjhh5lbvg05k46q1k4qqtrgn.apps.googleusercontent.com%26top_level_cookie%3D1%26from_login%3D1%26as%3D158e30052a6d899&ltmpl=nosignup&hl=en&oauth=1&sarp=1&scc=1&authuser=0
+
+ko sem naredil tole, je delal tudi skype plugin...
+
+## Skype
+https://github.com/EionRobb/skype4pidgin
+> cd skype...
+> make
+> sudo make install
+
+## GoogleTalks
+My account -> Prijava in varnost -> Gesla za aplikacije -> ime aplikacije : PIDGIN [ustvari]
+-> qwer tzui opšd asdf
+---
+basic
+---
+Protocol:XMPP
+user:david.rihtarsic
+domain:gmail.com
+Resource:Home
+pass: qwer tzui opšd asdf
+[x] remember pass
+[x] new mail...
+---
+advanced
+---
+Connect server: talk.google.com
+## WhatsApp
+debhelper (>= 7.0.50), libglib2.0-dev, libpurple-dev, libfreeimage-dev (>= 3.0.0), libprotobuf-dev, protobuf-compiler
+make ARCH=x86_64
+
+sudo apt-get install protobuf-compiler
+get :https://github.com/davidgfnet/whatsapp-purple/
+cd -> whatsapp-purple
+make
+# POPCORN-TIME
 # PPRINTER SUPPORT on BunsenLab
 sledil sem tocno tem [navodilom](http://hplipopensource.com/hplip-web/install/manual/distros/debian.html)
 - prej moraš vedeti tudi root geslo
@@ -518,6 +560,21 @@ namestis paket preko:
  [ ] Show title bar
  Profiles -> Colors = Green on Black
  Profiles -> Background -> Transparency = 50%
+
+## Programi za terminal
+### SC-IM
+excel za terminal... super omogoče veliko excelovih stvari ... tudi izvoz v .xlsx
+__Uporabne komande:__
+> :nmap "W" ":w<cr>:e! txt<cr>:e! xlsx<cr>"  //mapira "W" tako da shrani datoteko v .sc, .txt in .xlsx
+> 4<DOWN> // skočimo za 4 celice dol - uporabno pri kopiranju če se moraš premaknit
+> yr      // copy (YUNK) celo ROW
+> p       // paste cel YUNK
+> +/-     // increse/decrese number
+> C-d     // transform to DATE
+> f<UP>   // 0.00 -> 0.000
+> f<DOWN> // 0.00 -> 0.0
+> f<LEFT> // spremeni širino stolpca
+
 
 # TAB_CLICK:
 
