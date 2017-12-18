@@ -7,8 +7,11 @@ splača se inštalirat ta program, ker omogoča razširjen nabor Linux ukaov
 kot so npr: cp, crond, vi (Editor) ...
 ## CROND
 1. busybox
+2. su
 2. mount -o remount,rw /
-3. 
+3. mkdir bin
+4. ln -s /system/bin/sh /bin/sh
+5. crond -c /data/crontab
 
 # ARDUINO
   
