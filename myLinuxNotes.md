@@ -1,3 +1,15 @@
+# ANDROID
+## ADB
+= android deBugger... da se lahko z računalnikom povežeš na tel...
+in od tam urejaš linux (android)
+## BUSYBOX (nujno 4 me:)
+splača se inštalirat ta program, ker omogoča razširjen nabor Linux ukaov
+kot so npr: cp, crond, vi (Editor) ...
+## CROND
+1. busybox
+2. mount -o remount,rw /
+3. 
+
 # ARDUINO
   
 ## Enable PORT permmissions to user
