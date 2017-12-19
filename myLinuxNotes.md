@@ -580,7 +580,6 @@ namestis paket preko:
 ### SC-IM
 excel za terminal... super omogoče veliko excelovih stvari ... tudi izvoz v .xlsx
 __Uporabne komande:__
-> :nmap "W" ":w<cr>:e! txt<cr>:e! xlsx<cr>"  //mapira "W" tako da shrani datoteko v .sc, .txt in .xlsx
 > 4<DOWN> // skočimo za 4 celice dol - uporabno pri kopiranju če se moraš premaknit
 > yr      // copy (YUNK) celo ROW
 > p       // paste cel YUNK
@@ -590,6 +589,9 @@ __Uporabne komande:__
 > f<DOWN> // 0.00 -> 0.0
 > f<LEFT> // spremeni širino stolpca
 
+---
+V /home/david/.scimrc napišemo:
+> nmap "W" ":w<cr>:e! txt<cr>:e! xlsx<cr>"  //mapira "W" tako da shrani datoteko v .sc, .txt in .xlsx
 
 # TAB_CLICK:
 
