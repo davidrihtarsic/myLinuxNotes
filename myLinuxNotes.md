@@ -309,6 +309,34 @@ instaliral tako kot je opisano na [internetu](https://forum.lazarus.freepascal.o
  Instal preko terminala:
  > `apt-get install libreoffice`
 
+## WRITER
+__Short Cuts__
+| Short cut       | Action              |
+|-----------------|---------------------|
+| [Ctrl] + [Ent]  | Insert Break Page   |
+| []+[]           | Insert greek letter |                  |
+
+## CALC
+How To - Insert DATE:
+1. Tools -> Customize -> Keyboard -> 
+2. Short Keys :Ctrl+.
+3. Category: Insert
+4. Function: Insert Current Ddate
+5. [Modify]
+
+How To - Insert TIME:
+1. Tools -> Customize -> Keyboard -> 
+2. Short Keys :Ctrl+Shift.
+3. Category: Insert
+4. Function: Insert Current Time
+5. [Modify]
+
+__Short Cuts__
+| Short cut     | Action              |
+|---------------|---------------------|
+| [Ct]+[.]      | Insert Date         |
+| [Ct]+[Sh]+[.] | Insert Time         |
+
 # MERGE PDF DOCUMENTS
 Če moramo združiti več pdf dokumentov v enega v terminal napišemo:
 > pdfunite pdf0.pdf pdf1.pdf merged.pdf
@@ -324,7 +352,7 @@ You can also change your own password, by typing:
 > passwd
 
 You will be prompted to enter your old password for verification, and then a new password.
-#PIDGIN
+# PIDGIN
 ## HANGOUTS
 https://bitbucket.org/EionRobb/purple-hangouts/
 > sudo apt-get install -y libpurple-dev libjson-glib-dev libglib2.0-dev libprotobuf-c-dev protobuf-c-compiler mercurial make;
