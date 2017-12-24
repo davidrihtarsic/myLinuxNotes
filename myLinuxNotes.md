@@ -1,11 +1,21 @@
+% Zapiski o LINUX sistemu in se kaj drugega
+% David Rihtaršič
+% 2017-12-24
+
 # ANDROID
+
 ## ADB
+
 = android deBugger... da se lahko z računalnikom povežeš na tel...
 in od tam urejaš linux (android)
+
 ## BUSYBOX (nujno 4 me:)
+
 splača se inštalirat ta program, ker omogoča razširjen nabor Linux ukaov
 kot so npr: cp, crond, vi (Editor) ...
+
 ## CROND
+
 1. busybox
 2. su
 2. mount -o remount,rw /
@@ -16,16 +26,19 @@ kot so npr: cp, crond, vi (Editor) ...
 # ARDUINO
   
 ## Enable PORT permmissions to user
-> `sudo usermod -a -G dialout terrik`
+
+    sudo usermod -a -G dialout terrik`
 
 and Log Out / Log In 
 
 # DD_IBS_TEST.SH():
+
 program za testiranje dd komnade...
 kako hitro comp lahko kopira datoteke v odvisnosti ob bs= ? podatka...
 Program je na [GitHubu](https://github.com/tdg5/blog/blob/master/_includes/scripts/dd_ibs_test.sh)
 
 # C++
+
 ## PassBy VALUE REFERENCE POINTER
 Pomembno pri funkcijah, naprimer:
 void passByVal(int val);
@@ -80,12 +93,12 @@ Naredimo datoteko.desktop:
  instaliral ...
  grub dal na sda1 (kjer sem našel efi... [sudo parted -l])
  kar nekaj sem probal... ni delalo - sedaj pišem kaj ne dela
- ---
- BIOS:
+ 
+ BIOS: 
  new boot oprions:
- path:\efi\boot\bootx64.efi
+ /efi/boot/bootx64.efi
  ne dela
- ---
+ 
  Test x-n
  probaj ta navodila:
  http://sarah.thesharps.us/2014/12/31/installing-debian-on-asus-ux301la/
@@ -93,8 +106,8 @@ Naredimo datoteko.desktop:
  install
  grub -> /dev/sda1
  takoj ne dela... zažene se win10...
- path :\EFI\debian\grubx64.efi [ne dela]
- path :\efi\boot\bootx64.efi [ne dela]
+ path :/EFI/debian/grubx64.efi [ne dela]
+ path :/efi/boot/bootx64.efi [ne dela]
 
 # FILEMANAGER:
  Všeč mi je filemanager THUNAR:
@@ -136,17 +149,18 @@ Jaz raje uporabim:
 
     NAME   MAJ:MIN RM    SIZE RO TYPE MOUNTPOINT
     sda      8:0    0  931.5G  0 disk 
-    ├─sda1   8:1    0    100M  0 part 
-    ├─sda2   8:2    0  639.9G  0 part /media/david/964EABCA4EABA18B
-    ├─sda3   8:3    0      1K  0 part 
-    ├─sda5   8:5    0  284.7G  0 part /
-    └─sda6   8:6    0    6.9G  0 part [SWAP]
+    -sda1   8:1    0    100M  0 part 
+    -sda2   8:2    0  639.9G  0 part /media/david/964EABCA4EABA18B
+    -sda3   8:3    0      1K  0 part 
+    -sda5   8:5    0  284.7G  0 part /
+    -sda6   8:6    0    6.9G  0 part [SWAP]
     sdb      8:16   1 1010.3M  0 disk 
     sr0     11:0    1   1024M  0 rom  
 
 Lepo se vidijo diski in kje so mountirani. Po potrebi ga lahko od-mountiraš..
 After that unmount the device/partition (if necessary) by running
-> sudo umount /dev/sdb
+
+    sudo umount /dev/sdb
 
 Make sure you replaced ?? with the correct device/partition name from the previous output.
 To format The partition as FAT32 use
@@ -689,9 +703,16 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
   - izbereš koledarje za sync -> Next
   - Finish
 
-# W3M:
+# VIM
+## Instalation
+
+    sudo apt-get install vim-nox
+    sudo apt-get install exuberant-stags
+
+# W3M":
 ## instalation:
-> `apt-get install w3m`
+
+    apt-get install w3m
 
 ## frendlyUse:
   v ~/bashrc vpišeš:
