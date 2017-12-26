@@ -2,17 +2,10 @@
 % David Rihtaršič
 % 2017-12-24 18:24
 
----
-author:
-- mmini me
-documentclass:
-- memoir
-...
-
 # ANDROID
 
 Na tem msestu bomo zapisali nekaj programov za ANDROID program na telefonu. Glavno program je 
-*ADB* (*A*ndroid*D*e**B*ugger)... To omogoča, da priključimo telefon ns računalnik in se nanj
+__ADB__ (*A*ndroid*D*e**B*ugger)... To omogoča, da priključimo telefon ns računalnik in se nanj
 povežemo tako, da delamo na terminalu...
 
 ## ADB
@@ -357,16 +350,19 @@ How To - Insert TIME:
 5. [Modify]
 
 __Short Cuts__
+
 | Short cut     | Action              |
 |---------------|---------------------|
 | [Ct]+[.]      | Insert Date         |
 | [Ct]+[Sh]+[.] | Insert Time         |
 
 # MERGE PDF DOCUMENTS
+
 Če moramo združiti več pdf dokumentov v enega v terminal napišemo:
 > pdfunite pdf0.pdf pdf1.pdf merged.pdf
 
 # PASSWORD (LINUX)
+
 To change a password on behalf of a user, first sign on or "su" to the "root" account. Then type:
 (where user is the username for the password you are changing).
 > passwd user
@@ -767,6 +763,13 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
 ## Instalation
 
     sudo apt-get install vim-nox
+
+    "install Vundle -  Plugin Manger
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    
+    "install NerdTREE"
+    "install TagBar"
+
     sudo apt-get install exuberant-stags
 
 # W3M":
