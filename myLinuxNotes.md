@@ -536,31 +536,37 @@ sudo apt-get install qtdeclarative5-models-plugin
 
 ### Uporabni paketi
 
-1. Emmet //completeing the code
-2. AllAutoComplete //complete any word from opened files
+1. Emmet                    //completeing the code
+2. AllAutoComplete          //complete any word from opened files
 dodas v Preferences.sublime-settings:
+
 > "auto_complete_selector": "source, text"
-3. DocBlocker //komentiranje funkcij [Alt]+[Q]
-4. SideBarEnhacement //more functionality in side bar
-5. GitGutter //kaže kaj si na novo naredil v primerjavi s fajlom na GitHubu
+
+3. DocBlocker               //komentiranje funkcij [Alt]+[Q]
+4. SideBarEnhacement        //more functionality in side bar
+5. GitGutter                //kaže kaj si na novo naredil v primerjavi s fajlom na GitHubu
+6. Git (glej spodaj)
+7. MarkDown (glej spodaj)
 
 ### install GitHub:
-  1. C+S+p -> Install Packages
-  2. [Git()][https://github.com/kemayo/sublime-text-git/wiki]
+1. C+S+p -> Install Packages
+2. [Git()][https://github.com/kemayo/sublime-text-git/wiki]
 
-####  nastavitve:
-  The detail step:
-   1. go to your local git project directory, [open][.git/config] file and
-   2. edit: https://{username}:{password}@github.com/{username}/{project}.git
-   3. input git push to check if it works.
-    > jaz sem moral prej še spedenat v terminalu:
-    > git commit -a -m "sublime pedenanje"
-    > git push (če je kak error prej še git pull... in popraviš razlike)
+####  nastavitve
+The detail step
+
+1. go to your local git project directory, [open][.git/config] file and
+2. edit: https://{username}:{password}@github.com/{username}/{project}.git
+3. input git push to check if it works.
+ 
+jaz sem moral prej še spedenat v terminalu
+    git commit -a -m "sublime pedenanje"
+    git push (če je kak error prej še git pull... in popraviš razlike)
 
 #### uporaba:
-  1. popraviš file... & C+s (save)
-  2. C+S+p -> quick commit (repo) -> msg
-  3. C+S+p -> push
+1. popraviš file... & C+s (save)
+2. C+S+p -> quick commit (repo) -> msg
+3. C+S+p -> push
 
 ### MarkDown:
 Paket Package Controll mora biti nameščen...
