@@ -11,6 +11,10 @@ documentclass:
 
 # ANDROID
 
+Na tem msestu bomo zapisali nekaj programov za ANDROID program na telefonu. Glavno program je 
+*ADB* (*A*ndroid*D*e**B*ugger)... To omogoča, da priključimo telefon ns računalnik in se nanj
+povežemo tako, da delamo na terminalu...
+
 ## ADB
 
 = android deBugger... da se lahko z računalnikom povežeš na tel...
@@ -34,7 +38,7 @@ kot so npr: cp, crond, vi (Editor) ...
   
 ## Enable PORT permmissions to user
 
-    sudo usermod -a -G dialout terrik`
+    sudo usermod -a -G dialout terrik
 
 and Log Out / Log In 
 
@@ -77,11 +81,11 @@ void passByPtr(int *ptr);
   ... presnameš, odpakiraš kopiraš v:
   /opt/eclipse/
   narediš link za vse uporabnike:
-`sudo ln -sf /opt/eclipse/cpp-neon/eclipse/eclipse /usr/bin/eclipse`
+sudo ln -sf /opt/eclipse/cpp-neon/eclipse/eclipse /usr/bin/eclipse
 
 ## eclipse.desktop:
 Naredimo datoteko.desktop: 
- `sudo nano /usr/share/applications/eclipse.desktop`
+ sudo nano /usr/share/applications/eclipse.desktop
 
     [Desktop Entry]
     Version = Neon 2.0
@@ -118,7 +122,7 @@ Naredimo datoteko.desktop:
 
 # FILEMANAGER:
  Všeč mi je filemanager THUNAR:
- > `sudo apt-get install thunar`
+ > sudo apt-get install thunar
 
 # FILES STRUCTURE
 Tu bi napisal kako bom uredil file
@@ -154,15 +158,14 @@ First, you have to find out which device (/dev/sd??) your USB stick is. Therefor
 Jaz raje uporabim:
 >lsblk
 
-    NAME   MAJ:MIN RM    SIZE RO TYPE MOUNTPOINT
-    sda      8:0    0  931.5G  0 disk 
-    -sda1   8:1    0    100M  0 part 
-    -sda2   8:2    0  639.9G  0 part /media/david/964EABCA4EABA18B
-    -sda3   8:3    0      1K  0 part 
-    -sda5   8:5    0  284.7G  0 part /
-    -sda6   8:6    0    6.9G  0 part [SWAP]
-    sdb      8:16   1 1010.3M  0 disk 
-    sr0     11:0    1   1024M  0 rom  
+    NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+    sda      8:0    0 465.8G  0 disk 
+    +-sda1   8:1    0   300M  0 part /boot/efi
+    +-sda2   8:2    0   600M  0 part 
+    +-sda3   8:3    0   128M  0 part 
+    +-sda4   8:4    0 185.5G  0 part 
+    +-sda5   8:5    0 271.3G  0 part /
+    +-sda6   8:6    0   7.9G  0 part [SWAP]
 
 Lepo se vidijo diski in kje so mountirani. Po potrebi ga lahko od-mountiraš..
 After that unmount the device/partition (if necessary) by running
@@ -204,7 +207,7 @@ navigate to that dir
 ### editing:
 na tem mestu spreminjaš FAJL...
 > git add .
-> git commit -m "comment"`
+> git commit -m "comment"
 > git commit -a -m "comment"
 > git status
 > git diff
@@ -218,7 +221,7 @@ v spremenljivko "origin" spravimo URL projekta
 ### updating:
 naprimer, da nekdo popravi kodo (recimo ti sam na GitHubu...
 in nekdo tudi na compu ter naredi commit)
-> git commit -a -m "comment"`
+> git commit -a -m "comment"
 
 hočeš naložit... novo verzijo in dobiš konflikt s tisto na GitHub-u
 > git push origin master
@@ -277,7 +280,7 @@ Nato greš na tole stran:
 > sudo dd bs=4M if=*.iso of=/dev/sdb status=progress && sync
 
 ## More advanced copy with progress
-Inštaliran mora biti `pv`
+Inštaliran mora biti pv
 > sudo apt-get install pv 
 
 Ker pv (pipe Viever) dela več različnih stvari in ne le dd,
@@ -290,13 +293,14 @@ med drugim tudi progress bar... je ukaz potrebno izvesti v sudo načinu:
 >
 
 # JAVA in FIREFOX BROWSER
+
 1. naložiš javo JRE...
 2. mkdir ~/.mozilla/plugins
 3. cd ~/.mozilla/plugins
 4. ln -s /usr/lib/jvm/jre1.8.0_121/lib/amd64/libnpjp2.so
-          [tu pride java direktorij kjer je `libnpjp2.so`]
+          [tu pride java direktorij kjer je libnpjp2.so]
 5. restart FireFox
-6. v FF vpišeš `about:plugins` in preveriš če je java podprta... 
+6. v FF vpišeš about:plugins in preveriš če je java podprta... 
 
 # KEYBOARD SETTINFS:
   Settings -> Reigon&Language -> Input Source
@@ -328,7 +332,7 @@ instaliral tako kot je opisano na [internetu](https://forum.lazarus.freepascal.o
 
 # LIBREOFFICE:
  Instal preko terminala:
- > `apt-get install libreoffice`
+ > apt-get install libreoffice
 
 ## WRITER
 __Short Cuts__
@@ -422,13 +426,13 @@ sledil sem tocno tem [navodilom](http://hplipopensource.com/hplip-web/install/ma
 - prej moraš vedeti tudi root geslo
 
 Program za gledanje filmov:
-  1. Download [Popcorn-Time](https://www.popcorntime.ws/about)
-  2. razpakiraš in daš dokumente v /opt/popcorn-time/
-  3. polinkaš, da bo dosegljivo vsem:
-  `sudo ln -sf /opt/popcorn-time/Popcorn-Time /usr/bin/popcorn-time`
-  4. Narediš še .desktop datoteko
-  `sudo nano /usr/share/applications/popcorntime.desktop`
-  5. in vot vpišeš:
+1. Download [Popcorn-Time](https://www.popcorntime.ws/about)
+2. razpakiraš in daš dokumente v /opt/popcorn-time/
+3. polinkaš, da bo dosegljivo vsem:
+sudo ln -sf /opt/popcorn-time/Popcorn-Time /usr/bin/popcorn-time
+4. Narediš še .desktop datoteko
+sudo nano /usr/share/applications/popcorntime.desktop
+5. in vot vpišeš:
 
     [Desktop Entry]
     Version = 1.0
@@ -445,14 +449,14 @@ Program za gledanje filmov:
 # QCAD
   1. presnameš inštalacijo iz njihove [strani][https://qcad.org/en/qcad-downloads-trial]
   2. nato spremeniš rivilegije datoteke:
-  > `sudo chmod 777 qcad*.run`
+  > sudo chmod 777 qcad*.run
   3. in poženeš script:
-  > `./qcad*.run`
+  > ./qcad*.run
 
 
 # Qt5
 Za nekateri program sem si moral nainštalirat Qt5 knjižnice:
-1. Manjkala mi je `Qt5LinguistToolsConfig`
+1. Manjkala mi je Qt5LinguistToolsConfig
 Ostale mislim, da sem imel...
 
 ## Instalacija Qt5LinguistToolsConfig
@@ -486,14 +490,14 @@ sudo apt-get install qtdeclarative5-models-plugin
 
 # SOUNDON:
  Na začetku mi ni delal zvok... Rešitev je bila:
- 1. `lspci`: 
+ 1. lspci: 
   tako preveriš, če je Linux prepoznal zvočno...
   na terminalu sem dobil:
 
       '00:1b.0 Audio device: Intel Corporation 7 Series/C210 Series Chipset Family High #inition Audio Controller (rev 04)'
 
- 2. `apt-get install libasound2 alsa-utils alsa-oss`
- 3. `alsamixer`:
+ 2. apt-get install libasound2 alsa-utils alsa-oss
+ 3. alsamixer:
   in od "mutiraš" kanale, ki so zamutani
  Druga rešitev (ali celo dopolnitev):
   - je, da v terminal napišeš:
@@ -507,8 +511,8 @@ sudo apt-get install qtdeclarative5-models-plugin
 ## Install:
   Greš na njihovo stran in snameš dol pravo verzijo (Ubuntu 64)
   nato pa v terminalu zaženeš:
-  > `cd Downloads`
-  > `dpkg -i Sublime...64.deb`
+  > cd Downloads
+  > dpkg -i Sublime...64.deb
 
 ## Package Controll:
   Paket za koristne funkcionalnosti:
@@ -516,7 +520,7 @@ sudo apt-get install qtdeclarative5-models-plugin
 ### install:
   1. goto [link][https://packagecontrol.io/installation]
   2. _copy_ code for Sublime 3:
-    `import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)`
+    import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
   3. View -> Show Console
   4. _paste_ 
 
@@ -527,7 +531,7 @@ sudo apt-get install qtdeclarative5-models-plugin
 ####  nastavitve:
   The detail step:
    1. go to your local git project directory, [open][.git/config] file and
-   2. edit: `https://{username}:{password}@github.com/{username}/{project}.git`
+   2. edit: https://{username}:{password}@github.com/{username}/{project}.git
    3. input git push to check if it works.
     > jaz sem moral prej še spedenat v terminalu:
     > git commit -a -m "sublime pedenanje"
@@ -535,7 +539,7 @@ sudo apt-get install qtdeclarative5-models-plugin
 
 #### uporaba:
   1. popraviš file... & C+s (save)
-  2. C+S+p -> quick commit (repo) -> `msg`
+  2. C+S+p -> quick commit (repo) -> msg
   3. C+S+p -> push
 
 ### MarkDown:
@@ -582,9 +586,9 @@ namestis paket preko:
  ~~LaTeXTools~~
 OK, prej moras namestiti dodatne pakete..:
 
-    sudo apt-ge" : "t install texlive-full`
-    sudo apt-get install latexmk`
-    sudo apt-get install biber`
+    sudo apt-ge" : "t install texlive-full
+    sudo apt-get install latexmk
+    sudo apt-get install biber
 
 #### LaTex:
 Našel sem, da lahko iz MarkDown datoteke naredis pdf tako, da uporabim *pandic*.
@@ -609,9 +613,9 @@ oba paketa sem inštaliral preko SynapticPackageManager.
  download:
   v direktorij: /home/david/.config/sublime-text-3/Packages/
   
-    wget https://github.com/titoBouzout/Dictionaries/archive/master.zip`  
+    wget https://github.com/titoBouzout/Dictionaries/archive/master.zip  
     //then unz
-    unzip..`
+    unzip..
    
  ali ...
   1. [Download](http://extensions.openoffice.org/en/project/venian-dictionary-package-slovenski-paket-slovarjev) the language file from the appropiate OpenOffice extension
@@ -630,16 +634,16 @@ oba paketa sem inštaliral preko SynapticPackageManager.
   14. View->Dictionaries
  
  Google spell check:
-  + `apt-get update`
-  + `dpkg -i teamviewer_****_i386.deb`
-  + `sudo apt-get -f install` namestitev:
+  + apt-get update
+  + dpkg -i teamviewer_****_i386.deb
+  + sudo apt-get -f install namestitev:
     C+S+p -> Install Packages
     Google Spell Check
 
 
 # TERMINAL:
  Terminal je najboljši terminator
- > `sudo apt-get install terminator`
+ > sudo apt-get install terminator
 
 ## Preferences:
  [ ] Show title bar
@@ -670,7 +674,7 @@ V /home/david/.scimrc napišemo:
  2. mouse
  3. in nato : Tab-CLICK = ON
  Videl sem tudi, da problem reši tudi:
- > `synclient tapbutton1 = 1`
+ > synclient tapbutton1 = 1
 
 ## Touchpad
  v [datoteki][/usr/share/X11/xorg.conf.d/50-synaptics.conf]
@@ -702,15 +706,15 @@ V /home/david/.scimrc napišemo:
 # TEAMVIEWER
   presnames teamviewer i386 (cetudi imas 64-bitni comp.)
   v terminalu>
-  + `sudo dpkg --add-architecture i386`
-  + `sudo apt-get update`
-  + `sudo dpkg -i teamviewer_****_i386.deb`
-  + `sudo apt-get -f install`
+  + sudo dpkg --add-architecture i386
+  + sudo apt-get update
+  + sudo dpkg -i teamviewer_****_i386.deb
+  + sudo apt-get -f install
 
 # TEXMAKER
   1. Spell Checker:
   [download][http://extensions.services.openoffice.org/en/project/slovenian-dictionary-package-slovenski-paket-slovarjev]
-  2. `unzip pac-sl.oxt`
+  2. unzip pac-sl.oxt
   3. in prekopiraš datoteko sl-SI.dic v Sublime paketi direktorij (Preferences->Browse packages)
   4. nato nastaviš jezik : View->Dictionary->si-SL.dic
 
@@ -772,11 +776,11 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
 
 ## frendlyUse:
   v ~/bashrc vpišeš:
-> `alias w3mm='w3m www.google.com'`
+> alias w3mm='w3m www.google.com'
 
 # WIRELESS SETUP
  Wavemon...
- > `sudo apt-get install wavemon`
+ > sudo apt-get install wavemon
 
 
 # XANMOD KERNEL:
@@ -798,14 +802,14 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
  1. https://xanmod.org/
  2. First install the XanMod Repository Setup
  3. manual...
- > `echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/  urces.list.d/xanmod-kernel.list && wget -qO - http://deb.xanmod.org/gpg.key   sudo apt-key add -`  
- > `sudo apt update && sudo apt install linux-xanmod-4.9`  
- > `sudo reboot`  
- > `cat /proc/version` (preveri kernel verzijo:)
+ > echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/  urces.list.d/xanmod-kernel.list && wget -qO - http://deb.xanmod.org/gpg.key   sudo apt-key add -  
+ > sudo apt update && sudo apt install linux-xanmod-4.9  
+ > sudo reboot  
+ > cat /proc/version (preveri kernel verzijo:)
  4. chane [cfg] disk scheduler:
   1. preveri:
-  > `sudo cat /sys/block/sda/queue/scheduler` (kateri so na razpolago)  
-  > `sudo subl /etc/#ault/grub` (edit grub settings)  
+  > sudo cat /sys/block/sda/queue/scheduler (kateri so na razpolago)  
+  > sudo subl /etc/#ault/grub (edit grub settings)  
   2. spremeni vrstico:
   > GRUB_CMDLINE_LINUX_#AULT="quiet splash"  
   > GRUB_CMDLINE_LINUX_#AULT="quiet splash elevator=bfq"
@@ -813,13 +817,13 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
   4. sudo update-grub2
   5. reboot
   6. preveri disk scheduler:
-  > `sudo cat /sys/block/sda/queue/scheduler`
+  > sudo cat /sys/block/sda/queue/scheduler
  5. install Intel CPU support:
   1. ker sem prej dobil error:
-  `W: Possible missing firmware /lib/firmware/rtl_nic/rtl8107e-2.fw for dule   r8169`
+  W: Possible missing firmware /lib/firmware/rtl_nic/rtl8107e-2.fw for dule   r8169
   sem namestil še firmware, a mislim, da ni šlo skoz...
-  > `sudo apt install intel-microcode iucode-tool`
-  > `sudo reboot`
+  > sudo apt install intel-microcode iucode-tool
+  > sudo reboot
     
 
 # XRANDR:
@@ -830,10 +834,10 @@ najprej:
     Modeline "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hsync +vsync
 
 ...kopiras kar ti terminal vrže...:
-> sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027   1034   1063 -hsync +vsync`
+> sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027   1034   1063 -hsync +vsync
 
 dodas v moznosti:
-> sudo xrandr --addmode VGA1 1280x1024`
+> sudo xrandr --addmode VGA1 1280x1024
 
 potem nastavis resolucijo v 
 __MENU -> Settings -> Arandr__ ali v terminalu:
