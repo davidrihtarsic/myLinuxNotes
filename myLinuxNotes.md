@@ -2,8 +2,12 @@
 % David Rihtaršič
 % 2017-12-24 18:24
 
-testing new branch
-asdf asdf 
+---
+author:
+- mmini me
+documentclass:
+- memoir
+...
 
 # ANDROID
 
@@ -576,10 +580,27 @@ __podčtrano__
 namestis paket preko:
  C+S+p -> __Install Packages__
  ~~LaTeXTools~~
-  * OK, prej moras namestiti dodatne pakete..:
-  * `sudo apt-get install texlive-full`
-  * `sudo apt-get install latexmk`
-  * `sudo apt-get install biber`
+OK, prej moras namestiti dodatne pakete..:
+
+    sudo apt-ge" : "t install texlive-full`
+    sudo apt-get install latexmk`
+    sudo apt-get install biber`
+
+#### LaTex:
+Našel sem, da lahko iz MarkDown datoteke naredis pdf tako, da uporabim *pandic*.
+S tem programom lahko spremeniš tudi v druge formate WORD... Ampak moraš inštalirat
+še LaTeX podporo...
+
+    texlive-full
+
+program zasede full okoli 2GB
+zato inštaliraš raje
+
+    texlive
+
+nato pa še packages:
+
+    sudo apt-get install texlive-latex-extra
 
 ### Spell Checker:
  download:
