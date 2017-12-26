@@ -601,6 +601,9 @@ zato inštaliraš raje
 nato pa še packages:
 
     sudo apt-get install texlive-latex-extra
+    sudo apt-get install texlive-fimts-extra 
+
+oba paketa sem inštaliral preko SynapticPackageManager.
 
 ### Spell Checker:
  download:
