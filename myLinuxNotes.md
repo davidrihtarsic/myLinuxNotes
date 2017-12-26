@@ -520,8 +520,9 @@ sudo apt-get install qtdeclarative5-models-plugin
 ## Install:
   Greš na njihovo stran in snameš dol pravo verzijo (Ubuntu 64)
   nato pa v terminalu zaženeš:
-  > cd Downloads
-  > dpkg -i Sublime...64.deb
+    
+    cd Downloads
+    dpkg -i Sublime...64.deb
 
 ## Package Controll:
   Paket za koristne funkcionalnosti:
