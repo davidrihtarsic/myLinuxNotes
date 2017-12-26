@@ -5,7 +5,7 @@
 # ANDROID
 
 Na tem msestu bomo zapisali nekaj programov za ANDROID program na telefonu. Glavno program je 
-__ADB__ (*A*ndroid*D*e**B*ugger)... To omogoča, da priključimo telefon ns računalnik in se nanj
+__ADB__ ( __A__-ndroid __D__-e-__B__-ugger)... To omogoča, da priključimo telefon ns računalnik in se nanj
 povežemo tako, da delamo na terminalu...
 
 ## ADB
@@ -44,26 +44,30 @@ Program je na [GitHubu](https://github.com/tdg5/blog/blob/master/_includes/scrip
 # C++
 
 ## PassBy VALUE REFERENCE POINTER
+
 Pomembno pri funkcijah, naprimer:
 void passByVal(int val);
 void passByRef(int &ref);
 void passByPtr(int *ptr);
 
 ### Value
-: int x = 5;
-: naredi kopijo spremenljivke v stacku
-- več spomina
-+ vrednost prvotne spremenljivke se ne spremeni
+  int x = 5;
+
+naredi kopijo spremenljivke v stacku
+
+[-] več spomina
+
+[+] vrednost prvotne spremenljivke se ne spremeni
 
 ### Reference
-: int &ref = x
-: to je alias spremenljivke x
-+ ne zasede novega spomina
-+ če potrebuješ, da funkcija vrne več parametrov in NI potrebno imeti globalne spremenljivke. Vrednost spremenljivke  se lahko spremeni med samo funkcijo
+int &ref = x
+to je alias spremenljivke x
+[+] ne zasede novega spomina
+[+] če potrebuješ, da funkcija vrne več parametrov in NI potrebno imeti globalne spremenljivke. Vrednost spremenljivke  se lahko spremeni med samo funkcijo
 
 ### Pionter
-: int *xptr = &x;
-: xptr je naslov spremenljivke x, če želimo vrednost na tem naslovu = *xptr
+int *xptr = &x;
+xptr je naslov spremenljivke x, če želimo vrednost na tem naslovu = *xptr
 - nekoliko bolj zakomplicirana sintaksa, ker je prej potrebno v *xptr dati naslov spremenljivke
 + le s pointerji lahko dostopamo do __HEAP__ spomina (spomin večjih razsežnosti)
 
@@ -181,43 +185,47 @@ To format The partition as FAT32 use
   1. [Link](https://www.youtube.com/watch?v=1h9_cB9mPT8)
   
 ## install:
-Debian le:  
->sudo apt-get install git
+Debian le
+
+    sudo apt-get install git
   
 ## config:
->git config --global user.name "davidrihtarsic"
-
->git config --global user.email "david.rihtarsic@gmail.com"
-
->git config --global core.editor="subl"
+    git config --global user.name "davidrihtarsic"
+    git config --global user.email "david.rihtarsic@gmail.com"
+    git config --global core.editor="subl"
   
 ## general_use:
 make new repository ... BlaBla_project (need to be on URL gitHub)
 make dir on your computer for that project 
 navigate to that dir
-> git init
+    
+    git init
 
 ### editing:
 na tem mestu spreminjaš FAJL...
-> git add .
-> git commit -m "comment"
-> git commit -a -m "comment"
-> git status
-> git diff
+    
+    git add .
+    git commit -m "comment"
+    git commit -a -m "comment"
+    git status
+    git diff
 
 ### uploading:
 kako da stvar na GitHub...
 v spremenljivko "origin" spravimo URL projekta
-> git remote add origin https://github.com/davidrihtarsic/myZapiski.git
-> git push ~~origin master~~
+    
+    git remote add origin https://github.com/davidrihtarsic/myZapiski.git
+    git push ~~origin master~~
 
 ### updating:
 naprimer, da nekdo popravi kodo (recimo ti sam na GitHubu...
 in nekdo tudi na compu ter naredi commit)
-> git commit -a -m "comment"
+  
+    git commit -a -m "comment"
 
 hočeš naložit... novo verzijo in dobiš konflikt s tisto na GitHub-u
-> git push origin master
+  
+    git push origin master
 
     hint: Updates were rejected because the remote contains work that you do
     hint: not have locally. This is usually caused by another repository pushing
@@ -226,7 +234,8 @@ hočeš naložit... novo verzijo in dobiš konflikt s tisto na GitHub-u
     hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 potem naredis :
-> git pull
+  
+    git pull
 
 in če je bil dokument spremenjen na ISTEM mestu (recimo v isti crstici)
 potem je to v dokumentu označeno z:   
@@ -262,28 +271,28 @@ Nato greš na tole stran:
 3. CTRL+ALT+F1
 4. user:
 5. password:
->sudo service lightdm stop
+
+    sudo service lightdm stop
  
-
-
 # INKSCAPE
   asdf
 
 # ISO BURN TO USB
-> sudo dd bs=4M if=*.iso of=/dev/sdb status=progress && sync
+  
+    sudo dd bs=4M if=*.iso of=/dev/sdb status=progress && sync
 
 ## More advanced copy with progress
 Inštaliran mora biti pv
-> sudo apt-get install pv 
+    
+    sudo apt-get install pv 
 
 Ker pv (pipe Viever) dela več različnih stvari in ne le dd,
 med drugim tudi progress bar... je ukaz potrebno izvesti v sudo načinu:
-> sudo -s
-> pv <NekIsoFile.iso> /dev/sdb
-
-    857MiB 0:01:05 [13.1MiB/s] [======================================================================>] 100%
-> exit
->
+    
+    sudo -s
+    pv <NekIsoFile.iso> /dev/sdb
+    857MiB 0:01:05 [13.1MiB/s] [==============================>] 100%
+    exit
 
 # JAVA in FIREFOX BROWSER
 
@@ -300,7 +309,7 @@ med drugim tudi progress bar... je ukaz potrebno izvesti v sudo načinu:
   for KeyBindings:
 
 ## ShortCuts():
-  v settings>Keyboaard sem si nastavil nekaj bližnjic:
+v settings>Keyboaard sem si nastavil nekaj bližnjic:
    > super+w > Firefox
    > super+e > Text Editor
    > super+f > File Manager
@@ -324,18 +333,21 @@ instaliral tako kot je opisano na [internetu](https://forum.lazarus.freepascal.o
 6. Instaliral gdb
 
 # LIBREOFFICE:
- Instal preko terminala:
- > apt-get install libreoffice
+Instal preko terminala:
+    
+    apt-get install libreoffice
 
 ## WRITER
 __Short Cuts__
+
 | Short cut       | Action              |
 |-----------------|---------------------|
 | [Ctrl] + [Ent]  | Insert Break Page   |
-| []+[]           | Insert greek letter |                  |
+| []+[]           | Insert greek letter |
 
 ## CALC
 How To - Insert DATE:
+
 1. Tools -> Customize -> Keyboard -> 
 2. Short Keys :Ctrl+.
 3. Category: Insert
@@ -343,6 +355,7 @@ How To - Insert DATE:
 5. [Modify]
 
 How To - Insert TIME:
+
 1. Tools -> Customize -> Keyboard -> 
 2. Short Keys :Ctrl+Shift.
 3. Category: Insert
@@ -520,6 +533,16 @@ sudo apt-get install qtdeclarative5-models-plugin
   3. View -> Show Console
   4. _paste_ 
 
+### Uporabni paketi
+
+1. Emmet //completeing the code
+2. AllAutoComplete //complete any word from opened files
+dodas v Preferences.sublime-settings:
+> "auto_complete_selector": "source, text"
+3. DocBlocker //komentiranje funkcij [Alt]+[Q]
+4. SideBarEnhacement //more functionality in side bar
+5. GitGutter //kaže kaj si na novo naredil v primerjavi s fajlom na GitHubu
+
 ### install GitHub:
   1. C+S+p -> Install Packages
   2. [Git()][https://github.com/kemayo/sublime-text-git/wiki]
@@ -556,6 +579,7 @@ Paket Package Controll mora biti nameščen...
        "wrap_width": 0,
        "rulers": []
      }
+
 #### MarkDown uporaba:
 >linux ukazi
 
@@ -603,7 +627,10 @@ nato pa še packages:
     sudo apt-get install texlive-latex-extra
     sudo apt-get install texlive-fimts-extra 
 
-oba paketa sem inštaliral preko SynapticPackageManager.
+oba paketa sem inštaliral preko SynapticPackageManager, ker je preveč dependenciesov...
+__CMD:__
+
+    pandoc -o test.pdf --from markdown --template eisvogel --listings myLinuxNotes.md
 
 ### Spell Checker:
  download:
@@ -635,6 +662,7 @@ oba paketa sem inštaliral preko SynapticPackageManager.
   + sudo apt-get -f install namestitev:
     C+S+p -> Install Packages
     Google Spell Check
+
 
 
 # TERMINAL:
