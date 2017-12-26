@@ -606,8 +606,9 @@ nato pa še packages:
  download:
   v direktorij: /home/david/.config/sublime-text-3/Packages/
   
-  > `wget https://github.com/titoBouzout/Dictionaries/archive/master.zip`  
-  > `unzip..`
+    wget https://github.com/titoBouzout/Dictionaries/archive/master.zip`  
+    //then unz
+    unzip..`
    
  ali ...
   1. [Download](http://extensions.openoffice.org/en/project/venian-dictionary-package-slovenski-paket-slovarjev) the language file from the appropiate OpenOffice extension
