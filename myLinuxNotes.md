@@ -629,6 +629,7 @@ zato inštaliraš raje
 
     texlive
 
+#### PanDoc
 nato pa še packages:
 
     sudo apt-get install texlive-latex-extra
