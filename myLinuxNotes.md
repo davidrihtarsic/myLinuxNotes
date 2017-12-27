@@ -618,7 +618,7 @@ OK, prej moras namestiti dodatne pakete..:
     sudo apt-get install biber
 
 #### LaTex:
-Našel sem, da lahko iz MarkDown datoteke naredis pdf tako, da uporabim *pandic*.
+Našel sem, da lahko iz MarkDown datoteke naredis pdf tako, da uporabim *pandoc*.
 S tem programom lahko spremeniš tudi v druge formate WORD... Ampak moraš inštalirat
 še LaTeX podporo...
 
