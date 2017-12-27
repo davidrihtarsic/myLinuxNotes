@@ -542,7 +542,7 @@ dodas v Preferences.sublime-settings:
 
 > "auto_complete_selector": "source, text"
 
-3. DocBlocker               //komentiranje funkcij [Alt]+[Q]
+3. DoxyDoxygen              //komentiranje funkcij [Alt]+[Q]
 4. SideBarEnhacement        //more functionality in side bar
 5. GitGutter                //kaže kaj si na novo naredil v primerjavi s fajlom na GitHubu
 6. Git (glej spodaj)
@@ -625,7 +625,7 @@ OK, prej moras namestiti dodatne pakete..:
     sudo apt-get install biber
 
 #### LaTex:
-Našel sem, da lahko iz MarkDown datoteke naredis pdf tako, da uporabim *pandic*.
+Našel sem, da lahko iz MarkDown datoteke naredis pdf tako, da uporabim *pandoc*.
 S tem programom lahko spremeniš tudi v druge formate WORD... Ampak moraš inštalirat
 še LaTeX podporo...
 
@@ -636,6 +636,7 @@ zato inštaliraš raje
 
     texlive
 
+#### PanDoc
 nato pa še packages:
 
     sudo apt-get install texlive-latex-extra
