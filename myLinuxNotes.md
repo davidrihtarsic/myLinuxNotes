@@ -588,11 +588,17 @@ Paket Package Controll mora biti nameščen...
      }
 
 #### MarkDown uporaba:
->linux ukazi
+> Takole s ">" je označen tekst, ki je nokako označen kot _citat_.
+> Lahko pa ga tudi citiramo[^1]
 
-    z dvema TAB-oma
-    njegov izpis na ekranu
-    ali nek drug text v filu...
+[^1]: In tu je tudi sprotna opomba.
+Potem nekaj navadnega texta...
+
+    z dvema TAB-oma je ločena
+    vsaka vrstica kode. V Sublimu je pobarvana 
+    vijolično v pdf-ju pa je v okvirčku
+    z ostevilčinimi vrsticami..
+
 1. nastevanje
 2. nastevanje..
   - nast
@@ -601,6 +607,7 @@ Paket Package Controll mora biti nameščen...
   * nato tudi to
     + lahko pa tudi
     + ali a +
+
 __podčtrano__
 
 ~~prečrtano~~ bom uporabljal tam kjer sem nekaj probal pa ni delovalo
