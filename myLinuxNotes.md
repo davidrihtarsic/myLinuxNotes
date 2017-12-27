@@ -542,7 +542,7 @@ dodas v Preferences.sublime-settings:
 
 > "auto_complete_selector": "source, text"
 
-3. DocBlocker               //komentiranje funkcij [Alt]+[Q]
+3. DoxyDoxygen              //komentiranje funkcij [Alt]+[Q]
 4. SideBarEnhacement        //more functionality in side bar
 5. GitGutter                //kaže kaj si na novo naredil v primerjavi s fajlom na GitHubu
 6. Git (glej spodaj)
