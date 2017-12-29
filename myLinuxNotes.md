@@ -122,6 +122,7 @@ Naredimo datoteko.desktop:
  > sudo apt-get install thunar
 
 # FILES STRUCTURE
+Mogoče da si narediš template za folders
 Tu bi napisal kako bom uredil file
 - Files
   + To-Do(links)
