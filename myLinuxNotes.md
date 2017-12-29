@@ -71,6 +71,19 @@ xptr je naslov spremenljivke x, če želimo vrednost na tem naslovu = *xptr
 - nekoliko bolj zakomplicirana sintaksa, ker je prej potrebno v *xptr dati naslov spremenljivke
 + le s pointerji lahko dostopamo do __HEAP__ spomina (spomin večjih razsežnosti)
 
+# CATFISH
+Odličen iskalnik filov...
+po defaultu naložen.. hm ne vem od kdaj...
+v Thunar sem imel po defaultu Commnad:
+
+    catfish --fileman=bl-file-manager --hidden --path=%f
+
+:) aha ... sem spremenil v :
+
+    catfish --path=%f
+
+in dela :)
+
 # ECLIPSE
 
 ## installation:
