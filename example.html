@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="David Rihtaršič" />
+  <title>Zapiski o LINUX sistemu in se kaj drugega</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.line-block{white-space: pre-line;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">Zapiski o LINUX sistemu in se kaj drugega</h1>
+<p class="author">David Rihtaršič</p>
+<p class="date">2017-12-24 18:24</p>
+</header>
+<h1 id="android">ANDROID</h1>
+<p>Na tem msestu bomo zapisali nekaj programov za ANDROID program na telefonu. Glavno program je <strong>ADB</strong> ( <strong>A</strong>-ndroid <strong>D</strong>-e-<strong>B</strong>-ugger)… To omogoča, da priključimo telefon ns računalnik in se nanj povežemo tako, da delamo na terminalu…</p>
+<h2 id="adb">ADB</h2>
+<p>= android deBugger… da se lahko z računalnikom povežeš na tel… in od tam urejaš linux (android)</p>
+<h2 id="busybox-nujno-4-me">BUSYBOX (nujno 4 me:)</h2>
+<p>splača se inštalirat ta program, ker omogoča razširjen nabor Linux ukaov kot so npr: cp, crond, vi (Editor) …</p>
+<h2 id="crond">CROND</h2>
+<ol type="1">
+<li>busybox</li>
+<li>su</li>
+<li>mount -o remount,rw /</li>
+<li>mkdir bin</li>
+<li>ln -s /system/bin/sh /bin/sh</li>
+<li>crond -c /data/crontab</li>
+</ol>
+<h1 id="arduino">ARDUINO</h1>
+<h2 id="enable-port-permmissions-to-user">Enable PORT permmissions to user</h2>
+<pre><code>sudo usermod -a -G dialout terrik</code></pre>
+<p>and Log Out / Log In</p>
+<h1 id="dd_ibs_test.sh">DD_IBS_TEST.SH():</h1>
+<p>program za testiranje dd komnade… kako hitro comp lahko kopira datoteke v odvisnosti ob bs= ? podatka… Program je na <a href="https://github.com/tdg5/blog/blob/master/_includes/scripts/dd_ibs_test.sh">GitHubu</a></p>
+<h1 id="c">C++</h1>
+<h2 id="passby-value-reference-pointer">PassBy VALUE REFERENCE POINTER</h2>
+<p>Pomembno pri funkcijah, naprimer: void passByVal(int val); void passByRef(int &amp;ref); void passByPtr(int *ptr);</p>
+<h3 id="value">Value</h3>
+<p>int x = 5;</p>
+<p>naredi kopijo spremenljivke v stacku</p>
+<p>[-] več spomina</p>
+<p>[+] vrednost prvotne spremenljivke se ne spremeni</p>
+<h3 id="reference">Reference</h3>
+<p>int &amp;ref = x to je alias spremenljivke x [+] ne zasede novega spomina [+] če potrebuješ, da funkcija vrne več parametrov in NI potrebno imeti globalne spremenljivke. Vrednost spremenljivke se lahko spremeni med samo funkcijo</p>
+<h3 id="pionter">Pionter</h3>
+<p>int <em>xptr = &amp;x; xptr je naslov spremenljivke x, če želimo vrednost na tem naslovu = </em>xptr - nekoliko bolj zakomplicirana sintaksa, ker je prej potrebno v *xptr dati naslov spremenljivke + le s pointerji lahko dostopamo do <strong>HEAP</strong> spomina (spomin večjih razsežnosti)</p>
+<h1 id="catfish">CATFISH</h1>
+<p>Odličen iskalnik filov… po defaultu naložen.. hm ne vem od kdaj… v Thunar sem imel po defaultu Commnad:</p>
+<pre><code>catfish --fileman=bl-file-manager --hidden --path=%f</code></pre>
+<p>:) aha … sem spremenil v :</p>
+<pre><code>catfish --path=%f</code></pre>
+<p>in dela :)</p>
+<h1 id="eclipse">ECLIPSE</h1>
+<h2 id="installation">installation:</h2>
+<p>… nisem zapisal… … presnameš, odpakiraš kopiraš v: /opt/eclipse/ narediš link za vse uporabnike: sudo ln -sf /opt/eclipse/cpp-neon/eclipse/eclipse /usr/bin/eclipse</p>
+<h2 id="eclipse.desktop">eclipse.desktop:</h2>
+<p>Naredimo datoteko.desktop: sudo nano /usr/share/applications/eclipse.desktop</p>
+<pre><code>[Desktop Entry]
+Version = Neon 2.0
+Type = Application
+Terminal = false
+Name = eclipse
+Exec = /usr/bin/eclipse
+Icon = /opt/eclipse/cpp-neon/eclipse/icon.xpm
+Categories = Development;</code></pre>
+<h1 id="efi-mode">EFI MODE:</h1>
+<p>boot -&gt; CSM enable<br />
+security -&gt; security boot control -&gt; dissable</p>
+<h2 id="installbunsen">installBUNSEN</h2>
+<p>instaliral … grub dal na sda1 (kjer sem našel efi… [sudo parted -l]) kar nekaj sem probal… ni delalo - sedaj pišem kaj ne dela</p>
+<p>BIOS: new boot oprions: /efi/boot/bootx64.efi ne dela</p>
+<p>Test x-n probaj ta navodila: http://sarah.thesharps.us/2014/12/31/installing-debian-on-asus-ux301la/ — install grub -&gt; /dev/sda1 takoj ne dela… zažene se win10… path :/EFI/debian/grubx64.efi [ne dela] path :/efi/boot/bootx64.efi [ne dela]</p>
+<h1 id="filemanager">FILEMANAGER:</h1>
+<p>Všeč mi je filemanager THUNAR:</p>
+<pre><code>sudo apt-get install thunar</code></pre>
+<h1 id="files-structure">FILES STRUCTURE</h1>
+<p>Mogoče da si narediš template za folders Tu bi napisal kako bom uredil file - Files + To-Do(links) + Work * PeF - Vaje + Modelarstvo + Promet - Habilitacija - Diplome - Članki - Predstavitve * DRTI - Poletne Šole - Finance - * + Hobi * Linux - BunsenLab - RPi * Dom * Kolesarjenje + Musics + GitHub</p>
+<h1 id="format">FORMAT</h1>
+<p>First, you have to find out which device (/dev/sd??) your USB stick is. Therefore look at the output of &gt;sudo fdisk -l</p>
+<p>Jaz raje uporabim: &gt;lsblk</p>
+<pre><code>NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda      8:0    0 465.8G  0 disk 
++-sda1   8:1    0   300M  0 part /boot/efi
++-sda2   8:2    0   600M  0 part 
++-sda3   8:3    0   128M  0 part 
++-sda4   8:4    0 185.5G  0 part 
++-sda5   8:5    0 271.3G  0 part /
++-sda6   8:6    0   7.9G  0 part [SWAP]</code></pre>
+<p>Lepo se vidijo diski in kje so mountirani. Po potrebi ga lahko od-mountiraš.. After that unmount the device/partition (if necessary) by running</p>
+<pre><code>sudo umount /dev/sdb</code></pre>
+<p>Make sure you replaced ?? with the correct device/partition name from the previous output. To format The partition as FAT32 use &gt; sudo mkdosfs -F 32 -I /dev/sdb</p>
+<h1 id="fritzing">FRITZING</h1>
+<p>asdf</p>
+<h1 id="freecad">FREECAD</h1>
+<p>asdf # GIMP asdf # GITHUB ## LITERATURA: 1. <a href="https://www.youtube.com/watch?v=1h9_cB9mPT8">Link</a></p>
+<h2 id="install">install:</h2>
+<p>Debian le</p>
+<pre><code>sudo apt-get install git</code></pre>
+<h2 id="config">config:</h2>
+<pre><code>git config --global user.name &quot;davidrihtarsic&quot;
+git config --global user.email &quot;david.rihtarsic@gmail.com&quot;
+git config --global core.editor=&quot;subl&quot;</code></pre>
+<h2 id="general_use">general_use:</h2>
+<p>make new repository … BlaBla_project (need to be on URL gitHub) make dir on your computer for that project navigate to that dir</p>
+<pre><code>git init</code></pre>
+<h3 id="editing">editing:</h3>
+<p>na tem mestu spreminjaš FAJL…</p>
+<pre><code>git add .
+git commit -m &quot;comment&quot;
+git commit -a -m &quot;comment&quot;
+git status
+git diff</code></pre>
+<h3 id="uploading">uploading:</h3>
+<p>kako da stvar na GitHub… v spremenljivko “origin” spravimo URL projekta</p>
+<pre><code>git remote add origin https://github.com/davidrihtarsic/myZapiski.git
+git push ~~origin master~~</code></pre>
+<h3 id="updating">updating:</h3>
+<p>naprimer, da nekdo popravi kodo (recimo ti sam na GitHubu… in nekdo tudi na compu ter naredi commit)</p>
+<pre><code>git commit -a -m &quot;comment&quot;</code></pre>
+<p>hočeš naložit… novo verzijo in dobiš konflikt s tisto na GitHub-u</p>
+<pre><code>git push origin master
+
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., &#39;git pull ...&#39;) before pushing again.
+hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.</code></pre>
+<p>potem naredis :</p>
+<pre><code>git pull</code></pre>
+<p>in če je bil dokument spremenjen na ISTEM mestu (recimo v isti crstici) potem je to v dokumentu označeno z:</p>
+<pre><code>  &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      #to je novo na compu
+  =======
+      #to je novo na GitHubu
+      #heh nisem si zapisoval
+  &gt;&gt;&gt;&gt;&gt;&gt;&gt; 14d185fbd48d55e9a37d7de3e4d9bde157aa8915</code></pre>
+<p>če pa je na različnih mestih pa dokument združi preko:</p>
+<p>“recursive strategy”…</p>
+<p>in je to - to :) skratka popraviš in uploadaš še enkrat :) jeah!</p>
+<h1 id="graphic-card">GRAPHIC CARD</h1>
+<p>Kako preveriti in namestiti driverje za grafično kartico ## GeForce 9600 GT Jaz imam na PCju to kartico to lahko preveriš s: &gt; ‘lspci’</p>
+<p>V terminalu se ti izpiše nekaj takega:</p>
+<pre><code>05:00.0 VGA compatible controller: NVIDIA Corporation G94 [GeForce 9600 GT] (rev a1)</code></pre>
+<p>Nato greš na tole stran: <a href="http://www.geforce.com/drivers">GeForce Drivers</a> 1. vtipkaš podatke 2. Download 3. CTRL+ALT+F1 4. user: 5. password:</p>
+<pre><code>sudo service lightdm stop</code></pre>
+<h1 id="inkscape">INKSCAPE</h1>
+<p>asdf</p>
+<h1 id="iso-burn-to-usb">ISO BURN TO USB</h1>
+<pre><code>sudo dd bs=4M if=*.iso of=/dev/sdb status=progress &amp;&amp; sync</code></pre>
+<h2 id="more-advanced-copy-with-progress">More advanced copy with progress</h2>
+<p>Inštaliran mora biti pv</p>
+<pre><code>sudo apt-get install pv </code></pre>
+<p>Ker pv (pipe Viever) dela več različnih stvari in ne le dd, med drugim tudi progress bar… je ukaz potrebno izvesti v sudo načinu:</p>
+<pre><code>sudo -s
+pv &lt;NekIsoFile.iso&gt; /dev/sdb
+857MiB 0:01:05 [13.1MiB/s] [==============================&gt;] 100%
+exit</code></pre>
+<h1 id="java-in-firefox-browser">JAVA in FIREFOX BROWSER</h1>
+<ol type="1">
+<li>naložiš javo JRE…</li>
+<li>mkdir ~/.mozilla/plugins</li>
+<li>cd ~/.mozilla/plugins</li>
+<li>ln -s /usr/lib/jvm/jre1.8.0_121/lib/amd64/libnpjp2.so [tu pride java direktorij kjer je libnpjp2.so]</li>
+<li>restart FireFox</li>
+<li>v FF vpišeš about:plugins in preveriš če je java podprta…</li>
+</ol>
+<h1 id="keyboard-settinfs">KEYBOARD SETTINFS:</h1>
+<p>Settings -&gt; Reigon&amp;Language -&gt; Input Source for KeyBindings:</p>
+<h2 id="shortcuts">ShortCuts():</h2>
+<p>v settings&gt;Keyboaard sem si nastavil nekaj bližnjic: &gt; super+w &gt; Firefox &gt; super+e &gt; Text Editor &gt; super+f &gt; File Manager &gt; super+t &gt; terminator</p>
+<p>v ~/.bashrc (file se zazene na zacetku) &gt; bliznica ll namesto … &gt; alias ll=‘ls -alF’ &gt; tipki [đ] dodelimo znak [/] &gt; xmodmap -e “keycode 35 = slash”</p>
+<h1 id="lazarus">LAZARUS</h1>
+<p>Programing program in pascal… As Delphi</p>
+<h2 id="instalation">instalation</h2>
+<p>instaliral tako kot je opisano na <a href="https://forum.lazarus.freepascal.org/index.php?topic=36093.0">internetu</a>: 1. Install fpc_3.0.2-170225_amd64.deb via package manager 2. Install fpc_3.0.2.x86_64-linux.tar via shell (unzip and run sh install.sh). Install into /usr directory, so it overwrites 3. the existing installation 4. Install the deb sources via package manager (<strong>tega nisem naredu… neznam</strong>) 5. Install lazarus-project_1.6.4-0_amd64.deb via package manager 6. Instaliral gdb</p>
+<h1 id="libreoffice">LIBREOFFICE:</h1>
+<p>Instal preko terminala:</p>
+<pre><code>apt-get install libreoffice</code></pre>
+<h2 id="writer">WRITER</h2>
+<p><strong>Short Cuts</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Short cut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[Ctrl] + [Ent]</td>
+<td>Insert Break Page</td>
+</tr>
+<tr class="even">
+<td>[]+[]</td>
+<td>Insert greek letter</td>
+</tr>
+</tbody>
+</table>
+<h2 id="calc">CALC</h2>
+<p>How To - Insert DATE:</p>
+<ol type="1">
+<li>Tools -&gt; Customize -&gt; Keyboard -&gt;</li>
+<li>Short Keys :Ctrl+.</li>
+<li>Category: Insert</li>
+<li>Function: Insert Current Ddate</li>
+<li>[Modify]</li>
+</ol>
+<p>How To - Insert TIME:</p>
+<ol type="1">
+<li>Tools -&gt; Customize -&gt; Keyboard -&gt;</li>
+<li>Short Keys :Ctrl+Shift.</li>
+<li>Category: Insert</li>
+<li>Function: Insert Current Time</li>
+<li>[Modify]</li>
+</ol>
+<p><strong>Short Cuts</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Short cut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[Ct]+[.]</td>
+<td>Insert Date</td>
+</tr>
+<tr class="even">
+<td>[Ct]+[Sh]+[.]</td>
+<td>Insert Time</td>
+</tr>
+</tbody>
+</table>
+<h1 id="merge-pdf-documents">MERGE PDF DOCUMENTS</h1>
+<p>Če moramo združiti več pdf dokumentov v enega v terminal napišemo: &gt; pdfunite pdf0.pdf pdf1.pdf merged.pdf</p>
+<h1 id="password-linux">PASSWORD (LINUX)</h1>
+<p>To change a password on behalf of a user, first sign on or “su” to the “root” account. Then type: (where user is the username for the password you are changing). &gt; passwd user</p>
+<p>The system will prompt you to enter a password. Passwords do not echo to the screen when you enter them. You can also change your own password, by typing: (without specifying a username). &gt; passwd</p>
+<p>You will be prompted to enter your old password for verification, and then a new password. # PIDGIN ## HANGOUTS https://bitbucket.org/EionRobb/purple-hangouts/ &gt; sudo apt-get install -y libpurple-dev libjson-glib-dev libglib2.0-dev libprotobuf-c-dev protobuf-c-compiler mercurial make; &gt; hg clone https://bitbucket.org/EionRobb/purple-hangouts/ &amp;&amp; cd purple-hangouts; &gt; make &amp;&amp; sudo make install</p>
+<p>Po tem greš na tole spletno stran: https://accounts.google.com/ServiceLogin?passive=1&amp;continue=https://accounts.google.com/o/oauth2/programmatic_auth?hl%3Den%26scope%3Dhttps://www.google.com/accounts/OAuthLogin%2Bhttps://www.googleapis.com/auth/userinfo.email%26client_id%3D936475272427.apps.googleusercontent.com%26access_type%3Doffline%26delegated_client_id%3D183697946088-m3jnlsqshjhh5lbvg05k46q1k4qqtrgn.apps.googleusercontent.com%26top_level_cookie%3D1%26from_login%3D1%26as%3D158e30052a6d899&amp;ltmpl=nosignup&amp;hl=en&amp;oauth=1&amp;sarp=1&amp;scc=1&amp;authuser=0</p>
+<p>ko sem naredil tole, je delal tudi skype plugin…</p>
+<h2 id="skype">Skype</h2>
+<p>https://github.com/EionRobb/skype4pidgin &gt; cd skype… &gt; make &gt; sudo make install</p>
+<h2 id="googletalks">GoogleTalks</h2>
+<p>My account -&gt; Prijava in varnost -&gt; Gesla za aplikacije -&gt; ime aplikacije : PIDGIN [ustvari] -&gt; qwer tzui opšd asdf — basic — Protocol:XMPP user:david.rihtarsic domain:gmail.com Resource:Home pass: qwer tzui opšd asdf [x] remember pass [x] new mail… — advanced — Connect server: talk.google.com ## WhatsApp debhelper (&gt;= 7.0.50), libglib2.0-dev, libpurple-dev, libfreeimage-dev (&gt;= 3.0.0), libprotobuf-dev, protobuf-compiler make ARCH=x86_64</p>
+<p>sudo apt-get install protobuf-compiler get :https://github.com/davidgfnet/whatsapp-purple/ cd -&gt; whatsapp-purple make # POPCORN-TIME # PPRINTER SUPPORT on BunsenLab sledil sem tocno tem <a href="http://hplipopensource.com/hplip-web/install/manual/distros/debian.html">navodilom</a> - prej moraš vedeti tudi root geslo</p>
+<p>Program za gledanje filmov: 1. Download <a href="https://www.popcorntime.ws/about">Popcorn-Time</a> 2. razpakiraš in daš dokumente v /opt/popcorn-time/ 3. polinkaš, da bo dosegljivo vsem: sudo ln -sf /opt/popcorn-time/Popcorn-Time /usr/bin/popcorn-time 4. Narediš še .desktop datoteko sudo nano /usr/share/applications/popcorntime.desktop 5. in vot vpišeš:</p>
+<pre><code>[Desktop Entry]
+Version = 1.0
+Type = Application
+Terminal = false
+Name = Popcorn Time
+Exec = /usr/bin/popcorn-time
+Icon = /opt/popcorn-time/src/app/images/icon.png
+Categories = Application;</code></pre>
+<h1 id="print-screen-dark">PRINT SCREEN = DARK</h1>
+<h1 id="qcad">QCAD</h1>
+<ol type="1">
+<li>presnameš inštalacijo iz njihove [strani][https://qcad.org/en/qcad-downloads-trial]</li>
+<li>nato spremeniš rivilegije datoteke: &gt; sudo chmod 777 qcad*.run</li>
+<li>in poženeš script: &gt; ./qcad*.run</li>
+</ol>
+<h1 id="qt5">Qt5</h1>
+<p>Za nekateri program sem si moral nainštalirat Qt5 knjižnice: 1. Manjkala mi je Qt5LinguistToolsConfig Ostale mislim, da sem imel…</p>
+<h2 id="instalacija-qt5linguisttoolsconfig">Instalacija Qt5LinguistToolsConfig</h2>
+<p>Mislim, da mi jo je uspelo naložit z: &gt; sudo apt-get install qttools5-dev</p>
+<p>nato sem datoteko našel: &gt; sudo find /usr/lib/* -name Qt5Lin*</p>
+<p>nato je manjkal še Qt5Quck instaliral sem ga z &gt; sudo apt-get install qtdeclarative5-dev</p>
+<p>nato je manjkal Qt5SvgConfig, instaliral z: &gt; sudo apt-get install libqt5svg5-dev &gt; sudo apt-get install libraw-dev –sudo apt-get install exiv2 (najverjetneje ni bil taprav paket!!!)– &gt; sudo apt-get install libexiv2-dev &gt; sudo apt-get install graphicsmagick</p>
+<p>še vedno ni delalo nato sem inštaliral qt5 creator… (neumnost, ker je to cel program za programiranje) &gt; sudo apt-get install qtcreator</p>
+<p>še ni pomagalo: sudo apt-get install qml-module-qtgraphicaleffects sudo apt-get install qml-module-qtquick-dialogs sudo apt-get install pyqt5-dev sudo apt-get install qtdeclarative5-models-plugin</p>
+<h1 id="soundon">SOUNDON:</h1>
+<p>Na začetku mi ni delal zvok… Rešitev je bila: 1. lspci: tako preveriš, če je Linux prepoznal zvočno… na terminalu sem dobil:</p>
+<pre><code>  &#39;00:1b.0 Audio device: Intel Corporation 7 Series/C210 Series Chipset Family High #inition Audio Controller (rev 04)&#39;</code></pre>
+<ol start="2" type="1">
+<li>apt-get install libasound2 alsa-utils alsa-oss</li>
+<li>alsamixer: in od “mutiraš” kanale, ki so zamutani Druga rešitev (ali celo dopolnitev):</li>
+</ol>
+<ul>
+<li>je, da v terminal napišeš: pulseaudio -D</li>
+<li>secer napiše, da ni mišljeno, da bi bil zagnan kot root ampak Ok… po tem dela tudi: Settings&gt;Soun</li>
+</ul>
+<h1 id="sublime-text-3">SUBLIME TEXT 3</h1>
+<h2 id="install-1">Install:</h2>
+<p>Greš na njihovo stran in snameš dol pravo verzijo (Ubuntu 64) nato pa v terminalu zaženeš:</p>
+<pre><code>cd Downloads
+dpkg -i Sublime...64.deb</code></pre>
+<h2 id="package-controll">Package Controll:</h2>
+<p>Paket za koristne funkcionalnosti:</p>
+<h3 id="install-2">install:</h3>
+<ol type="1">
+<li>goto [link][https://packagecontrol.io/installation]</li>
+<li><em>copy</em> code for Sublime 3: import urllib.request,os,hashlib; h = ‘df21e130d211cfc94d9b0905775a7c0f’ + ‘1e3d39e33b79698005270310898eea76’; pf = ‘Package Control.sublime-package’; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( ‘http://packagecontrol.io/’ + pf.replace(‘’, ‘%20’)).read(); dh = hashlib.sha256(by).hexdigest(); print(‘Error validating download (got %s instead of %s), please try manual install’ % (dh, h)) if dh != h else open(os.path.join( ipp, pf), ‘wb’ ).write(by)</li>
+<li>View -&gt; Show Console</li>
+<li><em>paste</em></li>
+</ol>
+<h3 id="uporabni-paketi">Uporabni paketi</h3>
+<ol type="1">
+<li>Emmet //completeing the code</li>
+<li>AllAutoComplete //complete any word from opened files dodas v Preferences.sublime-settings:</li>
+</ol>
+<blockquote>
+<p>“auto_complete_selector”: “source, text”</p>
+</blockquote>
+<ol start="3" type="1">
+<li>DoxyDoxygen //komentiranje funkcij [Alt]+[Q]</li>
+<li>SideBarEnhacement //more functionality in side bar</li>
+<li>GitGutter //kaže kaj si na novo naredil v primerjavi s fajlom na GitHubu</li>
+<li>Git (glej spodaj)</li>
+<li>MarkDown (glej spodaj)</li>
+</ol>
+<h3 id="install-github">install GitHub:</h3>
+<ol type="1">
+<li>C+S+p -&gt; Install Packages</li>
+<li>[Git()][https://github.com/kemayo/sublime-text-git/wiki]</li>
+</ol>
+<h4 id="nastavitve">nastavitve</h4>
+<p>The detail step</p>
+<ol type="1">
+<li>go to your local git project directory, [open][.git/config] file and</li>
+<li>edit: https://{username}:{password}<span class="citation" data-cites="github.com">@github.com</span>/{username}/{project}.git</li>
+<li>input git push to check if it works.</li>
+</ol>
+<p>jaz sem moral prej še spedenat v terminalu git commit -a -m “sublime pedenanje” git push (če je kak error prej še git pull… in popraviš razlike)</p>
+<h4 id="uporaba">uporaba:</h4>
+<ol type="1">
+<li>popraviš file… &amp; C+s (save)</li>
+<li>C+S+p -&gt; quick commit (repo) -&gt; msg</li>
+<li>C+S+p -&gt; push</li>
+</ol>
+<h3 id="markdown">MarkDown:</h3>
+<p>Paket Package Controll mora biti nameščen… 1. Install Package: <em>Markdown extended</em> (mogoče ni treba) 2. Install Package: <em>Monokai extended</em> 3. Preferences -&gt; Color Scheme -&gt; Monokail Extended -&gt; Monokail Extended 4. Install Package: <em>Markdown Editing</em> 5. Set doc. syntax = Monokai Extended 6. Preferences -&gt; Package settings -&gt; Markdown Editing -&gt; Markdown Settings (standard) - User:</p>
+<pre><code> {
+   &quot;color_scheme&quot;: &quot;Packages/Monokai Extended/Monokai Extended.tmTheme&quot;,
+   &quot;tab_size&quot;: 2,
+   &quot;line_numbers&quot;: true,
+   // Layout
+   &quot;draw_centered&quot;: false,
+   &quot;wrap_width&quot;: 0,
+   &quot;rulers&quot;: []
+ }</code></pre>
+<h4 id="markdown-uporaba">MarkDown uporaba:</h4>
+<blockquote>
+<p>Takole s “&gt;” je označen tekst, ki je nokako označen kot <em>citat</em>. Lahko pa ga tudi citiramo<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+</blockquote>
+<ol type="1">
+<li>nastevanje</li>
+<li>nastevanje..</li>
+</ol>
+<ul>
+<li>nast</li>
+<li>nast</li>
+<li>nato pa se</li>
+<li>nato tudi to
+<ul>
+<li>lahko pa tudi</li>
+<li>ali a +</li>
+</ul></li>
+</ul>
+<p><strong>podčtrano</strong></p>
+<p><del>prečrtano</del> bom uporabljal tam kjer sem nekaj probal pa ni delovalo</p>
+<p><a href="http://google.com">link</a></p>
+<h3 id="latex">LaTeX:</h3>
+<p>namestis paket preko: C+S+p -&gt; <strong>Install Packages</strong> <del>LaTeXTools</del> OK, prej moras namestiti dodatne pakete..:</p>
+<pre><code>sudo apt-ge&quot; : &quot;t install texlive-full
+sudo apt-get install latexmk
+sudo apt-get install biber</code></pre>
+<h4 id="latex-1">LaTex:</h4>
+<p>Našel sem, da lahko iz MarkDown datoteke naredis pdf tako, da uporabim <em>pandoc</em>. S tem programom lahko spremeniš tudi v druge formate WORD… Ampak moraš inštalirat še LaTeX podporo…</p>
+<pre><code>texlive-full</code></pre>
+<p>program zasede full okoli 2GB zato inštaliraš raje</p>
+<pre><code>texlive</code></pre>
+<h4 id="pandoc">PanDoc</h4>
+<p>nato pa še packages:</p>
+<pre><code>sudo apt-get install texlive-latex-extra
+sudo apt-get install texlive-fimts-extra </code></pre>
+<p>oba paketa sem inštaliral preko SynapticPackageManager, ker je preveč dependenciesov… <strong>CMD:</strong></p>
+<pre><code>pandoc -o test.pdf --from markdown --template eisvogel --listings myLinuxNotes.md</code></pre>
+<h3 id="spell-checker">Spell Checker:</h3>
+<p>download: v direktorij: /home/david/.config/sublime-text-3/Packages/</p>
+<pre><code>wget https://github.com/titoBouzout/Dictionaries/archive/master.zip  
+//then unz
+unzip..</code></pre>
+<p>ali … 1. <a href="http://extensions.openoffice.org/en/project/venian-dictionary-package-slovenski-paket-slovarjev">Download</a> the language file from the appropiate OpenOffice extension 2. Rename the “some.oxt” file to “some.zip” 3. Unzip the file 4. Look for two files: “lang.aff” and “lang.dic”. For example es_ES.aff and ES.dic 5. Open the “lang.aff” to check the encoding used. Such the line: SET -8859-1 6. Convert that file to UTF-8 from the used encoding 7. Convert “lang.dic” to UTF-8 from the used encoding. 8. Change SET ISO-8859-1 to SET UTF-8 9. In ST3, click on Preferences -&gt; Browse Packages 10. Create a new folder, for example Language - Spanish 11. Move lang.dic and lang.aff to that folder 12. Activate the dictionary in ST3 (View -&gt; Dictionary -&gt; Language - Spanish es_ES) 13. Press F6 to enable spell check 14. View-&gt;Dictionaries</p>
+<p>Google spell check: + apt-get update + dpkg -i teamviewer_****_i386.deb + sudo apt-get -f install namestitev: C+S+p -&gt; Install Packages Google Spell Check</p>
+<h1 id="terminal">TERMINAL:</h1>
+<p>Terminal je najboljši terminator &gt; sudo apt-get install terminator</p>
+<h2 id="preferences">Preferences:</h2>
+<p>[ ] Show title bar Profiles -&gt; Colors = Green on Black Profiles -&gt; Background -&gt; Transparency = 50%</p>
+<h2 id="programi-za-terminal">Programi za terminal</h2>
+<h3 id="sc-im">SC-IM</h3>
+<p>excel za terminal… super omogoče veliko excelovih stvari … tudi izvoz v .xlsx <strong>Uporabne komande:</strong> &gt; 4<DOWN> // skočimo za 4 celice dol - uporabno pri kopiranju če se moraš premaknit &gt; yr // copy (YUNK) celo ROW &gt; p // paste cel YUNK &gt; +/- // increse/decrese number &gt; C-d // transform to DATE &gt; f<UP> // 0.00 -&gt; 0.000 &gt; f<DOWN> // 0.00 -&gt; 0.0 &gt; f<LEFT> // spremeni širino stolpca</p>
+<hr />
+<p>V /home/david/.scimrc napišemo: &gt; nmap “W” “:w<cr>:e! txt<cr>:e! xlsx<cr>” //mapira “W” tako da shrani datoteko v .sc, .txt in .xlsx</p>
+<h1 id="tab_click">TAB_CLICK:</h1>
+<p>Da vklnjučiš Tab-CLICK greš v: 1. settings 2. mouse 3. in nato : Tab-CLICK = ON Videl sem tudi, da problem reši tudi: &gt; synclient tapbutton1 = 1</p>
+<h2 id="touchpad">Touchpad</h2>
+<p>v [datoteki][/usr/share/X11/xorg.conf.d/50-synaptics.conf] dodas:</p>
+<pre><code>Section &quot;InputClass&quot;  
+  Identifier      &quot;Touchpad&quot;                      # required
+  MatchIsTouchpad &quot;yes&quot;                           # required
+  Driver          &quot;synaptics&quot;                     # required
+  Option          &quot;MinSpeed&quot;              &quot;0.5&quot;  
+  Option          &quot;MaxSpeed&quot;              &quot;1.0&quot;  
+  Option          &quot;AccelFactor&quot;           &quot;0.075&quot;  
+  Option          &quot;TapButton1&quot;            &quot;1&quot;
+  Option          &quot;TapButton2&quot;            &quot;3&quot;     # multitouch
+  Option          &quot;TapButton3&quot;            &quot;2&quot;     # multitouch
+  Option          &quot;VertTwoFingerScroll&quot;   &quot;1&quot;     # multitouch
+  Option          &quot;HorizTwoFingerScroll&quot;  &quot;1&quot;     # multitouch
+  Option          &quot;VertEdgeScroll&quot;        &quot;1&quot;  
+  Option          &quot;CoastingSpeed&quot;         &quot;8&quot;  
+  Option          &quot;CornerCoasting&quot;        &quot;1&quot;  
+  Option          &quot;CircularScrolling&quot;     &quot;1&quot;  
+  Option          &quot;CircScrollTrigger&quot;     &quot;7&quot;  
+  Option          &quot;EdgeMotionUseAlways&quot;   &quot;1&quot;  
+  Option          &quot;LBCornerButton&quot;        &quot;8&quot;     # browser &quot;back&quot; btn
+  Option          &quot;RBCornerButton&quot;        &quot;9&quot;     # browser &quot;forward&quot; btn
+EndSection</code></pre>
+<h1 id="teamviewer">TEAMVIEWER</h1>
+<p>presnames teamviewer i386 (cetudi imas 64-bitni comp.) v terminalu&gt; + sudo dpkg –add-architecture i386 + sudo apt-get update + sudo dpkg -i teamviewer_****_i386.deb + sudo apt-get -f install</p>
+<h1 id="texmaker">TEXMAKER</h1>
+<ol type="1">
+<li>Spell Checker: [download][http://extensions.services.openoffice.org/en/project/slovenian-dictionary-package-slovenski-paket-slovarjev]</li>
+<li>unzip pac-sl.oxt</li>
+<li>in prekopiraš datoteko sl-SI.dic v Sublime paketi direktorij (Preferences-&gt;Browse packages)</li>
+<li>nato nastaviš jezik : View-&gt;Dictionary-&gt;si-SL.dic</li>
+</ol>
+<h1 id="thunderbird">THUNDERBIRD()</h1>
+<p>inštalacija je čisto reprosta: &gt; apt-get install thunderbird</p>
+<p>ali če ni apt paketa: 1. greš na njihovo stran in presnameš datoteko thunderbird.tar.db2 2. extrahiraš v /opt/thunderbird 3. preveriš če dela: ./thunderbird 4. nastaviš privilegije (če je potrebno):</p>
+<blockquote>
+<p>sudo chown -R root:root /opt/hunderbird</p>
+</blockquote>
+<ol start="5" type="1">
+<li>in linkaš exe skript:</li>
+</ol>
+<blockquote>
+<p>sudo ln -fs /opt/thunderbird/thunderbird /usr/bin/hunderbird</p>
+</blockquote>
+<h2 id="nastavitev-thunderbirda-za-pef">Nastavitev Thunderbirda za PeF</h2>
+<ul>
+<li>Your name: David Rihtarsic</li>
+<li>Email add: david.rihtarsic@pef.uni-lj.si</li>
+<li>Password: Work-mei-kabinet</li>
+<li>Incoming: IMAP
+<ul>
+<li>server: imap.uni-lj.si</li>
+<li>port: 993</li>
+<li>SSL: SSL/TLS</li>
+<li>Authentication: NMLT</li>
+</ul></li>
+<li>Outgoing: SMTP
+<ul>
+<li>server: mail.uni-lj.si</li>
+<li>port: 587</li>
+<li>SSL: None</li>
+<li>Authentication: NMLT</li>
+</ul></li>
+</ul>
+<h2 id="google-koledar-v-thunderbirdu">Google Koledar v Thunderbirdu</h2>
+<ol type="1">
+<li>inštaliraš koledar: Menu-&gt;AddOns-&gt;Lightnings-&gt;Install</li>
+<li>inštaliraš Google Provider: Menu-&gt;AddOns-&gt;Provider for Google Calender-&gt;Install… Restart Now</li>
+<li>Vključevanje koledarja:</li>
+</ol>
+<ul>
+<li>v “Callenders” klikneš z desno in “New Calenders”</li>
+<li>On the network -&gt; Next</li>
+<li>Google Calender -&gt; Next</li>
+<li>david.rihtarsic@gmail.com + gesla + itd.</li>
+<li>izbereš koledarje za sync -&gt; Next</li>
+<li>Finish</li>
+</ul>
+<h1 id="vim">VIM</h1>
+<h2 id="instalation-1">Instalation</h2>
+<pre><code>sudo apt-get install vim-nox
+
+&quot;install Vundle -  Plugin Manger
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+&quot;install NerdTREE&quot;
+&quot;install TagBar&quot;
+
+sudo apt-get install exuberant-stags</code></pre>
+<h1 id="w3m-instalation">W3M“: ## instalation:</h1>
+<pre><code>apt-get install w3m</code></pre>
+<h2 id="frendlyuse">frendlyUse:</h2>
+<p>v ~/bashrc vpišeš: &gt; alias w3mm=‘w3m www.google.com’</p>
+<h1 id="wireless-setup">WIRELESS SETUP</h1>
+<p>Wavemon… &gt; sudo apt-get install wavemon</p>
+<h1 id="xanmod-kernel">XANMOD KERNEL:</h1>
+<p>XanMod is a mainline Linux kernel distribution with custom settings. Optimized to take full advantage of high-performance Desktops, PC Gamers, Workstations, Media Centers and others. Supports all recent 64-bit versions of Debian and Ubuntu-based systems.</p>
+<ul>
+<li>ne priporočam, ker potemnisem mogel inštalirati GeForce driverjev…</li>
+</ul>
+<h2 id="tested">Tested</h2>
+<p>based on <a href="http://www.hecticgeek.com/2016/09/supercharge-ubuntu-16-04-lts-xanmod-kernel/">article</a> tested on Ubuntu MATE (DELA SUPER!): * Firefox prej 10.5 s … po tem 4.6 s * kopiranje dd (komanda) prej 9MB/s le pri bs=128K * po tem… 9MB/s pri 1K, 4K, 8K, 32K,</p>
+<h2 id="installation-1">Installation</h2>
+<ol type="1">
+<li>https://xanmod.org/</li>
+<li>First install the XanMod Repository Setup</li>
+<li>manual… &gt; echo ‘deb http://deb.xanmod.org releases main’ | sudo tee /etc/apt/ urces.list.d/xanmod-kernel.list &amp;&amp; wget -qO - http://deb.xanmod.org/gpg.key sudo apt-key add -<br />
+&gt; sudo apt update &amp;&amp; sudo apt install linux-xanmod-4.9<br />
+&gt; sudo reboot<br />
+&gt; cat /proc/version (preveri kernel verzijo:)</li>
+<li>chane [cfg] disk scheduler:</li>
+<li>preveri: &gt; sudo cat /sys/block/sda/queue/scheduler (kateri so na razpolago)<br />
+&gt; sudo subl /etc/#ault/grub (edit grub settings)<br />
+</li>
+<li>spremeni vrstico: &gt; GRUB_CMDLINE_LINUX_#AULT=“quiet splash”<br />
+&gt; GRUB_CMDLINE_LINUX_#AULT=“quiet splash elevator=bfq”</li>
+<li>shrani</li>
+<li>sudo update-grub2</li>
+<li>reboot</li>
+<li>preveri disk scheduler: &gt; sudo cat /sys/block/sda/queue/scheduler</li>
+<li>install Intel CPU support:</li>
+<li>ker sem prej dobil error: W: Possible missing firmware /lib/firmware/rtl_nic/rtl8107e-2.fw for dule r8169 sem namestil še firmware, a mislim, da ni šlo skoz… &gt; sudo apt install intel-microcode iucode-tool &gt; sudo reboot</li>
+</ol>
+<h1 id="xrandr">XRANDR:</h1>
+<p>te nastavitve so odvisne od monitorja… ! najprej: &gt; cvt 1280 1024 60 # 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz Modeline “1280x1024_60.00” 109.00 1280 1368 1496 1712 1024 1027 1034 1063 -hsync +vsync</p>
+<p>…kopiras kar ti terminal vrže…: &gt; sudo xrandr –newmode “1280x1024” 109.00 1280 1368 1496 1712 1024 1027 1034 1063 -hsync +vsync</p>
+<p>dodas v moznosti: &gt; sudo xrandr –addmode VGA1 1280x1024</p>
+<p>potem nastavis resolucijo v <strong>MENU -&gt; Settings -&gt; Arandr</strong> ali v terminalu: &gt; xrandr –output VGA1 –mode 1280x1024 –pos 1366x0</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>In tu je tudi sprotna opomba. Potem nekaj navadnega texta…</p>
+<p>z dvema TAB-oma je ločena vsaka vrstica kode. V Sublimu je pobarvana vijolično v pdf-ju pa je v okvirčku z ostevilčinimi vrsticami..<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+</body>
+</html>
