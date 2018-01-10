@@ -617,6 +617,24 @@ Potem nekaj navadnega texta...
     vijolično v pdf-ju pa je v okvirčku
     z ostevilčinimi vrsticami..
 
+<!-- Menda naj bi bil tole komentar -->
+
+Če poznamo kodo jo lahko poumenujemo:
+Naprimer: c++ in Python
+
+```c
+int test = 0;
+void loop(){
+  digitalWrite(led_pin, HIGH);
+}
+```
+in Python
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
 1. nastevanje
 2. nastevanje..
   - nast
