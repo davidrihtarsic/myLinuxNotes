@@ -133,9 +133,11 @@ Naredimo datoteko.desktop:
 
 # FILEMANAGER:
  Všeč mi je filemanager THUNAR:
- > sudo apt-get install thunar
+    
+    sudo apt-get install thunar
 
 # FILES STRUCTURE
+Mogoče da si narediš template za folders
 Tu bi napisal kako bom uredil file
 - Files
   + To-Do(links)
@@ -161,7 +163,9 @@ Tu bi napisal kako bom uredil file
     * Kolesarjenje
   + Musics
   + GitHub
-
+## Folder structure <template>
+  recimo za project
+  + 
 # FORMAT
 First, you have to find out which device (/dev/sd??) your USB stick is. Therefore look at the output of
 >sudo fdisk -l
@@ -554,7 +558,8 @@ sudo apt-get install qtdeclarative5-models-plugin
 2. AllAutoComplete          //complete any word from opened files
 dodas v Preferences.sublime-settings:
 
-> "auto_complete_selector": "source, text"
+> "auto_complete_selector": "source, text",
+> "auto_complete_commit_on_tab": true,
 
 3. DoxyDoxygen              //komentiranje funkcij [Alt]+[Q]
 4. SideBarEnhacement        //more functionality in side bar
@@ -625,6 +630,24 @@ Potem nekaj navadnega texta...
     vijolično v pdf-ju pa je v okvirčku
     z ostevilčinimi vrsticami..
 
+<!-- Menda naj bi bil tole komentar -->
+
+Če poznamo kodo jo lahko poumenujemo:
+Naprimer: c++ in Python
+
+```c
+int test = 0;
+void loop(){
+  digitalWrite(led_pin, HIGH);
+}
+```
+in Python
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
 1. nastevanje
 2. nastevanje..
   - nast
@@ -632,7 +655,7 @@ Potem nekaj navadnega texta...
   * nato pa se
   * nato tudi to
     + lahko pa tudi
-    + ali a +
+    + ali a 
 
 __podčtrano__
 
