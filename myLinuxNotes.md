@@ -83,6 +83,7 @@ v Thunar sem imel po defaultu Commnad:
     catfish --path=%f
 
 in dela :)
+glej gmone-search-tool
 
 # ECLIPSE
 
@@ -564,6 +565,18 @@ dodas v Preferences.sublime-settings:
 ### install GitHub:
 1. C+S+p -> Install Packages
 2. [Git()][https://github.com/kemayo/sublime-text-git/wiki]
+
+#### automatic uploading in Sublime
+v .git/config zamenjaš namesto:
+
+    [remote "origin"]
+    url = https://github.com/davidrihtarsic/BunsenLab.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+v
+
+    [remote "origin"]
+    url = https://davidrihtarsic:rihtarsicda888@github.com/davidrihtarsic/BunsenLab.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
 
 ####  nastavitve
 The detail step
