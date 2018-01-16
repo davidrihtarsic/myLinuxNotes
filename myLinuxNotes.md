@@ -611,7 +611,6 @@ jaz sem moral prej še spedenat v terminalu
 
 ### MarkDown:
 Paket Package Controll mora biti nameščen...
-  1. Install Package: _Markdown extended_ (mogoče ni treba)
   2. Install Package: _Monokai extended_
   3. Preferences -> Color Scheme -> Monokail Extended -> Monokail Extended
   4. Install Package: _Markdown Editing_
