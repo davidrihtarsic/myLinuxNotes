@@ -591,6 +591,7 @@ The detail step
 3. input git push to check if it works.
  
 jaz sem moral prej še spedenat v terminalu
+
     git commit -a -m "sublime pedenanje"
     git push (če je kak error prej še git pull... in popraviš razlike)
 
@@ -685,10 +686,14 @@ zato inštaliraš raje
     texlive
 
 #### PanDoc
+Install (ARCH=x86_64):
+    
+    yaourt pandoc 2.0.6.11
+
 nato pa še packages:
 
     sudo apt-get install texlive-latex-extra
-    sudo apt-get install texlive-fimts-extra 
+    __sudo apt-get install texlive-fimts-extra__ 
 
 oba paketa sem inštaliral preko SynapticPackageManager, ker je preveč dependenciesov...
 __CMD:__
