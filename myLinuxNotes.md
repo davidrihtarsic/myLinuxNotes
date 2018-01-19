@@ -326,6 +326,16 @@ med drugim tudi progress bar... je ukaz potrebno izvesti v sudo načinu:
   Settings -> Reigon&Language -> Input Source
   for KeyBindings:
 
+# Settings for ARCH
+
+    sudo nano /etc/X11/xorg.conf.d/01.keyboard-layout.conf
+
+    Section "InputClass"
+        Identifier "system-keyboard"
+        MatchIsKeyboard "on"
+        Option "XkbLayout" "si"
+    EndSection
+
 ## ShortCuts():
 v settings>Keyboaard sem si nastavil nekaj bližnjic:
    > super+w > Firefox
