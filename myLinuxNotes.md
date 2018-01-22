@@ -397,6 +397,18 @@ __Short Cuts__
 | [Ct]+[.]      | Insert Date         |
 | [Ct]+[Sh]+[.] | Insert Time         |
 
+# LINUS TORVALDS
+1. get the work done
+2. do not ler go
+3. have passion
+4. start small
+5. learn trough trail & error
+6. embrase your uniqnes
+7. find your motivation
+8. be brutally honest
+9. create for yourself
+10. optimize your working environment
+
 # MERGE PDF DOCUMENTS
 
 Če moramo združiti več pdf dokumentov v enega v terminal napišemo:
@@ -892,6 +904,10 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
  > sudo apt-get install wavemon
 
 
+# YAOURT
+To je program za ARCH za namestitev paketov... ni da ni!
+- če vemo natančno ime lahko samo
+yaourt -S <ime> --noconfirm
 # XANMOD KERNEL:
   XanMod is a mainline Linux kernel distribution with custom settings.
   Optimized to take full advantage of high-performance Desktops, PC Gamers,
