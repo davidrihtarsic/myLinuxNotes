@@ -969,3 +969,7 @@ __MENU -> Settings -> Arandr__ ali v terminalu:
 > xrandr --output VGA1 --mode 1280x1024 --pos 1366x0
 
 
+
+
+
+konsole --noclose --workdir %d --title %t -e
