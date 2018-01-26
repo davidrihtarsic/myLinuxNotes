@@ -1,6 +1,9 @@
-% Zapiski o LINUX sistemu in se kaj drugega
-% David Rihtaršič
-% 2017-12-24 18:24
+---
+title: "Zapiski o LINUX sistemu in se kaj drugega"
+author: [David Rihtaršič]
+date: 2017-02-20
+tags: [Markdown, Example]
+...
 
 # ANDROID
 
@@ -34,6 +37,18 @@ kot so npr: cp, crond, vi (Editor) ...
     sudo usermod -a -G dialout terrik
 
 and Log Out / Log In 
+
+# ARCH
+Namestil sem archLabs
+
+## Programi
+skripta...
+
+### Dolphine
+search ne dela...
+zato sem naložil še FSearch...
+naloži še Konsol )terminal
+
 
 # DD_IBS_TEST.SH():
 
@@ -326,7 +341,7 @@ med drugim tudi progress bar... je ukaz potrebno izvesti v sudo načinu:
   Settings -> Reigon&Language -> Input Source
   for KeyBindings:
 
-# Settings for ARCH
+  # Settings for ARCH
 
     sudo nano /etc/X11/xorg.conf.d/01.keyboard-layout.conf
 
