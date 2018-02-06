@@ -85,6 +85,31 @@ v Thunar sem imel po defaultu Commnad:
 in dela :)
 glej gmone-search-tool
 
+# DOLPHINE FILE MANAGER
+## KDE-SERVICES
+(ni blo dobr!!)
+For Arch Linux, edit /etc/pacman.conf and add the following (note that the order of repositories in pacman.conf is important, since pacman always downloads the first found package):
+
+    [home_metakcahura_Arch_Extra]
+    SigLevel = Never
+    Server = https://download.opensuse.org/repositories/home:/metakcahura/Arch_Extra/$arch
+
+Then run the following as root
+
+    pacman -Syu
+    pacman -S home_metakcahura_Arch_Extra/kde-services
+
+### instalation 
+libkonq-frameworks-git
+iz [link](http://download.opensuse.org/pub/opensuse/repositories/home:/mazdlc:/kde-frameworks-5/Arch_Extra/x86_64/)
+Dela !!!
+nato še run 
+    
+    kbuildsycoca5
+
+datoteke pa so shranjene v:
+/usr/share/kservices5/ServiceMenus
+
 # ECLIPSE
 
 ## installation:
@@ -426,6 +451,12 @@ You can also change your own password, by typing:
 > passwd
 
 You will be prompted to enter your old password for verification, and then a new password.
+# PDF MERGE/SPLIT
+pdfunite source1.pdf source2.pdf out.pdf
+
+pdftk source.pbf burst
+pdftk source.pbf 4 just-4th-page.pdf
+
 # PIDGIN
 ## HANGOUTS
 https://bitbucket.org/EionRobb/purple-hangouts/
@@ -535,6 +566,13 @@ sudo apt-get install qml-module-qtgraphicaleffects
 sudo apt-get install qml-module-qtquick-dialogs
 sudo apt-get install pyqt5-dev
 sudo apt-get install qtdeclarative5-models-plugin
+
+
+# SCAN
+simple scan
+
+v terminalu pa lahko :
+inštaliraš SANE
 
 
 # SOUNDON:
@@ -873,7 +911,8 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
   - v "Callenders" klikneš z desno in "New Calenders"
   - On the network -> Next
   - Google Calender -> Next
-  - david.rihtarsic@gmail.com + gesla + itd.
+  - david.rihtarsic@gmail.com
+  -  + gesla + itd.
   - izbereš koledarje za sync -> Next
   - Finish
 
