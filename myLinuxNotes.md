@@ -454,6 +454,23 @@ __Short Cuts__
 Če moramo združiti več pdf dokumentov v enega v terminal napišemo:
 > pdfunite pdf0.pdf pdf1.pdf merged.pdf
 
+# NEMO
+File browser
+
+## Script
+You can add yours scripts... Script must be added to:
+
+    ~/.local/share/nemo/actions
+
+**Script example:**
+
+    
+
+## Shortcuts
+| Key combo | Action          |
+|-----------|-----------------|
+| A+Home    | go to HOME dir  |
+
 # PASSWORD (LINUX)
 
 To change a password on behalf of a user, first sign on or "su" to the "root" account. Then type:
