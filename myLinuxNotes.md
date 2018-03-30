@@ -3,7 +3,8 @@ title: "Zapiski o LINUX sistemu in se kaj drugega"
 author: [David Rihtaršič]
 date: 2017-02-20
 tags: [Markdown, Example]
-...
+bibliography: bibtex.bib
+---
 
 # ANDROID
 
@@ -458,6 +459,99 @@ __Short Cuts__
 9. create for yourself
 10. optimize your working environment
 
+# MARKDOWN
+## Uporaba:
+> Takole s ">" je označen tekst, ki je nokako označen kot _citat_.
+> Lahko pa ga tudi citiramo[^1]
+
+[^1]: In tu je tudi sprotna opomba.
+Potem nekaj navadnega texta...
+
+    z dvema TAB-oma je ločena
+    vsaka vrstica kode. V Sublimu je pobarvana 
+    vijolično v pdf-ju pa je v okvirčku
+    z ostevilčinimi vrsticami..
+
+<!-- Menda naj bi bil tole komentar -->
+
+Če poznamo kodo jo lahko poumenujemo:
+Naprimer: c++ in Python
+
+```c
+int test = 0;
+void loop(){
+  digitalWrite(led_pin, HIGH);
+}
+```
+in Python
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+1. nastevanje
+2. nastevanje..
+  - nast
+  - nast
+  * nato pa se
+  * nato tudi to
+    + lahko pa tudi
+    + ali a 
+
+_podčtrano_
+
+~~prečrtano~~ bom uporabljal tam kjer sem nekaj probal pa ni delovalo
+
+[link](http://google.com)
+
+## LaTex Commnads
+
+Deluje tudi če napišemo naslednje LaTex ukaze:
+
+    \tableofcontent
+    \newpage 
+
+## References (citiranje)
+V metadata poleg title, author vpšemo tudi **bibliography:** in dodamo še ime datoteke z BibTex datoteko referenc...
+in nato tu citiramo v besedilu naprimer @Rihtarsic16.
+
+Da tako oblikovano md datoteko spravimo v pdf pa vpšemo naslednji ukaz:
+
+    pandoc -o test.pdf --from markdown --template eisvogel --listings --pdf-engine=xelatex myLinuxNotes.md --filter pandoc-citeproc
+
+in to je to.
+
+### Možnosti citiranja
+Poskusimo še tri načine citiranja. Če želimo citirati tako kot to počnemo običajno na koncu neke smiselne povedi to naredimo tako da v oglate oklepaje napišemo ime reference. Naprimer citat se izpiše takole**[@Rihti2015]** v besedilo pa ga vnesemo takole:
+
+    [@Rihti2015]
+
+Če pa želimo citirati tako, da se v besedilu navezujemo na avtorje, naprimer da nekateri avtorji kot **@Rihti2015** svetujejo to in ono... pa naredimo le takole:
+
+    @Rihti2015
+
+Poleg teh dveh citiranj lahko citiramo tudi brez priimkov avtorjev naprimer tam, kjer jih moramo sklanjati ali kako drugače opredeliti, da so prav ti omenjeni avtorji sodelovali dlje časa z Rihtaršičem **-@Rihti2015**. To pa naredimo takole:
+
+    -@Rihti2015
+
+### DOI to BibTex
+Ko iščemo vire imamo pogosto možnost oznake DOI (angl.: **D**igital **O**bject **I**dentyfier). Če želimo iz te oznake še ostale podatke o viru jih lahko dobimo preko te strani: [https://www.doi2bib.org/](https://www.doi2bib.org/). Tako podatke lahko shranimo v orimerno oblikovano besedilo, da ga lahko uporabimo v zgornji funkcionalnosti.
+
+    @article{Rihti2015,
+      doi = {10.1007/s10798-015-9310-7},
+      url = {https://doi.org/10.1007/s10798-015-9310-7},
+      year  = {2015},
+      month = {may},
+      publisher = {Springer Nature},
+      volume = {26},
+      number = {2},
+      pages = {205--224},
+      author = {David Rihtar{\v{s}}i{\v{c}} and Stanislav Avsec and Slavko Kocijancic},
+      title = {Experiential learning of electronics subject matter in middle school robotics courses},
+      journal = {International Journal of Technology and Design Education}
+    }
+
 # MERGE PDF DOCUMENTS
 
 Če moramo združiti več pdf dokumentov v enega v terminal napišemo:
@@ -718,58 +812,6 @@ Paket Package Controll mora biti nameščen...
        "wrap_width": 0,
        "rulers": []
      }
-
-#### MarkDown uporaba:
-> Takole s ">" je označen tekst, ki je nokako označen kot _citat_.
-> Lahko pa ga tudi citiramo[^1]
-
-[^1]: In tu je tudi sprotna opomba.
-Potem nekaj navadnega texta...
-
-    z dvema TAB-oma je ločena
-    vsaka vrstica kode. V Sublimu je pobarvana 
-    vijolično v pdf-ju pa je v okvirčku
-    z ostevilčinimi vrsticami..
-
-<!-- Menda naj bi bil tole komentar -->
-
-Če poznamo kodo jo lahko poumenujemo:
-Naprimer: c++ in Python
-
-```c
-int test = 0;
-void loop(){
-  digitalWrite(led_pin, HIGH);
-}
-```
-in Python
-
-```python
-s = "Python syntax highlighting"
-print s
-```
-
-1. nastevanje
-2. nastevanje..
-  - nast
-  - nast
-  * nato pa se
-  * nato tudi to
-    + lahko pa tudi
-    + ali a 
-
-__podčtrano__
-
-~~prečrtano~~ bom uporabljal tam kjer sem nekaj probal pa ni delovalo
-
-[link](http://google.com)
-
-### Markdown uporaba - LaTex
-
-Deluje tudi če napišemo naslednje LaTex ukaze:
-
-    \tableofcontent
-    \newpage 
 
 ### LaTeX:
 namestis paket preko:
