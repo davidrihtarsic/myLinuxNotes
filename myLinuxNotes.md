@@ -180,7 +180,16 @@ Tu bi napisal kako bom uredil file
   + GitHub
 ## Folder structure <template>
   recimo za project
-  + 
+## Programs category
+  1. System
+  2. Development
+  3. Multimedia
+  4. Office
+  5. Graphics
+  6. Internet
+  7. Accesories
+  8. Other
+
 # FORMAT
 First, you have to find out which device (/dev/sd??) your USB stick is. Therefore look at the output of
 >sudo fdisk -l
@@ -700,6 +709,13 @@ __podčtrano__
 
 [link](http://google.com)
 
+### Markdown uporaba - LaTex
+
+Deluje tudi če napišemo naslednje LaTex ukaze:
+
+    \tableofcontent
+    \newpage 
+
 ### LaTeX:
 namestis paket preko:
  C+S+p -> __Install Packages__
@@ -982,9 +998,6 @@ dodas v moznosti:
 potem nastavis resolucijo v 
 __MENU -> Settings -> Arandr__ ali v terminalu:
 > xrandr --output VGA1 --mode 1280x1024 --pos 1366x0
-
-
-
 
 
 konsole --noclose --workdir %d --title %t -e
