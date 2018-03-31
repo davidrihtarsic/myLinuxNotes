@@ -6,6 +6,9 @@ tags: [Markdown, Example]
 bibliography: bibtex.bib
 ---
 
+\tableofcontents
+\newpage
+
 # ANDROID
 
 Na tem msestu bomo zapisali nekaj programov za ANDROID program na telefonu. Glavno program je 
@@ -512,9 +515,19 @@ Deluje tudi če napišemo naslednje LaTex ukaze:
     \tableofcontent
     \newpage 
 
+## Enačbe
+Enačbe lahko pišemo zelo enostavno, tako da celotno enačbo zaviješ v dva dolarja.
+$$ y = mx +b $$
+$$ \int_a^b x^2dx $$
+$$ y(x)=2x_a^2+1 $$
+$$ \frac{\frac{1}{x}+\frac{1}{y}}{y-z} $$
+
+Več o tem kako se pišejo enačbe lahko preberemo na tej strani:
+[https://en.wikibooks.org/wiki/LaTeX/Mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics).
+
 ## References (citiranje)
 V metadata poleg title, author vpšemo tudi **bibliography:** in dodamo še ime datoteke z BibTex datoteko referenc...
-in nato tu citiramo v besedilu naprimer @Rihtarsic16.
+in nato tu citiramo v besedilu naprimer @Rihti2015.
 
 Da tako oblikovano md datoteko spravimo v pdf pa vpšemo naslednji ukaz:
 
