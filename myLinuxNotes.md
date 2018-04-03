@@ -104,6 +104,13 @@ v Thunar sem imel po defaultu Commnad:
 in dela :)
 glej gmone-search-tool
 
+# CHARACTER MAP
+Super programček za brskanje znakov
+
+    gucharmap
+Če uporabimo font "common" je tam veliko primernih znakov kot naprimer:
+
+
 # DOLPHINE FILE MANAGER
 ## KDE-SERVICES
 (ni blo dobr!!)
