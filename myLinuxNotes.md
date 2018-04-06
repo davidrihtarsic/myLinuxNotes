@@ -1068,11 +1068,14 @@ V ~/.vimrc na vrhu voišeš:
 		filetype plugin indent on    " required
 
 ## Instalation Plugins from terminal
-		
+
 		yaourt -S vim-tagbar
 		yaourt -S vim-fugitive
 
+
+
 # W3M":
+
 ## instalation:
 
     apt-get install w3m
