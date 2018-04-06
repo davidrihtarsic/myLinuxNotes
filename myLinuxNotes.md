@@ -255,7 +255,9 @@ To format The partition as FAT32 use
   asdf
 
 # FREECAD
-  asdf
+
+asdf
+
 # GIMP
   asdf 
 # GITHUB
@@ -1043,11 +1045,13 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
   - Finish
 
 # VIM
+
 ## Instalation
 
     sudo apt-get install vim-nox
 
 ### install Vundle -  Plugin Manger
+
 run v terminalu:
 
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
