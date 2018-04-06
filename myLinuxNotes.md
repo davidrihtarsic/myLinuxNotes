@@ -355,6 +355,22 @@ Nato greš na tole stran:
 # INKSCAPE
   asdf
 
+# i3 WORKSPACE MANAGER
+tiling manager...
+## moje bližnjice
+1. _Mod_ -> za okna/programe
+  1. +Left/Right -> focus left/right
+  2. +Shift+1/2/3 -> premakni program na workspace 1/2/3
+2. _Mod+Control_ -> za workspace
+  1. +Left/Right -> premakni WS na drug zaslon
+  2. +r -> RESTART WORKSPACE
+  3. +l -> reLoad i3 config
+  4. +v/h -> naslednji program naj se doda Vertikalno/Horizontalno
+3. _Alt_ -> za funkcije v programu
+  1. +Left/Right -> resize left/right
+  2. +1/2/3/4 -> tab focus
+  3. +F/E/H -> menu File/Edit/Help
+
 # ISO BURN TO USB
   
     sudo dd bs=4M if=*.iso of=/dev/sdb status=progress && sync
@@ -1031,13 +1047,32 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
 
     sudo apt-get install vim-nox
 
-    "install Vundle -  Plugin Manger
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    
-    "install NerdTREE"
-    "install TagBar"
+### install Vundle -  Plugin Manger
+run v terminalu:
 
-    sudo apt-get install exuberant-stags
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+V ~/.vimrc na vrhu voišeš:
+    
+    set nocompatible
+    filetype off
+		set rtp+=~/.vim/bundle/Vundle.vim
+		call vundle#begin()
+
+   	Plugin 'VundleVim/Vundle.vim'
+		Plugin 'majutsushi/tagbar'
+		" za delovanje moraš inštalirati še:
+		" exuberant-stags
+
+	 	call vundle#end()            " required
+		filetype plugin indent on    " required
+
+## Instalation Plugins from terminal
+		
+		yaourt -S vim-tagbar
+		yaourt -S vim-fugitive
+
+
 
 # W3M":
 ## instalation:
