@@ -1,4 +1,4 @@
----
+-
 title: "Zapiski o LINUX sistemu in se kaj drugega"
 author: [David Rihtaršič]
 date: 2017-02-20
