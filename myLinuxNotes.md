@@ -1071,7 +1071,6 @@ V ~/.vimrc na vrhu voišeš:
 		
 		yaourt -S vim-tagbar
 		yaourt -S vim-fugitive
-asdf
 
 # W3M":
 ## instalation:
