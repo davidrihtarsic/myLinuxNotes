@@ -11,8 +11,8 @@ bibliography: bibtex.bib
 
 # ANDROID
 
-Na tem msestu bomo zapisali nekaj programov za ANDROID program na telefonu. Glavno program je 
-__ADB__ ( __A__-ndroid __D__-e-__B__-ugger)... To omogoča, da priključimo telefon ns računalnik in se nanj
+na tem msestu bomo zapisali nekaj programov za android program na telefonu. glavno program je 
+__adb__ ( __a__-ndroid __d__-e-__b__-ugger)... to omogoča, da priključimo telefon ns računalnik in se nanj
 povežemo tako, da delamo na terminalu...
 
 ## ADB
@@ -35,7 +35,7 @@ kot so npr: cp, crond, vi (Editor) ...
 5. crond -c /data/crontab
 
 # ARDUINO
-  
+ 
 ## Enable PORT permmissions to user
 
     sudo usermod -a -G dialout terrik
@@ -1076,6 +1076,9 @@ V ~/.vimrc na vrhu voišeš:
 		yaourt -S vim-tagbar
 		yaourt -S vim-fugitive
 
+## References
+
+[How to fold](http://vimcasts.org/episodes/how-to-fold/)
 
 
 # W3M":
