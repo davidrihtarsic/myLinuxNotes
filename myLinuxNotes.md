@@ -780,6 +780,16 @@ inštaliraš SANE
     cd Downloads
     dpkg -i Sublime...64.deb
 
+## Nastavitve - Key Bindings
+Da imam kompatibilnost z ostalimi programi si nastavim še KeyBindings
+1. -> Preferences -> KeyBindings
+2. v "User" pastneš tole:
+
+		[
+			{ "keys": ["ctrl+e"], "command": "toggle_side_bar" },
+			{ "keys": ["ctrl+t"], "command": "new_file" }
+		]
+		
 ## Package Controll:
   Paket za koristne funkcionalnosti:
 
