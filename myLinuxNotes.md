@@ -335,6 +335,7 @@ in je to - to :)
 skratka popraviš in uploadaš še enkrat :) jeah!
 
 # GRAPHIC CARD
+
 Kako preveriti in namestiti driverje za grafično kartico
 ## GeForce 9600 GT
 Jaz imam na PCju to kartico to lahko preveriš s:
@@ -358,8 +359,11 @@ Nato greš na tole stran:
   asdf
 
 # i3 WORKSPACE MANAGER
+
 tiling manager...
+
 ## moje bližnjice
+
 1. _Mod_ -> za okna/programe
   1. +Left/Right -> focus left/right
   2. +Shift+1/2/3 -> premakni program na workspace 1/2/3
@@ -374,12 +378,13 @@ tiling manager...
   3. +F/E/H -> menu File/Edit/Help
 
 # ISO BURN TO USB
-  
-    sudo dd bs=4M if=*.iso of=/dev/sdb status=progress && sync
+
+		sudo dd bs=4M if=*.iso of=/dev/sdb status=progress && sync
 
 ## More advanced copy with progress
+
 Inštaliran mora biti pv
-    
+
     sudo apt-get install pv 
 
 Ker pv (pipe Viever) dela več različnih stvari in ne le dd,
@@ -450,6 +455,7 @@ __Short Cuts__
 |-----------------|---------------------|
 | [Ctrl] + [Ent]  | Insert Break Page   |
 | []+[]           | Insert greek letter |
+
 
 ## CALC
 How To - Insert DATE:
