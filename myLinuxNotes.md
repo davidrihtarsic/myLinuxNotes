@@ -1085,7 +1085,7 @@ V ~/.vimrc na vrhu voišeš:
 
 [How to fold](http://vimcasts.org/episodes/how-to-fold/)
 - folding je izredno počasen... (to-do)
-
+- ...
 
 # W3M":
 
@@ -1100,7 +1100,6 @@ V ~/.vimrc na vrhu voišeš:
 # WIRELESS SETUP
  Wavemon...
  > sudo apt-get install wavemon
-
 
 # YAOURT
 To je program za ARCH za namestitev paketov... ni da ni!
