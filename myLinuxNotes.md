@@ -451,11 +451,10 @@ Instal preko terminala:
 ## WRITER
 __Short Cuts__
 
-| Short cut       | Action              |
-|-----------------|---------------------|
-| [Ctrl] + [Ent]  | Insert Break Page   |
-| []+[]           | Insert greek letter |
-
+| Short cut      | Action              |
+|----------------|---------------------|
+| [Ctrl] + [Ent] | Insert Break Page   |
+| []+[]          | Insert greek letter |
 
 ## CALC
 How To - Insert DATE:
@@ -481,7 +480,7 @@ __Short Cuts__
 | [Ct]+[.]      | Insert Date         |
 | [Ct]+[Sh]+[.] | Insert Time         |
 
-# LINUS TORVALDS
+# linus torvalds
 1. get the work done
 2. do not ler go
 3. have passion
@@ -1085,6 +1084,7 @@ V ~/.vimrc na vrhu voišeš:
 ## References
 
 [How to fold](http://vimcasts.org/episodes/how-to-fold/)
+- folding je izredno počasen...
 
 
 # W3M":
