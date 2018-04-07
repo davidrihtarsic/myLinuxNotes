@@ -336,8 +336,8 @@ potem je to v dokumentu označeno z:
 in je to - to :)
 skratka popraviš in uploadaš še enkrat :) jeah!
 
-# GRAPHIC CARD
-
+# GRAPHIC CARD:
+## driverji
 Kako preveriti in namestiti driverje za grafično kartico
 ## GeForce 9600 GT
 Jaz imam na PCju to kartico to lahko preveriš s:
@@ -357,13 +357,10 @@ Nato greš na tole stran:
 
     sudo service lightdm stop
  
-# INKSCAPE
-  asdf
-
 # i3 WORKSPACE MANAGER
-
-tiling manager...
-
+## nastavitve
+[arch i3 navodila](https://wiki.archlinux.org/index.php/I3#Launching_programs_on_specific_workspaces)
+ 
 ## moje bližnjice
 
 1. _Mod_ -> za okna/programe
@@ -380,7 +377,7 @@ tiling manager...
   3. +F/E/H -> menu File/Edit/Help
 
 # ISO BURN TO USB
-
+## terminal cmd
 		sudo dd bs=4M if=*.iso of=/dev/sdb status=progress && sync
 
 ## More advanced copy with progress
@@ -680,8 +677,11 @@ sudo apt-get install protobuf-compiler
 get :https://github.com/davidgfnet/whatsapp-purple/
 cd -> whatsapp-purple
 make
+
 # POPCORN-TIME
+
 # PPRINTER SUPPORT on BunsenLab
+
 sledil sem tocno tem [navodilom](http://hplipopensource.com/hplip-web/install/manual/distros/debian.html)
 - prej moraš vedeti tudi root geslo
 
