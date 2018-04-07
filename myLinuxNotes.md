@@ -1073,7 +1073,7 @@ Run v terminalu:
 
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-V ~/.vimrc na vrhu vpišeš:
+V ~/.vimrc na vrhu vpiš:
     
     set nocompatible
     filetype off
