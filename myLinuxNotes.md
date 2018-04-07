@@ -1084,7 +1084,7 @@ V ~/.vimrc na vrhu voišeš:
 ## References
 
 [How to fold](http://vimcasts.org/episodes/how-to-fold/)
-- folding je izredno počasen...
+- folding je izredno počasen... (to-do)
 
 
 # W3M":
