@@ -1,4 +1,4 @@
--
+---
 title: "Zapiski o LINUX sistemu in se kaj drugega"
 author: [David Rihtaršič]
 date: 2017-02-20
@@ -9,13 +9,11 @@ bibliography: bibtex.bib
 \tableofcontents
 \newpage
 
-# ANDROID
-
+# ANDROID:
+## ADB
 na tem msestu bomo zapisali nekaj programov za android program na telefonu. glavno program je 
 __adb__ ( __a__-ndroid __d__-e-__b__-ugger)... to omogoča, da priključimo telefon ns računalnik in se nanj
 povežemo tako, da delamo na terminalu...
-
-## ADB
 
 = android deBugger... da se lahko z računalnikom povežeš na tel...
 in od tam urejaš linux (android)
@@ -34,17 +32,14 @@ kot so npr: cp, crond, vi (Editor) ...
 4. ln -s /system/bin/sh /bin/sh
 5. crond -c /data/crontab
 
-# ARDUINO
- 
+# ARDUINO:
 ## Enable PORT permmissions to user
 
     sudo usermod -a -G dialout terrik
 
 and Log Out / Log In 
 
-# ARCH
-Namestil sem archLabs
-
+# ARCH:
 ## Programi
 skripta...
 
@@ -55,13 +50,12 @@ naloži še Konsol )terminal
 
 
 # DD_IBS_TEST.SH():
-
+## test
 program za testiranje dd komnade...
 kako hitro comp lahko kopira datoteke v odvisnosti ob bs= ? podatka...
 Program je na [GitHubu](https://github.com/tdg5/blog/blob/master/_includes/scripts/dd_ibs_test.sh)
 
-# C++
-
+# C++:
 ## PassBy VALUE REFERENCE POINTER
 
 Pomembno pri funkcijah, naprimer:
@@ -90,7 +84,8 @@ xptr je naslov spremenljivke x, če želimo vrednost na tem naslovu = *xptr
 - nekoliko bolj zakomplicirana sintaksa, ker je prej potrebno v *xptr dati naslov spremenljivke
 + le s pointerji lahko dostopamo do __HEAP__ spomina (spomin večjih razsežnosti)
 
-# CATFISH
+# CATFISH:
+## namestitev
 Odličen iskalnik filov...
 po defaultu naložen.. hm ne vem od kdaj...
 v Thunar sem imel po defaultu Commnad:
@@ -104,7 +99,8 @@ v Thunar sem imel po defaultu Commnad:
 in dela :)
 glej gmone-search-tool
 
-# CHARACTER MAP
+# CHARACTER MAP:
+## pregled znakov
 Super programček za brskanje znakov
 
     gucharmap
@@ -136,9 +132,8 @@ nato še run
 datoteke pa so shranjene v:
 /usr/share/kservices5/ServiceMenus
 
-# ECLIPSE
-
-## installation:
+# ECLIPSE:
+## installation
   ... nisem zapisal...
   ... presnameš, odpakiraš kopiraš v:
   /opt/eclipse/
@@ -159,8 +154,9 @@ Naredimo datoteko.desktop:
     Categories = Development;
 
 # EFI MODE:
- boot -> CSM enable  
- security -> security boot control -> dissable
+## test
+boot -> CSM enable  
+security -> security boot control -> dissable
 
 ## installBUNSEN
  instaliral ...
@@ -182,12 +178,17 @@ Naredimo datoteko.desktop:
  path :/EFI/debian/grubx64.efi [ne dela]
  path :/efi/boot/bootx64.efi [ne dela]
 
-# FILEMANAGER:
- Všeč mi je filemanager THUNAR:
+# FILEMANAGERs:
+## Thuar
+Všeč mi je filemanager THUNAR:
     
     sudo apt-get install thunar
+## Nemo
+to je to !!! 
+narejene so tudi skripte za ...
 
 # FILES STRUCTURE
+## moja struktura
 Mogoče da si narediš template za folders
 Tu bi napisal kako bom uredil file
 - Files
@@ -226,7 +227,8 @@ Tu bi napisal kako bom uredil file
   7. Accesories
   8. Other
 
-# FORMAT
+# FORMAT SD
+## ukazi
 First, you have to find out which device (/dev/sd??) your USB stick is. Therefore look at the output of
 >sudo fdisk -l
 
@@ -772,7 +774,6 @@ inštaliraš SANE
     Settings>Soun
 
 # SUBLIME TEXT 3
-
 ## Install:
   Greš na njihovo stran in snameš dol pravo verzijo (Ubuntu 64)
   nato pa v terminalu zaženeš:
@@ -781,7 +782,9 @@ inštaliraš SANE
     dpkg -i Sublime...64.deb
 
 ## Nastavitve - Key Bindings
+
 Da imam kompatibilnost z ostalimi programi si nastavim še KeyBindings
+
 1. -> Preferences -> KeyBindings
 2. v "User" pastneš tole:
 
@@ -1060,7 +1063,6 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
   - Finish
 
 # VIM
-
 ## Instalation
 
     sudo apt-get install vim-nox
