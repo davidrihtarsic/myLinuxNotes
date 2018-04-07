@@ -1069,7 +1069,7 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
 
 ### install Vundle -  Plugin Manger
 
-Run v terminalu:
+Run v terminalu :
 
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
