@@ -178,6 +178,14 @@ security -> security boot control -> dissable
  path :/EFI/debian/grubx64.efi [ne dela]
  path :/efi/boot/bootx64.efi [ne dela]
 
+# FZF:
+## uporaba
+Fust FuzZy File Search ...
+Res dober način zaiskanje filov... dve bljižnjici:
+- Ctrl+r => iskanje po zadnjih cmd-jih
+- Ctrl+t => iskanje po filih naprej po foldru
+- Tab => označi več filov..
+
 # FILEMANAGERs:
 ## Thuar
 Všeč mi je filemanager THUNAR:
@@ -1098,6 +1106,12 @@ V ~/.vimrc na vrhu vpiš:
 [How to fold](http://vimcasts.org/episodes/how-to-fold/)
 - folding je izredno počasen... (to-do)
 - ...
+
+## Folding
+ - zz - FoldToggle
+ - zi - not/Foldable
+ - zo - open fold
+ - zc - close fold
 
 # W3M":
 
