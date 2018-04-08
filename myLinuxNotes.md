@@ -1107,12 +1107,16 @@ V ~/.vimrc na vrhu vpiš:
 - folding je izredno počasen... (to-do)
 - ...
 
-## Folding
+## Shortcuts
+ - <leader>hjkl => resize window
+ - <leader>u update .vimrc
+ 
+### Folding
+ - zm - foldAll
  - zz - FoldToggle
  - zi - not/Foldable
- - zo - open fold
- - zc - close fold
-
+ - zo - open
+ - za - 
 # W3M":
 
 ## instalation:
