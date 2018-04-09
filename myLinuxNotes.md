@@ -1138,7 +1138,8 @@ V ~/.vimrc na vrhu vpiš:
  - zi - not/Foldable
  - zo - open
  - za - 
-# W3M":
+
+# W3M
 
 ## instalation:
 
@@ -1190,7 +1191,7 @@ yaourt -S <ime> --noconfirm
   4. sudo update-grub2
   5. reboot
   6. preveri disk scheduler:
-  > sudo cat /sys/block/sda/queue/scheduler
+  > sudo cat /!!sys/block/sda/queue/scheduler
  5. install Intel CPU support:
   1. ker sem prej dobil error:
   W: Possible missing firmware /lib/firmware/rtl_nic/rtl8107e-2.fw for dule   r8169
