@@ -106,6 +106,27 @@ Super programček za brskanje znakov
     gucharmap
 Če uporabimo font "common" je tam veliko primernih znakov kot naprimer:
 
+# CONFIG FILES (my)
+## My all . files
+
+		find . -type f
+
+./.config/terminator/config
+./.config/tint2/tint2rc
+./.config/conky/dave_s_conky.conkyrc
+./.config/polybar/modules.conf
+./.config/polybar/config
+./.config/polybar/lounch_polybar.sh
+./.config/polybar/master.conf
+./.config/openbox/rc.xml
+./.local/share/nemo/actions/MD-->PDF_bib.nemo_action
+./.local/share/nemo/actions/PDF_unite.nemo_action
+./.local/share/nemo/actions/PDF_extract.nemo_action
+./.local/share/nemo/actions/MD-->PDF.nemo_action
+./.local/share/nemo/actions/Office-->PDF.nemo_action
+./.pandoc/templates/eisvogel.latex
+./.vimrc
+./.zshrc
 
 # DOLPHINE FILE MANAGER
 ## KDE-SERVICES
