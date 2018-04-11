@@ -1120,7 +1120,25 @@ V ~/.vimrc na vrhu vpiš:
 ## Instalation Plugins from terminal
 
 		yaourt -S vim-tagbar
-		yaourt -S vim-fugitive
+## Instalation of FZF
+Super stvar : fuzzy file search!
+
+1. Najprej pustiš, da vim nainštelira plugin:  junegunn/fzf
+2. Nato poženeš:
+    
+    ~/.vim/bundle/fzf/install
+
+3. in ponovno zaženeš terminal in vim.
+
+Plugin uporabljaš tako, da :
+- Ctrl+T => za iskanje filov
+- Ctrl+R => za iskanje kommand v terminalu..
+
+Če želimo, da lahko iščemo še po skritih dokumentih moramo v .zshrc vpisati:
+
+    export FZF_DEFAULT_COMMAND="find . -type f -print -o -type l -print"
+    export FZF_CTRL_T_COMMAND="find . -type f -print -o -type l -print"
+
 
 ## References
 
