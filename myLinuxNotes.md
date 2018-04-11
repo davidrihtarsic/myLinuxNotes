@@ -386,6 +386,14 @@ Nato greš na tole stran:
 
     sudo service lightdm stop
  
+# HIBERNATION (arch)
+Kako nastaviš da imaš hibernacijo računaljika...
+- potrebuješ dovolj swap particije
+- nasraviš resume
+- dodaš v grub pod HOOK tudi resume
+- zbildaš grub
+[link](https://www.youtube.com/watch?v=GF13ZpYsrI0)
+
 # i3 WORKSPACE MANAGER
 ## nastavitve
 [arch i3 navodila](https://wiki.archlinux.org/index.php/I3#Launching_programs_on_specific_workspaces)
