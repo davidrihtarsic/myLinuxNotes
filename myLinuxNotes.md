@@ -914,6 +914,7 @@ v .git/config zamenjaš namesto:
     fetch = +refs/heads/*:refs/remotes/origin/*
 v
 
+
     [remote "origin"]
     url = https://davidrihtarsic:rihtarsicda888@github.com/davidrihtarsic/BunsenLab.git
     fetch = +refs/heads/*:refs/remotes/origin/*
