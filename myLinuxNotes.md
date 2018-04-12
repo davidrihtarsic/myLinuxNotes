@@ -43,6 +43,30 @@ and Log Out / Log In
 ## Programi
 skripta...
 
+# BACKLIGHT
+Včasih je težko krmiliti osvetlitev najlažje je, če dela 
+xbacklight -set 10
+
+če ne:
+osvetljenost je krmiljena v datoteki:
+
+		/sys/class/backlight/.../brightness
+
+in v to datoteko zapišeš številko...
+
+		tee brightness <<<100
+
+Moral sem spremeniti tudi dovoljenja, saj je po defaultu omogočeno le root-u. Zato v:
+
+    sudo vim /etc/udev/rules.d/basklight.rules
+
+dodaš:
+
+    ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="intel_backlight", RUN+="/bin/chgrp video /sys/class/backlight/%k/brightness"
+    ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="intel_backlight", RUN+="/bin/chmod   g+w /sys/class/backlight/%k/brightness"
+
+## keyboard backlight (podobno kot za lcd backlight)
+
 ### Dolphine
 search ne dela...
 zato sem naložil še FSearch...
@@ -727,6 +751,17 @@ cd -> whatsapp-purple
 make
 
 # POPCORN-TIME
+
+# PRELOAD (deamon service)
+preload is a program written by Behdad Esfahbod which runs as a daemon and records statistics about usage of programs using Markov chains; files of more frequently-used programs are, during a computer's spare time, loaded into memory. This results in faster startup times as less data needs to be fetched from disk.
+
+## Running
+
+    systemctl start preload.service
+
+## Config
+
+    /etc/preload.conf
 
 # PPRINTER SUPPORT on BunsenLab
 
