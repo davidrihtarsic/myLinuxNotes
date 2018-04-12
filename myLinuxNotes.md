@@ -892,6 +892,7 @@ Da imam kompatibilnost z ostalimi programi si nastavim še KeyBindings
 2. AllAutoComplete          //complete any word from opened files
 dodas v Preferences.sublime-settings:
 
+
 > "auto_complete_selector": "source, text",
 > "auto_complete_commit_on_tab": true,
 
