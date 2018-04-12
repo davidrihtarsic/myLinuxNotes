@@ -871,10 +871,13 @@ Da imam kompatibilnost z ostalimi programi si nastavim še KeyBindings
 1. -> Preferences -> KeyBindings
 2. v "User" pastneš tole:
 
-		[
-			{ "keys": ["ctrl+e"], "command": "toggle_side_bar" },
-			{ "keys": ["ctrl+t"], "command": "new_file" }
-		]
+    [
+      { "keys": ["ctrl+e"], "command": "toggle_side_bar" },
+      { "keys": ["ctrl+t"], "command": "new_file" },
+      { "keys": ["ctrl+shift+c"], "command": "git_quick_commit" },
+      { "keys": ["ctrl+shift+u"], "command": "git_push_current_branch" },
+      { "keys": ["ctrl+shift+d"], "command": "git_pull_current_branch" }
+    ]
 		
 ## Package Controll:
   Paket za koristne funkcionalnosti:
