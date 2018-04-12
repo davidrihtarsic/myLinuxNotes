@@ -107,7 +107,7 @@ Super programček za brskanje znakov
 Če uporabimo font "common" je tam veliko primernih znakov kot naprimer:
 
 # CONFIG FILES (my)
-## My all . files
+## My all . dotfiles
 
 		find . -type f
 
@@ -127,6 +127,10 @@ Super programček za brskanje znakov
 ./.pandoc/templates/eisvogel.latex
 ./.vimrc
 ./.zshrc
+to-do:
+./.config/termite/config
+./.config/i3/config
+
 
 # DOLPHINE FILE MANAGER
 ## KDE-SERVICES
@@ -213,6 +217,12 @@ Všeč mi je filemanager THUNAR:
     
     sudo apt-get install thunar
 ## Nemo
+samba mi ni delala naložil sem še:
+- samba
+- pacman -S gvfs-smb
+
+nato je delalo...
+
 to je to !!! 
 narejene so tudi skripte za ...
 
@@ -392,6 +402,7 @@ Kako nastaviš da imaš hibernacijo računaljika...
 - nasraviš resume
 - dodaš v grub pod HOOK tudi resume
 - zbildaš grub
+ni delalo!!!!!!
 [link](https://www.youtube.com/watch?v=GF13ZpYsrI0)
 
 # i3 WORKSPACE MANAGER
@@ -1098,6 +1109,11 @@ Menu->AddOns->Provider for Google Calender->Install... Restart Now
   -  + gesla + itd.
   - izbereš koledarje za sync -> Next
   - Finish
+
+## Paragraph space
+Da ne pušča preveč prostora med posameznimi odstavki, je potrebno nastaviti:
+- Menu [__=__] -> Preferences -> Composition :
++ [ ] Use Paragraph format instead of Body Text by default.
 
 # VIM
 ## Instalation
