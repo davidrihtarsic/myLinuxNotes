@@ -1174,6 +1174,13 @@ Da ne pušča preveč prostora med posameznimi odstavki, je potrebno nastaviti:
 - Menu [__=__] -> Preferences -> Composition :
 + [ ] Use Paragraph format instead of Body Text by default.
 
+
+# TO-DO
+- Make .config files --> backup to Git->MyDotFiles
+  + skript v ~/.config/i3
+  + keybinding v i3/config
+
+
 # VIM
 ## Instalation
 
