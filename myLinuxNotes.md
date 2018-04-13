@@ -1179,7 +1179,8 @@ Da ne pušča preveč prostora med posameznimi odstavki, je potrebno nastaviti:
 - Make .config files --> backup to Git->MyDotFiles
   + skript v ~/.config/i3
   + keybinding v i3/config
-
+- preveri v installMyArchApps za vsako od postavk, če je inštalirana
+  + v funkciji .installPacman in .installYaourt
 
 # VIM
 ## Instalation
