@@ -428,6 +428,7 @@ Kako nastaviš da imaš hibernacijo računaljika...
 - zbildaš grub
 ni delalo!!!!!!
 [link](https://www.youtube.com/watch?v=GF13ZpYsrI0)
+(to-do)
 
 # i3 WORKSPACE MANAGER
 ## nastavitve
