@@ -43,6 +43,11 @@ and Log Out / Log In
 ## Programi
 skripta...
 
+
+# AUTOSTART
+
+## To-do
+
 # BACKLIGHT
 Včasih je težko krmiliti osvetlitev najlažje je, če dela 
 xbacklight -set 10
@@ -753,6 +758,17 @@ make
 
 # POPCORN-TIME
 
+
+# POWERTOP
+Program za zmanjševanje porabe el. energije laptopa...
+
+## Running
+
+    sudo powertop --auto-tune
+
+## To-do
+da se program sam zažene...
+
 # PRELOAD (deamon service)
 preload is a program written by Behdad Esfahbod which runs as a daemon and records statistics about usage of programs using Markov chains; files of more frequently-used programs are, during a computer's spare time, loaded into memory. This results in faster startup times as less data needs to be fetched from disk.
 
@@ -763,6 +779,9 @@ preload is a program written by Behdad Esfahbod which runs as a daemon and recor
 ## Config
 
     /etc/preload.conf
+
+## To-do
+da se sam zažene ob zagonu
 
 # PPRINTER SUPPORT on BunsenLab
 
@@ -1282,25 +1301,4 @@ yaourt -S <ime> --noconfirm
   > sudo reboot
     
 
-# XRANDR:
-te nastavitve so odvisne od monitorja... !
-najprej:
-> cvt 1280 1024 60
-    # 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz
-    Modeline "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hsync +vsync
-
-...kopiras kar ti terminal vrže...:
-
-    sudo xrandr --newmode "1280x1024"  109.00  1280 1368 1496 1712  1024 1027   1034   1063 -hsync +vsync
-
-dodas v moznosti:
-
-    sudo xrandr --addmode VGA1 1280x1024
-
-potem nastavis resolucijo v 
-__MENU -> Settings -> Arandr__ ali v terminalu:
-
-    xrandr --output VGA1 --mode 1280x1024 --pos 1366x0
-
-
-konsole --noclose --workdir %d --title %t -e
+# XRANDR: 
