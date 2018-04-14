@@ -11,6 +11,9 @@ bibliography: bibtex.bib
 
 # ANDROID:
 ## ADB
+
+$$a=\frac {2}{3}$$
+
 na tem msestu bomo zapisali nekaj programov za android program na telefonu. glavno program je 
 __adb__ ( __a__-ndroid __d__-e-__b__-ugger)... to omogoča, da priključimo telefon ns računalnik in se nanj
 povežemo tako, da delamo na terminalu...
@@ -615,6 +618,15 @@ _podčtrano_
 
 [link](http://google.com)
 
+## Live view
+
+    pacman -S npm
+    sudo npm install -g markmon
+
+SublimeText3 -> Package Controll -> Install Package : Markmon
+_Uporaba_ -> Ctrl+k+m
+
+
 ## LaTex Commnads
 
 Deluje tudi če napišemo naslednje LaTex ukaze:
@@ -923,6 +935,8 @@ dodas v Preferences -> Settings:
 5. GitGutter                //kaže kaj si na novo naredil v primerjavi s fajlom na GitHubu
 6. Git (glej spodaj)
 7. MarkDown (glej spodaj)
+8. LiveReload
+9. MarkdownPreview
 
 ### install GitHub:
 1. C+S+p -> Install Packages
@@ -1011,6 +1025,12 @@ oba paketa sem inštaliral preko SynapticPackageManager, ker je preveč dependen
 __CMD:__
 
     pandoc -o test.pdf --from markdown --template eisvogel --listings myLinuxNotes.md
+
+__TEMPLATE GENERATOR___
+da naredič template v terminal vpišeš:
+
+    pandoc -D latex
+(objavil je Luck Schmit)
 
 ### Spell Checker:
  download:
@@ -1175,6 +1195,7 @@ Da ne pušča preveč prostora med posameznimi odstavki, je potrebno nastaviti:
 
 
 # TO-DO
+- Sublime MD preview [link](https://packagecontrol.io/packages/Markmon%20real-time%20markdown%20preview)
 - Make .config files --> backup to Git->MyDotFiles
   + skript v ~/.config/i3
   + keybinding v i3/config
@@ -1182,6 +1203,7 @@ Da ne pušča preveč prostora med posameznimi odstavki, je potrebno nastaviti:
   + dodaj, da se da osvetljenost ekrana na full, če comp na elektiki
 - preveri v installMyArchApps za vsako od postavk, če je inštalirana
   + v funkciji .installPacman in .installYaourt
+
 
 # VIM
 ## Instalation
