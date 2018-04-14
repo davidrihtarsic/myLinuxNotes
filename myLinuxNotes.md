@@ -913,8 +913,7 @@ Da imam kompatibilnost z ostalimi programi si nastavim še KeyBindings
 
 1. Emmet                    //completeing the code
 2. AllAutoComplete          //complete any word from opened files
-dodas v Preferences.sublime-settings:
-
+dodas v Preferences -> Settings:
 
 > "auto_complete_selector": "source, text",
 > "auto_complete_commit_on_tab": true,
@@ -1179,6 +1178,8 @@ Da ne pušča preveč prostora med posameznimi odstavki, je potrebno nastaviti:
 - Make .config files --> backup to Git->MyDotFiles
   + skript v ~/.config/i3
   + keybinding v i3/config
+- /i3/config
+  + dodaj, da se da osvetljenost ekrana na full, če comp na elektiki
 - preveri v installMyArchApps za vsako od postavk, če je inštalirana
   + v funkciji .installPacman in .installYaourt
 
