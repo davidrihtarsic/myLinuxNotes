@@ -614,14 +614,16 @@ _podčtrano_
 
 [link](http://google.com)
 
-## Live view
+## Live preview
+Instalation
 
     pacman -S npm
     sudo npm install -g markmon
 
 SublimeText3 -> Package Controll -> Install Package : Markmon
-_Uporaba_ -> Ctrl+k+m
 
+### run
+Ctrl+Shift+p --> Markmon launch
 
 ## LaTex Commnads
 
@@ -1092,7 +1094,6 @@ Program skrbi za zagon UNIT-ov ali procesov oz. v linuxu se jim reče *deamon*.
 ## system run
     
     systemctl 
-      - poweroff
       - hibernate
       - suspend
 
