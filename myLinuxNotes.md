@@ -689,6 +689,14 @@ Ko iščemo vire imamo pogosto možnost oznake DOI (angl.: **D**igital **O**bjec
 Če moramo združiti več pdf dokumentov v enega v terminal napišemo:
 > pdfunite pdf0.pdf pdf1.pdf merged.pdf
 
+# MUSIC TAGGING (audi tags)
+
+V terminalu lahko uporabljalmo: _beets_:
+
+    beet import ~/Music/BigFoodMama/
+
+in nato beet poišče v bazah iz spleta kateri album, izvajalec naslov pesmi...
+
 # NEMO
 File browser
 
