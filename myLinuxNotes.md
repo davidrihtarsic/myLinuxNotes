@@ -48,9 +48,6 @@ skripta...
 
 
 # AUTOSTART
-
-## To-do
-
 # BACKLIGHT
 Včasih je težko krmiliti osvetlitev najlažje je, če dela 
 xbacklight -set 10
@@ -144,6 +141,8 @@ Super programček za brskanje znakov
 		find . -type f
 
 ./.config/terminator/config
+./.config/termite/config
+./.config/i3/config
 ./.config/tint2/tint2rc
 ./.config/conky/dave_s_conky.conkyrc
 ./.config/polybar/modules.conf
@@ -159,9 +158,6 @@ Super programček za brskanje znakov
 ./.pandoc/templates/eisvogel.latex
 ./.vimrc
 ./.zshrc
-to-do:
-./.config/termite/config
-./.config/i3/config
 
 
 # DOLPHINE FILE MANAGER
@@ -434,7 +430,7 @@ Kako nastaviš da imaš hibernacijo računaljika...
 - nasraviš resume
 - dodaš v grub pod HOOK tudi resume
 - zbildaš grub
-ni delalo!!!!!!
+__ni delalo!!!!!!__ nato je začelo delati... samo ne vem kdaj in kaj sem še naredil... večinoma sem se ukvarjal s pandocom... ampak to nima veze...
 [link](https://www.youtube.com/watch?v=GF13ZpYsrI0)
 (to-do)
 
@@ -794,7 +790,9 @@ preload is a program written by Behdad Esfahbod which runs as a daemon and recor
 
 ## Running
 
-    systemctl start preload.service
+    __systemctl start preload.service__
+    systemctl enable preload.service
+
 
 ## Config
 
@@ -1073,6 +1071,31 @@ da naredič template v terminal vpišeš:
 
 
 
+# SYSTEMD
+Program skrbi za zagon UNIT-ov ali procesov oz. v linuxu se jim reče *deamon*. 
+
+## uporaba
+
+    systemctl enable UNIT.service --> zagon servisa tudi ob restartu
+    systemctl start UNIT.service --> zagon servisa za ta sesion
+    systemctl stop UNIT.service --> izkljuci servis
+    systemctl restart UNIT.service --> ponovni zagon servisa za ta sesion
+
+    systemctl status -l UNIT.service --> nekaj več podatkov o UNITU
+
+## log file
+če je kak eror na začetku ga lahko pogledaš z:
+
+    journalctl -b
+    journalctl -f - za sprotno gledanje kaj gre narobe...
+
+## system run
+    
+    systemctl 
+      - poweroff
+      - hibernate
+      - suspend
+
 # TERMINAL:
  Terminal je najboljši terminator
  > sudo apt-get install terminator
@@ -1203,7 +1226,6 @@ Da ne pušča preveč prostora med posameznimi odstavki, je potrebno nastaviti:
 
 
 # TO-DO
-[x] Sublime MD preview [link](https://packagecontrol.io/packages/Markmon%20real-time%20markdown%20preview)
 [ ] Make .config files --> backup to Git->MyDotFiles
   + skript v ~/.config/i3
   + keybinding v i3/config
