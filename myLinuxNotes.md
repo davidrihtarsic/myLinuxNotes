@@ -1195,13 +1195,17 @@ Da ne pušča preveč prostora med posameznimi odstavki, je potrebno nastaviti:
 
 
 # TO-DO
-- Sublime MD preview [link](https://packagecontrol.io/packages/Markmon%20real-time%20markdown%20preview)
-- Make .config files --> backup to Git->MyDotFiles
+[x] Sublime MD preview [link](https://packagecontrol.io/packages/Markmon%20real-time%20markdown%20preview)
+[ ] Make .config files --> backup to Git->MyDotFiles
   + skript v ~/.config/i3
   + keybinding v i3/config
-- /i3/config
+  + ali pa naredis linke za vse file, ki so v GitHub_noSyncGit/MyDotFiles/.config
+    * beckup obstojecih in
+    * linke filov
+    * nato pa editiras samo te, ki so v GitHub_noSync... 
+[ ] /i3/config
   + dodaj, da se da osvetljenost ekrana na full, če comp na elektiki
-- preveri v installMyArchApps za vsako od postavk, če je inštalirana
+[ ] preveri v installMyArchApps za vsako od postavk, če je inštalirana
   + v funkciji .installPacman in .installYaourt
 
 
