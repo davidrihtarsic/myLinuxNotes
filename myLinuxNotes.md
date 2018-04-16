@@ -945,6 +945,32 @@ dodas v Preferences -> Settings:
 7. MarkDown (glej spodaj)
 8. LiveReload
 9. MarkdownPreview
+10. Pandown
+
+### Pandown 
+V Preferences -> Package settings --> Pandown --> Settings -user:
+
+    {
+      "pandoc_arguments":
+      {
+        "command_arguments":
+        {
+          "number-sections": false,
+          "template": "eisvogel",
+          "variables":
+          {
+          },
+          "filter":
+                [
+                    "pandoc-eqnos"
+                ],
+          "listings": true,
+          "incremental": false,
+          "latex-engine": "",
+          "bibliography": "bibtex.bib",
+        }
+      }
+    }
 
 ### install GitHub:
 1. C+S+p -> Install Packages
