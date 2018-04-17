@@ -712,6 +712,32 @@ You can add yours scripts... Script must be added to:
 |-----------|-----------------|
 | A+Home    | go to HOME dir  |
 
+# Pandown (SublimeText3 Plugin)
+V Preferences -> Package settings --> Pandown --> Settings -user:
+
+    {
+      "pandoc_arguments":
+      {
+        "command_arguments":
+        {
+          "number-sections": false,
+          "template": "eisvogel",
+          "variables":
+          {
+            "lang":"sl"
+          },
+          "filter":
+                [
+                    "pandoc-eqnos"
+                ],
+          "listings": true,
+          "incremental": false,
+          "latex-engine": "",
+          "bibliography": "bibtex.bib",
+        }
+      }
+    }
+    
 # PASSWORD (LINUX)
 
 To change a password on behalf of a user, first sign on or "su" to the "root" account. Then type:
@@ -946,31 +972,6 @@ dodas v Preferences -> Settings:
 8. LiveReload
 9. MarkdownPreview
 10. Pandown
-
-### Pandown 
-V Preferences -> Package settings --> Pandown --> Settings -user:
-
-    {
-      "pandoc_arguments":
-      {
-        "command_arguments":
-        {
-          "number-sections": false,
-          "template": "eisvogel",
-          "variables":
-          {
-          },
-          "filter":
-                [
-                    "pandoc-eqnos"
-                ],
-          "listings": true,
-          "incremental": false,
-          "latex-engine": "",
-          "bibliography": "bibtex.bib",
-        }
-      }
-    }
 
 ### install GitHub:
 1. C+S+p -> Install Packages
