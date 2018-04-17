@@ -712,6 +712,7 @@ You can add yours scripts... Script must be added to:
 |-----------|-----------------|
 | A+Home    | go to HOME dir  |
 
+
 # Pandown (SublimeText3 Plugin)
 V Preferences -> Package settings --> Pandown --> Settings -user:
 
@@ -737,7 +738,7 @@ V Preferences -> Package settings --> Pandown --> Settings -user:
         }
       }
     }
-    
+
 # PASSWORD (LINUX)
 
 To change a password on behalf of a user, first sign on or "su" to the "root" account. Then type:
@@ -943,6 +944,15 @@ Da imam kompatibilnost z ostalimi programi si nastavim še KeyBindings
       { "keys": ["ctrl+shift+c"], "command": "git_quick_commit" },
       { "keys": ["ctrl+shift+u"], "command": "git_push_current_branch" },
       { "keys": ["ctrl+shift+d"], "command": "git_pull_current_branch" }
+      { "keys": ["ctrl+alt+s"],
+        "command": "pandown_build",
+        "args":
+          {
+            "pandoc_from": "markdown",
+            "pandoc_to": ["latex", ".pdf"],
+            "prevent_viewing": true 
+          }
+      }
     ]
 		
 ## Package Controll:
