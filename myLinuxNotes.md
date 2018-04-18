@@ -139,25 +139,33 @@ Super programček za brskanje znakov
 ## My all . dotfiles
 
 		find . -type f
-
-./.config/terminator/config
-./.config/termite/config
-./.config/i3/config
-./.config/tint2/tint2rc
-./.config/conky/dave_s_conky.conkyrc
+./.zshrc
 ./.config/polybar/modules.conf
 ./.config/polybar/config
 ./.config/polybar/lounch_polybar.sh
 ./.config/polybar/master.conf
+./.config/terminator/config
+./.config/tint2/tint2rc
 ./.config/openbox/rc.xml
-./.local/share/nemo/actions/MD-->PDF_bib.nemo_action
-./.local/share/nemo/actions/PDF_unite.nemo_action
+./.config/i3/LcdBrightnesUP.sh
+./.config/i3/KbdBrightnesUP.sh
+./.config/i3/myMonitorSetup.sh
+./.config/i3/config
+./.config/i3/LcdBrightnesDOWN.sh
+./.config/i3/KbdBrightnesDOWN.sh
+./.config/i3/lcd_backlight.rules
+./.config/i3/kbd_backlight.rules
+./.config/conky/dave_s_conky.conkyrc
+./.config/termite/config
+./.config/termite/config (copy_original)
 ./.local/share/nemo/actions/PDF_extract.nemo_action
-./.local/share/nemo/actions/MD-->PDF.nemo_action
+./.local/share/nemo/actions/PDF_unite.nemo_action
 ./.local/share/nemo/actions/Office-->PDF.nemo_action
-./.pandoc/templates/eisvogel.latex
+./.local/share/nemo/actions/MD-->PDF.nemo_action
+./.local/share/nemo/actions/MD-->PDF_bib.nemo_action
 ./.vimrc
-./.zshrc
+./.pandoc/templates/eisvogel.latex
+
 
 
 # DOLPHINE FILE MANAGER
