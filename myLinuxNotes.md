@@ -214,6 +214,16 @@ Naredimo datoteko.desktop:
     Icon = /opt/eclipse/cpp-neon/eclipse/icon.xpm
     Categories = Development;
 
+## Arduino ECLIPSE Plugin
+[link](http://eclipse.baeyens.it/)
+__Instalation__
+
+1. run eclipse c++ with "sudo"
+2. Help-->eclipse marketplace
+4.  [x] Solber Arduino IDE
+5. next -->  "i agree" --> Finish...
+
+
 # EFI MODE:
 ## test
 boot -> CSM enable  
@@ -942,6 +952,7 @@ inštaliraš SANE
 ## Nastavitve - Key Bindings
 
 Da imam kompatibilnost z ostalimi programi si nastavim še KeyBindings
+veliko command najdemo tule:[link](http://www.sublimetext.com/docs/commands)
 
 1. -> Preferences -> KeyBindings
 2. v "User" pastneš tole:
