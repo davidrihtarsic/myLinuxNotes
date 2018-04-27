@@ -4,6 +4,7 @@ author: [David Rihtaršič]
 date: 2017-02-20
 tags: [Markdown, Example]
 bibliography: bibtex.bib
+listings: true
 ---
 
 \tableofcontents
@@ -134,7 +135,7 @@ Super programček za brskanje znakov
 
     gucharmap
 Če uporabimo font "common" je tam veliko primernih znakov kot naprimer:
-
+
 # CONFIG FILES (my)
 ## My all . dotfiles
 
@@ -957,22 +958,62 @@ veliko command najdemo tule:[link](http://www.sublimetext.com/docs/commands)
 1. -> Preferences -> KeyBindings
 2. v "User" pastneš tole:
 
-    [
-      { "keys": ["ctrl+e"], "command": "toggle_side_bar" },
-      { "keys": ["ctrl+t"], "command": "new_file" },
-      { "keys": ["ctrl+shift+c"], "command": "git_quick_commit" },
-      { "keys": ["ctrl+shift+u"], "command": "git_push_current_branch" },
-      { "keys": ["ctrl+shift+d"], "command": "git_pull_current_branch" }
-      { "keys": ["ctrl+alt+s"],
-        "command": "pandown_build",
-        "args":
-          {
-            "pandoc_from": "markdown",
-            "pandoc_to": ["latex", ".pdf"],
-            "prevent_viewing": true 
-          }
-      }
-    ]
+```json
+[
+
+  { "keys": ["ctrl+e"],     "command": "toggle_side_bar" },
+  { "keys": ["ctrl+t"],     "command": "new_file" },
+  { "keys": ["ctrl+shift+c"], "command": "git_quick_commit" },
+  { "keys": ["ctrl+shift+u"], "command": "git_push_current_branch" },
+  { "keys": ["ctrl+shift+d"], "command": "git_pull_current_branch" },
+  { "keys": ["ctrl+alt+s"],   "command": "pandown_build",
+                  "args":{
+                    "pandoc_from": "markdown",
+                    "pandoc_to": ["latex", ".pdf"],
+                    "prevent_viewing": true 
+                  }
+  },
+  { "keys": ["ctrl+alt+i"], "command": "insert",
+                  "args": {
+                    "characters": "![caption\\label{slika}](link)"
+                  }
+  },
+  { "keys": ["ctrl+alt+r"],   "command": "insert",
+                  "args": {
+                    "characters": "[@ref]"
+                  }
+  },
+  { "keys": ["ctrl+alt+t"],   "command": "insert",
+                  "args": {
+                    "characters": "<!--timesheet: -->"
+                  }
+  },
+  { "keys": ["ctrl+alt+d"], "command": "shell_command",
+                    "args": {
+                      "command": "date +'%F'",
+                      "target": "point"
+                    }
+    },
+    { "keys": ["ctrl+alt+h"], "command": "shell_command",
+                    "args": {
+                      "command": "date +'%R'",
+                      "target": "point"
+                    }
+    },
+  { "keys": ["ctrl+m"],     "command": "insert",
+                  "args": {
+                    "characters": "---\ntitle: 'Naslov'\nauthor: [dr. David Rihtaršič]\ndate: \ntags: [tag1,tag2]\nbibliography: bibtex.bib\n---"
+                  }
+  },
+  { "keys": ["ctrl+enter"], "command": "shell_command",
+                  "args": {
+                      //"prompt": "Enter a command",
+                      "title": "My Command",
+                      "target": "point"
+                  }
+  }
+]
+```
 		
 ## Package Controll:
   Paket za koristne funkcionalnosti:
@@ -1426,7 +1467,9 @@ yaourt -S <ime> --noconfirm
 # XRANDR:
 te nastavitve so odvisne od monitorja... ! najprej:
 
-    cvt 1280 1024 60 # 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz Modeline "1280x1024_60.00" 109.00 1280 1368 1496 1712 1024 1027 1034 1063 -hsync +vsync
+    cvt 1280 1024 60
+
+    # 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz Modeline "1280x1024_60.00" 109.00 1280 1368 1496 1712 1024 1027 1034 1063 -hsync +vsync
 
 ...kopiras kar ti terminal vrže...:
 
