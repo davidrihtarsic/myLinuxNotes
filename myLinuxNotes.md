@@ -983,10 +983,11 @@ veliko command najdemo tule:[link](http://www.sublimetext.com/docs/commands)
                     "characters": "[@ref]"
                   }
   },
-  { "keys": ["ctrl+alt+t"],   "command": "insert",
-                  "args": {
-                    "characters": "<!--timesheet: -->"
-                  }
+  { "keys": ["ctrl+alt+t"],   "command": "shell_command",
+                    "args": {
+                      "command": "echo '<!-- timesheet: `date +'%Y-%m-%d %H:%M'`, PROJECT, NOTES -->'",
+                      "target": "point"
+                    }
   },
   { "keys": ["ctrl+alt+d"], "command": "shell_command",
                     "args": {
