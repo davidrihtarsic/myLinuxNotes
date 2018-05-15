@@ -273,6 +273,9 @@ nato je delalo...
 to je to !!! 
 narejene so tudi skripte za ...
 
+### shortcuts:
+* - expand all subfolders :)
+
 # FILES STRUCTURE
 ## moja struktura
 Mogoče da si narediš template za folders
