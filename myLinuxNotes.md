@@ -251,6 +251,7 @@ security -> security boot control -> dissable
  path :/efi/boot/bootx64.efi [ne dela]
 
 # FZF:
+[link](https://github.com/junegunn/fzf)
 ## uporaba
 Fust FuzZy File Search ...
 Res dober način zaiskanje filov... dve bljižnjici:
