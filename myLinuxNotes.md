@@ -1023,30 +1023,42 @@ veliko command najdemo tule:[link](http://www.sublimetext.com/docs/commands)
 ## Package Controll:
   Paket za koristne funkcionalnosti:
 
-### install:
+__install Package Controll:__
   1. goto [link][https://packagecontrol.io/installation]
   2. _copy_ code for Sublime 3:
     import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
   3. View -> Show Console
   4. _paste_ 
 
-### Uporabni paketi
+### Emmet
+Emmet                    //completeing the code
 
-1. Emmet                    //completeing the code
-2. AllAutoComplete          //complete any word from opened files
+### AllAutoComplete
+complete any word from opened files
+
 dodas v Preferences -> Settings:
 
 > "auto_complete_selector": "source, text",
 > "auto_complete_commit_on_tab": true,
 
-3. DoxyDoxygen              //komentiranje funkcij [Alt]+[Q]
-4. SideBarEnhacement        //more functionality in side bar
-5. GitGutter                //kaže kaj si na novo naredil v primerjavi s fajlom na GitHubu
-6. Git (glej spodaj)
-7. MarkDown (glej spodaj)
-8. LiveReload
-9. MarkdownPreview
-10. Pandown
+### DoxyDoxygen              
+komentiranje funkcij [Alt]+[Q]
+
+### SideBarEnhacement        
+more functionality in side bar
+
+### GitGutter                
+kaže kaj si na novo naredil v primerjavi s fajlom na GitHubu
+
+### Git (glej spodaj)
+
+### MarkDown (glej spodaj)
+
+### LiveReload
+
+### MarkdownPreview
+
+### Pandown
 
 ### install GitHub:
 1. C+S+p -> Install Packages
