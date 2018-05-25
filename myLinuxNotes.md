@@ -344,7 +344,7 @@ To format The partition as FAT32 use
 > sudo mkdosfs -F 32 -I /dev/sdb
 
 # FRITZING
-  asdf
+
 
 # FREECAD
 
@@ -1050,17 +1050,7 @@ more functionality in side bar
 ### GitGutter                
 kaže kaj si na novo naredil v primerjavi s fajlom na GitHubu
 
-### Git (glej spodaj)
-
-### MarkDown (glej spodaj)
-
-### LiveReload
-
-### MarkdownPreview
-
-### Pandown
-
-### install GitHub:
+### Git
 1. C+S+p -> Install Packages
 2. [Git()][https://github.com/kemayo/sublime-text-git/wiki]
 
@@ -1093,7 +1083,7 @@ jaz sem moral prej še spedenat v terminalu
 2. C+S+p -> quick commit (repo) -> msg
 3. C+S+p -> push
 
-### MarkDown:
+### MarkDown
 Paket Package Controll mora biti nameščen...
   2. Install Package: _Monokai extended_
   3. Preferences -> Color Scheme -> Monokail Extended -> Monokail Extended
@@ -1110,6 +1100,14 @@ Paket Package Controll mora biti nameščen...
        "wrap_width": 0,
        "rulers": []
      }
+
+### CiteBibtex
+
+### LiveReload
+
+### MarkdownPreview
+
+### Pandown
 
 ### LaTeX:
 namestis paket preko:
