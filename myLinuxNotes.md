@@ -1463,6 +1463,12 @@ Plugin uporabljaš tako, da :
  - zo - open
  - za - 
 
+# VIRTUALBOX
+
+    pacman -S virtualbox
+    pacman -S pacman -S virtualbox-host-dkms
+    sudo modprobe vboxdrv
+    
 # W3M
 
 ## instalation:
