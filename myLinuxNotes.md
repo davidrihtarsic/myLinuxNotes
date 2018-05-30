@@ -736,31 +736,17 @@ You can add yours scripts... Script must be added to:
 | A+Home    | go to HOME dir  |
 
 
-# Pandown (SublimeText3 Plugin)
-V Preferences -> Package settings --> Pandown --> Settings -user:
+# PACMAN
+Program za pakete = PACkage MANager. Ena varianta je, da uporabiš:
+PACLI programček v terminalu...
 
-    {
-      "pandoc_arguments":
-      {
-        "command_arguments":
-        {
-          "number-sections": false,
-          "template": "eisvogel",
-          "variables":
-          {
-            "lang":"sl"
-          },
-          "filter":
-                [
-                    "pandoc-eqnos"
-                ],
-          "listings": true,
-          "incremental": false,
-          "latex-engine": "",
-          "bibliography": "bibtex.bib",
-        }
-      }
-    }
+### pacman -S paket
+> namesti paket
+ 
+## ERRORS
+failed to...
+> odstraniš paket, ki ti ga javi in probaš še enkrat...
+
 
 # PASSWORD (LINUX)
 
@@ -982,14 +968,15 @@ veliko command najdemo tule:[link](http://www.sublimetext.com/docs/commands)
                     "characters": "![caption\\label{slika}](link)"
                   }
   },
-  { "keys": ["ctrl+alt+r"],   "command": "insert",
+  { "keys": ["ctrl+alt+e"],   "command": "insert",
                   "args": {
-                    "characters": "[@ref]"
+                    "characters": "$$Y=kX+n$$ {#eq:linearna-f}"
                   }
   },
+  { "keys": ["f10"],  "command": "citer_show_keys"},
   { "keys": ["ctrl+alt+t"],   "command": "shell_command",
                     "args": {
-                      "command": "echo '<!-- timesheet: `date +'%Y-%m-%d %H:%M'`, PROJECT, NOTES -->'",
+                      "command": "~/Files/GitHub_noSync/ArchLabs/MyDotFiles/timesheetNotes.sh",
                       "target": "point"
                     }
   },
@@ -1005,7 +992,7 @@ veliko command najdemo tule:[link](http://www.sublimetext.com/docs/commands)
                       "target": "point"
                     }
     },
-  { "keys": ["ctrl+m"],     "command": "insert",
+  { "keys": ["ctrl+alt+m"],     "command": "insert",
                   "args": {
                     "characters": "---\ntitle: 'Naslov'\nauthor: [dr. David Rihtaršič]\ndate: \ntags: [tag1,tag2]\nbibliography: bibtex.bib\n---"
                   }
@@ -1101,13 +1088,71 @@ Paket Package Controll mora biti nameščen...
        "rulers": []
      }
 
-### CiteBibtex
+### Citer
+[link](https://github.com/mangecoeur/Citer)
+Shraniti moraš projet in potem išče po vseh filit v projetku zapise z bibliography
+
+Preferences -> Package Controll -> Citer -> Settings - default:
+    
+    ...
+    "bibtex_file_path": "/home/david/Files/Work/PeF/Articles/bibtex_global.bib",
+    ...
+
+### ~~CiteBibtex~~
+
+    {
+        "bibtex_file": "bibtex.bib",
+        "bibtex_file_encoding": "utf-8",
+        "default_citation_style": "pandoc",
+        "autodetect_citation_style": true,
+        "additional_search_fields": [],
+        "autodetect_syntaxes": {"LaTeX": "latex",
+                                "LaTeX Beamer": "latex",
+                                "LaTeX Memoir": "latex",
+                                "Markdown": "pandoc",
+                                "MultiMarkdown": "pandoc",
+                                "Markdown GFM": "pandoc",
+                                "AcademicMarkdown": "pandoc"},
+        "styles": {"pandoc": "[@$CITATION]",
+                   "latex": "\\citep{$CITATION}"},
+        "citation_format_string": "{author} ({year}). {title}"
+    }
 
 ### LiveReload
 
 ### MarkdownPreview
 
-### Pandown
+### Pandown (SublimeText3 Plugin)
+V Preferences -> Package settings --> Pandown --> Settings -user:
+
+    {
+      "pandoc_arguments":
+      {
+        "command_arguments":
+        {
+          "template": "eisvogel",
+          "variables":
+          {
+            "lang":"sl"
+          },
+          "filter":
+                [
+                    "pandoc-eqnos",
+                    "pandoc-crossref"
+                ],
+          "listings": true,
+          "incremental": false,
+          "latex-engine": "",
+          "bibliography": 
+          [
+            "bibtex.bib",
+            "/home/david/Files/Work/PeF/Articles/bibtex_global.bib"
+          ]
+        }
+      }
+    }
+
+
 
 ### LaTeX:
 namestis paket preko:
