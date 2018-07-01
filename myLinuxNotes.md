@@ -641,9 +641,9 @@ __Short Cuts__
 | [Ct]+[.]      | Insert Date         |
 | [Ct]+[Sh]+[.] | Insert Time         |
 
-# linus torvalds
+# Linus Torvalds
 1. get the work done
-2. do not ler go
+2. do not let go
 3. have passion
 4. start small
 5. learn trough trail & error
