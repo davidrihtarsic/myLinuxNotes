@@ -618,7 +618,7 @@ __Short Cuts__
 | []+[]          | Insert greek letter |
 
 ## CALC
-How To - Insert DATE:
+### How To - Insert DATE:
 
 1. Tools -> Customize -> Keyboard -> 
 2. Short Keys :Ctrl+.
@@ -626,7 +626,7 @@ How To - Insert DATE:
 4. Function: Insert Current Ddate
 5. [Modify]
 
-How To - Insert TIME:
+### How To - Insert TIME:
 
 1. Tools -> Customize -> Keyboard -> 
 2. Short Keys :Ctrl+Shift.
@@ -634,12 +634,30 @@ How To - Insert TIME:
 4. Function: Insert Current Time
 5. [Modify]
 
-__Short Cuts__
+### __Short Cuts__
 
 | Short cut     | Action              |
 |---------------|---------------------|
 | [Ct]+[.]      | Insert Date         |
 | [Ct]+[Sh]+[.] | Insert Time         |
+
+### How to - Filter duplicated
+
+Ko imamo tabelo:
+
+|  ime  | vpisna |  smer |
+|-------|--------|-------|
+| DAvid | 123456 | Fi-Te |
+| DAvid | 123456 | Fi-Te |
+| Mija  | 345678 | Ma-Te |
+| Jure  | 098765 | Fi-Ma |
+
+1. vklnjučiš filter
+2. nato greš v meni [ime v]
+    - Standard Filter
+    - ime = NotEmpty
+    - > Options : No Duplicates
+[ok]
 
 # Linus Torvalds
 1. get the work done
