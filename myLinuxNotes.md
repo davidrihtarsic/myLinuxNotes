@@ -728,6 +728,30 @@ SublimeText3 -> Package Controll -> Install Package : Markmon
 ### run
 Ctrl+Shift+p --> Markmon launch
 
+## Metadata
+
+```yaml
+title: "Using Arduino based low-cost DAQ in science teacher training"
+subtitle: "Sub-Title"
+author: "David Rihtaršič\\\nUniversity of Ljubljana"
+date: "2018-07-12"
+mainfont: FiraSans-Regular.otf
+mainfontoptions: BoldFont=Font-Bold.otf
+mainfontoptions: ItalicFont=Font-Italic.otf
+mainfontoptions: BoldItalicFont=Font-BoldItalic.otf
+fontsize: 10pt
+geometry: "top=0.9cm, bottom=1.5cm, left=2.0cm, right=2.0cm"
+numbersections: false
+classoption: onecolumn
+documentclass: article    # [article, book, report]
+csl: ieee.csl #/home/david/.pandoc/templates/ieee.csl
+bibliography: [
+  /home/david/Files/Work/PeF/Articles/bibtex_global.bib,
+  bibtex.bib
+]
+lang: en-US         # [sl, en-US, us-GB]
+```
+
 ## LaTex Commnads
 
 Deluje tudi če napišemo naslednje LaTex ukaze:
@@ -784,6 +808,7 @@ Ko iščemo vire imamo pogosto možnost oznake DOI (angl.: **D**igital **O**bjec
       title = {Experiential learning of electronics subject matter in middle school robotics courses},
       journal = {International Journal of Technology and Design Education}
     }
+
 
 # MERGE PDF DOCUMENTS
 
