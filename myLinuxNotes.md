@@ -735,12 +735,19 @@ title: "Using Arduino based low-cost DAQ in science teacher training"
 subtitle: "Sub-Title"
 author: "David Rihtaršič\\\nUniversity of Ljubljana"
 date: "2018-07-12"
+# more fonts in: /usr/share/texmf-dist/fonts/opentype
+# more fonts in: /usr/share/texmf-dist/fonts/truetype
 mainfont: FiraSans-Regular.otf
 mainfontoptions: BoldFont=Font-Bold.otf
 mainfontoptions: ItalicFont=Font-Italic.otf
 mainfontoptions: BoldItalicFont=Font-BoldItalic.otf
 fontsize: 10pt
 geometry: "top=0.9cm, bottom=1.5cm, left=2.0cm, right=2.0cm"
+header-includes:
+    - \usepackage{setspace}
+    - \singlespacing          #doublespacing
+    - \usepackage{lineno}
+    - \linenumbers
 numbersections: false
 classoption: onecolumn
 documentclass: article    # [article, book, report]
