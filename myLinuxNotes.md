@@ -690,6 +690,24 @@ Potem nekaj navadnega texta...
 Naprimer: c++ in Python
 
 ```c
+#!/usr/bin/env python
+from Arduino import Arduino
+import time
+
+# setup an Arduino-board object
+ArduinoNano = Arduino()
+
+# set pin 13 as OUTPUT
+ArduinoNano.pinMode(13,'OUTPUT')
+
+for x in range(1,5):
+  ArduinoNano.digitalWrite(13,'HIGH')
+  time.sleep(1)
+  ArduinoNano.digitalWrite(13,'LOW')
+  time.sleep(1)
+```
+
+```c
 int test = 0;
 void loop(){
   digitalWrite(led_pin, HIGH);
@@ -1367,6 +1385,7 @@ Program skrbi za zagon UNIT-ov ali procesov oz. v linuxu se jim reče *deamon*.
       - suspend
 
 # STATISTICS(PYTHON&PANDAS)
+https://github.com/justmarkham/pandas-videos
 
 ## Importing Data
     pd.read_csv(filename) | From a CSV file
