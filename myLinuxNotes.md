@@ -312,6 +312,10 @@ security -> security boot control -> dissable
  path :/EFI/debian/grubx64.efi [ne dela]
  path :/efi/boot/bootx64.efi [ne dela]
 
+# FEH 
+program s katerim lahko nastaviš background sliko.. naprimer takol:
+
+    feh --bg-scale Leopard-Wallpapers-HD-Free-Download.jpg
 # FZF:
 [link](https://github.com/junegunn/fzf)
 ## uporaba
