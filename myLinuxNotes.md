@@ -48,8 +48,9 @@ and Log Out / Log In
 ## Programi
 skripta...
 
-
 # AUTOSTART
+to-do...
+
 # BACKLIGHT
 Včasih je težko krmiliti osvetlitev najlažje je, če dela 
 xbacklight -set 10
@@ -316,6 +317,7 @@ security -> security boot control -> dissable
 program s katerim lahko nastaviš background sliko.. naprimer takol:
 
     feh --bg-scale Leopard-Wallpapers-HD-Free-Download.jpg
+
 # FZF:
 [link](https://github.com/junegunn/fzf)
 ## uporaba
@@ -900,6 +902,16 @@ pdfunite source1.pdf source2.pdf out.pdf
 pdftk source.pbf burst
 pdftk source.pbf 4 just-4th-page.pdf
 
+# PATCH
+
+Za naredit patch uporabiš:
+
+> diff -u standard.file my-new.file > patch.diff
+
+Za izvršit patch na stari datoteki pa narediš:
+
+> patch < patch.diff
+
 # PIDGIN
 ## HANGOUTS
 https://bitbucket.org/EionRobb/purple-hangouts/
@@ -998,14 +1010,15 @@ sudo nano /usr/share/applications/popcorntime.desktop
 
 # PRINT SCREEN = DARK
 
+Kaj pa vem ...?
 
 # QCAD
+
   1. presnameš inštalacijo iz njihove [strani][https://qcad.org/en/qcad-downloads-trial]
   2. nato spremeniš rivilegije datoteke:
   > sudo chmod 777 qcad*.run
   3. in poženeš script:
   > ./qcad*.run
-
 
 # Qt5
 Za nekateri program sem si moral nainštalirat Qt5 knjižnice:
@@ -1656,7 +1669,6 @@ Super stvar : fuzzy file search!
 
 1. Najprej pustiš, da vim nainštelira plugin:  junegunn/fzf
 2. Nato poženeš:
-    
     ~/.vim/bundle/fzf/install
 
 3. in ponovno zaženeš terminal in vim.
@@ -1675,25 +1687,27 @@ Plugin uporabljaš tako, da :
 
 [How to fold](http://vimcasts.org/episodes/how-to-fold/)
 - folding je izredno počasen... (to-do)
-- ...
+- zato raje uporabljam kar TOC za markdown
 
 ## Shortcuts
- - <leader>hjkl => resize window
- - <leader>u update .vimrc
- 
+| Shortcuts     | behaviour     |
+|---------------|---------------|
+| <leader> hjkl | resize window |
+| <leader> u    | uprate .vimrc |
+
 ### Folding
- - zm - foldAll
- - zz - FoldToggle
- - zi - not/Foldable
- - zo - open
- - za - 
+ * zm - foldMore
+ * zz - Fold tree toggle
+ * zi - not/Foldable
+ * zo - open
+ * za - 
 
 # VIRTUALBOX
-
+##Instalation:
     pacman -S virtualbox
     pacman -S pacman -S virtualbox-host-dkms
     sudo modprobe vboxdrv
-    
+
 # W3M
 
 ## instalation:
@@ -1712,64 +1726,64 @@ Plugin uporabljaš tako, da :
 To je program za ARCH za namestitev paketov... ni da ni!
 - če vemo natančno ime lahko samo
 yaourt -S <ime> --noconfirm
-# XANMOD KERNEL:
-  XanMod is a mainline Linux kernel distribution with custom settings.
-  Optimized to take full advantage of high-performance Desktops, PC Gamers,
-  Workstations, Media Centers and others. Supports all recent 64-bit
-  versions of Debian and Ubuntu-based systems.
+#-XANMOD-KERNEL:
+--XanMod-is-a-mainline-Linux-kernel-distribution-with-custom-settings.
+--Optimized-to-take-full-advantage-of-high-performance-Desktops,-PC-Gamers,
+--Workstations,-Media-Centers-and-others.-Supports-all-recent-64-bit
+--versions-of-Debian-and-Ubuntu-based-systems.
 
-  - ne priporočam, ker potemnisem mogel inštalirati GeForce driverjev... 
+----ne-priporočam,-ker-potemnisem-mogel-inštalirati-GeForce-driverjev...-
 
-## Tested
- based on [article](http://www.hecticgeek.com/2016/09/supercharge-ubuntu-16-04-lts-xanmod-kernel/)
- tested on Ubuntu MATE (DELA SUPER!):
-  * Firefox prej 10.5 s ... po tem 4.6 s
-  * kopiranje dd (komanda) prej 9MB/s le pri bs=128K
-  * po tem... 9MB/s pri 1K, 4K, 8K, 32K, 
+##-Tested
+-based-on-[article](http://www.hecticgeek.com/2016/09/supercharge-ubuntu-16-04-lts-xanmod-kernel/)
+-tested-on-Ubuntu-MATE-(DELA-SUPER!):
+--*-Firefox-prej-10.5-s-...-po-tem-4.6-s
+--*-kopiranje-dd-(komanda)-prej-9MB/s-le-pri-bs=128K
+--*-po-tem...-9MB/s-pri-1K,-4K,-8K,-32K,-
 
-## Installation 
- 1. https://xanmod.org/
- 2. First install the XanMod Repository Setup
- 3. manual...
- > echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/  urces.list.d/xanmod-kernel.list && wget -qO - http://deb.xanmod.org/gpg.key   sudo apt-key add -  
- > sudo apt update && sudo apt install linux-xanmod-4.9  
- > sudo reboot  
- > cat /proc/version (preveri kernel verzijo:)
- 4. chane [cfg] disk scheduler:
-  1. preveri:
-  > sudo cat /sys/block/sda/queue/scheduler (kateri so na razpolago)  
-  > sudo subl /etc/#ault/grub (edit grub settings)  
-  2. spremeni vrstico:
-  > GRUB_CMDLINE_LINUX_#AULT="quiet splash"  
-  > GRUB_CMDLINE_LINUX_#AULT="quiet splash elevator=bfq"
-  3. shrani
-  4. sudo update-grub2
-  5. reboot
-  6. preveri disk scheduler:
-  > sudo cat /!!sys/block/sda/queue/scheduler
- 5. install Intel CPU support:
-  1. ker sem prej dobil error:
-  W: Possible missing firmware /lib/firmware/rtl_nic/rtl8107e-2.fw for dule   r8169
-  sem namestil še firmware, a mislim, da ni šlo skoz...
-  > sudo apt install intel-microcode iucode-tool
-  > sudo reboot
-    
+##-Installation-
+-1.-https://xanmod.org/
+-2.-First-install-the-XanMod-Repository-Setup
+-3.-manual...
+->-echo-'deb-http://deb.xanmod.org-releases-main'-|-sudo-tee-/etc/apt/--urces.list.d/xanmod-kernel.list-&&-wget--qO---http://deb.xanmod.org/gpg.key---sudo-apt-key-add----
+->-sudo-apt-update-&&-sudo-apt-install-linux-xanmod-4.9--
+->-sudo-reboot--
+->-cat-/proc/version-(preveri-kernel-verzijo:)
+-4.-chane-[cfg]-disk-scheduler:
+--1.-preveri:
+-->-sudo-cat-/sys/block/sda/queue/scheduler-(kateri-so-na-razpolago)--
+-->-sudo-subl-/etc/#ault/grub-(edit-grub-settings)--
+--2.-spremeni-vrstico:
+-->-GRUB_CMDLINE_LINUX_#AULT="quiet-splash"--
+-->-GRUB_CMDLINE_LINUX_#AULT="quiet-splash-elevator=bfq"
+--3.-shrani
+--4.-sudo-update-grub2
+--5.-reboot
+--6.-preveri-disk-scheduler:
+-->-sudo-cat-/!!sys/block/sda/queue/scheduler
+-5.-install-Intel-CPU-support:
+--1.-ker-sem-prej-dobil-error:
+--W:-Possible-missing-firmware-/lib/firmware/rtl_nic/rtl8107e-2.fw-for-dule---r8169
+--sem-namestil-še-firmware,-a-mislim,-da-ni-šlo-skoz...
+-->-sudo-apt-install-intel-microcode-iucode-tool
+-->-sudo-reboot
+----
 
-# XRANDR:
-te nastavitve so odvisne od monitorja... ! najprej:
+:
+:
 
-    cvt 1280 1024 60
 
-    # 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz Modeline "1280x1024_60.00" 109.00 1280 1368 1496 1712 1024 1027 1034 1063 -hsync +vsync
 
-...kopiras kar ti terminal vrže...:
+::
 
-    sudo xrandr --newmode "1280x1024" 109.00 1280 1368 1496 1712 1024 1027 1034 1063 -hsync +vsync
+:
 
-dodas v moznosti:
 
-    sudo xrandr --addmode VGA1 1280x1024
 
-potem nastavis resolucijo v MENU -> Settings -> Arandr ali v terminalu:
+:
 
-    xrandr --output VGA1 --mode 1280x1024 --pos 1366x0
+
+
+:
+
+
