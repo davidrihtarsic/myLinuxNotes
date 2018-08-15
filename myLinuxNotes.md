@@ -1688,6 +1688,15 @@ Plugin uporabljaš tako, da :
 [How to fold](http://vimcasts.org/episodes/how-to-fold/)
 - folding je izredno počasen... (to-do)
 - zato raje uporabljam kar TOC za markdown
+## Spell checking
+		:set spell spellang=sl
+		:set nospell
+
+SHORTCUTS:
+		z= 		predlog za pravilno črkovano besedo
+		]s 		naslednja napačno črkovana beseda
+
+[več o spell](https://www.linux.com/learn/using-spell-checking-vim)
 
 ## Shortcuts
 | Shortcuts     | behaviour     |
@@ -1768,22 +1777,4 @@ yaourt -S <ime> --noconfirm
 -->-sudo-apt-install-intel-microcode-iucode-tool
 -->-sudo-reboot
 ----
-
-:
-:
-
-
-
-::
-
-:
-
-
-
-:
-
-
-
-:
-
 
