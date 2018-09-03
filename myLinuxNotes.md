@@ -80,8 +80,12 @@ search ne dela...
 zato sem naložil še FSearch...
 naloži še Konsol )terminal
 
-
 # BLUETOOTH
+
+> Zaenkrat dela najbolje tako, da na samem začetku zaženeš
+
+	Bluetooth Manager
+
 >bluetoothctl
 >scan
 >trust
@@ -1021,9 +1025,9 @@ Kaj pa vem ...?
   > ./qcad*.run
 
 # Qt5
+Ostale mislim, da sem imel...
 Za nekateri program sem si moral nainštalirat Qt5 knjižnice:
 1. Manjkala mi je Qt5LinguistToolsConfig
-Ostale mislim, da sem imel...
 
 ## Instalacija Qt5LinguistToolsConfig
 Mislim, da mi jo je uspelo naložit z:
@@ -1339,6 +1343,7 @@ __CMD:__
     pandoc -o test.pdf --from markdown --template eisvogel --listings myLinuxNotes.md
 
 __TEMPLATE GENERATOR___
+
 da naredič template v terminal vpišeš:
 
     pandoc -D latex
@@ -1731,6 +1736,49 @@ SHORTCUTS:
  Wavemon...
  > sudo apt-get install wavemon
 
+## wifi drop
+Če stvar dela imam takele nastavitve:
+```
+└─(09:47:05)──> ip addr                                                                              ──(Thu,30-Aug)─┘
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: enp4s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether 18:31:bf:73:8c:49 brd ff:ff:ff:ff:ff:ff
+3: wlp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 74:e5:f9:19:10:27 brd ff:ff:ff:ff:ff:ff
+    inet 172.21.0.86/23 brd 172.21.1.255 scope global dynamic noprefixroute wlp3s0
+       valid_lft 432sec preferred_lft 432sec
+    inet6 fe80::e12b:7b71:5f59:d39a/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+┌─(~)────────────────────────────────────────────────────────────────────────────────────────(david@archlabs:pts/4)─┐
+└─(09:48:55)──> ping www.google.com                                                                  ──(Thu,30-Aug)─┘
+PING www.google.com (172.217.20.36) 56(84) bytes of data.
+64 bytes from par10s09-in-f36.1e100.net (172.217.20.36): icmp_seq=1 ttl=47 time=55.2 ms
+64 bytes from par10s09-in-f36.1e100.net (172.217.20.36): icmp_seq=2 ttl=47 time=1090 ms
+64 bytes from par10s09-in-f36.1e100.net (172.217.20.36): icmp_seq=4 ttl=47 time=55.1 ms
+64 bytes from par10s09-in-f36.1e100.net (172.217.20.36): icmp_seq=5 ttl=47 time=54.0 ms
+64 bytes from par10s09-in-f36.1e100.net (172.217.20.36): icmp_seq=6 ttl=47 time=55.5 ms
+64 bytes from par10s09-in-f36.1e100.net (172.217.20.36): icmp_seq=7 ttl=47 time=54.7 ms
+^C
+--- www.google.com ping statistics ---
+7 packets transmitted, 6 received, 14.2857% packet loss, time 87ms
+rtt min/avg/max/mdev = 54.049/227.503/1090.393/385.896 ms, pipe 2
+```
+Slaba komunikacija ali slab wifi signal...
+Zgodilo se je, da se je WIFI večkrat izgubil in je linija "padla dol"
+mislim, da je pomagalo, da naložiš module z:
+
+		modprobe iwlwifi 11n_disable=1 swcrypto=1
+
+ali pa narediš to bolj za zmerej tako, da naredip file:
+
+		#/etc/modprobe.d/iwlwifi.conf
+		options iwlwifi 11n_disable=1 swcrypto=1
+
 # YAOURT
 To je program za ARCH za namestitev paketov... ni da ni!
 - če vemo natančno ime lahko samo
@@ -1777,4 +1825,5 @@ yaourt -S <ime> --noconfirm
 -->-sudo-apt-install-intel-microcode-iucode-tool
 -->-sudo-reboot
 ----
+
 
