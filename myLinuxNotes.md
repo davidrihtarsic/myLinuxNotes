@@ -995,9 +995,6 @@ Program za zmanjševanje porabe el. energije laptopa...
 
     sudo powertop   auto tune
 
-## To do
-da se program sam zažene...
-
 # PRELOAD (deamon service)
 preload is a program written by Behdad Esfahbod which runs as a daemon and records statistics about usage of programs using Markov chains; files of more frequently used programs are, during a computer's spare time, loaded into memory. This results in faster startup times as less data needs to be fetched from disk.
 
@@ -1010,9 +1007,6 @@ preload is a program written by Behdad Esfahbod which runs as a daemon and recor
 ## Config
 
     /etc/preload.conf
-
-## To do
-da se sam zažene ob zagonu
 
 # PPRINTER SUPPORT on BunsenLab
 
