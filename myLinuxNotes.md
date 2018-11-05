@@ -46,6 +46,14 @@ kot so npr: cp, crond, vi (Editor) ...
 and Log Out / Log In
 
 # ARCH:
+
+## Maintainence (vzdrževanje)
+[youtube vidoe](https://www.youtube.com/watch?v=3OoMvyHYWDY)
+
+### disk
+		ncdu (disk pregled velikosti datotek)
+
+
 ## Programi
 skripta...
 
@@ -1093,6 +1101,12 @@ pomembni datoteki sta :
 ## rifle
 nastavitve za odpiranje programov...
 
+## fzf
+
+Glej navodila:
+
+https://github.com/gotbletu/shownotes/blob/master/ranger_file_locate_fzf.md
+
 # SCAN
 simple scan
 
@@ -1708,7 +1722,10 @@ Da ne pušča preveč prostora med posameznimi odstavki, je potrebno nastaviti:
 
 # TO DO
 [ ] /i3/config
-  + dodaj, da se da osvetljenost ekrana na full, če comp na elektiki
+	+ naredi sh tako:
+			da preveri, če je VIM_MAIN vključen
+				potem naj naredi le focus na to okno
+			drugače pa ga  odpre
 [ ] Izključi CTRL+S da pavzira itvajanje terminala
   + vklljuči CTRL+S v Vim da shrani file...
 [ ] NAUČI SE VIM
@@ -1892,6 +1909,7 @@ nameserver 213.186.33.99
 nameserver 127.0.0.1
 nameserver 208.67.222.222
 search ovh.net
+
 # YAOURT
 To je program za ARCH za namestitev paketov... ni da ni!
   če vemo natančno ime lahko samo
