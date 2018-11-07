@@ -50,6 +50,10 @@ and Log Out / Log In
 ## Maintainence (vzdrževanje)
 [youtube vidoe](https://www.youtube.com/watch?v=3OoMvyHYWDY)
 
+## Backup
+
+		sudo rsync -aAXv --dry-run --exclude='*_noSync*' --exclude='*Work*' ~/Files/ /run/media/david/BackupDisk/FilesBACKUP/
+
 ### disk
 		ncdu (disk pregled velikosti datotek)
 
@@ -1728,6 +1732,8 @@ Da ne pušča preveč prostora med posameznimi odstavki, je potrebno nastaviti:
 			drugače pa ga  odpre
 [ ] Izključi CTRL+S da pavzira itvajanje terminala
   + vklljuči CTRL+S v Vim da shrani file...
+[ ] v i3/config dodaj:
+	+ Ctrl+PrintScreen -> scort -s (klikneš na okno in ti ga da v sliko)
 [ ] NAUČI SE VIM
 	+ uporaba multiple cursor
 	+ kako shraniti (mogoče je kaj z rangerjem
