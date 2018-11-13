@@ -57,7 +57,6 @@ and Log Out / Log In
 ### disk
 		ncdu (disk pregled velikosti datotek)
 
-
 ## Programi
 skripta...
 
@@ -1110,6 +1109,12 @@ nastavitve za odpiranje programov...
 Glej navodila:
 
 https://github.com/gotbletu/shownotes/blob/master/ranger_file_locate_fzf.md
+
+## Issues...
+z Ranger-jem, ki je v AUR sem imel težave, da se je sesul, ko sem pregledoval cvs... neki error "null character"
+
+Issue je odpravljen... instaliraš ranger iz githuba...
+
 
 # SCAN
 simple scan
