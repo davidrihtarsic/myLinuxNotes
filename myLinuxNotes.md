@@ -705,6 +705,11 @@ Ko imamo tabelo:
       > Options : No Duplicates
 [ok]
 
+# Simon Sinek
+
+## Presentation
+[Presentation as Simon Sink would do...](https://www.youtube.com/watch?v=e80BbX05D7Y)
+
 # Linus Torvalds
 1. get the work done
 2. do not let go
