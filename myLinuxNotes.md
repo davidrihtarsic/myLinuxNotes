@@ -710,6 +710,14 @@ Ko imamo tabelo:
 ## Presentation
 [Presentation as Simon Sink would do...](https://www.youtube.com/watch?v=e80BbX05D7Y)
 
+What do we want to do
+
+1. Start with the story - kot neka metafora, kar jim hočeš povedati...
+2. spirit of giving - publiki moraš nekaj dat (idejo, nekaj open source,) za kar ne rabiš nič v zameno)
+3. ne govori o sebi
+4. ne začni s podatki... zakaj je to pomembno - To pride na koncu in mora biti del sestavljanke...
+
+
 # Linus Torvalds
 1. get the work done
 2. do not let go
