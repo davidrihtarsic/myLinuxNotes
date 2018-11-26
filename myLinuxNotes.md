@@ -329,6 +329,17 @@ security  > security boot control  > dissable
  path :/EFI/debian/grubx64.efi [ne dela]
  path :/efi/boot/bootx64.efi [ne dela]
 
+# EMOJI
+da kaže vse emoji-je moraš inštalirat:
+> yaourt yaourt ttf-emojione
+
+in mogoče tudi:
+> yaourt ttf-symbola
+
+in nato lahko vsatvljaš znake:
+
+✅
+
 # FEH
 program s katerim lahko nastaviš background sliko.. naprimer takol:
 
@@ -710,7 +721,7 @@ Ko imamo tabelo:
 ## Presentation
 [Presentation as Simon Sink would do...](https://www.youtube.com/watch?v=e80BbX05D7Y)
 
-What do we want to do
+What do we want to do to have good presentation...
 
 1. Start with the story - kot neka metafora, kar jim hočeš povedati...
 2. spirit of giving - publiki moraš nekaj dat (idejo, nekaj open source,) za kar ne rabiš nič v zameno)
@@ -877,7 +888,7 @@ Poleg teh dveh citiranj lahko citiramo tudi brez priimkov avtorjev naprimer tam,
      @Rihti2015
 
 ### DOI to BibTex
-Ko iščemo vire imamo pogosto možnost oznake DOI (angl.: **D**igital **O**bject **I**dentyfier). Če želimo iz te oznake še ostale podatke o viru jih lahko dobimo preko te strani: [https://www.doi2bib.org/](https://www.doi2bib.org/). Tako podatke lahko shranimo v orimerno oblikovano besedilo, da ga lahko uporabimo v zgornji funkcionalnosti.
+Ko iščemo vire imamo pogosto možnost oznake DOI (angl.: **D**igital **O**bject **I**dentyfier). Če želimo iz te oznake še ostale podatke o viru jih lahko dobimo preko te strani: [https://www.doi2bib.org/ ](https://www.doi2bib.org/). Tako podatke lahko shranimo v orimerno oblikovano besedilo, da ga lahko uporabimo v zgornji funkcionalnosti.
 
     @article{Rihti2015,
       doi = {10.1007/s10798 015 9310 7},
@@ -898,6 +909,63 @@ Ko iščemo vire imamo pogosto možnost oznake DOI (angl.: **D**igital **O**bjec
 
 Če moramo združiti več pdf dokumentov v enega v terminal napišemo:
 > pdfunite pdf0.pdf pdf1.pdf merged.pdf
+
+# MERMAID (izgradnja diagramov iz kode v markdownu)
+
+inštaliral sem:
+
+		yaourt -S nodejs-mermaid-git
+		npm install mermaid.cli
+
+mermaid.cli sem moral inštalirat lokalno (dir je v ~ direktoriju), ker sem z globalno inštalacijo imel težave...
+Narediti sem moral tudi config file:
+
+		puppeteer-config.json
+
+z vsebino:
+
+		{
+  		"args": ["--no-sandbox"]
+		}
+
+in nato izvesti ukaz:
+> ~/node_modules/.bin/mmdc -p ~/node_modules/.bin/puppeteer-config.json -i b70fcd12274a43de8c625dfa9fbed6c8e73a21bf.mmd -o test.svg
+
+datoteko b70fcd12274a43de8c625dfa9fbed6c8e73a21bf.mmd sem dobil z ukazom:
+> pandoc mermaid.md -o test.pdf --filter pandoc-mermaid
+
+... zgleda, da sem inštaliral tudi:
+> pip install pandoc-mermaid-filter
+
+...nato sem v filu:
+
+		/home/david/node_modules/mermaid.cli/index.bundle.js
+
+spremenil tako, da mi avtomatsko vzame file puppeteer-config.json
+
+
+	let puppeteerConfig = {};
+	puppeteerConfigFile = '/home/david/node_modules/mermaid.cli/puppeteer-config.json';
+	if (puppeteerConfigFile) {
+  	checkConfigFile(puppeteerConfigFile);
+  	puppeteerConfig = JSON.parse(fs.readFileSync(puppeteerConfigFile, 'utf-8'));
+	}
+
+nato sem še nastavil env variable:
+
+> export PUPPETEER_CFG=/home/david/node_modules/mermaid.cli/puppeteer-config.json
+> export MERMAID_BIN=~/node_modules/.bin/mmdc
+
+(ampak puppetirja nikakor nisem usposobil)
+
+## popravek....
+
+verjetno bi šlo, če inštaliraš:
+- mermaid.cli iz githuba
+- pandoc-mermaid-filter
+- in narediš link iz /bin/mermade --> /home/david/node_modules/mermaid.cli/index.bundle.js
+		
+		sudo ln -s /home/david/node_modules/mermaid.cli/index.bundle.js /bin/mermade
 
 # MUSIC TAGGING (audi tags)
 
