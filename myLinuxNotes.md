@@ -450,7 +450,13 @@ To format The partition as FAT32 use
 
 # FREECAD
 
-asdf
+zadjo verzijo dobiš na https://www.freecadweb.org/wiki/Download
+
+Macroti mi niso delali, zato sem inštaliral:
+
+- qt5-default
+- qt5creator
+
 
 # GIMP
   asdf
