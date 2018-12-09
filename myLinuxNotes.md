@@ -244,11 +244,168 @@ Super programček za brskanje znakov
 ./.local/share/nemo/actions/MD  >PDF.nemo_action
 ./.local/share/nemo/actions/MD  >PDF_bib.nemo_action
 ./.vimrc
+      UUID: Message Notification Se.. (00001133 0000 1000 8000 00805f9b34fb)
+      UUID: Phonebook Access Server   (0000112f 0000 1000 8000 00805f9b34fb)
+      UUID: Message Access Server     (00001132 0000 1000 8000 00805f9b34fb)
+      UUID: Headset                   (00001108 0000 1000 8000 00805f9b34fb)
+      Modalias: usb:v1D6Bp0246d0532
+      Discovering: no
+
+... kot kaže ne išče BT naprav
+>[bluetooth]# scan on
+    Discovery started
+    [CHG] Controller 74:E5:F9:19:10:2B Discovering: yes
+
+    [NEW] Device 13:31:19:07:15:8C Bluetooth Mouse
+
+ga označiš kot "trusted" in "pair" aš
+>bluetooth]# trust 13:31:19:07:15:8C
+    [CHG] Device 13:31:19:07:15:8C Trusted: yes
+    Changing 13:31:19:07:15:8C trust succeeded
+>[bluetooth]# pair 13:31:19:07:15:8C
+    Attempting to pair with 13:31:19:07:15:8C
+    [CHG] Device 13:31:19:07:15:8C Connected: yes
+    [CHG] Device 13:31:19:07:15:8C Modalias: usb:v05ACp3232d0001
+    [CHG] Device 13:31:19:07:15:8C UUIDs: 00001124 0000 1000 8000 00805f9b34fb
+    [CHG] Device 13:31:19:07:15:8C UUIDs: 00001200 0000 1000 8000 00805f9b34fb
+    [CHG] Device 13:31:19:07:15:8C ServicesResolved: yes
+    [CHG] Device 13:31:19:07:15:8C Paired: yes
+    Pairing successful
+
+
+
+# DD_IBS_TEST.SH():
+## test
+program za testiranje dd komnade...
+kako hitro comp lahko kopira datoteke v odvisnosti ob bs= ? podatka...
+Program je na [GitHubu](https://github.com/tdg5/blog/blob/master/_includes/scripts/dd_ibs_test.sh)
+
+# C++:
+## PassBy VALUE REFERENCE POINTER
+
+Pomembno pri funkcijah, naprimer:
+void passByVal(int val);
+void passByRef(int &ref);
+void passByPtr(int *ptr);
+
+### Value
+  int x = 5;
+
+naredi kopijo spremenljivke v stacku
+
+[ ] več spomina
+
+[+] vrednost prvotne spremenljivke se ne spremeni
+
+### Reference
+int &ref = x
+to je alias spremenljivke x
+[+] ne zasede novega spomina
+[+] če potrebuješ, da funkcija vrne več parametrov in NI potrebno imeti globalne spremenljivke. Vrednost spremenljivke  se lahko spremeni med samo funkcijo
+
+### Pionter
+int *xptr = &x;
+xptr je naslov spremenljivke x, če želimo vrednost na tem naslovu = *xptr
+  nekoliko bolj zakomplicirana sintaksa, ker je prej potrebno v *xptr dati naslov spremenljivke
++ le s pointerji lahko dostopamo do __HEAP__ spomina (spomin večjih razsežnosti)
+
+# CATFISH:
+## namestitev
+Odličen iskalnik filov...
+po defaultu naložen.. hm ne vem od kdaj...
+v Thunar sem imel po defaultu Commnad:
+
+    catfish   fileman=bl file manager   hidden   path=%f
+
+:) aha ... sem spremenil v :
+
+    catfish   path=%f
+
+in dela :)
+glej gmone search tool
+
+# CHARACTER MAP:
+## pregled znakov
+Super programček za brskanje znakov
+
+    gucharmap
+Če uporabimo font "common" je tam veliko primernih znakov kot naprimer:
+
+# CONFIG FILES (my)
+## My all . dotfiles
+
+		find .  type f
+./.zshrc
+./.config/polybar/modules.conf
+./.config/polybar/config
+./.config/polybar/lounch_polybar.sh
+./.config/polybar/master.conf
+./.config/terminator/config
+./.config/tint2/tint2rc
+./.config/openbox/rc.xml
+./.config/i3/LcdBrightnesUP.sh
+./.config/i3/KbdBrightnesUP.sh
+./.config/i3/myMonitorSetup.sh
+./.config/i3/config
+./.config/i3/LcdBrightnesDOWN.sh
+./.config/i3/KbdBrightnesDOWN.sh
+./.config/i3/lcd_backlight.rules
+./.config/i3/kbd_backlight.rules
+./.config/conky/dave_s_conky.conkyrc
+./.config/termite/config
+./.config/termite/config (copy_original)
+./.local/share/nemo/actions/PDF_extract.nemo_action
+./.local/share/nemo/actions/PDF_unite.nemo_action
+./.local/share/nemo/actions/Office  >PDF.nemo_action
+./.local/share/nemo/actions/MD  >PDF.nemo_action
+./.local/share/nemo/actions/MD  >PDF_bib.nemo_action
+./.vimrc
 ./.pandoc/templates/eisvogel.latex
 
 
 
 # DOLPHINE FILE MANAGER
+## KDE SERVICES
+(ni blo dobr!!)
+For Arch Linux, edit /etc/pacman.conf and add the following (note that the order of repositories in pacman.conf is important, since pacman always downloads the first found package):
+
+    [home_metakcahura_Arch_Extra]
+    SigLevel = Never
+    Server = https://download.opensuse.org/repositories/home:/metakcahura/Arch_Extra/$arch
+
+Then run the following as root
+
+    pacman  Syu
+    pacman  S home_metakcahura_Arch_Extra/kde services
+
+### instalation
+libkonq frameworks git
+iz [link](http://download.opensuse.org/pub/opensuse/repositories/home:/mazdlc:/kde frameworks 5/Arch_Extra/x86_64/)
+Dela !!!
+nato še run
+
+    kbuildsycoca5
+
+datoteke pa so shranjene v:
+/usr/share/kservices5/ServiceMenus
+
+# ECLIPSE:
+## installation
+  ... nisem zapisal...
+  ... presnameš, odpakiraš kopiraš v:
+  /opt/eclipse/
+  narediš link za vse uporabnike:
+sudo ln  sf /opt/eclipse/cpp neon/eclipse/eclipse /usr/bin/eclipse
+
+## eclipse.desktop:
+Naredimo datoteko.desktop:
+ sudo nano /usr/share/applications/eclipse.desktop
+
+    [Desktop Entry]
+    Version = Neon 2.0
+    Type = Application
+    Terminal = false
+    Name = eclipse
 ## KDE SERVICES
 (ni blo dobr!!)
 For Arch Linux, edit /etc/pacman.conf and add the following (note that the order of repositories in pacman.conf is important, since pacman always downloads the first found package):
@@ -390,25 +547,6 @@ Tu bi napisal kako bom uredil file
         Vaje
         + Modelarstvo
         + Promet
-        Habilitacija
-        Diplome
-        Članki
-        Predstavitve
-    * DRTI
-        Poletne Šole
-        Finance
-
-    *
-  + Hobi
-    * Linux
-        BunsenLab
-        RPi
-    * Dom
-    * Kolesarjenje
-  + Musics
-  + GitHub
-## Folder structure <template>
-  recimo za project
 ## Programs category
   1. System
   2. Development
@@ -540,126 +678,19 @@ Kako preveriti in namestiti driverje za grafično kartico
 ## GeForce 9600 GT
 Jaz imam na PCju to kartico to lahko preveriš s:
   > 'lspci'
-
-V terminalu se ti izpiše nekaj takega:
-
-    05:00.0 VGA compatible controller: NVIDIA Corporation G94 [GeForce 9600 GT] (rev a1)
-
-Nato greš na tole stran:
-  [GeForce Drivers](http://www.geforce.com/drivers)
-1. vtipkaš podatke
-2. Download
-3. CTRL+ALT+F1
-4. user:
-5. password:
-
-    sudo service lightdm stop
-
-# HIBERNATION (arch)
-Kako nastaviš da imaš hibernacijo računaljika...
-  potrebuješ dovolj swap particije
-  nasraviš resume
-  dodaš v grub pod HOOK tudi resume
-  zbildaš grub
-__ni delalo!!!!!!__ nato je začelo delati... samo ne vem kdaj in kaj sem še naredil... večinoma sem se ukvarjal s pandocom... ampak to nima veze...
-[link](https://www.youtube.com/watch?v=GF13ZpYsrI0)
-(to do)
-
-# i3 WORKSPACE MANAGER
-## nastavitve
-[arch i3 navodila](https://wiki.archlinux.org/index.php/I3#Launching_programs_on_specific_workspaces)
-
-## moje bližnjice
-
-1. _Mod_  > za okna/programe
-  1. +Left/Right  > focus left/right
-  2. +Shift+1/2/3  > premakni program na workspace 1/2/3
-2. _Mod+Control_  > za workspace
-  1. +Left/Right  > premakni WS na drug zaslon
-  2. +r  > RESTART WORKSPACE
-  3. +l  > reLoad i3 config
-  4. +v/h  > naslednji program naj se doda Vertikalno/Horizontalno
-3. _Alt_  > za funkcije v programu
-  1. +Left/Right  > resize left/right
-  2. +1/2/3/4  > tab focus
-  3. +F/E/H  > menu File/Edit/Help
-
-## uporaba
-
-list vseh oken:
-
-		wmctrl -l
-
-narediš fokus na okno z imenom:
-
-		wmctrl -a VIM1
-
-
-# ISO BURN TO USB
-## terminal cmd
-		sudo dd bs=4M if=*.iso of=/dev/sdb status=progress && sync
-
-## More advanced copy with progress
-
-Inštaliran mora biti pv
-
-    sudo apt get install pv
-
-Ker pv (pipe Viever) dela več različnih stvari in ne le dd,
-med drugim tudi progress bar... je ukaz potrebno izvesti v sudo načinu:
-
-    sudo  s
-    pv <NekIsoFile.iso> /dev/sdb
-    857MiB 0:01:05 [13.1MiB/s] [==============================>] 100%
-    exit
-
-# JAVA in FIREFOX BROWSER
-
-1. naložiš javo JRE...
-2. mkdir ~/.mozilla/plugins
-3. cd ~/.mozilla/plugins
-4. ln  s /usr/lib/jvm/jre1.8.0_121/lib/amd64/libnpjp2.so
-          [tu pride java direktorij kjer je libnpjp2.so]
-5. restart FireFox
-6. v FF vpišeš about:plugins in preveriš če je java podprta...
-
-# KEYBOARD SETTINFS:
-  Settings  > Reigon&Language  > Input Source
-  for KeyBindings:
-
-  # Settings for ARCH
-
-    sudo nano /etc/X11/xorg.conf.d/01.keyboard layout.conf
-
-    Section "InputClass"
-        Identifier "system keyboard"
-        MatchIsKeyboard "on"
-        Option "XkbLayout" "si"
-    EndSection
-
-## ShortCuts():
-v settings>Keyboaard sem si nastavil nekaj bližnjic:
-   > super+w > Firefox
-   > super+e > Text Editor
-   > super+f > File Manager
-   > super+t > terminator
-
-  v ~/.bashrc (file se zazene na zacetku)
-   > bliznica ll namesto ...
-   > alias ll='ls  alF'
-   > tipki [đ] dodelimo znak [/]
-   > xmodmap  e "keycode 35 = slash"
-
-# LAZARUS
-Programing program in pascal... As Delphi
-
-## instalation
-instaliral tako kot je opisano na [internetu](https://forum.lazarus.freepascal.org/index.php?topic=36093.0):
-1. Install fpc_3.0.2 170225_amd64.deb via package manager
 2. Install fpc_3.0.2.x86_64 linux.tar via shell (unzip and run sh install.sh). Install into /usr directory, so it overwrites 3. the existing installation
 4. Install the deb sources via package manager (__tega nisem naredu... neznam__)
 5. Install lazarus project_1.6.4 0_amd64.deb via package manager
 6. Instaliral gdb
+
+
+## Asus n850
+- Intel
+- GTX 1050
+
+https://www.youtube.com/watch?v=KUsnygrNUMw
+
+
 
 # LIBREOFFICE:
 Instal preko terminala:
@@ -813,10 +844,104 @@ _podčtrano_
 
 ## Live preview
 Instalation
+      UUID: Message Notification Se.. (00001133 0000 1000 8000 00805f9b34fb)
+      UUID: Phonebook Access Server   (0000112f 0000 1000 8000 00805f9b34fb)
+      UUID: Message Access Server     (00001132 0000 1000 8000 00805f9b34fb)
+      UUID: Headset                   (00001108 0000 1000 8000 00805f9b34fb)
+      Modalias: usb:v1D6Bp0246d0532
+      Discovering: no
 
-    pacman  S npm
-    sudo npm install  g markmon
+... kot kaže ne išče BT naprav
+>[bluetooth]# scan on
+    Discovery started
+    [CHG] Controller 74:E5:F9:19:10:2B Discovering: yes
 
+    [NEW] Device 13:31:19:07:15:8C Bluetooth Mouse
+
+ga označiš kot "trusted" in "pair" aš
+>bluetooth]# trust 13:31:19:07:15:8C
+    [CHG] Device 13:31:19:07:15:8C Trusted: yes
+    Changing 13:31:19:07:15:8C trust succeeded
+>[bluetooth]# pair 13:31:19:07:15:8C
+    Attempting to pair with 13:31:19:07:15:8C
+    [CHG] Device 13:31:19:07:15:8C Connected: yes
+    [CHG] Device 13:31:19:07:15:8C Modalias: usb:v05ACp3232d0001
+    [CHG] Device 13:31:19:07:15:8C UUIDs: 00001124 0000 1000 8000 00805f9b34fb
+    [CHG] Device 13:31:19:07:15:8C UUIDs: 00001200 0000 1000 8000 00805f9b34fb
+    [CHG] Device 13:31:19:07:15:8C ServicesResolved: yes
+    [CHG] Device 13:31:19:07:15:8C Paired: yes
+    Pairing successful
+
+
+
+# DD_IBS_TEST.SH():
+## test
+program za testiranje dd komnade...
+kako hitro comp lahko kopira datoteke v odvisnosti ob bs= ? podatka...
+Program je na [GitHubu](https://github.com/tdg5/blog/blob/master/_includes/scripts/dd_ibs_test.sh)
+
+# C++:
+## PassBy VALUE REFERENCE POINTER
+
+Pomembno pri funkcijah, naprimer:
+void passByVal(int val);
+void passByRef(int &ref);
+void passByPtr(int *ptr);
+
+### Value
+  int x = 5;
+
+naredi kopijo spremenljivke v stacku
+
+[ ] več spomina
+
+[+] vrednost prvotne spremenljivke se ne spremeni
+
+### Reference
+int &ref = x
+to je alias spremenljivke x
+[+] ne zasede novega spomina
+[+] če potrebuješ, da funkcija vrne več parametrov in NI potrebno imeti globalne spremenljivke. Vrednost spremenljivke  se lahko spremeni med samo funkcijo
+
+### Pionter
+int *xptr = &x;
+xptr je naslov spremenljivke x, če želimo vrednost na tem naslovu = *xptr
+  nekoliko bolj zakomplicirana sintaksa, ker je prej potrebno v *xptr dati naslov spremenljivke
++ le s pointerji lahko dostopamo do __HEAP__ spomina (spomin večjih razsežnosti)
+
+# CATFISH:
+## namestitev
+Odličen iskalnik filov...
+po defaultu naložen.. hm ne vem od kdaj...
+v Thunar sem imel po defaultu Commnad:
+
+    catfish   fileman=bl file manager   hidden   path=%f
+
+:) aha ... sem spremenil v :
+
+    catfish   path=%f
+
+in dela :)
+glej gmone search tool
+
+# CHARACTER MAP:
+## pregled znakov
+Super programček za brskanje znakov
+
+    gucharmap
+Če uporabimo font "common" je tam veliko primernih znakov kot naprimer:
+
+# CONFIG FILES (my)
+## My all . dotfiles
+
+		find .  type f
+./.zshrc
+./.config/polybar/modules.conf
+./.config/polybar/config
+./.config/polybar/lounch_polybar.sh
+./.config/polybar/master.conf
+./.config/terminator/config
+./.config/tint2/tint2rc
 SublimeText3  > Package Controll  > Install Package : Markmon
 
 ### run
@@ -953,6 +1078,44 @@ spremenil tako, da mi avtomatsko vzame file puppeteer-config.json
 	let puppeteerConfig = {};
 	puppeteerConfigFile = '/home/david/node_modules/mermaid.cli/puppeteer-config.json';
 	if (puppeteerConfigFile) {
+
+# MERMAID (izgradnja diagramov iz kode v markdownu)
+
+inštaliral sem:
+
+		yaourt -S nodejs-mermaid-git
+		npm install mermaid.cli
+
+mermaid.cli sem moral inštalirat lokalno (dir je v ~ direktoriju), ker sem z globalno inštalacijo imel težave...
+Narediti sem moral tudi config file:
+
+		puppeteer-config.json
+
+z vsebino:
+
+		{
+  		"args": ["--no-sandbox"]
+		}
+
+in nato izvesti ukaz:
+> ~/node_modules/.bin/mmdc -p ~/node_modules/.bin/puppeteer-config.json -i b70fcd12274a43de8c625dfa9fbed6c8e73a21bf.mmd -o test.svg
+
+datoteko b70fcd12274a43de8c625dfa9fbed6c8e73a21bf.mmd sem dobil z ukazom:
+> pandoc mermaid.md -o test.pdf --filter pandoc-mermaid
+
+... zgleda, da sem inštaliral tudi:
+> pip install pandoc-mermaid-filter
+
+...nato sem v filu:
+
+		/home/david/node_modules/mermaid.cli/index.bundle.js
+
+spremenil tako, da mi avtomatsko vzame file puppeteer-config.json
+
+
+	let puppeteerConfig = {};
+	puppeteerConfigFile = '/home/david/node_modules/mermaid.cli/puppeteer-config.json';
+	if (puppeteerConfigFile) {
   	checkConfigFile(puppeteerConfigFile);
   	puppeteerConfig = JSON.parse(fs.readFileSync(puppeteerConfigFile, 'utf-8'));
 	}
@@ -1037,138 +1200,6 @@ Za naredit patch uporabiš:
 
 Za izvršit patch na stari datoteki pa narediš:
 
-> patch < patch.diff
-
-# PIDGIN
-## HANGOUTS
-https://bitbucket.org/EionRobb/purple hangouts/
-> sudo apt get install  y libpurple dev libjson glib dev libglib2.0 dev libprotobuf c dev protobuf c compiler mercurial make;
-> hg clone https://bitbucket.org/EionRobb/purple hangouts/ && cd purple hangouts;
-> make && sudo make install
-
-Po tem greš na tole spletno stran:
-https://accounts.google.com/ServiceLogin?passive=1&continue=https://accounts.google.com/o/oauth2/programmatic_auth?hl%3Den%26scope%3Dhttps://www.google.com/accounts/OAuthLogin%2Bhttps://www.googleapis.com/auth/userinfo.email%26client_id%3D936475272427.apps.googleusercontent.com%26access_type%3Doffline%26delegated_client_id%3D183697946088 m3jnlsqshjhh5lbvg05k46q1k4qqtrgn.apps.googleusercontent.com%26top_level_cookie%3D1%26from_login%3D1%26as%3D158e30052a6d899&ltmpl=nosignup&hl=en&oauth=1&sarp=1&scc=1&authuser=0
-
-ko sem naredil tole, je delal tudi skype plugin...
-
-## Skype
-https://github.com/EionRobb/skype4pidgin
-> cd skype...
-> make
-> sudo make install
-
-## GoogleTalks
-My account  > Prijava in varnost  > Gesla za aplikacije  > ime aplikacije : PIDGIN [ustvari]
- > qwer tzui opšd asdf
-
-basic
-
-Protocol:XMPP
-user:david.rihtarsic
-domain:gmail.com
-Resource:Home
-pass: qwer tzui opšd asdf
-[x] remember pass
-[x] new mail...
-
-advanced
-
-Connect server: talk.google.com
-## WhatsApp
-debhelper (>= 7.0.50), libglib2.0 dev, libpurple dev, libfreeimage dev (>= 3.0.0), libprotobuf dev, protobuf compiler
-make ARCH=x86_64
-
-sudo apt get install protobuf compiler
-get :https://github.com/davidgfnet/whatsapp purple/
-cd  > whatsapp purple
-make
-
-# POPCORN TIME
-
-
-# POWERTOP
-Program za zmanjševanje porabe el. energije laptopa...
-
-## Running
-
-    sudo powertop   auto tune
-
-# PRELOAD (deamon service)
-preload is a program written by Behdad Esfahbod which runs as a daemon and records statistics about usage of programs using Markov chains; files of more frequently used programs are, during a computer's spare time, loaded into memory. This results in faster startup times as less data needs to be fetched from disk.
-
-## Running
-
-    __systemctl start preload.service__
-    systemctl enable preload.service
-
-
-## Config
-
-    /etc/preload.conf
-
-# PPRINTER SUPPORT on BunsenLab
-
-sledil sem tocno tem [navodilom](http://hplipopensource.com/hplip web/install/manual/distros/debian.html)
-  prej moraš vedeti tudi root geslo
-
-Program za gledanje filmov:
-1. Download [Popcorn Time](https://www.popcorntime.ws/about)
-2. razpakiraš in daš dokumente v /opt/popcorn time/
-3. polinkaš, da bo dosegljivo vsem:
-sudo ln  sf /opt/popcorn time/Popcorn Time /usr/bin/popcorn time
-4. Narediš še .desktop datoteko
-sudo nano /usr/share/applications/popcorntime.desktop
-5. in vot vpišeš:
-
-    [Desktop Entry]
-    Version = 1.0
-    Type = Application
-    Terminal = false
-    Name = Popcorn Time
-    Exec = /usr/bin/popcorn time
-    Icon = /opt/popcorn time/src/app/images/icon.png
-    Categories = Application;
-
-# PRINTSCREEN = DARK
-
-## printscreen
-
-Uporabiš program:
-
-		scrot -s
-
-- in klikneš na program ki ga želiš dat v sliko
-- in slika se shrani v directory, v katerm si.
-
-
-# QCAD
-
-  1. presnameš inštalacijo iz njihove [strani][https://qcad.org/en/qcad downloads trial]
-  2. nato spremeniš rivilegije datoteke:
-  > sudo chmod 777 qcad*.run
-  3. in poženeš script:
-  > ./qcad*.run
-
-# Qt5
-Ostale mislim, da sem imel...
-Za nekateri program sem si moral nainštalirat Qt5 knjižnice:
-1. Manjkala mi je Qt5LinguistToolsConfig
-
-## Instalacija Qt5LinguistToolsConfig
-Mislim, da mi jo je uspelo naložit z:
-> sudo apt get install qttools5 dev
-
-nato sem datoteko našel:
-> sudo find /usr/lib/*  name Qt5Lin*
-
-nato je manjkal še Qt5Quck
-instaliral sem ga z
-> sudo apt get install qtdeclarative5 dev
-
-nato je manjkal Qt5SvgConfig, instaliral z:
-> sudo apt get install libqt5svg5 dev
-> sudo apt get install libraw dev
-  sudo apt get install exiv2 (najverjetneje ni bil taprav paket!!!)
 > sudo apt get install libexiv2 dev
 > sudo apt get install graphicsmagick
 
@@ -1289,8 +1320,116 @@ veliko command najdemo tule:[link](http://www.sublimetext.com/docs/commands)
                     }
     },
   { "keys": ["ctrl+alt+m"],     "command": "insert",
-                  "args": {
-                    "characters": "   \ntitle: 'Naslov'\nauthor: [dr. David Rihtaršič]\ndate: \ntags: [tag1,tag2]\nbibliography: bibtex.bib\n   "
+      UUID: Message Notification Se.. (00001133 0000 1000 8000 00805f9b34fb)
+      UUID: Phonebook Access Server   (0000112f 0000 1000 8000 00805f9b34fb)
+      UUID: Message Access Server     (00001132 0000 1000 8000 00805f9b34fb)
+      UUID: Headset                   (00001108 0000 1000 8000 00805f9b34fb)
+      Modalias: usb:v1D6Bp0246d0532
+      Discovering: no
+
+... kot kaže ne išče BT naprav
+>[bluetooth]# scan on
+    Discovery started
+    [CHG] Controller 74:E5:F9:19:10:2B Discovering: yes
+
+    [NEW] Device 13:31:19:07:15:8C Bluetooth Mouse
+
+ga označiš kot "trusted" in "pair" aš
+>bluetooth]# trust 13:31:19:07:15:8C
+    [CHG] Device 13:31:19:07:15:8C Trusted: yes
+    Changing 13:31:19:07:15:8C trust succeeded
+>[bluetooth]# pair 13:31:19:07:15:8C
+    Attempting to pair with 13:31:19:07:15:8C
+    [CHG] Device 13:31:19:07:15:8C Connected: yes
+    [CHG] Device 13:31:19:07:15:8C Modalias: usb:v05ACp3232d0001
+    [CHG] Device 13:31:19:07:15:8C UUIDs: 00001124 0000 1000 8000 00805f9b34fb
+    [CHG] Device 13:31:19:07:15:8C UUIDs: 00001200 0000 1000 8000 00805f9b34fb
+    [CHG] Device 13:31:19:07:15:8C ServicesResolved: yes
+    [CHG] Device 13:31:19:07:15:8C Paired: yes
+    Pairing successful
+
+
+
+# DD_IBS_TEST.SH():
+## test
+program za testiranje dd komnade...
+kako hitro comp lahko kopira datoteke v odvisnosti ob bs= ? podatka...
+Program je na [GitHubu](https://github.com/tdg5/blog/blob/master/_includes/scripts/dd_ibs_test.sh)
+
+# C++:
+## PassBy VALUE REFERENCE POINTER
+
+Pomembno pri funkcijah, naprimer:
+void passByVal(int val);
+void passByRef(int &ref);
+void passByPtr(int *ptr);
+
+### Value
+  int x = 5;
+
+naredi kopijo spremenljivke v stacku
+
+[ ] več spomina
+
+[+] vrednost prvotne spremenljivke se ne spremeni
+
+### Reference
+int &ref = x
+to je alias spremenljivke x
+[+] ne zasede novega spomina
+[+] če potrebuješ, da funkcija vrne več parametrov in NI potrebno imeti globalne spremenljivke. Vrednost spremenljivke  se lahko spremeni med samo funkcijo
+
+### Pionter
+int *xptr = &x;
+xptr je naslov spremenljivke x, če želimo vrednost na tem naslovu = *xptr
+  nekoliko bolj zakomplicirana sintaksa, ker je prej potrebno v *xptr dati naslov spremenljivke
++ le s pointerji lahko dostopamo do __HEAP__ spomina (spomin večjih razsežnosti)
+
+# CATFISH:
+## namestitev
+Odličen iskalnik filov...
+po defaultu naložen.. hm ne vem od kdaj...
+v Thunar sem imel po defaultu Commnad:
+
+    catfish   fileman=bl file manager   hidden   path=%f
+
+:) aha ... sem spremenil v :
+
+    catfish   path=%f
+
+in dela :)
+glej gmone search tool
+
+# CHARACTER MAP:
+## pregled znakov
+Super programček za brskanje znakov
+
+    gucharmap
+Če uporabimo font "common" je tam veliko primernih znakov kot naprimer:
+
+# CONFIG FILES (my)
+## My all . dotfiles
+
+		find .  type f
+./.zshrc
+./.config/polybar/modules.conf
+./.config/polybar/config
+./.config/polybar/lounch_polybar.sh
+./.config/polybar/master.conf
+./.config/terminator/config
+./.config/tint2/tint2rc
+./.config/openbox/rc.xml
+./.config/i3/LcdBrightnesUP.sh
+./.config/i3/KbdBrightnesUP.sh
+./.config/i3/myMonitorSetup.sh
+./.config/i3/config
+./.config/i3/LcdBrightnesDOWN.sh
+./.config/i3/KbdBrightnesDOWN.sh
+./.config/i3/lcd_backlight.rules
+./.config/i3/kbd_backlight.rules
+./.config/conky/dave_s_conky.conkyrc
+./.config/termite/config
+./.config/termite/config (copy_original)
                   }
   },
   { "keys": ["ctrl+enter"], "command": "shell_command",
@@ -1413,6 +1552,18 @@ Preferences  > Package Controll  > Citer  > Settings   default:
                    "latex": "\\citep{$CITATION}"},
         "citation_format_string": "{author} ({year}). {title}"
     }
+        "additional_search_fields": [],
+        "autodetect_syntaxes": {"LaTeX": "latex",
+                                "LaTeX Beamer": "latex",
+                                "LaTeX Memoir": "latex",
+                                "Markdown": "pandoc",
+                                "MultiMarkdown": "pandoc",
+                                "Markdown GFM": "pandoc",
+                                "AcademicMarkdown": "pandoc"},
+        "styles": {"pandoc": "[@$CITATION]",
+                   "latex": "\\citep{$CITATION}"},
+        "citation_format_string": "{author} ({year}). {title}"
+    }
 
 ### ~~LiveReload~~
 
@@ -1514,126 +1665,6 @@ da naredič template v terminal vpišeš:
   9. In ST3, click on Preferences  > Browse Packages
   10. Create a new folder, for example Language   Spanish
   11. Move lang.dic and lang.aff to that folder
-  12. Activate the dictionary in ST3 (View  > Dictionary  > Language   Spanish   es_ES)
-  13. Press F6 to enable spell check
-  14. View >Dictionaries
-
- Google spell check:
-  + apt get update
-  + dpkg  i teamviewer_****_i386.deb
-  + sudo apt get  f install namestitev:
-    C+S+p  > Install Packages
-    Google Spell Check
-
-
-
-# SYSTEMD
-Program skrbi za zagon UNIT ov ali procesov oz. v linuxu se jim reče *deamon*. Bistvena razlika pri ARCH linuxu je,  da service ni enablan takoj, ko naložiš program in ga moraš inštalirat sam...  To je vidno tudi v kaki ARCH wiki ko piše le :
-
-> you must enable UNIT.service...
-
-## uporaba
-
-    systemctl enable UNIT.service   > zagon servisa tudi ob restartu
-    systemctl start UNIT.service   > zagon servisa za ta sesion
-    systemctl stop UNIT.service   > izkljuci servis
-    systemctl restart UNIT.service   > ponovni zagon servisa za ta sesion
-
-    systemctl status UNIT.service   > nekaj več podatkov o UNITU
-
-S status lahko vidiš, kje je LOG file... to lahko pomaga pri debagiranju kaj je šlo narobe...
-
-Preverimo lahko ali je Unit enablan? to pomeni, če se bo service ZAGNAL že ob zagonu...
-
-		systemctl is-enabled UNIT.service
-
-in če je  rezultat
-
-		enabled
-
-potem ja OK
-
-
-
-## log file
-če je kak eror na začetku ga lahko pogledaš z:
-
-    journalctl  b
-    journalctl  f   za sprotno gledanje kaj gre narobe...
-
-## system run
-
-    systemctl
-        hibernate
-        suspend
-
-## dodjanje svojih skriptov
-
-Če želimo dodati svoje skripte tako, da bo delovalo kot CRONJOB moramo najprej:
-
-1. ustvariti SCRIPT.SH
-2. dodati pravice za execution
-3. greš v /etc/systemd/system
-4. dodaš datoteko: krneki.service (nujno .service)
-5. v datoteki se mora nahajati besedilo:
-
-		[Service]
-		ExecStart=/home/david/SCRIPT.SH
-		Restart=always
-		WorkingDirectory=/home/david
-		User=david
-		Group=david
-		...
-(več na: https://www.youtube.com/watch?v=fYQBvjYQ63U)
-
-6. nato le zaženemo service
-
-		sudo systemctl start krneki (ne vem zakaj je izpustil .service)
-
-7. le še preverimo če vse dela
-
-		systemctl status krneki
-
-
-
-# STATISTICS(PYTHON&PANDAS)
-https://github.com/justmarkham/pandas videos
-
-## Importing Data
-    pd.read_csv(filename) | From a CSV file
-    pd.read_table(filename) | From a delimited text file (like TSV)
-    pd.read_excel(filename) | From an Excel file
-    pd.read_sql(query, connection_object) | Read from a SQL table/database
-    pd.read_json(json_string) | Read from a JSON formatted string, URL or file.
-    pd.read_html(url) | Parses an html URL, string or file and extracts tables to a list of dataframes
-    pd.read_clipboard() | Takes the contents of your clipboard and passes it to read_table()
-    pd.DataFrame(dict) | From a dict, keys for columns names, values for data as lists
-
-## Exporting Data
-    df.to_csv(filename) | Write to a CSV file
-    df.to_excel(filename) | Write to an Excel file
-    df.to_sql(table_name, connection_object) | Write to a SQL table
-    df.to_json(filename) | Write to a file in JSON format
-
-## Create Test Objects
-Useful for testing code segements
-
-    pd.DataFrame(np.random.rand(20,5)) | 5 columns and 20 rows of random floats
-    pd.Series(my_list) | Create a series from an iterable my_list
-    df.index = pd.date_range('1900/1/30', periods=df.shape[0]) | Add a date index
-
-## Viewing/Inspecting Data
-    df.head(n) | First n rows of the DataFrame
-    df.tail(n) | Last n rows of the DataFrame
-    df.shape() | Number of rows and columns
-    df.info() | Index, Datatype and Memory information
-    df.describe() | Summary statistics for numerical columns
-    s.value_counts(dropna=False) | View unique values and counts
-    df.apply(pd.Series.value_counts) | Unique values and counts for all columns
-
-## Selection
-df[col] | Returns column with label col as Series
-df[[col1, col2]] | Returns columns as a new DataFrame
     s.iloc[0] | Selection by position
     s.loc['index_one'] | Selection by index
     df.iloc[0,:] | First row
@@ -1700,6 +1731,7 @@ df[[col1, col2]] | Returns columns as a new DataFrame
 ### SC IM
 excel za terminal... super omogoče veliko excelovih stvari ... tudi izvoz v .xlsx
 __Uporabne komande:__
+> 4<DOWN> // skočimo za 4 celice dol   uporabno pri kopiranju če se moraš premaknit
 > 4<DOWN> // skočimo za 4 celice dol   uporabno pri kopiranju če se moraš premaknit
 > yr      // copy (YUNK) celo ROW
 > p       // paste cel YUNK
@@ -1808,147 +1840,146 @@ Menu >AddOns >Provider for Google Calender >Install... Restart Now
     david.rihtarsic@gmail.com
      + gesla + itd.
     izbereš koledarje za sync  > Next
-    Finish
+      UUID: Message Notification Se.. (00001133 0000 1000 8000 00805f9b34fb)
+      UUID: Phonebook Access Server   (0000112f 0000 1000 8000 00805f9b34fb)
+      UUID: Message Access Server     (00001132 0000 1000 8000 00805f9b34fb)
+      UUID: Headset                   (00001108 0000 1000 8000 00805f9b34fb)
+      Modalias: usb:v1D6Bp0246d0532
+      Discovering: no
 
-## Paragraph space
-Da ne pušča preveč prostora med posameznimi odstavki, je potrebno nastaviti:
-  Menu [__=__]  > Preferences  > Composition :
-+ [ ] Use Paragraph format instead of Body Text by default.
+... kot kaže ne išče BT naprav
+>[bluetooth]# scan on
+    Discovery started
+    [CHG] Controller 74:E5:F9:19:10:2B Discovering: yes
 
+    [NEW] Device 13:31:19:07:15:8C Bluetooth Mouse
 
-# TO DO
-[ ] /i3/config
-	+ naredi sh tako:
-			da preveri, če je VIM_MAIN vključen
-				potem naj naredi le focus na to okno
-			drugače pa ga  odpre
-[ ] Izključi CTRL+S da pavzira itvajanje terminala
-  + vklljuči CTRL+S v Vim da shrani file...
-[ ] v i3/config dodaj:
-	+ Ctrl+PrintScreen -> scort -s (klikneš na okno in ti ga da v sliko)
-[ ] NAUČI SE VIM
-	+ uporaba multiple cursor
-	+ kako shraniti (mogoče je kaj z rangerjem
-			ukaz je :w ime.datotehe
-			Ampak to se shrani v PWD
-
-# VIM
-## Instalation
-
-    sudo apt get install vim nox
-
-### install Vundle    Plugin Manger
-
-Run v terminalu:
-
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-V ~/.vimrc na vrhu vpiš:
-
-    set nocompatible
-    filetype off
-		set rtp+=~/.vim/bundle/Vundle.vim
-		call vundle#begin()
-
-   	Plugin 'VundleVim/Vundle.vim'
-		Plugin 'majutsushi/tagbar'
-		" za delovanje moraš inštalirati še:
-		" exuberant stags
-
-	 	call vundle#end()            " required
-		filetype plugin indent on    " required
-
-## Instalation Plugins from terminal
-
-		yaourt  S vim tagbar
-## Instalation of FZF
-Super stvar : fuzzy file search!
-
-1. Najprej pustiš, da vim nainštelira plugin:  junegunn/fzf
-2. Nato poženeš:
-    ~/.vim/bundle/fzf/install
-
-3. in ponovno zaženeš terminal in vim.
-
-Plugin uporabljaš tako, da :
-  Ctrl+T => za iskanje filov
-  Ctrl+R => za iskanje kommand v terminalu..
-
-Če želimo, da lahko iščemo še po skritih dokumentih moramo v .zshrc vpisati:
-
-    export FZF_DEFAULT_COMMAND="find .  type f  print  o  type l  print"
-    export FZF_CTRL_T_COMMAND="find .  type f  print  o  type l  print"
+ga označiš kot "trusted" in "pair" aš
+>bluetooth]# trust 13:31:19:07:15:8C
+    [CHG] Device 13:31:19:07:15:8C Trusted: yes
+    Changing 13:31:19:07:15:8C trust succeeded
+>[bluetooth]# pair 13:31:19:07:15:8C
+    Attempting to pair with 13:31:19:07:15:8C
+    [CHG] Device 13:31:19:07:15:8C Connected: yes
+    [CHG] Device 13:31:19:07:15:8C Modalias: usb:v05ACp3232d0001
+    [CHG] Device 13:31:19:07:15:8C UUIDs: 00001124 0000 1000 8000 00805f9b34fb
+    [CHG] Device 13:31:19:07:15:8C UUIDs: 00001200 0000 1000 8000 00805f9b34fb
+    [CHG] Device 13:31:19:07:15:8C ServicesResolved: yes
+    [CHG] Device 13:31:19:07:15:8C Paired: yes
+    Pairing successful
 
 
-## References
 
-[How to fold](http://vimcasts.org/episodes/how to fold/)
-  folding je izredno počasen... (to do)
-  zato raje uporabljam kar TOC za markdown
-## Spell checking
-		:set spell spellang=sl
-		:set nospell
+# DD_IBS_TEST.SH():
+## test
+program za testiranje dd komnade...
+kako hitro comp lahko kopira datoteke v odvisnosti ob bs= ? podatka...
+Program je na [GitHubu](https://github.com/tdg5/blog/blob/master/_includes/scripts/dd_ibs_test.sh)
 
-SHORTCUTS:
-		z= 		predlog za pravilno črkovano besedo
-		]s 		naslednja napačno črkovana beseda
+# C++:
+## PassBy VALUE REFERENCE POINTER
 
-[več o spell](https://www.linux.com/learn/using spell checking vim)
+Pomembno pri funkcijah, naprimer:
+void passByVal(int val);
+void passByRef(int &ref);
+void passByPtr(int *ptr);
 
-## Shortcuts
-| Shortcuts     | behaviour     |
-|               |               |
-| <leader> hjkl | resize window |
-| <leader> u    | uprate .vimrc |
+### Value
+  int x = 5;
 
-### Folding
- * zm   foldMore
- * zz   Fold tree toggle
- * zi   not/Foldable
- * zo   open
- * za
+naredi kopijo spremenljivke v stacku
 
-# VIRTUALBOX
-## Instalation:
-    pacman  S virtualbox
-    pacman  S pacman  S virtualbox host dkms
-    sudo modprobe vboxdrv
+[ ] več spomina
 
-## Android
-### Resolution Android 7.1
-- terminal - go to : VirtualBox folder
+[+] vrednost prvotne spremenljivke se ne spremeni
 
-    vboxmanage setextradata "Android3" "CustomVideoMode1" "360x640x16"
+### Reference
+int &ref = x
+to je alias spremenljivke x
+[+] ne zasede novega spomina
+[+] če potrebuješ, da funkcija vrne več parametrov in NI potrebno imeti globalne spremenljivke. Vrednost spremenljivke  se lahko spremeni med samo funkcijo
 
-- run virtula Machine
-- izberi resolucijo : 360x640
+### Pionter
+int *xptr = &x;
+xptr je naslov spremenljivke x, če želimo vrednost na tem naslovu = *xptr
+  nekoliko bolj zakomplicirana sintaksa, ker je prej potrebno v *xptr dati naslov spremenljivke
++ le s pointerji lahko dostopamo do __HEAP__ spomina (spomin večjih razsežnosti)
+
+# CATFISH:
+## namestitev
+Odličen iskalnik filov...
+po defaultu naložen.. hm ne vem od kdaj...
+v Thunar sem imel po defaultu Commnad:
+
+    catfish   fileman=bl file manager   hidden   path=%f
+
+:) aha ... sem spremenil v :
+
+    catfish   path=%f
+
+in dela :)
+glej gmone search tool
+
+# CHARACTER MAP:
+## pregled znakov
+Super programček za brskanje znakov
+
+    gucharmap
+Če uporabimo font "common" je tam veliko primernih znakov kot naprimer:
+
+# CONFIG FILES (my)
+## My all . dotfiles
+
+		find .  type f
+./.zshrc
+./.config/polybar/modules.conf
+./.config/polybar/config
+./.config/polybar/lounch_polybar.sh
+./.config/polybar/master.conf
+./.config/terminator/config
+./.config/tint2/tint2rc
+./.config/openbox/rc.xml
+./.config/i3/LcdBrightnesUP.sh
+./.config/i3/KbdBrightnesUP.sh
+./.config/i3/myMonitorSetup.sh
+./.config/i3/config
+./.config/i3/LcdBrightnesDOWN.sh
+./.config/i3/KbdBrightnesDOWN.sh
+./.config/i3/lcd_backlight.rules
+./.config/i3/kbd_backlight.rules
+./.config/conky/dave_s_conky.conkyrc
+./.config/termite/config
+./.config/termite/config (copy_original)
+./.local/share/nemo/actions/PDF_extract.nemo_action
+./.local/share/nemo/actions/PDF_unite.nemo_action
+./.local/share/nemo/actions/Office  >PDF.nemo_action
+./.local/share/nemo/actions/MD  >PDF.nemo_action
+./.local/share/nemo/actions/MD  >PDF_bib.nemo_action
+./.vimrc
+./.pandoc/templates/eisvogel.latex
 
 
-# W3M
 
-## instalation:
+# DOLPHINE FILE MANAGER
+## KDE SERVICES
+(ni blo dobr!!)
+For Arch Linux, edit /etc/pacman.conf and add the following (note that the order of repositories in pacman.conf is important, since pacman always downloads the first found package):
 
-    apt get install w3m
+    [home_metakcahura_Arch_Extra]
+    SigLevel = Never
+    Server = https://download.opensuse.org/repositories/home:/metakcahura/Arch_Extra/$arch
 
-## frendlyUse:
-  v ~/bashrc vpišeš:
-> alias w3mm='w3m www.google.com'
+Then run the following as root
 
-# WIRELESS SETUP
- Wavemon...
- > sudo apt get install wavemon
+    pacman  Syu
+    pacman  S home_metakcahura_Arch_Extra/kde services
 
-## wifi drop
-Če stvar dela imam takele nastavitve:
-```
-└─(09:47:05)──> ip addr                                                                              ──(Thu,30 Aug)─┘
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host
-       valid_lft forever preferred_lft forever
-2: enp4s0: <NO CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+### instalation
+libkonq frameworks git
+iz [link](http://download.opensuse.org/pub/opensuse/repositories/home:/mazdlc:/kde frameworks 5/Arch_Extra/x86_64/)
+Dela !!!
+nato še run
+
     link/ether 18:31:bf:73:8c:49 brd ff:ff:ff:ff:ff:ff
 3: wlp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
     link/ether 74:e5:f9:19:10:27 brd ff:ff:ff:ff:ff:ff
@@ -2053,3 +2084,4 @@ yaourt  S <ime>   noconfirm
  sem namestil še firmware, a mislim, da ni šlo skoz...
  > sudo apt install intel microcode iucode tool
  > sudo reboot
+---
