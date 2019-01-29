@@ -52,7 +52,14 @@ and Log Out / Log In
 
 ## Backup
 
-		sudo rsync -aAXv --dry-run --exclude='*_noSync*' --exclude='*Work*' ~/Files/ /run/media/david/BackupDisk/FilesBACKUP/
+za sinhronizacijo filov se uporablja prameter -a (archive) in --delete (zato da se fili tudi pobrišejo v BACKUP foldru)
+
+		rsync -avr --delete ~/Files/ /media/david/BACKUP/Files/ 
+
+za arhiv slik bi verjetno moral brez tega delete - potem bi le dodajal...
+
+		rsync -avr ~/Pictures/ /media/david/BACKUP/Pictures/
+
 
 ### disk
 		ncdu (disk pregled velikosti datotek)
@@ -155,7 +162,6 @@ ga označiš kot "trusted" in "pair" aš
     [CHG] Device 13:31:19:07:15:8C ServicesResolved: yes
     [CHG] Device 13:31:19:07:15:8C Paired: yes
     Pairing successful
-
 
 
 # DD_IBS_TEST.SH():
@@ -673,24 +679,22 @@ in je to   to :)
 skratka popraviš in uploadaš še enkrat :) jeah!
 
 # GRAPHIC CARD:
-## driverji
-Kako preveriti in namestiti driverje za grafično kartico
-## GeForce 9600 GT
-Jaz imam na PCju to kartico to lahko preveriš s:
-  > 'lspci'
-2. Install fpc_3.0.2.x86_64 linux.tar via shell (unzip and run sh install.sh). Install into /usr directory, so it overwrites 3. the existing installation
-4. Install the deb sources via package manager (__tega nisem naredu... neznam__)
-5. Install lazarus project_1.6.4 0_amd64.deb via package manager
-6. Instaliral gdb
-
-
 ## Asus n850
 - Intel
 - GTX 1050
 
 https://www.youtube.com/watch?v=KUsnygrNUMw
 
+## NVIDIA errorlines
+[navodila](https://www.youtube.com/watch?v=IJeX35wbZY4)
+sudo mkdir /etc/X11/xorg.conf.d
+sudo nano /etc/X11/xorg.conf.d/20-intel.conf
 
+Section "Device"
+	Identifier  "Intel Graphics"
+  Driver      "intel"
+	Option      "TearFree"    "true"
+EndSection
 
 # LIBREOFFICE:
 Instal preko terminala:
@@ -752,6 +756,11 @@ Ko imamo tabelo:
       ime = NotEmpty
       > Options : No Duplicates
 [ok]
+
+## base
+Data field
+DAY([dat_odhod])&". "&MONTH([dat_odhod])&". "&YEAR([dat_odhod])-2000
+YEAR([dat_odhod])&"-"&[ID]
 
 # Simon Sinek
 
@@ -1136,6 +1145,24 @@ verjetno bi šlo, če inštaliraš:
 		
 		sudo ln -s /home/david/node_modules/mermaid.cli/index.bundle.js /bin/mermade
 
+## examples
+
+https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcblMoKFNUQVJUKSkgLS0-IE4xXG5OMSAtLT4gTjJcbk4yIC0tPiBOM1xuTjMgLS0-IEsoKEtPTkVDKSlcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19
+
+https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcblMoU1RBUlQpIC0tPiBOQUxPR0ExXG5OQUxPR0ExIC0tPiBOQUxPR0EyXG5OQUxPR0EyIC0tPiBOQUxPR0EzXG5OQUxPR0EzIC0tPiBLKEtPTkVDKVxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifX0
+
+https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbnN1YmdyYXBoIHByb2dyYW1za2EgZnVua2NpalxuTihOQUxPR0EyKS0tPk8gXG5PLS4tST52cmVkbm9zdF1cbk9bb2TEjWl0YWogc2Vuem9yXS0tPk40XG5ONC0tPk41XG5ONS0tPk5FXG5ORShLT05FQylcbmVuZFxuUyhTVEFSVCkgLS0-IE5BTE9HQTFcbk5BTE9HQTEgLS0-IE5BTE9HQTJcbk5BTE9HQTIgLS0-IE5BTE9HQTNcbk5BTE9HQTMgLS0-IEsoS09ORUMpXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ
+
+https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcblMoU1RBUlQpIC0tPiBOMVtcImRpZ2l0YWxXcml0ZSg2LCBISUdIKTtcIl1cbnN1YmdyYXBoIHZvaWQgc2V0dXBcbk4xIC0tPiBOMltcImRlbGF5KDIwMDApO1wiXVxuTjIgLS0-IE4zW1wiZGlnaXRhbFdyaXRlKDYsIExPVyk7XCJdXG5lbmRcbnN1YmdyYXBoIHZvaWQgbG9vcFxuTjMtLT5ONFxuTjQtLT5ONVxuTjUtLT5ONlxuTjYtLT5ONFxuZW5kXG5ONiAtLi0gSyhLT05FQykiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ
+
+https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcbk4oU1RBUlQpLS0-IElGe3BvZ29qfVxuc3ViZ3JhcGggcG9nb2puaSBzdGF2ZWsgSUZcbklGIC0tPnxEQXxOMlxuSUYtLT58TkV8TjNcbmVuZFxuTjItLT5FKEtPTkVDKVxuTjMtLT5FXG5cbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19
+
+https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbk4oU1RBUlQpLS0-IElGKChwb2dvaikpXG5zdWJncmFwaCBXSElMRVxuSUYgLS0-fERBfE4yXG5OMi0tPk4zXG5OMy0tPk40XG5ONC0tPklGXG5lbmRcbklGLS0-fE5FfE41XG5ONS0tPk42XG5ONi0tPkUoS09ORUMpXG5cbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19
+
+https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbk4oU1RBUlQpLS0-IElGKChwb2dvaikpXG5zdWJncmFwaCB6YW5rYSBGT1JcbklGLS4tST7FoXRldmVjXVxuSUYgLS0-fERBfE4yXG5OMi0tPk4zXG5OMy0tPk40XG5ONC0tPnzFoXRldmVjKzF8SUZcbmVuZFxuSUYtLT58TkV8TjVcbk41LS0-TjZcbk42LS0-RShLT05FQylcblxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifX0
+
+
+
 # MUSIC TAGGING (audi tags)
 
 V terminalu lahko uporabljalmo: _beets_:
@@ -1168,6 +1195,10 @@ PACLI programček v terminalu...
 
 ### pacman  S paket
 > namesti paket
+
+# POPCORN-TIME
+
+sudo
 
 ## ERRORS
 failed to...
@@ -1265,7 +1296,7 @@ inštaliraš SANE
   nato pa v terminalu zaženeš:
 
     cd Downloads
-    dpkg  i Sublime...64.deb
+		dpkg  i Sublime...64.deb
 
 ## Nastavitve   Key Bindings
 
@@ -2000,7 +2031,39 @@ PING www.google.com (172.217.20.36) 56(84) bytes of data.
     www.google.com ping statistics
 7 packets transmitted, 6 received, 14.2857% packet loss, time 87ms
 rtt min/avg/max/mdev = 54.049/227.503/1090.393/385.896 ms, pipe 2
-```
+
+# VIM
+
+## RegularExpressions
+[RegularExpressions maual](http://vimregex.com/)
+
+kako iskati določene besede in znakovne skupke:
+
+/ - iskanje
+. - katerikoli znak razen konec vrstice
+^ - začetek vrstice
+$ - konec vrstice
+* - n-kratna ponovitev zadnjega iskalnega niza
+{6} - 6x krat se zadnji iskani znak ponovi
+\d - števka
+\D - ni številka
+\w - črka
+\s - presledek
+
+## dictionary / spell / spellchecker
+1. download dictionary iz [Slovenian Dictionary - LIBREOFFICE](https://extensions.libreoffice.org/extensions/slovenian-dictionary-pack)
+2. file je sl_pack-SI.oxt in je v bistvu ZIP file... torej odzipamo
+3. med drugim dobiš datoteki si_xy.aff in si_xy.dic -> skopiraš v ~/.vim/spell/
+4. zaženeš VIM in izvršiš ukaz: :mkspell! ~/.vim/spell/sl ~/.vim/spell/sl_SI.aff
+in imaš slovenski slovarjev
+
+
+# Wallpapers
+https://wallpaperplay.com/
+
+
+# WiFi signal
+
 Slaba komunikacija ali slab wifi signal...
 Zgodilo se je, da se je WIFI večkrat izgubil in je linija "padla dol"
 mislim, da je pomagalo, da naložiš module z:
@@ -2011,6 +2074,11 @@ ali pa narediš to bolj za zmerej tako, da naredip file:
 
 		#/etc/modprobe.d/iwlwifi.conf
 		options iwlwifi 11n_disable=1 swcrypto=1
+
+## Power Manager error
+
+mogoče nagaja power manager, zato poizkusi :
+	sudo iwconfig wlp3s0 power off
 
 ## Slow DNS
 
