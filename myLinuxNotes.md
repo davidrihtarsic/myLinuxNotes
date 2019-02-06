@@ -678,6 +678,9 @@ potem je to v dokumentu označeno z:
 in je to   to :)
 skratka popraviš in uploadaš še enkrat :) jeah!
 
+## tips & tricks
+git add . && git commit -m "info" && git push
+
 # GRAPHIC CARD:
 ## Asus n850
 - Intel
