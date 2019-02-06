@@ -696,6 +696,30 @@ Section "Device"
 	Option      "TearFree"    "true"
 EndSection
 
+### na ARCH linux NVIDIA
+https://wiki.archlinux.org/index.php/NVIDIA#Installation
+namestil sem:
+aurman -S nvidia-lts
+
+https://wiki.archlinux.org/index.php/NVIDIA#Installation
+
+# HIBERNATION
+Na archu mi ni delalo, ker v :
+        /etc/mkinitcpio.conf
+ni bilo napisano "resume" :
+
+        HOOKS=(base udev autodetect keyboard modconf block filesystems resume fsck)
+
+navodila: so tu:
+
+https://www.reddit.com/r/linuxquestions/comments/7swvyb/cannot_restore_session_after_hibernation/?utm_source=reddit-android
+https://wiki.arhttps://www.reddit.com/r/linuxquestions/comments/7swvyb/cannot_restore_session_after_hibernation/?utm_source=reddit-androidchlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation
+
+ko to urediš moraš skompajlirat GRUB in linux????.img
+
+        sudo grub-mkconfig -o /boot/grub/grub.cfg
+        sudo mkinitcpio -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-lts.img
+
 # LIBREOFFICE:
 Instal preko terminala:
 
@@ -1291,6 +1315,7 @@ inštaliraš SANE
     Settings>Soun
 
 # SUBLIME TEXT 3
+
 ## Install:
   Greš na njihovo stran in snameš dol pravo verzijo (Ubuntu 64)
   nato pa v terminalu zaženeš:
@@ -1858,6 +1883,7 @@ V /home/david/.scimrc napišemo:
     + port: 587
     + SSL: None
     + Authentication: NMLT
+    + UserName: rihtarsicda
 
 ## Google Koledar v Thunderbirdu
 1. inštaliraš koledar:
