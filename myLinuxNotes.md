@@ -678,6 +678,9 @@ potem je to v dokumentu označeno z:
 in je to   to :)
 skratka popraviš in uploadaš še enkrat :) jeah!
 
+## tips & tricks
+git add . && git commit -m "info" && git push
+
 # GRAPHIC CARD:
 ## Asus n850
 - Intel
@@ -720,6 +723,7 @@ ko to urediš moraš skompajlirat GRUB in linux????.img
 
         sudo grub-mkconfig -o /boot/grub/grub.cfg
         sudo mkinitcpio -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-lts.img
+
 ## skratka:
 
     lsblk
@@ -766,6 +770,9 @@ in zbildaš še grub:
 rebootaš in HIBERNATION dela
 
 # LIBREOFFICE:<LeftMouse>
+=======
+
+# LIBREOFFICE:
 Instal preko terminala:
 
     apt get install libreoffice
@@ -1933,6 +1940,7 @@ V /home/david/.scimrc napišemo:
 Nastavi še:
     - Options -> Preferences -> Preferences -> Composition -> [ ] Use paragraf format...
 
+=======
 
 ## Google Koledar v Thunderbirdu
 1. inštaliraš koledar:
