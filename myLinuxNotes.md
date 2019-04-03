@@ -54,11 +54,11 @@ and Log Out / Log In
 
 za sinhronizacijo filov se uporablja prameter -a (archive) in --delete (zato da se fili tudi pobrišejo v BACKUP foldru)
 
-		rsync -avr --delete ~/Files/ /media/david/BACKUP/Files/ 
+		rsync -avr --delete ~/Files/ /run/media/david/BACKUP/Files/ 
 
 za arhiv slik bi verjetno moral brez tega delete - potem bi le dodajal...
 
-		rsync -avr ~/Pictures/ /media/david/BACKUP/Pictures/
+		rsync -avr ~/Pictures/ /run/media/david/BACKUP/Pictures/
 
 
 ### disk
@@ -696,7 +696,76 @@ Section "Device"
 	Option      "TearFree"    "true"
 EndSection
 
-# LIBREOFFICE:
+### na ARCH linux NVIDIA
+https://wiki.archlinux.org/index.php/NVIDIA#Installation
+namestil sem:
+aurman -S nvidia-lts
+
+https://wiki.archlinux.org/index.php/NVIDIA#Installation
+
+# HIBERNATION
+Na archu mi ni delalo, ker v :
+        /etc/mkinitcpio.conf
+ni bilo napisano "resume" :
+
+        HOOKS=(base udev autodetect keyboard modconf block filesystems resume fsck)
+
+navodila: so tu:
+
+https://www.reddit.com/r/linuxquestions/comments/7swvyb/cannot_restore_session_after_hibernation/?utm_source=reddit-android
+
+https://wiki.arhttps://www.reddit.com/r/linuxquestions/comments/7swvyb/cannot_restore_session_after_hibernation/?utm_source=reddit-androidchlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation
+
+ko to urediš moraš skompajlirat GRUB in linux????.img
+
+        sudo grub-mkconfig -o /boot/grub/grub.cfg
+        sudo mkinitcpio -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-lts.img
+## skratka:
+
+    lsblk
+
+    NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+    sda      8:0    0 238.5G  0 disk 
+    ├─sda1   8:1    0   512M  0 part /boot
+    ├─sda2   8:2    0   218G  0 part /
+    └─sda3   8:3    0    20G  0 part 
+    sdb      8:16   0 256.2G  0 disk 
+    ├─sdb1   8:17   0 236.2G  0 part /home
+    └─sdb2   8:18   0    20G  0 part [SWAP]
+
+da dobiš na kateri partuvuju je **SWAP** -> /dev/sdb2
+nato pridobiš **UUID**
+
+    ls -l /dev/disk/by-uuid/
+    lrwxrwxrwx 1 root root 10 Jan 14 03:24 91e9d10f-75f0-4790-a13a-fc8d6f67b4d7 -> ../../sdb2
+
+nato v datoteko:
+
+    /etc/mkinitcpio.conf
+
+dodaš resume
+
+    HOOKS=(base udev autodetect modconf block  filesystems shutdown keyboard resume fsck)
+
+in zbildaš nov linux image
+
+    sudo mkinitcpio -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-lts.img
+
+nato popraviš še v  filju:
+    
+    /etc/default/grub
+
+in dodoap UUID od SWAP particije:
+
+    GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=91e9d10f-75f0-4790-a13a-fc8d6f67b4d7"
+
+in zbildaš še grub:
+
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+rebootaš in HIBERNATION dela
+
+# LIBREOFFICE:<LeftMouse>
 Instal preko terminala:
 
     apt get install libreoffice
@@ -1291,6 +1360,7 @@ inštaliraš SANE
     Settings>Soun
 
 # SUBLIME TEXT 3
+
 ## Install:
   Greš na njihovo stran in snameš dol pravo verzijo (Ubuntu 64)
   nato pa v terminalu zaženeš:
@@ -1849,15 +1919,20 @@ V /home/david/.scimrc napišemo:
     Email add: david.rihtarsic@pef.uni lj.si
     Password: Work mei kabinet
     Incoming: IMAP
-    + server: imap.uni lj.si
+    + server: imap.uni-lj.si
     + port: 993
     + SSL: SSL/TLS
     + Authentication: NMLT
     Outgoing: SMTP
-    + server: mail.uni lj.si
+    + server: mail.uni-lj.si
     + port: 587
     + SSL: None
     + Authentication: NMLT
+    + UserName: rihtarsicda
+
+Nastavi še:
+    - Options -> Preferences -> Preferences -> Composition -> [ ] Use paragraf format...
+
 
 ## Google Koledar v Thunderbirdu
 1. inštaliraš koledar:
@@ -2052,11 +2127,10 @@ $ - konec vrstice
 
 ## dictionary / spell / spellchecker
 1. download dictionary iz [Slovenian Dictionary - LIBREOFFICE](https://extensions.libreoffice.org/extensions/slovenian-dictionary-pack)
-2. file je sl_pack-SI.oxt in je v bistvu ZIP file... torej odzipamo
+2. file je pack-sl.oxt in je v bistvu ZIP file... torej odzipamo
 3. med drugim dobiš datoteki si_xy.aff in si_xy.dic -> skopiraš v ~/.vim/spell/
-4. zaženeš VIM in izvršiš ukaz: :mkspell! ~/.vim/spell/sl ~/.vim/spell/sl_SI.aff
-in imaš slovenski slovarjev
-
+4. zaženeš VIM in izvršiš ukaz:
+:mkspell! ~/.config/nvim/spell/sl ~/.config/nvim/spell/sl_SI
 
 # Wallpapers
 https://wallpaperplay.com/
