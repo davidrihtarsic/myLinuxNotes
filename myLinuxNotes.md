@@ -38,6 +38,10 @@ kot so npr: cp, crond, vi (Editor) ...
 4. ln  s /system/bin/sh /bin/sh
 5. crond  c /data/crontab
 
+## COOL APPS
+
+- BLAY (Program za aerodrom in lete, gates....)
+
 # ARDUINO:
 ## Enable PORT permmissions to user
 
@@ -1126,6 +1130,27 @@ Ko iščemo vire imamo pogosto možnost oznake DOI (angl.: **D**igital **O**bjec
 Če moramo združiti več pdf dokumentov v enega v terminal napišemo:
 > pdfunite pdf0.pdf pdf1.pdf merged.pdf
 
+## pdfunite in aliexpress
+naredil sem skripto :aliexpress-invoices.sh ... kot parameter pa dodaš številko. Naprimer:
+> ./aliexpress-invoices.sh 1
+
+Fili morajo biti:
+- o1.pdf in 
+- f1.pdf
+
+- o je za order in 
+- f je za finance
+
+lahko tudi zalaufaš za več filov v terminal vpišeš for zanko:
+
+    for x in {1-15}
+    do
+        ./aliexpress-invoices.sh $x
+    done
+
+in dokumenti "o1.pdf, f1.pdf" se združijo in pimenujejo:
+>2019-03-01-23e45-Motor_driver-LB12345678CN
+
 # MERMAID (izgradnja diagramov iz kode v markdownu)
 
 inštaliral sem:
@@ -2118,7 +2143,7 @@ rtt min/avg/max/mdev = 54.049/227.503/1090.393/385.896 ms, pipe 2
 # VIM
 
 ## RegularExpressions
-[RegularExpressions maual](http://vimregex.com/)
+[RegularExpressions maual](http://vimregex.com)
 
 kako iskati določene besede in znakovne skupke:
 
