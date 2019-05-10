@@ -53,6 +53,61 @@ and Log Out / Log In
 
 ## Maintainence (vzdrževanje)
 [youtube vidoe](https://www.youtube.com/watch?v=3OoMvyHYWDY)
+trenutno imam kernel:
+    4.19.34-1-lts
+in z 39 sem imel problem tako da mi ni delala miška (ko sem rebootal)
+to različico sem inštaliral nazaj tako:
+    
+    pacman -U linux-lts-4.19.34-1-x86_64.pkg.tar.xz
+
+in inštaliran firmware:
+
+local/linux-firmware 20190313.efd2c1c-1 (base)
+    Firmware files for Linux
+
+UPDATE : javlja mi napako:
+
+    ==> WARNING: Possibly missing firmware for module: wd719x
+    ==> WARNING: Possibly missing firmware for module: aic94xx
+
+= mogole je res kaj na aic94xx ker je to za modem firmware...
+
+    iwconfig
+
+enp4s0    no wireless extensions.
+
+lo        no wireless extensions.
+
+wlp3s0    IEEE 802.11  ESSID:"Janez"  
+          Mode:Managed  Frequency:2.412 GHz  Access Point: 64:6E:EA:22:85:6E   
+          Bit Rate=86.7 Mb/s   Tx-Power=22 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+          Link Quality=39/70  Signal level=-71 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:7  Invalid misc:56   Missed beacon:0
+
+inštaliral sem oboje preko AUR-ja.. in
+
+    iwconfig
+
+
+enp4s0    no wireless extensions.
+
+lo        no wireless extensions.
+
+wlp3s0    IEEE 802.11  ESSID:"Janez"  
+          Mode:Managed  Frequency:2.412 GHz  Access Point: 64:6E:EA:22:85:6E   
+          Bit Rate=86.7 Mb/s   Tx-Power=22 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+          Link Quality=37/70  Signal level=-73 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:2  Invalid misc:10   Missed beacon:0
+
+nič posebnega ....
+
+
 
 ## Backup
 
@@ -1289,6 +1344,23 @@ You can add yours scripts... Script must be added to:
 |           |                 |
 | A+Home    | go to HOME dir  |
 
+# NOTIFICTIONS
+deamon for notifictions
+
+        dunst
+
+config file:
+
+        ~/.config/dunst/dunstrc
+
+ko spremeniš config file moraš
+
+        killall dunst
+        dunst
+
+## notify-send
+
+
 
 # PACMAN
 Program za pakete = PACkage MANager. Ena varianta je, da uporabiš:
@@ -1359,6 +1431,11 @@ nastavitve za odpiranje programov...
 Glej navodila:
 
 https://github.com/gotbletu/shownotes/blob/master/ranger_file_locate_fzf.md
+
+## KeyBindings
+
+S - odpre podokno za shell
+Ctrl - d = gre nazaj v Ranger
 
 ## Issues...
 z Ranger-jem, ki je v AUR sem imel težave, da se je sesul, ko sem pregledoval cvs... neki error "null character"
