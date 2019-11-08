@@ -1947,6 +1947,7 @@ Terminal je najboljši terminator
 > sudo apt get install terminator
 
 Najraje uporabljam TERMITE v kombinaciji s VIFM & UEBERZUG
+UEBERZUG image prewiew ne dela z linkom... v ~/.config/vifm/scripts mora biti prav datoteka vifmimg in ne LINK.
 
 TERMITE:
 Slike:yes v kombinaciji s UEBERZUG (imel sem težave s python-pillow-simd... zato sem ga odinštaliral, in nanovo instaliraš sudo pip3 install pillow..)
