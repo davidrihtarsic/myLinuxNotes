@@ -73,7 +73,7 @@ to različico sem inštaliral nazaj tako:
 
     pacman -U /var/cache/pacman/pkg/in_ime_paketa_ki_se_dela.pkg.tar.xz
 
-in inštaliran firmware:
+in inštaliran firmware(to nima več veze):
 
 local/linux-firmware 20190313.efd2c1c-1 (base)
     Firmware files for Linux
