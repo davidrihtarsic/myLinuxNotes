@@ -49,6 +49,15 @@ kot so npr: cp, crond, vi (Editor) ...
 
 and Log Out / Log In
 
+## ARDUBLOCKLY
+instaliral sem tudi:
+arduino-cli (ne vemče je treba...) 
+za kitajski arduino sem samo downgradal board werzijo na 1.6.20 (tako, da ni potrebno več nastavljat (Old Bootloader)
+nato je Ardublocky začel delat na nastavitvah 
+/usr/share/arduino
+NANO 328
+
+
 # ARCH:
 
 ## Maintainence (vzdrževanje)
@@ -59,6 +68,10 @@ in z 39 sem imel problem tako da mi ni delala miška (ko sem rebootal)
 to različico sem inštaliral nazaj tako:
     
     pacman -U linux-lts-4.19.34-1-x86_64.pkg.tar.xz
+
+## Downgrade
+
+    pacman -U /var/cache/pacman/pkg/in_ime_paketa_ki_se_dela.pkg.tar.xz
 
 in inštaliran firmware:
 
@@ -1864,21 +1877,21 @@ da naredič template v terminal vpišeš:
     unzip..
 
  ali ...
-  1. [Download](http://extensions.openoffice.org/en/project/venian dictionary package slovenski paket slovarjev) the language file from the appropiate OpenOffice extension
-  2. Rename the "some.oxt" file to "some.zip"
-  3. Unzip the file
-  4. Look for two files: "lang.aff" and "lang.dic". For example es_ES.aff and   ES.dic
-  5. Open the "lang.aff" to check the encoding used. Such the line: SET    8859 1
-  6. Convert that file to UTF 8 from the used encoding
-  7. Convert "lang.dic" to UTF 8 from the used encoding.
-  8. Change SET ISO 8859 1 to SET UTF 8
-  9. In ST3, click on Preferences  > Browse Packages
-  10. Create a new folder, for example Language   Spanish
-  11. Move lang.dic and lang.aff to that folder
-    s.iloc[0] | Selection by position
-    s.loc['index_one'] | Selection by index
-    df.iloc[0,:] | First row
-    df.iloc[0,0] | First element of first column
+1. [Download](http://extensions.openoffice.org/en/project/venian dictionary package slovenski paket slovarjev) the language file from the appropiate OpenOffice extension
+2. Rename the "some.oxt" file to "some.zip"
+3. Unzip the file
+4. Look for two files: "lang.aff" and "lang.dic". For example es_ES.aff and   ES.dic
+5. Open the "lang.aff" to check the encoding used. Such the line: SET    8859 1
+6. Convert that file to UTF 8 from the used encoding
+7. Convert "lang.dic" to UTF 8 from the used encoding.
+8. Change SET ISO 8859 1 to SET UTF 8
+9. In ST3, click on Preferences  > Browse Packages
+10. Create a new folder, for example Language   Spanish
+11. Move lang.dic and lang.aff to that folder
+s.iloc[0] | Selection by position
+s.loc['index_one'] | Selection by index
+df.iloc[0,:] | First row
+df.iloc[0,0] | First element of first column
 
 ## Data Cleaning
     df.columns = ['a','b','c'] | Rename columns
@@ -1929,15 +1942,89 @@ da naredič template v terminal vpišeš:
     df.std() | Returns the standard deviation of each column
 
 # TERMINAL:
- Terminal je najboljši terminator
- > sudo apt get install terminator
+
+Terminal je najboljši terminator
+> sudo apt get install terminator
+
+Najraje uporabljam TERMITE v kombinaciji s VIFM & UEBERZUG
+
+TERMITE:
+Slike:yes v kombinaciji s UEBERZUG (imel sem težave s python-pillow-simd... zato sem ga odinštaliral, in nanovo instaliraš sudo pip3 install pillow..)
+Emoji:ok(perfektno)
+transparency:ok
+system-Colors:yes
+
+
+XTERM:
+Slike:ok
+Emoji:ne vsi
+transparency:ok
+system-Colors:yes
+
+UXTERM:
+Slike:ok
+Emoji:ne vsi
+transparency:ok
+system-Colors:yes
+
+TILDA:
+Slike:nope
+Emoji:ok(perfektno)
+transparency:nope
+system-Colors:nope
+
+TERMINATOR:
+Slike:nope
+Emoji:ok(perfektno)
+transparency:yes
+system-Colors:yes
+
+SAKURA:
+Slike:nope
+Emoji:ok(perfektno)
+transparency:no
+system-Colors:no
+
+TERMINATOR:
+Slike:nope
+Emoji:ok(perfektno)
+transparency:yes
+system-Colors:yes
+
+TERMINATOR:
+Slike:nope
+Emoji:ok(perfektno)
+transparency:yes
+system-Colors:yes
+
+TERMINATOR:
+Slike:nope
+Emoji:ok(perfektno)
+transparency:yes
+system-Colors:yes
+
+TERMINATOR:
+Slike:nope
+Emoji:ok(perfektno)
+transparency:yes
+system-Colors:yes
+
+TERMINATOR:
+Slike:nope
+Emoji:ok(perfektno)
+transparency:yes
+system-Colors:yes
+
+
 
 ## Preferences:
- [ ] Show title bar
- Profiles  > Colors = Green on Black
- Profiles  > Background  > Transparency = 50%
+
+[ ] Show title bar
+Profiles  > Colors = Green on Black
+Profiles  > Background  > Transparency = 50%
 
 ## Programi za terminal
+
 ### SC IM
 excel za terminal... super omogoče veliko excelovih stvari ... tudi izvoz v .xlsx
 __Uporabne komande:__
@@ -2042,7 +2129,13 @@ V /home/david/.scimrc napišemo:
 Nastavi še:
     - Options -> Preferences -> Preferences -> Composition -> [ ] Use paragraf format...
 
-=======
+## Arhiviranje emailov
+
+Če želimo izbrisati maile na serverju in jih hkrati obdržati na lacal disku moramo:
+- emaile označiti in
+- desni klik -> Move To Local ... INBOX
+
+Tako se ob naslednji sinhronizaciji emaili izbrišejo, lokalno pa jih še vedno imamo.
 
 ## Google Koledar v Thunderbirdu
 1. inštaliraš koledar:
