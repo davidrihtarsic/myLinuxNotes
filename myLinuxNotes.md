@@ -1943,6 +1943,11 @@ df.iloc[0,0] | First element of first column
 
 # TERMINAL:
 
+Glede detminla sem se premislil... 
+uporabljam UXTERM in RANGER
+Ranger je precej hitrejši od VIFM
+
+
 Terminal je najboljši terminator
 > sudo apt get install terminator
 
